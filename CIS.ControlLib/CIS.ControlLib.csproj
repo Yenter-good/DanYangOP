@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{958522EA-20D5-4851-A1CF-571DE5901BF5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CIS.ControlLib</RootNamespace>
+    <AssemblyName>CIS.ControlLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\BindingManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ColorTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ComboTokenEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FilterList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FilterList.Designer.cs">
+      <DependentUpon>FilterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FindComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MyComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\myDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\myTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\myTab.Designer.cs">
+      <DependentUpon>myTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Popup\PopupControlHost.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Popup\PopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\SelectUnit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SuperText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TemperatureChart\Elements\Caution.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\CautionList.cs" />
+    <Compile Include="Controls\TemperatureChart\Data\DCDataSource.cs" />
+    <Compile Include="Controls\TemperatureChart\Data\DCDataSourceField.cs" />
+    <Compile Include="Controls\TemperatureChart\Data\DCDataSourceFieldList.cs" />
+    <Compile Include="Controls\TemperatureChart\Data\DCSingleDataSource.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\DocumentPageSettings.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\DocumentViewMode.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\Element.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\FontInfo.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\HeaderLabel.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\HeaderLabelList.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\JudgeType.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\LabelHost.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\LabelInfo.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\LabelInfoList.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\Scaleplate.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\ScalplateList.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\SimpleReversibleDrawer.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\TemperatureDocument.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\TemperatureDocumentConfig.cs" />
+    <Compile Include="Controls\TemperatureChart\TemperaturePrintDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TemperatureChart\TemperatureViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TemperatureChart\Elements\TickInfo.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\TickInfoList.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\TitleLineCountType.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\TitleLine.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\TitleLineList.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\TitleLineLayoutType.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\TitleLineUpDownType.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\TitleLineValueType.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\Token.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\TokenList.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\ValuePoint.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\ValuePointList.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\ViewDragEventArgs.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\ViewDragType.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\ViewEnterEventArgs.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\ViewMouseEventArgs.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\ViewPart.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\YAxisInfo.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\YAxisInfoList.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\YAxisScaleInfo.cs" />
+    <Compile Include="Controls\TemperatureChart\Elements\YAxisScaleInfoList.cs" />
+    <Compile Include="Converters\XDataBindingConverter.cs" />
+    <Compile Include="Converters\TypeConverterGeneral.cs" />
+    <Compile Include="Controls\Popup\IPopupFilterView.cs" />
+    <Compile Include="Drawing\Arrow.cs" />
+    <Compile Include="Drawing\Direction.cs" />
+    <Compile Include="Drawing\PointSymbolStyle.cs" />
+    <Compile Include="Controls\SpecialCharList\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\SpecialCharList\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\ControlHelper.cs" />
+    <Compile Include="Helper\GraphicsHelper.cs" />
+    <Compile Include="Helper\PopupExtension.cs" />
+    <Compile Include="Helper\PopupStyle\ComboFindPopupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Helper\PopupStyle\ComboFindPopupView.Designer.cs">
+      <DependentUpon>ComboFindPopupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\PopupStyle\GridPopupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Helper\PopupStyle\GridPopupView.Designer.cs">
+      <DependentUpon>GridPopupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\PopupStyle\ComboPopupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Helper\PopupStyle\ComboPopupView.Designer.cs">
+      <DependentUpon>ComboPopupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Win32\NativeMethods.cs" />
+    <Compile Include="Controls\Popup\PopupPosition.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Win32\Enums.cs" />
+    <Compile Include="Win32\Structs.cs" />
+    <Compile Include="Win32\UnsafeNativeMethods.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\Partogram\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\FilterList.resx">
+      <DependentUpon>FilterList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\myTab.resx">
+      <DependentUpon>myTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Popup\PopupForm.resx">
+      <DependentUpon>PopupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SpecialCharList\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helper\PopupStyle\ComboFindPopupView.resx">
+      <DependentUpon>ComboFindPopupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helper\PopupStyle\GridPopupView.resx">
+      <DependentUpon>GridPopupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helper\PopupStyle\ComboPopupView.resx">
+      <DependentUpon>ComboPopupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CIS.Utility\CIS.Utility.csproj">
+      <Project>{679daad6-d534-44d9-9790-e46fac55005a}</Project>
+      <Name>CIS.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miniSelect.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

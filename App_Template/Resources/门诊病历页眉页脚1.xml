@@ -1,0 +1,940 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2015.8.17">
+   <Attributes />
+   <XElements>
+      <Element xsi:type="XTextBody">
+         <Attributes />
+         <Expressions />
+         <ScriptItems />
+         <XElements>
+            <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextHeader">
+         <Attributes />
+         <Expressions />
+         <ScriptItems />
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="4">
+               <Text>皖南医学院第二附属医院</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="0" />
+            <Element xsi:type="XString" StyleIndex="5">
+               <Text>门诊病历</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="11" />
+            <Element xsi:type="XTextTable" NumOfRows="2" NumOfColumns="6">
+               <Attributes />
+               <ID>table1</ID>
+               <Expressions />
+               <ScriptItems />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <ScriptItems />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="12">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <Text>姓名：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="6">
+                                 <Attributes />
+                                 <ID>姓名</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <InnerValue />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="12">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <Text>性别：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="6">
+                                 <Attributes />
+                                 <ID>性别</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <InnerValue />
+                                 <FieldSettings>
+                                    <ListSource>
+                                       <SourceName />
+                                       <Items>
+                                          <Item>
+                                             <TextInList />
+                                             <Text>男</Text>
+                                             <Value>0</Value>
+                                             <Group />
+                                          </Item>
+                                          <Item>
+                                             <TextInList />
+                                             <Text>女</Text>
+                                             <Value>1</Value>
+                                             <Group />
+                                          </Item>
+                                       </Items>
+                                    </ListSource>
+                                    <ListValueFormatString />
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="12">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <Text>年龄：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="6">
+                                 <Attributes />
+                                 <ID>年龄</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <InnerValue />
+                                 <FieldSettings>
+                                    <ListSource>
+                                       <SourceName />
+                                       <Items>
+                                          <Item>
+                                             <TextInList />
+                                             <Text>男</Text>
+                                             <Value>0</Value>
+                                             <Group />
+                                          </Item>
+                                          <Item>
+                                             <TextInList />
+                                             <Text>女</Text>
+                                             <Value>1</Value>
+                                             <Group />
+                                          </Item>
+                                       </Items>
+                                    </ListSource>
+                                    <ListValueFormatString />
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="13">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <Text>就诊号：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="6">
+                                 <Attributes />
+                                 <ID>就诊号</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <InnerValue />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-77</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <ScriptItems />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <Text>病历号：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="6">
+                                 <Attributes />
+                                 <ID>门诊号</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <InnerValue />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <Text>身份：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="6">
+                                 <Attributes />
+                                 <ID>身份</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <InnerValue />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <Text>科室：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="6">
+                                 <Attributes />
+                                 <ID>科室</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <InnerValue />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <Text>日期：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="6">
+                                 <Attributes />
+                                 <ID>日期</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <AutoHideMode>HideWhenEmpty</AutoHideMode>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <InnerValue />
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>-77.95276</SpecifyHeight>
+                  </Element>
+               </XElements>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>397.1875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>116.729187</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>196</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>187.458313</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>297</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>465.374939</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <Attributes />
+         <Expressions />
+         <ScriptItems />
+         <XElements>
+            <Element xsi:type="XTextTable" NumOfRows="3" NumOfColumns="6">
+               <Attributes />
+               <ID>table1</ID>
+               <Expressions />
+               <ScriptItems />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <ScriptItems />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                           <RowSpan>2</RowSpan>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <Text>诊断：西医诊断：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="7">
+                                 <Attributes />
+                                 <ID>西医诊断</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <AutoHideMode>HideWhenEmpty</AutoHideMode>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <ScriptItems />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <Text>      中医诊断：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="9">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="6">
+                                 <Attributes />
+                                 <ID>中医诊断</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <InnerValue />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <ScriptItems />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <Text>处理：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                              <Element xsi:type="XInputField" StyleIndex="6">
+                                 <Attributes />
+                                 <ID>处理</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                           <ColSpan>6</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="2">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>397.1875</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>116.729187</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>196</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>187.458313</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>297</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>465.374939</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag" />
+            <Element xsi:type="XTextTable" NumOfRows="1" NumOfColumns="4">
+               <Attributes />
+               <ID>table2</ID>
+               <Expressions />
+               <ScriptItems />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <ID />
+                     <Expressions />
+                     <ScriptItems />
+                     <EventTemplateName />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="10" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <Text>医生签名：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="8">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="6">
+                                 <Attributes />
+                                 <ID>签名</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="3">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XInputField" StyleIndex="6">
+                                 <Attributes />
+                                 <ID>当前时间</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <Deleteable>false</Deleteable>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <Name>当前时间</Name>
+                                 <InnerValue />
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                     <CanSplitByPageLine>false</CanSplitByPageLine>
+                  </Element>
+               </XElements>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>344.333344</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>247.166687</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>406.1667</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>694.3334</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+         </XElements>
+      </Element>
+   </XElements>
+   <FileName>D:\MyDesktop\临时文件\门诊病历页眉页脚1.xml</FileName>
+   <FileFormat>XML</FileFormat>
+   <RepeatedImages />
+   <Info>
+      <LicenseText>本软件未注册。</LicenseText>
+      <CreationTime>1980-01-01T00:00:00</CreationTime>
+      <LastModifiedTime>2016-11-07T14:52:28.9217461+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2015.8.17</Operator>
+      <NumOfPage>1</NumOfPage>
+   </Info>
+   <BodyText />
+   <Comments />
+   <LocalConfig />
+   <PageSettings>
+      <PageIndexsForHideHeaderFooter />
+      <PrinterName />
+      <PaperSource />
+      <PaperKind>A5</PaperKind>
+      <PaperWidth>583</PaperWidth>
+      <PaperHeight>827</PaperHeight>
+      <LeftMargin>12</LeftMargin>
+      <TopMargin>10</TopMargin>
+      <RightMargin>15</RightMargin>
+      <BottomMargin>17</BottomMargin>
+   </PageSettings>
+   <Parameters>
+      <Parameter Name="当前时间" />
+   </Parameters>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="1">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+         </Style>
+         <Style Index="2">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingRight>15</PaddingRight>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="3">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <BorderBottom>true</BorderBottom>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingRight>15</PaddingRight>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="4">
+            <FontName>黑体</FontName>
+            <FontSize>14.25</FontSize>
+            <Bold>true</Bold>
+         </Style>
+         <Style Index="5">
+            <FontName>宋体</FontName>
+            <FontSize>10.5</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="6">
+            <FontName>宋体</FontName>
+            <FontSize>10</FontSize>
+         </Style>
+         <Style Index="7">
+            <FontName>宋体</FontName>
+            <FontSize>10</FontSize>
+            <LeftIndent>153.5433</LeftIndent>
+         </Style>
+         <Style Index="8">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <BorderBottom>true</BorderBottom>
+            <PaddingRight>15</PaddingRight>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="9">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>5.905512</PaddingTop>
+            <PaddingRight>15</PaddingRight>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="10">
+            <FontName>宋体</FontName>
+            <FontSize>10</FontSize>
+            <LeftIndent>303</LeftIndent>
+         </Style>
+         <Style Index="11">
+            <FontName>宋体</FontName>
+            <FontSize>10</FontSize>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="12">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <BorderTop>true</BorderTop>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingRight>15</PaddingRight>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="13">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <BorderTop>true</BorderTop>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>9.448819</PaddingTop>
+            <PaddingRight>15</PaddingRight>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <UserHistories />
+</XTextDocument>

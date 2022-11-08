@@ -1,0 +1,2324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EditorVersionString="1.2015.8.17">
+   <Attributes />
+   <XElements>
+      <Element xsi:type="XTextBody">
+         <Attributes />
+         <Expressions />
+         <ScriptItems />
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="1">
+               <Text>卡片编号:</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="1">
+               <Attributes />
+               <ID>CardID</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <VisibleExpression />
+               <ValueExpression />
+               <Expressions />
+               <ScriptItems />
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="1" WhiteSpaceLength="1">
+                     <Text> </Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="16">
+                     <Text>                </Text>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="1" WhiteSpaceLength="1">
+                     <Text> </Text>
+                  </Element>
+               </XElements>
+               <BorderElementColor />
+               <RuntimeBackgroundTextColor />
+               <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+               <EventExpressions />
+               <InnerValue>                  </InnerValue>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="1">
+               <Text>                   报卡类别</Text>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="1">
+               <Attributes />
+               <ID>checkbox1</ID>
+               <ScriptItems />
+               <Caption>1、初次报告</Caption>
+               <Width>278.249969</Width>
+               <Height>62</Height>
+               <EventExpressions />
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XTextCheckBox" StyleIndex="1">
+               <Attributes />
+               <ID>checkbox2</ID>
+               <ScriptItems />
+               <Caption>2、订正报告</Caption>
+               <Width>278.249969</Width>
+               <Height>62</Height>
+               <EventExpressions />
+               <VisualStyle>SystemDefault</VisualStyle>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+            <Element xsi:type="XTextTable" NumOfRows="13" NumOfColumns="1">
+               <Attributes />
+               <ID>table1</ID>
+               <Expressions />
+               <ScriptItems />
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <ScriptItems />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="0">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>患者姓名*:</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="2">
+                                 <Attributes />
+                                 <ID>PatientName</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <ValueName />
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                    <ExcludeKeywords />
+                                    <CustomMessage />
+                                 </ValidateStyle>
+                                 <ValueBinding>
+                                    <DataSource>DB_EMR_PATIENTS</DataSource>
+                                    <BindingPath>PA_NAME</BindingPath>
+                                    <Readonly>true</Readonly>
+                                 </ValueBinding>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <MoveFocusHotKey>Enter</MoveFocusHotKey>
+                                 <RuntimeMoveFocusHotKey>Enter</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <UserEditable>false</UserEditable>
+                                 <Name>姓名</Name>
+                                 <DisplayFormat>
+                                    <Style>String</Style>
+                                    <Format>trim</Format>
+                                 </DisplayFormat>
+                                 <InnerValue />
+                                 <ToolTip>姓名</ToolTip>
+                                 <BackgroundText>姓名</BackgroundText>
+                                 <EnableHighlight>Disabled</EnableHighlight>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>      (14岁及14岁以下患儿家长姓名*:</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>ContactsName</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="15">
+                                       <Text>               </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>               </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>)</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>92</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <ScriptItems />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="0">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>身份证号:</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="2">
+                                 <Attributes />
+                                 <ID>IDCard</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <Required>true</Required>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding>
+                                    <DataSource>DB_EMR_PATIENTS</DataSource>
+                                    <BindingPath>PA_IDENTITYCARD</BindingPath>
+                                    <AutoUpdate>true</AutoUpdate>
+                                 </ValueBinding>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <MoveFocusHotKey>Enter</MoveFocusHotKey>
+                                 <RuntimeMoveFocusHotKey>Enter</RuntimeMoveFocusHotKey>
+                                 <SpecifyWidth>590.5512</SpecifyWidth>
+                                 <Alignment>Center</Alignment>
+                                 <EventExpressions />
+                                 <Name>身份证号</Name>
+                                 <DisplayFormat>
+                                    <Style>String</Style>
+                                    <Format>trim</Format>
+                                 </DisplayFormat>
+                                 <InnerValue />
+                                 <ToolTip>身份证号</ToolTip>
+                                 <BackgroundText>身份证号</BackgroundText>
+                                 <EnableHighlight>Disabled</EnableHighlight>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>          性别*:</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Sex</ID>
+                                 <ScriptItems />
+                                 <Caption>男</Caption>
+                                 <Width>109.5</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Sex</ID>
+                                 <ScriptItems />
+                                 <Caption>女</Caption>
+                                 <Width>109.5</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <ScriptItems />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="0">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>出生日期*:</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="2">
+                                 <Attributes />
+                                 <ID>Birthday</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <ValueName />
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                    <ExcludeKeywords />
+                                    <CustomMessage />
+                                 </ValidateStyle>
+                                 <ValueBinding>
+                                    <DataSource>DB_EMR_PATIENTS</DataSource>
+                                    <BindingPath>PA_PRITHTIME</BindingPath>
+                                 </ValueBinding>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <MoveFocusHotKey>Enter</MoveFocusHotKey>
+                                 <RuntimeMoveFocusHotKey>Enter</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <Name>出生日期</Name>
+                                 <DisplayFormat>
+                                    <Style>DateTime</Style>
+                                    <Format>yyyy-MM-dd HH:mm</Format>
+                                 </DisplayFormat>
+                                 <InnerValue />
+                                 <ToolTip>出生日期</ToolTip>
+                                 <BackgroundText>出生日期</BackgroundText>
+                                 <EnableHighlight>Disabled</EnableHighlight>
+                                 <FieldSettings>
+                                    <EditStyle>DateTimeWithoutSecond</EditStyle>
+                                 </FieldSettings>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text> (如出生日期不详,实足年龄:</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>field9</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="4">
+                                       <Text>    </Text>
+                                    </Element>
+                                    <Element xsi:type="XString" StyleIndex="1" WhiteSpaceLength="1">
+                                       <Text> </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text> 年龄单位 : </Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>2df054b837354c72afbb23dd084f8331</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="2">
+                                       <Text>  </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>岁</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>bb13628159ed43deae8c9e746cfd96d4</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="2">
+                                       <Text>  </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>月</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>f8524ee570c146d29d35fe0d8b10fb8f</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="2">
+                                       <Text>  </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>天)</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <ScriptItems />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="0">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>工作单位:</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="2">
+                                 <Attributes />
+                                 <ID>JobAddress</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>DB_EMR_PATIENTS</DataSource>
+                                    <BindingPath>PA_WORK_UNIT</BindingPath>
+                                 </ValueBinding>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <MoveFocusHotKey>Enter</MoveFocusHotKey>
+                                 <RuntimeMoveFocusHotKey>Enter</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <Name>工作单位</Name>
+                                 <DisplayFormat>
+                                    <Style>String</Style>
+                                    <Format>trim</Format>
+                                 </DisplayFormat>
+                                 <InnerValue />
+                                 <ToolTip>工作单位</ToolTip>
+                                 <BackgroundText>工作单位</BackgroundText>
+                                 <EnableHighlight>Disabled</EnableHighlight>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>    联系电话*:</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="4">
+                                 <Attributes />
+                                 <ID>PhoneNumber</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <Required>true</Required>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                 </ValidateStyle>
+                                 <ValueBinding>
+                                    <DataSource>DB_EMR_PATIENTS</DataSource>
+                                    <BindingPath>PA_RPE_PHONE</BindingPath>
+                                 </ValueBinding>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <Name>患者本人电话</Name>
+                                 <InnerValue />
+                                 <ToolTip>患者本人电话</ToolTip>
+                                 <BackgroundText>患者本人电话</BackgroundText>
+                                 <FieldSettings />
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <ScriptItems />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="0">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>病人属于*:</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox5</ID>
+                                 <ScriptItems />
+                                 <Caption>本县区</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox6</ID>
+                                 <ScriptItems />
+                                 <Caption>本市其他县区</Caption>
+                                 <Width>296.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox7</ID>
+                                 <ScriptItems />
+                                 <Caption>本省其他城市</Caption>
+                                 <Width>296.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox8</ID>
+                                 <ScriptItems />
+                                 <Caption>外省</Caption>
+                                 <Width>147</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox10</ID>
+                                 <ScriptItems />
+                                 <Caption>港澳台</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox9</ID>
+                                 <ScriptItems />
+                                 <Caption>外籍</Caption>
+                                 <Width>147</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>91</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <ScriptItems />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="0">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>现住址(详填)*:</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>276e6915e6514acfbc7b2a319919bcdd</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValidateStyle>
+                                    <DateTimeMaxValue>1980-01-01T00:00:00</DateTimeMaxValue>
+                                    <DateTimeMinValue>1980-01-01T00:00:00</DateTimeMinValue>
+                                    <RegExpression>^*@$|-</RegExpression>
+                                    <CustomMessage>地址格式需满足省市区(县)或直辖市、行政区、自治区格式</CustomMessage>
+                                 </ValidateStyle>
+                                 <ValueBinding>
+                                    <DataSource>DB_EMR_PATIENTS</DataSource>
+                                    <BindingPath>PA_LM_ADDRESS</BindingPath>
+                                 </ValueBinding>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements />
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <MoveFocusHotKey>Enter</MoveFocusHotKey>
+                                 <RuntimeMoveFocusHotKey>Enter</RuntimeMoveFocusHotKey>
+                                 <SpecifyWidth>602.3622</SpecifyWidth>
+                                 <EventExpressions />
+                                 <Name>联系人地址</Name>
+                                 <DisplayFormat>
+                                    <Style>String</Style>
+                                    <Format>trim</Format>
+                                 </DisplayFormat>
+                                 <InnerValue />
+                                 <ToolTip>联系人地址</ToolTip>
+                                 <BackgroundText>联系人地址 [双击]</BackgroundText>
+                                 <EnableHighlight>Disabled</EnableHighlight>
+                                 <FieldSettings />
+                                 <CustomValueEditorTypeName>DotNet.WinForm.ElementValueEditorEx.AddressValueEditor</CustomValueEditorTypeName>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>82</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <ScriptItems />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="0">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>患者职业*:</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>幼托儿童、</Caption>
+                                 <Width>259.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>散居儿童、</Caption>
+                                 <Width>259.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>学生(大中小学)、</Caption>
+                                 <Width>371.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>教师、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>保育员及保姆、</Caption>
+                                 <Width>334.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>餐饮食品业、</Caption>
+                                 <Width>296.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>公共场所服务员</Caption>
+                                 <Width>334.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>商业服务、</Caption>
+                                 <Width>259.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>医务人员、</Caption>
+                                 <Width>259.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>工人、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>农民、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>牧民、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>渔(船)民、</Caption>
+                                 <Width>259.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>海员及长途驾驶员、</Caption>
+                                 <Width>409.499939</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>干部职员</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>离退人员、</Caption>
+                                 <Width>259.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>家务及待业、</Caption>
+                                 <Width>296.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>Job</ID>
+                                 <ScriptItems />
+                                 <Caption>其他</Caption>
+                                 <Width>147</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>(请注明:</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>field16</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="8">
+                                       <Text>        </Text>
+                                    </Element>
+                                    <Element xsi:type="XString" StyleIndex="1" WhiteSpaceLength="1">
+                                       <Text> </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>)、</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox29</ID>
+                                 <ScriptItems />
+                                 <Caption>不详</Caption>
+                                 <Width>147</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>病例分类*:(1)</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox30</ID>
+                                 <ScriptItems />
+                                 <Caption>临床诊断病例、</Caption>
+                                 <Width>334.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox31</ID>
+                                 <ScriptItems />
+                                 <Caption>实验室诊断病例、</Caption>
+                                 <Width>371.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox32</ID>
+                                 <ScriptItems />
+                                 <Caption>疑似病例、</Caption>
+                                 <Width>259.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox33</ID>
+                                 <ScriptItems />
+                                 <Caption>病原携带者、</Caption>
+                                 <Width>296.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox34</ID>
+                                 <ScriptItems />
+                                 <Caption>阳性检测、</Caption>
+                                 <Width>259.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>       (2)</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox35</ID>
+                                 <ScriptItems />
+                                 <Caption>急性、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox36</ID>
+                                 <ScriptItems />
+                                 <Caption>慢性</Caption>
+                                 <Width>147</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>(乙型肝炎、丙肝、血吸虫病填写)</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>发病日期*:</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>b5e98e8ea7e14afc9bb29d473f9e9cf2</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="6">
+                                       <Text>      </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text> 年 </Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>field17</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="6">
+                                       <Text>      </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>月</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>a98f83f5ba0448a7b0c7e123647a7cd0</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="6">
+                                       <Text>      </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>日(病原携带者填初检日期或就诊时间)</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>诊断时间*:</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>0a9117e306294b17abe7359da97d4ad9</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="6">
+                                       <Text>      </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>年 </Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>42e3505aa3d04d6d88b1604fc20abbf5</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="6">
+                                       <Text>      </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>月</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>68bd83c664814a40b8e45223222fd850</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="6">
+                                       <Text>      </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>日</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>32f4f2948b5c436788e161e077f61f98</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="6">
+                                       <Text>      </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>时</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>死亡日期:</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>0f731896f968466f90f12a4c24626ccc</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="6">
+                                       <Text>      </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>年 </Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>bef8be5055784a0785732d54e86a4488</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="6">
+                                       <Text>      </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>月</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>f02dd525fa9c4eb5adb9215705f69001</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="6">
+                                       <Text>      </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>日</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <ScriptItems />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="0">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>甲类传染病*(2种):</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A20.900</ID>
+                                 <ScriptItems />
+                                 <Caption>鼠疫、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A00.900</ID>
+                                 <ScriptItems />
+                                 <Caption>霍乱</Caption>
+                                 <Width>147</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>154</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <ScriptItems />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="0">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>乙类传染病*(26种):</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>U04.901</ID>
+                                 <ScriptItems />
+                                 <Caption>传染性非典型肺炎、</Caption>
+                                 <Width>409.499939</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>B24.x01</ID>
+                                 <ScriptItems />
+                                 <Caption>艾滋病、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>病毒性肝炎(</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>B15.900</ID>
+                                 <ScriptItems />
+                                 <Caption>甲型、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>B16.904</ID>
+                                 <ScriptItems />
+                                 <Caption>乙型、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox43</ID>
+                                 <ScriptItems />
+                                 <Caption>丙型、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>B17.201</ID>
+                                 <ScriptItems />
+                                 <Caption>戊肝、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox45</ID>
+                                 <ScriptItems />
+                                 <Caption>未分型</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>)、</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A80.900</ID>
+                                 <ScriptItems />
+                                 <Caption>脊髓灰质炎、</Caption>
+                                 <Width>296.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>J09.x00</ID>
+                                 <ScriptItems />
+                                 <Caption>人感染高致命性禽流感、</Caption>
+                                 <Width>484.499939</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>J09.x02</ID>
+                                 <ScriptItems />
+                                 <Caption>人感染H7N9禽流感、</Caption>
+                                 <Width>409.499939</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>B05.900</ID>
+                                 <ScriptItems />
+                                 <Caption>麻疹、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox50</ID>
+                                 <ScriptItems />
+                                 <Caption>流行性出血热、</Caption>
+                                 <Width>334.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A82.900</ID>
+                                 <ScriptItems />
+                                 <Caption>狂犬病</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>、</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A83.001</ID>
+                                 <ScriptItems />
+                                 <Caption>流行性乙型脑炎、</Caption>
+                                 <Width>371.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A90.x00</ID>
+                                 <ScriptItems />
+                                 <Caption>登革热、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>炭疽(</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A22.100</ID>
+                                 <ScriptItems />
+                                 <Caption>肺炭疽、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A22.000</ID>
+                                 <ScriptItems />
+                                 <Caption>皮肤炭疽、</Caption>
+                                 <Width>259.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox56</ID>
+                                 <ScriptItems />
+                                 <Caption>未分型、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>)、痢疾（</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A03.900</ID>
+                                 <ScriptItems />
+                                 <Caption>细菌性、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A06.002</ID>
+                                 <ScriptItems />
+                                 <Caption>阿米巴性</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>）</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>肺结核（</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox59</ID>
+                                 <ScriptItems />
+                                 <Caption>涂阳、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox60</ID>
+                                 <ScriptItems />
+                                 <Caption>仅培阳、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox61</ID>
+                                 <ScriptItems />
+                                 <Caption>菌阳、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox62</ID>
+                                 <ScriptItems />
+                                 <Caption>未痰检</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>）、伤寒（</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A01.000</ID>
+                                 <ScriptItems />
+                                 <Caption>伤寒、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A01.400</ID>
+                                 <ScriptItems />
+                                 <Caption>副伤寒</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>）、</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A39.003+</ID>
+                                 <ScriptItems />
+                                 <Caption>流行性脑脊髓膜炎、</Caption>
+                                 <Width>409.499939</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A37.900</ID>
+                                 <ScriptItems />
+                                 <Caption>百日咳、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A36.900</ID>
+                                 <ScriptItems />
+                                 <Caption>白喉、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A33.x00</ID>
+                                 <ScriptItems />
+                                 <Caption>新生儿破伤风、</Caption>
+                                 <Width>334.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A38.x00</ID>
+                                 <ScriptItems />
+                                 <Caption>猩红热、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox70</ID>
+                                 <ScriptItems />
+                                 <Caption>布鲁氏菌病、</Caption>
+                                 <Width>296.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox71</ID>
+                                 <ScriptItems />
+                                 <Caption>淋毒、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A27.900</ID>
+                                 <ScriptItems />
+                                 <Caption>钩端螺旋体病、</Caption>
+                                 <Width>334.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>B65.900</ID>
+                                 <ScriptItems />
+                                 <Caption>血吸虫病、</Caption>
+                                 <Width>259.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>梅毒（</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A51.002</ID>
+                                 <ScriptItems />
+                                 <Caption>Ⅰ期、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A51.400</ID>
+                                 <ScriptItems />
+                                 <Caption>Ⅱ期、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A52.105+</ID>
+                                 <ScriptItems />
+                                 <Caption>Ⅲ期、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox75</ID>
+                                 <ScriptItems />
+                                 <Caption>胎传、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox76</ID>
+                                 <ScriptItems />
+                                 <Caption>隐性</Caption>
+                                 <Width>147</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>）、疟疾（</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>B51.900</ID>
+                                 <ScriptItems />
+                                 <Caption>间日疟、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>B50.900</ID>
+                                 <ScriptItems />
+                                 <Caption>恶性疟、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox81</ID>
+                                 <ScriptItems />
+                                 <Caption>未分型</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>）</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>149</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <ScriptItems />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="0">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>丙类传染病*（11种）：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>J11.101</ID>
+                                 <ScriptItems />
+                                 <Caption>流行性感冒、</Caption>
+                                 <Width>296.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>B26.900</ID>
+                                 <ScriptItems />
+                                 <Caption>流行性腮腺炎、</Caption>
+                                 <Width>334.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>B06.900</ID>
+                                 <ScriptItems />
+                                 <Caption>风疹、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>B30.302+</ID>
+                                 <ScriptItems />
+                                 <Caption>急性出血性结膜炎</Caption>
+                                 <Width>371.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>、</Text>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>B08.401</ID>
+                                 <ScriptItems />
+                                 <Caption>手足口病、</Caption>
+                                 <Width>259.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox87</ID>
+                                 <ScriptItems />
+                                 <Caption>麻风病、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox88</ID>
+                                 <ScriptItems />
+                                 <Caption>流行性和地方性斑疹伤寒、</Caption>
+                                 <Width>521.999939</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A95.900</ID>
+                                 <ScriptItems />
+                                 <Caption>黑热病、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox90</ID>
+                                 <ScriptItems />
+                                 <Caption>包虫病、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>B74.900</ID>
+                                 <ScriptItems />
+                                 <Caption>丝虫病、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox92</ID>
+                                 <ScriptItems />
+                                 <Caption>除霍乱、细菌性和阿米巴性痢疾、伤寒和副伤寒以外的感染性腹泻病</Caption>
+                                 <Width>1196.99988</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>149</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <ScriptItems />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="0">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>其他法定管理以及重点监测传染病：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>B01.900</ID>
+                                 <ScriptItems />
+                                 <Caption>水痘、</Caption>
+                                 <Width>184.499985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox94</ID>
+                                 <ScriptItems />
+                                 <Caption>结核性膜炎、</Caption>
+                                 <Width>296.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox95</ID>
+                                 <ScriptItems />
+                                 <Caption>生殖道沙眼衣原体感染、</Caption>
+                                 <Width>484.499939</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A63.002</ID>
+                                 <ScriptItems />
+                                 <Caption>尖锐湿疣、</Caption>
+                                 <Width>259.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A60.001</ID>
+                                 <ScriptItems />
+                                 <Caption>生殖器疱疹、</Caption>
+                                 <Width>296.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox98</ID>
+                                 <ScriptItems />
+                                 <Caption>肝吸虫病、</Caption>
+                                 <Width>259.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A75.300</ID>
+                                 <ScriptItems />
+                                 <Caption>恙虫病、</Caption>
+                                 <Width>221.999985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox100</ID>
+                                 <ScriptItems />
+                                 <Caption>森林脑炎、</Caption>
+                                 <Width>259.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>A28.801</ID>
+                                 <ScriptItems />
+                                 <Caption>人感染猪链球菌、</Caption>
+                                 <Width>371.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox102</ID>
+                                 <ScriptItems />
+                                 <Caption>人粒细胞无形体、</Caption>
+                                 <Width>371.999969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox103</ID>
+                                 <ScriptItems />
+                                 <Caption>AFP、</Caption>
+                                 <Width>165.749985</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox104</ID>
+                                 <ScriptItems />
+                                 <Caption>不明原因肺炎、</Caption>
+                                 <Width>334.499969</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox105</ID>
+                                 <ScriptItems />
+                                 <Caption>发热伴血小板减少综合症、</Caption>
+                                 <Width>521.999939</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XTextCheckBox" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>checkbox106</ID>
+                                 <ScriptItems />
+                                 <Caption>肠出血性大肠杆菌感染性腹泻</Caption>
+                                 <Width>559.499939</Width>
+                                 <Height>62</Height>
+                                 <EventExpressions />
+                                 <VisualStyle>SystemDefault</VisualStyle>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>293</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <ScriptItems />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="0">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>订正病名：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>field25</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="47">
+                                       <Text>                                               </Text>
+                                    </Element>
+                                    <Element xsi:type="XString" StyleIndex="1" WhiteSpaceLength="1">
+                                       <Text> </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>          退卡原因：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="20">
+                                 <Text>                    </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1" WhiteSpaceLength="3">
+                                 <Text>   </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>报告单位：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="47">
+                                 <Text>                                               </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>           联系电话：</Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="20">
+                                 <Text>                    </Text>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1" WhiteSpaceLength="2">
+                                 <Text>  </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>报告医生*：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="2">
+                                 <Attributes />
+                                 <ID>field26</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="46">
+                                       <Text>                                              </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>           填卡日期：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>field27</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="6">
+                                       <Text>      </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text> 年</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>946b8e461312401f830eb797f6b43bb7</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="6">
+                                       <Text>      </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text> 月</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="1">
+                                 <Attributes />
+                                 <ID>12dbec10d2fe408a97db25eeb47d8981</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <VisibleExpression />
+                                 <ValueExpression />
+                                 <Expressions />
+                                 <ScriptItems />
+                                 <XElements>
+                                    <Element xsi:type="XString" StyleIndex="2" WhiteSpaceLength="6">
+                                       <Text>      </Text>
+                                    </Element>
+                                 </XElements>
+                                 <BorderElementColor />
+                                 <RuntimeBackgroundTextColor />
+                                 <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                                 <EventExpressions />
+                                 <InnerValue>
+                      </InnerValue>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text> 日</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>227</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <Attributes />
+                     <Expressions />
+                     <ScriptItems />
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="0">
+                           <Attributes />
+                           <Expressions />
+                           <ScriptItems />
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="1">
+                                 <Text>备注：</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                              <Element xsi:type="XParagraphFlag" StyleIndex="1" />
+                           </XElements>
+                           <RuntimeMoveFocusHotKey>Tab</RuntimeMoveFocusHotKey>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>37.25</SpecifyHeight>
+                  </Element>
+               </XElements>
+               <CompressOwnerLineSpacing>true</CompressOwnerLineSpacing>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <Attributes />
+                     <Width>2097.75</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextHeader">
+         <Attributes />
+         <Expressions />
+         <ScriptItems />
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="3">
+               <Text>中华人民共和国传染病报告卡</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6" />
+            <Element xsi:type="XParagraphFlag" StyleIndex="5" />
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <Attributes />
+         <Expressions />
+         <ScriptItems />
+         <XElements>
+            <Element xsi:type="XParagraphFlag" />
+         </XElements>
+      </Element>
+   </XElements>
+   <FileName>D:\MyDesktop\CIS源代码\源代码\CIS\CIS.Purview\Resources\传染病报卡.xml</FileName>
+   <FileFormat>XML</FileFormat>
+   <RepeatedImages />
+   <Info>
+      <LicenseText>深圳九明珠信息科技有限公司:九明珠EMR编辑器</LicenseText>
+      <CreationTime>1980-01-01T00:00:00</CreationTime>
+      <LastModifiedTime>2017-06-27T09:56:15.1793407+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2015.9.18</Operator>
+      <NumOfPage>1</NumOfPage>
+   </Info>
+   <BodyText>卡片编号:                                     报卡类别□1、初次报告□2、订正报告
+患者姓名*:      (14岁及14岁以下患儿家长姓名*:               ) 
+身份证号:          性别*:□男□女 
+出生日期*: (如出生日期不详,实足年龄:      年龄单位 :   岁  月  天) 
+工作单位:    联系电话*: 
+病人属于*:□本县区□本市其他县区□本省其他城市□外省□港澳台□外籍 
+现住址(详填)*: 
+患者职业*:
+□幼托儿童、□散居儿童、□学生(大中小学)、□教师、□保育员及保姆、□餐饮食品业、□公共场所服务员
+□商业服务、□医务人员、□工人、□农民、□牧民、□渔(船)民、□海员及长途驾驶员、□干部职员
+□离退人员、□家务及待业、□其他(请注明:         )、□不详
+病例分类*:(1)□临床诊断病例、□实验室诊断病例、□疑似病例、□病原携带者、□阳性检测、
+       (2)□急性、□慢性(乙型肝炎、丙肝、血吸虫病填写)
+发病日期*:       年       月      日(病原携带者填初检日期或就诊时间)
+诊断时间*:      年       月      日      时
+死亡日期:      年       月      日 
+甲类传染病*(2种):
+□鼠疫、□霍乱 
+乙类传染病*(26种):
+□传染性非典型肺炎、□艾滋病、病毒性肝炎(□甲型、□乙型、□丙型、□戊肝、□未分型)、□脊髓灰质炎、□人感染高致命性禽流感、□人感染H7N9禽流感、□麻疹、□流行性出血热、□狂犬病、
+□流行性乙型脑炎、□登革热、炭疽(□肺炭疽、□皮肤炭疽、□未分型、)、痢疾（□细菌性、□阿米巴性）
+肺结核（□涂阳、□仅培阳、□菌阳、□未痰检）、伤寒（□伤寒、□副伤寒）、□流行性脑脊髓膜炎、
+□百日咳、□白喉、□新生儿破伤风、□猩红热、□布鲁氏菌病、□淋毒、□钩端螺旋体病、□血吸虫病、
+梅毒（□Ⅰ期、□Ⅱ期、□Ⅲ期、□胎传、□隐性）、疟疾（□间日疟、□恶性疟、□未分型） 
+丙类传染病*（11种）：
+□流行性感冒、□流行性腮腺炎、□风疹、□急性出血性结膜炎、□手足口病、□麻风病、□流行性和地方性斑疹伤寒、□黑热病、□包虫病、□丝虫病、□除霍乱、细菌性和阿米巴性痢疾、伤寒和副伤寒以外的感染性腹泻病 
+其他法定管理以及重点监测传染病：
+□水痘、□结核性膜炎、□生殖道沙眼衣原体感染、□尖锐湿疣、□生殖器疱疹、□肝吸虫病、□恙虫病、
+□森林脑炎、□人感染猪链球菌、□人粒细胞无形体、□AFP、□不明原因肺炎、□发热伴血小板减少综合症、
+□肠出血性大肠杆菌感染性腹泻 
+订正病名：                                                          退卡原因：                       
+报告单位：                                                          联系电话：                      
+报告医生*：                                                         填卡日期：       年       月       日 
+备注：
+ </BodyText>
+   <Comments />
+   <LocalConfig />
+   <PageSettings>
+      <LeftMargin>64</LeftMargin>
+      <TopMargin>21</TopMargin>
+   </PageSettings>
+   <Parameters>
+      <Parameter Name="当前时间" />
+      <Parameter Name="HospitalName" />
+   </Parameters>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <BorderWidth>1</BorderWidth>
+            <BorderLeft>true</BorderLeft>
+            <BorderBottom>true</BorderBottom>
+            <BorderTop>true</BorderTop>
+            <BorderRight>true</BorderRight>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingRight>15</PaddingRight>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="1">
+            <FontName>宋体</FontName>
+            <FontSize>9</FontSize>
+         </Style>
+         <Style Index="2">
+            <FontName>宋体</FontName>
+            <FontSize>9</FontSize>
+            <Underline>true</Underline>
+         </Style>
+         <Style Index="3">
+            <FontName>黑体</FontName>
+            <FontSize>15.75</FontSize>
+            <Bold>true</Bold>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="4">
+            <FontName>宋体</FontName>
+            <FontSize>9</FontSize>
+            <Underline>true</Underline>
+            <Align>Right</Align>
+         </Style>
+         <Style Index="5">
+            <FontName>宋体</FontName>
+            <FontSize>10.5</FontSize>
+            <SpacingAfterParagraph>34.9583321</SpacingAfterParagraph>
+            <SpacingBeforeParagraph>8.958333</SpacingBeforeParagraph>
+         </Style>
+         <Style Index="6">
+            <FontName>宋体</FontName>
+            <FontSize>15.75</FontSize>
+            <Bold>true</Bold>
+            <SpacingAfterParagraph>32.5</SpacingAfterParagraph>
+            <Align>Center</Align>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <UserHistories />
+</XTextDocument>

@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27B3CCFE-B0CB-4512-9BDF-A1E05CC2EEF4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CIS.Model</RootNamespace>
+    <AssemblyName>CIS.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dos.ORM, Version=1.10.6.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dos.ORM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Automatic\IView_HIS_Outpatients_All.cs" />
+    <Compile Include="Automatic\yj_pacs_dr.cs" />
+    <Compile Include="Automatic\IView_Dept.cs" />
+    <Compile Include="Automatic\IView_HIS_DealWithItem.cs" />
+    <Compile Include="Automatic\IView_HIS_DrugInfo.cs" />
+    <Compile Include="Automatic\IView_HIS_DrugProperties.cs" />
+    <Compile Include="Automatic\IView_HIS_DrugUsage.cs" />
+    <Compile Include="Automatic\IView_HIS_ExamineItem.cs" />
+    <Compile Include="Automatic\vZD_TCSM.cs" />
+    <Compile Include="Automatic\IView_HIS_ExamineItem_Detail.cs" />
+    <Compile Include="Automatic\IView_HIS_ICD.cs" />
+    <Compile Include="Automatic\IView_HIS_LISResult.cs" />
+    <Compile Include="Automatic\IView_HIS_Outpatients_Emergency.cs" />
+    <Compile Include="Automatic\IView_HIS_Outpatients.cs" />
+    <Compile Include="Automatic\IView_Inside_DealWithItem.cs" />
+    <Compile Include="Automatic\IView_Inside_DrugDetail.cs" />
+    <Compile Include="Automatic\IView_Inside_ExamineDetail.cs" />
+    <Compile Include="Automatic\IView_Inside_ExamineGroup.cs" />
+    <Compile Include="Automatic\IView_User.cs" />
+    <Compile Include="Automatic\OP_DearWithGroup.cs" />
+    <Compile Include="Automatic\OP_DearWithGroup_Detail.cs" />
+    <Compile Include="Automatic\OP_Dic_DrugPermission.cs" />
+    <Compile Include="Automatic\OP_Dic_ReportDataSource.cs" />
+    <Compile Include="Automatic\OP_Log_InOut.cs" />
+    <Compile Include="Automatic\OP_Report.cs" />
+    <Compile Include="Automatic\OP_ReportValue.cs" />
+    <Compile Include="Automatic\OP_SpecialMaterialReport.cs" />
+    <Compile Include="Automatic\OP_DiagnosisReport.cs" />
+    <Compile Include="Automatic\OP_Dic_CommonICD.cs" />
+    <Compile Include="Automatic\OP_Dic_Interval.cs" />
+    <Compile Include="Automatic\OP_Dic_PrescriptionType.cs" />
+    <Compile Include="Automatic\OP_Dic_Report.cs" />
+    <Compile Include="Automatic\OP_Dic_TemplateNode.cs" />
+    <Compile Include="Automatic\OP_DrugGroup.cs" />
+    <Compile Include="Automatic\OP_DrugGroup_Detail.cs" />
+    <Compile Include="Automatic\OP_ExaminationGroup.cs" />
+    <Compile Include="Automatic\OP_ExaminationGroup_Detail.cs" />
+    <Compile Include="Automatic\OP_InfectionReport.cs" />
+    <Compile Include="Automatic\OP_Job.cs" />
+    <Compile Include="Automatic\OP_Journal.cs" />
+    <Compile Include="Automatic\OP_Journal_History.cs" />
+    <Compile Include="Automatic\OP_MedicalRecords.cs" />
+    <Compile Include="Automatic\OP_MedicalRecords_History.cs" />
+    <Compile Include="Automatic\OP_PatientDiagnosis_History.cs" />
+    <Compile Include="Automatic\OP_PatientDiagnosis.cs" />
+    <Compile Include="Automatic\OP_PatientRecords_Sourse.cs" />
+    <Compile Include="Automatic\OP_Prescription.cs" />
+    <Compile Include="Automatic\OP_Prescription_Chronic.cs" />
+    <Compile Include="Automatic\OP_Prescription_Detail.cs" />
+    <Compile Include="Automatic\OP_ReportSummary.cs" />
+    <Compile Include="Automatic\OP_SubTemplate.cs" />
+    <Compile Include="Automatic\OP_TemplateSample.cs" />
+    <Compile Include="Automatic\Sys_App.cs" />
+    <Compile Include="Automatic\Sys_App_Dept.cs" />
+    <Compile Include="Automatic\Sys_AuthorityCode.cs" />
+    <Compile Include="Automatic\Sys_Dept.cs" />
+    <Compile Include="Automatic\Sys_DeptParameter.cs" />
+    <Compile Include="Automatic\Sys_DeptParameter_Value.cs" />
+    <Compile Include="Automatic\Sys_Dept_Subsidiary.cs" />
+    <Compile Include="Automatic\Sys_Dic.cs" />
+    <Compile Include="Automatic\Sys_Dic_Details.cs" />
+    <Compile Include="Automatic\Sys_Dic_ICD.cs" />
+    <Compile Include="Automatic\Sys_Dic_Surgery.cs" />
+    <Compile Include="Automatic\Sys_Dic_SurgeryCategory.cs" />
+    <Compile Include="Automatic\Sys_Dic_SurgeryIncision.cs" />
+    <Compile Include="Automatic\Sys_Dic_SurgeryLevel.cs" />
+    <Compile Include="Automatic\Sys_LoginLog.cs" />
+    <Compile Include="Automatic\Sys_Menu.cs" />
+    <Compile Include="Automatic\Sys_Message.cs" />
+    <Compile Include="Automatic\Sys_Module.cs" />
+    <Compile Include="Automatic\Sys_OperationLog.cs" />
+    <Compile Include="Automatic\Sys_Parameter.cs" />
+    <Compile Include="Automatic\Sys_Role.cs" />
+    <Compile Include="Automatic\Sys_Role_AuthorityCode.cs" />
+    <Compile Include="Automatic\Sys_Role_Menu.cs" />
+    <Compile Include="Automatic\Sys_User.cs" />
+    <Compile Include="Automatic\Sys_UserParameter.cs" />
+    <Compile Include="Automatic\Sys_UserParameter_Value.cs" />
+    <Compile Include="Automatic\Sys_User_AuthorityCode.cs" />
+    <Compile Include="Automatic\Sys_User_Dept.cs" />
+    <Compile Include="Automatic\Sys_User_Role.cs" />
+    <Compile Include="Automatic\Sys_User_Subsidiary.cs" />
+    <Compile Include="Automatic\TP_DataMeta.cs" />
+    <Compile Include="Automatic\TP_DataSource.cs" />
+    <Compile Include="Automatic\TP_ElementLIB.cs" />
+    <Compile Include="Automatic\TP_KnowlageCategory.cs" />
+    <Compile Include="Automatic\TP_KnowlageNode.cs" />
+    <Compile Include="Automatic\TP_Range.cs" />
+    <Compile Include="Automatic\TP_RangeType.cs" />
+    <Compile Include="Automatic\TP_Structure.cs" />
+    <Compile Include="Automatic\TP_Template.cs" />
+    <Compile Include="Automatic\TP_WordLIB.cs" />
+    <Compile Include="Automatic\TP_WordLIB_User.cs" />
+    <Compile Include="Automatic\OP_UserInterval.cs" />
+    <Compile Include="Enum\DrugLimitPrescriptionTypeEnum.cs" />
+    <Compile Include="Enum\PrescriptionType.cs" />
+    <Compile Include="Extension\OP_Journal_Ext.cs" />
+    <Compile Include="Extension\Clinic.cs" />
+    <Compile Include="Extension\Chronic.cs" />
+    <Compile Include="DosORMExtension.cs" />
+    <Compile Include="Extension\DeptType.cs" />
+    <Compile Include="Extension\IView_DeptExt.cs" />
+    <Compile Include="Extension\LogExt.cs" />
+    <Compile Include="Extension\MenuOpenStyle.cs" />
+    <Compile Include="Extension\ProclamationModel.cs" />
+    <Compile Include="Extension\Sys_DeptExt.cs" />
+    <Compile Include="Extension\Sys_MenuExt.cs" />
+    <Compile Include="Extension\Sys_ModuleExt.cs" />
+    <Compile Include="Extension\IView_UserExt.cs" />
+    <Compile Include="Extension\PersonType.cs" />
+    <Compile Include="Extension\Prescription.cs" />
+    <Compile Include="Extension\HospitalizedReportExt.cs" />
+    <Compile Include="MedicalInsurance\MedicalInsuranceDrugResult.cs" />
+    <Compile Include="MedicalInsurance\MedicalInsuranceReasonResult.cs" />
+    <Compile Include="MedicalInsurance\MedicalInsuranceReasonSend.cs" />
+    <Compile Include="MedicalInsurance\MedicalInsuranceDrugSend.cs" />
+    <Compile Include="Automatic\OP_HospitalizedReport.cs" />
+    <Compile Include="Extension\OP_Prescription_Detail_HistoryPrescription.cs" />
+    <Compile Include="Extension\OP_Dic_Report.cs" />
+    <Compile Include="OP_Dic_DrugPermission_Ext.cs" />
+    <Compile Include="Pay\PayRequest.cs" />
+    <Compile Include="Pay\PayrResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="Extension\RecordDate.cs" />
+    <Compile Include="RationalUse\RationalUse.cs" />
+    <Compile Include="RationalUse\RationalUseTips.cs" />
+    <Compile Include="RationalUse\RationalUseAnalysis.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="Extension\UserPositionSetting.cs" />
+    <Compile Include="Automatic\Sys_Exception_Log.cs" />
+    <Compile Include="Automatic\TP_Favorite.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CIS.Utility\CIS.Utility.csproj">
+      <Project>{679daad6-d534-44d9-9790-e46fac55005a}</Project>
+      <Name>CIS.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

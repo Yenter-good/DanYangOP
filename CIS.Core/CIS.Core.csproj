@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E78AEEA2-962D-4D27-AD53-BE29C3644007}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CIS.Core</RootNamespace>
+    <AssemblyName>CIS.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DCSoft.Writer, Version=1.2015.9.18, Culture=neutral, PublicKeyToken=2e40e961ea876340, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DCSoft.Writer.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Dos.ORM, Version=1.10.6.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dos.ORM.dll</HintPath>
+    </Reference>
+    <Reference Include="DSkin, Version=16.4.1.7, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Editor, Version=2013.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FastReport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="HMSocket, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\HMSocket.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EventBroker\EventArg\PatientEventArgs.cs" />
+    <Compile Include="EventBroker\EventArg\DepartmentCancelEventArgs.cs" />
+    <Compile Include="EventBroker\EventArg\SystemCancelEventArgs.cs" />
+    <Compile Include="EventBroker\EventAttributes.cs" />
+    <Compile Include="EventBroker\EventBroker.cs" />
+    <Compile Include="EventBroker\EventContext.cs" />
+    <Compile Include="EventBroker\EventPublisher.cs" />
+    <Compile Include="EventBroker\EventModels.cs" />
+    <Compile Include="EventBroker\EventPublication.cs" />
+    <Compile Include="EventBroker\EventScope.cs" />
+    <Compile Include="EventBroker\EventSubscription.cs" />
+    <Compile Include="EventBroker\EventTopic.cs" />
+    <Compile Include="Infect.cs" />
+    <Compile Include="Interceptors\DataResult.cs" />
+    <Compile Include="Interceptors\Log4Helper.cs" />
+    <Compile Include="Interceptors\LogMessage.cs" />
+    <Compile Include="Interceptors\ReflectionLayout.cs" />
+    <Compile Include="UIBase\BaseReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBase\BaseReportForm.Designer.cs">
+      <DependentUpon>BaseReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBase\FormCancleUnenabled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IdleManager.cs" />
+    <Compile Include="ShortcutKey.cs" />
+    <Compile Include="IContext.cs" />
+    <Compile Include="MsgBox.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AlertBox.cs" />
+    <Compile Include="ResourceMananger.cs" />
+    <Compile Include="SerialNumber.cs" />
+    <Compile Include="SysContext.cs" />
+    <Compile Include="UIBase\CancelEventArgExt.cs" />
+    <Compile Include="UIBase\DialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBase\DialogBase.Designer.cs">
+      <DependentUpon>DialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBase\DialogBottonType.cs" />
+    <Compile Include="UIBase\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBase\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBase\NavgateDialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIBase\NavgateDialogBase.Designer.cs">
+      <DependentUpon>NavgateDialogBase.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UIBase\BaseReportForm.resx">
+      <DependentUpon>BaseReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBase\DialogBase.resx">
+      <DependentUpon>DialogBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBase\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIBase\NavgateDialogBase.resx">
+      <DependentUpon>NavgateDialogBase.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CIS.ControlLib\CIS.ControlLib.csproj">
+      <Project>{958522ea-20d5-4851-a1cf-571de5901bf5}</Project>
+      <Name>CIS.ControlLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.DCWriterExtensions\CIS.DCWriter.csproj">
+      <Project>{685046b0-ce5b-4e6d-b29c-7a9a24934742}</Project>
+      <Name>CIS.DCWriter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.Model\CIS.Model.csproj">
+      <Project>{27b3ccfe-b0cb-4512-9bdf-a1e05cc2eef4}</Project>
+      <Name>CIS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.Purview\CIS.Purview.csproj">
+      <Project>{6af12c66-25a4-4024-8e19-c19abef87fdb}</Project>
+      <Name>CIS.Purview</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.Utility\CIS.Utility.csproj">
+      <Project>{679daad6-d534-44d9-9790-e46fac55005a}</Project>
+      <Name>CIS.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="log4net.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

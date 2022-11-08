@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="App_OP.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="App_OP_WebReference_Pay" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://127.0.0.1:8090/Pay.asmx</Value>
+    </Setting>
+    <Setting Name="App_OP_MedOrdersAudit_IPrescriptionAuditToHospitalWSI1_1Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.99:8056/phhcwsi/services/medOrdersAudit</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

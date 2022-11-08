@@ -1,0 +1,1402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://wsInterface.ws.phhc.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="IPrescriptionAuditToHospitalWSI1_1Service" targetNamespace="http://wsInterface.ws.phhc.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://wsInterface.ws.phhc.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="CmPrescriptionAudit" type="tns:CmPrescriptionAudit" />
+      <xs:element name="CmPrescriptionAuditResponse" type="tns:CmPrescriptionAuditResponse" />
+      <xs:element name="DischargeDoctorDrugData" type="tns:DischargeDoctorDrugData" />
+      <xs:element name="DischargeDoctorDrugDataResponse" type="tns:DischargeDoctorDrugDataResponse" />
+      <xs:element name="DocAdviceCalHistDrugDdd" type="tns:DocAdviceCalHistDrugDdd" />
+      <xs:element name="DocAdviceCalHistDrugDddResponse" type="tns:DocAdviceCalHistDrugDddResponse" />
+      <xs:element name="HisDrugManualByAuditClient" type="tns:HisDrugManualByAuditClient" />
+      <xs:element name="HisDrugManualByAuditClientResponse" type="tns:HisDrugManualByAuditClientResponse" />
+      <xs:element name="HospitalDocAdvMigration" type="tns:HospitalDocAdvMigration" />
+      <xs:element name="HospitalDocAdvMigrationResponse" type="tns:HospitalDocAdvMigrationResponse" />
+      <xs:element name="HospitalDocAdviceAudit" type="tns:HospitalDocAdviceAudit" />
+      <xs:element name="HospitalDocAdviceAuditResponse" type="tns:HospitalDocAdviceAuditResponse" />
+      <xs:element name="HospitalDocAdviceChangeStatus" type="tns:HospitalDocAdviceChangeStatus" />
+      <xs:element name="HospitalDocAdviceChangeStatusResponse" type="tns:HospitalDocAdviceChangeStatusResponse" />
+      <xs:element name="HospitalDocAdviceRecommend" type="tns:HospitalDocAdviceRecommend" />
+      <xs:element name="HospitalDocAdviceRecommendResponse" type="tns:HospitalDocAdviceRecommendResponse" />
+      <xs:element name="HospitalEtiologicalInfoSync" type="tns:HospitalEtiologicalInfoSync" />
+      <xs:element name="HospitalEtiologicalInfoSyncResponse" type="tns:HospitalEtiologicalInfoSyncResponse" />
+      <xs:element name="PresCalHistDrugDdd" type="tns:PresCalHistDrugDdd" />
+      <xs:element name="PresCalHistDrugDddResponse" type="tns:PresCalHistDrugDddResponse" />
+      <xs:element name="PrescriptionAudit" type="tns:PrescriptionAudit" />
+      <xs:element name="PrescriptionAuditMobile" type="tns:PrescriptionAuditMobile" />
+      <xs:element name="PrescriptionAuditMobileResponse" type="tns:PrescriptionAuditMobileResponse" />
+      <xs:element name="PrescriptionAuditPharInfo" type="tns:PrescriptionAuditPharInfo" />
+      <xs:element name="PrescriptionAuditPharInfoResponse" type="tns:PrescriptionAuditPharInfoResponse" />
+      <xs:element name="PrescriptionAuditResponse" type="tns:PrescriptionAuditResponse" />
+      <xs:element name="PrescriptionDispensingAudit" type="tns:PrescriptionDispensingAudit" />
+      <xs:element name="PrescriptionDispensingAuditResponse" type="tns:PrescriptionDispensingAuditResponse" />
+      <xs:element name="QueryDocAdvice" type="tns:QueryDocAdvice" />
+      <xs:element name="QueryDocAdviceResponse" type="tns:QueryDocAdviceResponse" />
+      <xs:element name="QueryDocAdviceResult" type="tns:QueryDocAdviceResult" />
+      <xs:element name="QueryDocAdviceResultByPatAdvDateNo" type="tns:QueryDocAdviceResultByPatAdvDateNo" />
+      <xs:element name="QueryDocAdviceResultByPatAdvDateNoResponse" type="tns:QueryDocAdviceResultByPatAdvDateNoResponse" />
+      <xs:element name="QueryDocAdviceResultByPatient" type="tns:QueryDocAdviceResultByPatient" />
+      <xs:element name="QueryDocAdviceResultByPatientResponse" type="tns:QueryDocAdviceResultByPatientResponse" />
+      <xs:element name="QueryDocAdviceResultDetailByAdvNo" type="tns:QueryDocAdviceResultDetailByAdvNo" />
+      <xs:element name="QueryDocAdviceResultDetailByAdvNoResponse" type="tns:QueryDocAdviceResultDetailByAdvNoResponse" />
+      <xs:element name="QueryDocAdviceResultResponse" type="tns:QueryDocAdviceResultResponse" />
+      <xs:element name="QueryReviewData" type="tns:QueryReviewData" />
+      <xs:element name="QueryReviewDataNum" type="tns:QueryReviewDataNum" />
+      <xs:element name="QueryReviewDataNumResponse" type="tns:QueryReviewDataNumResponse" />
+      <xs:element name="QueryReviewDataResponse" type="tns:QueryReviewDataResponse" />
+      <xs:element name="RemindDocAdviceResult" type="tns:RemindDocAdviceResult" />
+      <xs:element name="RemindDocAdviceResultResponse" type="tns:RemindDocAdviceResultResponse" />
+      <xs:element name="SelectDrugDeliveryStatus" type="tns:SelectDrugDeliveryStatus" />
+      <xs:element name="SelectDrugDeliveryStatusResponse" type="tns:SelectDrugDeliveryStatusResponse" />
+      <xs:element name="SetEMRData" type="tns:SetEMRData" />
+      <xs:element name="SetEMRDataResponse" type="tns:SetEMRDataResponse" />
+      <xs:element name="SetLISData" type="tns:SetLISData" />
+      <xs:element name="SetLISDataResponse" type="tns:SetLISDataResponse" />
+      <xs:element name="SetPACSData" type="tns:SetPACSData" />
+      <xs:element name="SetPACSDataResponse" type="tns:SetPACSDataResponse" />
+      <xs:element name="SetSurgeryData" type="tns:SetSurgeryData" />
+      <xs:element name="SetSurgeryDataResponse" type="tns:SetSurgeryDataResponse" />
+      <xs:element name="SynRpPatInfo" type="tns:SynRpPatInfo" />
+      <xs:element name="SynRpPatInfoResponse" type="tns:SynRpPatInfoResponse" />
+      <xs:element name="SyncCmPrescriptionData" type="tns:SyncCmPrescriptionData" />
+      <xs:element name="SyncCmPrescriptionDataResponse" type="tns:SyncCmPrescriptionDataResponse" />
+      <xs:element name="SyncDiagnosisDictData" type="tns:SyncDiagnosisDictData" />
+      <xs:element name="SyncDiagnosisDictDataResponse" type="tns:SyncDiagnosisDictDataResponse" />
+      <xs:element name="SyncDocAdviceData" type="tns:SyncDocAdviceData" />
+      <xs:element name="SyncDocAdviceDataResponse" type="tns:SyncDocAdviceDataResponse" />
+      <xs:element name="SyncHospitalDictData" type="tns:SyncHospitalDictData" />
+      <xs:element name="SyncHospitalDictDataResponse" type="tns:SyncHospitalDictDataResponse" />
+      <xs:element name="SyncPatInfoExt" type="tns:SyncPatInfoExt" />
+      <xs:element name="SyncPatInfoExtResponse" type="tns:SyncPatInfoExtResponse" />
+      <xs:element name="SyncPrescriptionData" type="tns:SyncPrescriptionData" />
+      <xs:element name="SyncPrescriptionDataResponse" type="tns:SyncPrescriptionDataResponse" />
+      <xs:element name="SyncPrescriptionDataSingleDrugJson" type="tns:SyncPrescriptionDataSingleDrugJson" />
+      <xs:element name="SyncPrescriptionDataSingleDrugJsonResponse" type="tns:SyncPrescriptionDataSingleDrugJsonResponse" />
+      <xs:element name="SyncZyAuditLisData" type="tns:SyncZyAuditLisData" />
+      <xs:element name="SyncZyAuditLisDataResponse" type="tns:SyncZyAuditLisDataResponse" />
+      <xs:element name="TellCmPrescriptionData" type="tns:TellCmPrescriptionData" />
+      <xs:element name="TellCmPrescriptionDataResponse" type="tns:TellCmPrescriptionDataResponse" />
+      <xs:element name="TellSyncDocadviceData" type="tns:TellSyncDocadviceData" />
+      <xs:element name="TellSyncDocadviceDataResponse" type="tns:TellSyncDocadviceDataResponse" />
+      <xs:element name="TellSyncEmrData" type="tns:TellSyncEmrData" />
+      <xs:element name="TellSyncEmrDataResponse" type="tns:TellSyncEmrDataResponse" />
+      <xs:element name="TellSyncPacsData" type="tns:TellSyncPacsData" />
+      <xs:element name="TellSyncPacsDataResponse" type="tns:TellSyncPacsDataResponse" />
+      <xs:element name="TellSyncPrescriptionData" type="tns:TellSyncPrescriptionData" />
+      <xs:element name="TellSyncPrescriptionDataResponse" type="tns:TellSyncPrescriptionDataResponse" />
+      <xs:element name="TellSyncSurgeryData" type="tns:TellSyncSurgeryData" />
+      <xs:element name="TellSyncSurgeryDataResponse" type="tns:TellSyncSurgeryDataResponse" />
+      <xs:element name="UpdatePrescriptionStatus" type="tns:UpdatePrescriptionStatus" />
+      <xs:element name="UpdatePrescriptionStatusResponse" type="tns:UpdatePrescriptionStatusResponse" />
+      <xs:element name="customizedMessage" type="tns:customizedMessage" />
+      <xs:element name="customizedMessageResponse" type="tns:customizedMessageResponse" />
+      <xs:complexType name="SetSurgeryData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SetSurgeryDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncHospitalDictData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncHospitalDictDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncZyAuditLisData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncZyAuditLisDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HospitalDocAdviceRecommend">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HospitalDocAdviceRecommendResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SetPACSData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SetPACSDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SetEMRData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SetEMRDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HospitalDocAdvMigration">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HospitalDocAdvMigrationResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryReviewDataNum">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryReviewDataNumResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryReviewData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryReviewDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DocAdviceCalHistDrugDdd">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DocAdviceCalHistDrugDddResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PrescriptionAuditPharInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PrescriptionAuditPharInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UpdatePrescriptionStatus">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UpdatePrescriptionStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TellSyncSurgeryData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TellSyncSurgeryDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="customizedMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="customizedMessageResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryDocAdviceResultByPatient">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryDocAdviceResultByPatientResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncPrescriptionDataSingleDrugJson">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncPrescriptionDataSingleDrugJsonResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HospitalEtiologicalInfoSync">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HospitalEtiologicalInfoSyncResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncPrescriptionData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncPrescriptionDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncDocAdviceData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncDocAdviceDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryDocAdviceResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryDocAdviceResultResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SetLISData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SetLISDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SelectDrugDeliveryStatus">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SelectDrugDeliveryStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DischargeDoctorDrugData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DischargeDoctorDrugDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HospitalDocAdviceAudit">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HospitalDocAdviceAuditResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PrescriptionAuditMobile">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PrescriptionAuditMobileResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncDiagnosisDictData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncDiagnosisDictDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HisDrugManualByAuditClient">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HisDrugManualByAuditClientResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PrescriptionDispensingAudit">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PrescriptionDispensingAuditResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncPatInfoExt">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncPatInfoExtResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryDocAdviceResultByPatAdvDateNo">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryDocAdviceResultByPatAdvDateNoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TellSyncDocadviceData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TellSyncDocadviceDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HospitalDocAdviceChangeStatus">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HospitalDocAdviceChangeStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryDocAdvice">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryDocAdviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SynRpPatInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SynRpPatInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PresCalHistDrugDdd">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PresCalHistDrugDddResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RemindDocAdviceResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RemindDocAdviceResultResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PrescriptionAudit">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PrescriptionAuditResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TellSyncPacsData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TellSyncPacsDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TellSyncEmrData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TellSyncEmrDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncCmPrescriptionData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SyncCmPrescriptionDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CmPrescriptionAudit">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CmPrescriptionAuditResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryDocAdviceResultDetailByAdvNo">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" form="qualified" name="arg2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryDocAdviceResultDetailByAdvNoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TellSyncPrescriptionData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TellSyncPrescriptionDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TellCmPrescriptionData">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TellCmPrescriptionDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="SetSurgeryData">
+    <wsdl:part name="parameters" element="tns:SetSurgeryData" />
+  </wsdl:message>
+  <wsdl:message name="SyncZyAuditLisData">
+    <wsdl:part name="parameters" element="tns:SyncZyAuditLisData" />
+  </wsdl:message>
+  <wsdl:message name="HospitalDocAdvMigrationResponse">
+    <wsdl:part name="parameters" element="tns:HospitalDocAdvMigrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetEMRData">
+    <wsdl:part name="parameters" element="tns:SetEMRData" />
+  </wsdl:message>
+  <wsdl:message name="PresCalHistDrugDddResponse">
+    <wsdl:part name="parameters" element="tns:PresCalHistDrugDddResponse" />
+  </wsdl:message>
+  <wsdl:message name="HospitalDocAdvMigration">
+    <wsdl:part name="parameters" element="tns:HospitalDocAdvMigration" />
+  </wsdl:message>
+  <wsdl:message name="QueryReviewData">
+    <wsdl:part name="parameters" element="tns:QueryReviewData" />
+  </wsdl:message>
+  <wsdl:message name="HospitalDocAdviceAuditResponse">
+    <wsdl:part name="parameters" element="tns:HospitalDocAdviceAuditResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrescriptionAuditPharInfo">
+    <wsdl:part name="parameters" element="tns:PrescriptionAuditPharInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePrescriptionStatus">
+    <wsdl:part name="parameters" element="tns:UpdatePrescriptionStatus" />
+  </wsdl:message>
+  <wsdl:message name="TellSyncSurgeryData">
+    <wsdl:part name="parameters" element="tns:TellSyncSurgeryData" />
+  </wsdl:message>
+  <wsdl:message name="customizedMessage">
+    <wsdl:part name="parameters" element="tns:customizedMessage" />
+  </wsdl:message>
+  <wsdl:message name="QueryDocAdviceResultResponse">
+    <wsdl:part name="parameters" element="tns:QueryDocAdviceResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="HisDrugManualByAuditClientResponse">
+    <wsdl:part name="parameters" element="tns:HisDrugManualByAuditClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemindDocAdviceResultResponse">
+    <wsdl:part name="parameters" element="tns:RemindDocAdviceResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryDocAdviceResultByPatient">
+    <wsdl:part name="parameters" element="tns:QueryDocAdviceResultByPatient" />
+  </wsdl:message>
+  <wsdl:message name="SyncPrescriptionDataSingleDrugJson">
+    <wsdl:part name="parameters" element="tns:SyncPrescriptionDataSingleDrugJson" />
+  </wsdl:message>
+  <wsdl:message name="SyncHospitalDictDataResponse">
+    <wsdl:part name="parameters" element="tns:SyncHospitalDictDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CmPrescriptionAuditResponse">
+    <wsdl:part name="parameters" element="tns:CmPrescriptionAuditResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncPrescriptionData">
+    <wsdl:part name="parameters" element="tns:SyncPrescriptionData" />
+  </wsdl:message>
+  <wsdl:message name="SyncDocAdviceData">
+    <wsdl:part name="parameters" element="tns:SyncDocAdviceData" />
+  </wsdl:message>
+  <wsdl:message name="HospitalDocAdviceChangeStatusResponse">
+    <wsdl:part name="parameters" element="tns:HospitalDocAdviceChangeStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryReviewDataResponse">
+    <wsdl:part name="parameters" element="tns:QueryReviewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetEMRDataResponse">
+    <wsdl:part name="parameters" element="tns:SetEMRDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryDocAdviceResult">
+    <wsdl:part name="parameters" element="tns:QueryDocAdviceResult" />
+  </wsdl:message>
+  <wsdl:message name="DischargeDoctorDrugData">
+    <wsdl:part name="parameters" element="tns:DischargeDoctorDrugData" />
+  </wsdl:message>
+  <wsdl:message name="PrescriptionDispensingAuditResponse">
+    <wsdl:part name="parameters" element="tns:PrescriptionDispensingAuditResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrescriptionAuditResponse">
+    <wsdl:part name="parameters" element="tns:PrescriptionAuditResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncDiagnosisDictData">
+    <wsdl:part name="parameters" element="tns:SyncDiagnosisDictData" />
+  </wsdl:message>
+  <wsdl:message name="TellSyncDocadviceDataResponse">
+    <wsdl:part name="parameters" element="tns:TellSyncDocadviceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="TellSyncEmrDataResponse">
+    <wsdl:part name="parameters" element="tns:TellSyncEmrDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrescriptionDispensingAudit">
+    <wsdl:part name="parameters" element="tns:PrescriptionDispensingAudit" />
+  </wsdl:message>
+  <wsdl:message name="SyncPatInfoExtResponse">
+    <wsdl:part name="parameters" element="tns:SyncPatInfoExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynRpPatInfoResponse">
+    <wsdl:part name="parameters" element="tns:SynRpPatInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectDrugDeliveryStatusResponse">
+    <wsdl:part name="parameters" element="tns:SelectDrugDeliveryStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="HospitalEtiologicalInfoSyncResponse">
+    <wsdl:part name="parameters" element="tns:HospitalEtiologicalInfoSyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncPatInfoExt">
+    <wsdl:part name="parameters" element="tns:SyncPatInfoExt" />
+  </wsdl:message>
+  <wsdl:message name="SetPACSDataResponse">
+    <wsdl:part name="parameters" element="tns:SetPACSDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryDocAdviceResultByPatAdvDateNoResponse">
+    <wsdl:part name="parameters" element="tns:QueryDocAdviceResultByPatAdvDateNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="HospitalDocAdviceChangeStatus">
+    <wsdl:part name="parameters" element="tns:HospitalDocAdviceChangeStatus" />
+  </wsdl:message>
+  <wsdl:message name="QueryDocAdvice">
+    <wsdl:part name="parameters" element="tns:QueryDocAdvice" />
+  </wsdl:message>
+  <wsdl:message name="SynRpPatInfo">
+    <wsdl:part name="parameters" element="tns:SynRpPatInfo" />
+  </wsdl:message>
+  <wsdl:message name="TellSyncPacsDataResponse">
+    <wsdl:part name="parameters" element="tns:TellSyncPacsDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncZyAuditLisDataResponse">
+    <wsdl:part name="parameters" element="tns:SyncZyAuditLisDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryReviewDataNumResponse">
+    <wsdl:part name="parameters" element="tns:QueryReviewDataNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocAdviceCalHistDrugDddResponse">
+    <wsdl:part name="parameters" element="tns:DocAdviceCalHistDrugDddResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryDocAdviceResultDetailByAdvNoResponse">
+    <wsdl:part name="parameters" element="tns:QueryDocAdviceResultDetailByAdvNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CmPrescriptionAudit">
+    <wsdl:part name="parameters" element="tns:CmPrescriptionAudit" />
+  </wsdl:message>
+  <wsdl:message name="QueryDocAdviceResultDetailByAdvNo">
+    <wsdl:part name="parameters" element="tns:QueryDocAdviceResultDetailByAdvNo" />
+  </wsdl:message>
+  <wsdl:message name="TellSyncPrescriptionData">
+    <wsdl:part name="parameters" element="tns:TellSyncPrescriptionData" />
+  </wsdl:message>
+  <wsdl:message name="QueryDocAdviceResponse">
+    <wsdl:part name="parameters" element="tns:QueryDocAdviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="TellCmPrescriptionData">
+    <wsdl:part name="parameters" element="tns:TellCmPrescriptionData" />
+  </wsdl:message>
+  <wsdl:message name="SyncHospitalDictData">
+    <wsdl:part name="parameters" element="tns:SyncHospitalDictData" />
+  </wsdl:message>
+  <wsdl:message name="HospitalDocAdviceRecommend">
+    <wsdl:part name="parameters" element="tns:HospitalDocAdviceRecommend" />
+  </wsdl:message>
+  <wsdl:message name="SetPACSData">
+    <wsdl:part name="parameters" element="tns:SetPACSData" />
+  </wsdl:message>
+  <wsdl:message name="TellCmPrescriptionDataResponse">
+    <wsdl:part name="parameters" element="tns:TellCmPrescriptionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSurgeryDataResponse">
+    <wsdl:part name="parameters" element="tns:SetSurgeryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncDocAdviceDataResponse">
+    <wsdl:part name="parameters" element="tns:SyncDocAdviceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryReviewDataNum">
+    <wsdl:part name="parameters" element="tns:QueryReviewDataNum" />
+  </wsdl:message>
+  <wsdl:message name="SyncPrescriptionDataResponse">
+    <wsdl:part name="parameters" element="tns:SyncPrescriptionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncPrescriptionDataSingleDrugJsonResponse">
+    <wsdl:part name="parameters" element="tns:SyncPrescriptionDataSingleDrugJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncCmPrescriptionDataResponse">
+    <wsdl:part name="parameters" element="tns:SyncCmPrescriptionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocAdviceCalHistDrugDdd">
+    <wsdl:part name="parameters" element="tns:DocAdviceCalHistDrugDdd" />
+  </wsdl:message>
+  <wsdl:message name="DischargeDoctorDrugDataResponse">
+    <wsdl:part name="parameters" element="tns:DischargeDoctorDrugDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="TellSyncPrescriptionDataResponse">
+    <wsdl:part name="parameters" element="tns:TellSyncPrescriptionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="HospitalEtiologicalInfoSync">
+    <wsdl:part name="parameters" element="tns:HospitalEtiologicalInfoSync" />
+  </wsdl:message>
+  <wsdl:message name="SyncDiagnosisDictDataResponse">
+    <wsdl:part name="parameters" element="tns:SyncDiagnosisDictDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetLISData">
+    <wsdl:part name="parameters" element="tns:SetLISData" />
+  </wsdl:message>
+  <wsdl:message name="SelectDrugDeliveryStatus">
+    <wsdl:part name="parameters" element="tns:SelectDrugDeliveryStatus" />
+  </wsdl:message>
+  <wsdl:message name="PrescriptionAuditPharInfoResponse">
+    <wsdl:part name="parameters" element="tns:PrescriptionAuditPharInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="HospitalDocAdviceAudit">
+    <wsdl:part name="parameters" element="tns:HospitalDocAdviceAudit" />
+  </wsdl:message>
+  <wsdl:message name="PrescriptionAuditMobile">
+    <wsdl:part name="parameters" element="tns:PrescriptionAuditMobile" />
+  </wsdl:message>
+  <wsdl:message name="HospitalDocAdviceRecommendResponse">
+    <wsdl:part name="parameters" element="tns:HospitalDocAdviceRecommendResponse" />
+  </wsdl:message>
+  <wsdl:message name="HisDrugManualByAuditClient">
+    <wsdl:part name="parameters" element="tns:HisDrugManualByAuditClient" />
+  </wsdl:message>
+  <wsdl:message name="customizedMessageResponse">
+    <wsdl:part name="parameters" element="tns:customizedMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetLISDataResponse">
+    <wsdl:part name="parameters" element="tns:SetLISDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryDocAdviceResultByPatAdvDateNo">
+    <wsdl:part name="parameters" element="tns:QueryDocAdviceResultByPatAdvDateNo" />
+  </wsdl:message>
+  <wsdl:message name="TellSyncDocadviceData">
+    <wsdl:part name="parameters" element="tns:TellSyncDocadviceData" />
+  </wsdl:message>
+  <wsdl:message name="PresCalHistDrugDdd">
+    <wsdl:part name="parameters" element="tns:PresCalHistDrugDdd" />
+  </wsdl:message>
+  <wsdl:message name="RemindDocAdviceResult">
+    <wsdl:part name="parameters" element="tns:RemindDocAdviceResult" />
+  </wsdl:message>
+  <wsdl:message name="PrescriptionAudit">
+    <wsdl:part name="parameters" element="tns:PrescriptionAudit" />
+  </wsdl:message>
+  <wsdl:message name="PrescriptionAuditMobileResponse">
+    <wsdl:part name="parameters" element="tns:PrescriptionAuditMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="TellSyncPacsData">
+    <wsdl:part name="parameters" element="tns:TellSyncPacsData" />
+  </wsdl:message>
+  <wsdl:message name="TellSyncSurgeryDataResponse">
+    <wsdl:part name="parameters" element="tns:TellSyncSurgeryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="TellSyncEmrData">
+    <wsdl:part name="parameters" element="tns:TellSyncEmrData" />
+  </wsdl:message>
+  <wsdl:message name="SyncCmPrescriptionData">
+    <wsdl:part name="parameters" element="tns:SyncCmPrescriptionData" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePrescriptionStatusResponse">
+    <wsdl:part name="parameters" element="tns:UpdatePrescriptionStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryDocAdviceResultByPatientResponse">
+    <wsdl:part name="parameters" element="tns:QueryDocAdviceResultByPatientResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPrescriptionAuditToHospitalWSI1_1">
+    <wsdl:operation name="SetSurgeryData">
+      <wsdl:input name="SetSurgeryData" message="tns:SetSurgeryData" />
+      <wsdl:output name="SetSurgeryDataResponse" message="tns:SetSurgeryDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncHospitalDictData">
+      <wsdl:input name="SyncHospitalDictData" message="tns:SyncHospitalDictData" />
+      <wsdl:output name="SyncHospitalDictDataResponse" message="tns:SyncHospitalDictDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncZyAuditLisData">
+      <wsdl:input name="SyncZyAuditLisData" message="tns:SyncZyAuditLisData" />
+      <wsdl:output name="SyncZyAuditLisDataResponse" message="tns:SyncZyAuditLisDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="HospitalDocAdviceRecommend">
+      <wsdl:input name="HospitalDocAdviceRecommend" message="tns:HospitalDocAdviceRecommend" />
+      <wsdl:output name="HospitalDocAdviceRecommendResponse" message="tns:HospitalDocAdviceRecommendResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPACSData">
+      <wsdl:input name="SetPACSData" message="tns:SetPACSData" />
+      <wsdl:output name="SetPACSDataResponse" message="tns:SetPACSDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEMRData">
+      <wsdl:input name="SetEMRData" message="tns:SetEMRData" />
+      <wsdl:output name="SetEMRDataResponse" message="tns:SetEMRDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="HospitalDocAdvMigration">
+      <wsdl:input name="HospitalDocAdvMigration" message="tns:HospitalDocAdvMigration" />
+      <wsdl:output name="HospitalDocAdvMigrationResponse" message="tns:HospitalDocAdvMigrationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryReviewDataNum">
+      <wsdl:input name="QueryReviewDataNum" message="tns:QueryReviewDataNum" />
+      <wsdl:output name="QueryReviewDataNumResponse" message="tns:QueryReviewDataNumResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryReviewData">
+      <wsdl:input name="QueryReviewData" message="tns:QueryReviewData" />
+      <wsdl:output name="QueryReviewDataResponse" message="tns:QueryReviewDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DocAdviceCalHistDrugDdd">
+      <wsdl:input name="DocAdviceCalHistDrugDdd" message="tns:DocAdviceCalHistDrugDdd" />
+      <wsdl:output name="DocAdviceCalHistDrugDddResponse" message="tns:DocAdviceCalHistDrugDddResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PrescriptionAuditPharInfo">
+      <wsdl:input name="PrescriptionAuditPharInfo" message="tns:PrescriptionAuditPharInfo" />
+      <wsdl:output name="PrescriptionAuditPharInfoResponse" message="tns:PrescriptionAuditPharInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrescriptionStatus">
+      <wsdl:input name="UpdatePrescriptionStatus" message="tns:UpdatePrescriptionStatus" />
+      <wsdl:output name="UpdatePrescriptionStatusResponse" message="tns:UpdatePrescriptionStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="TellSyncSurgeryData">
+      <wsdl:input name="TellSyncSurgeryData" message="tns:TellSyncSurgeryData" />
+      <wsdl:output name="TellSyncSurgeryDataResponse" message="tns:TellSyncSurgeryDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="customizedMessage">
+      <wsdl:input name="customizedMessage" message="tns:customizedMessage" />
+      <wsdl:output name="customizedMessageResponse" message="tns:customizedMessageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryDocAdviceResultByPatient">
+      <wsdl:input name="QueryDocAdviceResultByPatient" message="tns:QueryDocAdviceResultByPatient" />
+      <wsdl:output name="QueryDocAdviceResultByPatientResponse" message="tns:QueryDocAdviceResultByPatientResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncPrescriptionDataSingleDrugJson">
+      <wsdl:input name="SyncPrescriptionDataSingleDrugJson" message="tns:SyncPrescriptionDataSingleDrugJson" />
+      <wsdl:output name="SyncPrescriptionDataSingleDrugJsonResponse" message="tns:SyncPrescriptionDataSingleDrugJsonResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="HospitalEtiologicalInfoSync">
+      <wsdl:input name="HospitalEtiologicalInfoSync" message="tns:HospitalEtiologicalInfoSync" />
+      <wsdl:output name="HospitalEtiologicalInfoSyncResponse" message="tns:HospitalEtiologicalInfoSyncResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncPrescriptionData">
+      <wsdl:input name="SyncPrescriptionData" message="tns:SyncPrescriptionData" />
+      <wsdl:output name="SyncPrescriptionDataResponse" message="tns:SyncPrescriptionDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncDocAdviceData">
+      <wsdl:input name="SyncDocAdviceData" message="tns:SyncDocAdviceData" />
+      <wsdl:output name="SyncDocAdviceDataResponse" message="tns:SyncDocAdviceDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryDocAdviceResult">
+      <wsdl:input name="QueryDocAdviceResult" message="tns:QueryDocAdviceResult" />
+      <wsdl:output name="QueryDocAdviceResultResponse" message="tns:QueryDocAdviceResultResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SetLISData">
+      <wsdl:input name="SetLISData" message="tns:SetLISData" />
+      <wsdl:output name="SetLISDataResponse" message="tns:SetLISDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDrugDeliveryStatus">
+      <wsdl:input name="SelectDrugDeliveryStatus" message="tns:SelectDrugDeliveryStatus" />
+      <wsdl:output name="SelectDrugDeliveryStatusResponse" message="tns:SelectDrugDeliveryStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DischargeDoctorDrugData">
+      <wsdl:input name="DischargeDoctorDrugData" message="tns:DischargeDoctorDrugData" />
+      <wsdl:output name="DischargeDoctorDrugDataResponse" message="tns:DischargeDoctorDrugDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="HospitalDocAdviceAudit">
+      <wsdl:input name="HospitalDocAdviceAudit" message="tns:HospitalDocAdviceAudit" />
+      <wsdl:output name="HospitalDocAdviceAuditResponse" message="tns:HospitalDocAdviceAuditResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PrescriptionAuditMobile">
+      <wsdl:input name="PrescriptionAuditMobile" message="tns:PrescriptionAuditMobile" />
+      <wsdl:output name="PrescriptionAuditMobileResponse" message="tns:PrescriptionAuditMobileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncDiagnosisDictData">
+      <wsdl:input name="SyncDiagnosisDictData" message="tns:SyncDiagnosisDictData" />
+      <wsdl:output name="SyncDiagnosisDictDataResponse" message="tns:SyncDiagnosisDictDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="HisDrugManualByAuditClient">
+      <wsdl:input name="HisDrugManualByAuditClient" message="tns:HisDrugManualByAuditClient" />
+      <wsdl:output name="HisDrugManualByAuditClientResponse" message="tns:HisDrugManualByAuditClientResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PrescriptionDispensingAudit">
+      <wsdl:input name="PrescriptionDispensingAudit" message="tns:PrescriptionDispensingAudit" />
+      <wsdl:output name="PrescriptionDispensingAuditResponse" message="tns:PrescriptionDispensingAuditResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncPatInfoExt">
+      <wsdl:input name="SyncPatInfoExt" message="tns:SyncPatInfoExt" />
+      <wsdl:output name="SyncPatInfoExtResponse" message="tns:SyncPatInfoExtResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryDocAdviceResultByPatAdvDateNo">
+      <wsdl:input name="QueryDocAdviceResultByPatAdvDateNo" message="tns:QueryDocAdviceResultByPatAdvDateNo" />
+      <wsdl:output name="QueryDocAdviceResultByPatAdvDateNoResponse" message="tns:QueryDocAdviceResultByPatAdvDateNoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="TellSyncDocadviceData">
+      <wsdl:input name="TellSyncDocadviceData" message="tns:TellSyncDocadviceData" />
+      <wsdl:output name="TellSyncDocadviceDataResponse" message="tns:TellSyncDocadviceDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="HospitalDocAdviceChangeStatus">
+      <wsdl:input name="HospitalDocAdviceChangeStatus" message="tns:HospitalDocAdviceChangeStatus" />
+      <wsdl:output name="HospitalDocAdviceChangeStatusResponse" message="tns:HospitalDocAdviceChangeStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryDocAdvice">
+      <wsdl:input name="QueryDocAdvice" message="tns:QueryDocAdvice" />
+      <wsdl:output name="QueryDocAdviceResponse" message="tns:QueryDocAdviceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SynRpPatInfo">
+      <wsdl:input name="SynRpPatInfo" message="tns:SynRpPatInfo" />
+      <wsdl:output name="SynRpPatInfoResponse" message="tns:SynRpPatInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PresCalHistDrugDdd">
+      <wsdl:input name="PresCalHistDrugDdd" message="tns:PresCalHistDrugDdd" />
+      <wsdl:output name="PresCalHistDrugDddResponse" message="tns:PresCalHistDrugDddResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RemindDocAdviceResult">
+      <wsdl:input name="RemindDocAdviceResult" message="tns:RemindDocAdviceResult" />
+      <wsdl:output name="RemindDocAdviceResultResponse" message="tns:RemindDocAdviceResultResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PrescriptionAudit">
+      <wsdl:input name="PrescriptionAudit" message="tns:PrescriptionAudit" />
+      <wsdl:output name="PrescriptionAuditResponse" message="tns:PrescriptionAuditResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="TellSyncPacsData">
+      <wsdl:input name="TellSyncPacsData" message="tns:TellSyncPacsData" />
+      <wsdl:output name="TellSyncPacsDataResponse" message="tns:TellSyncPacsDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="TellSyncEmrData">
+      <wsdl:input name="TellSyncEmrData" message="tns:TellSyncEmrData" />
+      <wsdl:output name="TellSyncEmrDataResponse" message="tns:TellSyncEmrDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncCmPrescriptionData">
+      <wsdl:input name="SyncCmPrescriptionData" message="tns:SyncCmPrescriptionData" />
+      <wsdl:output name="SyncCmPrescriptionDataResponse" message="tns:SyncCmPrescriptionDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CmPrescriptionAudit">
+      <wsdl:input name="CmPrescriptionAudit" message="tns:CmPrescriptionAudit" />
+      <wsdl:output name="CmPrescriptionAuditResponse" message="tns:CmPrescriptionAuditResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryDocAdviceResultDetailByAdvNo">
+      <wsdl:input name="QueryDocAdviceResultDetailByAdvNo" message="tns:QueryDocAdviceResultDetailByAdvNo" />
+      <wsdl:output name="QueryDocAdviceResultDetailByAdvNoResponse" message="tns:QueryDocAdviceResultDetailByAdvNoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="TellSyncPrescriptionData">
+      <wsdl:input name="TellSyncPrescriptionData" message="tns:TellSyncPrescriptionData" />
+      <wsdl:output name="TellSyncPrescriptionDataResponse" message="tns:TellSyncPrescriptionDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="TellCmPrescriptionData">
+      <wsdl:input name="TellCmPrescriptionData" message="tns:TellCmPrescriptionData" />
+      <wsdl:output name="TellCmPrescriptionDataResponse" message="tns:TellCmPrescriptionDataResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IPrescriptionAuditToHospitalWSI1_1ServiceSoapBinding" type="tns:IPrescriptionAuditToHospitalWSI1_1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetSurgeryData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/SetSurgeryData" style="document" />
+      <wsdl:input name="SetSurgeryData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SetSurgeryDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncZyAuditLisData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/SyncZyAuditLisData" style="document" />
+      <wsdl:input name="SyncZyAuditLisData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SyncZyAuditLisDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncHospitalDictData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/SyncHospitalDictData" style="document" />
+      <wsdl:input name="SyncHospitalDictData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SyncHospitalDictDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HospitalDocAdviceRecommend">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/HospitalDocAdviceRecommend" style="document" />
+      <wsdl:input name="HospitalDocAdviceRecommend">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="HospitalDocAdviceRecommendResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPACSData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/SetPACSData" style="document" />
+      <wsdl:input name="SetPACSData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SetPACSDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEMRData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/SetEMRData" style="document" />
+      <wsdl:input name="SetEMRData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SetEMRDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HospitalDocAdvMigration">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/HospitalDocAdvMigration" style="document" />
+      <wsdl:input name="HospitalDocAdvMigration">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="HospitalDocAdvMigrationResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryReviewDataNum">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/QueryReviewDataNum" style="document" />
+      <wsdl:input name="QueryReviewDataNum">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryReviewDataNumResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryReviewData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/QueryReviewData" style="document" />
+      <wsdl:input name="QueryReviewData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryReviewDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocAdviceCalHistDrugDdd">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/DocAdviceCalHistDrugDdd" style="document" />
+      <wsdl:input name="DocAdviceCalHistDrugDdd">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DocAdviceCalHistDrugDddResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrescriptionAuditPharInfo">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/PrescriptionAuditPharInfo" style="document" />
+      <wsdl:input name="PrescriptionAuditPharInfo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrescriptionAuditPharInfoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrescriptionStatus">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/UpdatePrescriptionStatus" style="document" />
+      <wsdl:input name="UpdatePrescriptionStatus">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdatePrescriptionStatusResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TellSyncSurgeryData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/TellSyncSurgeryData" style="document" />
+      <wsdl:input name="TellSyncSurgeryData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="TellSyncSurgeryDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="customizedMessage">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/customizedMessage" style="document" />
+      <wsdl:input name="customizedMessage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="customizedMessageResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDocAdviceResultByPatient">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/QueryDocAdviceResultByPatient" style="document" />
+      <wsdl:input name="QueryDocAdviceResultByPatient">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryDocAdviceResultByPatientResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncPrescriptionDataSingleDrugJson">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/SyncPrescriptionDataSingleDrugJson" style="document" />
+      <wsdl:input name="SyncPrescriptionDataSingleDrugJson">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SyncPrescriptionDataSingleDrugJsonResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HospitalEtiologicalInfoSync">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/HospitalEtiologicalInfoSync" style="document" />
+      <wsdl:input name="HospitalEtiologicalInfoSync">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="HospitalEtiologicalInfoSyncResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncPrescriptionData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/SyncPrescriptionData" style="document" />
+      <wsdl:input name="SyncPrescriptionData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SyncPrescriptionDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncDocAdviceData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/SyncDocAdviceData" style="document" />
+      <wsdl:input name="SyncDocAdviceData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SyncDocAdviceDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDocAdviceResult">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/QueryDocAdviceResult" style="document" />
+      <wsdl:input name="QueryDocAdviceResult">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryDocAdviceResultResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLISData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/SetLISData" style="document" />
+      <wsdl:input name="SetLISData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SetLISDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDrugDeliveryStatus">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/SelectDrugDeliveryStatus" style="document" />
+      <wsdl:input name="SelectDrugDeliveryStatus">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SelectDrugDeliveryStatusResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DischargeDoctorDrugData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/DischargeDoctorDrugData" style="document" />
+      <wsdl:input name="DischargeDoctorDrugData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DischargeDoctorDrugDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HospitalDocAdviceAudit">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/HospitalDocAdviceAudit" style="document" />
+      <wsdl:input name="HospitalDocAdviceAudit">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="HospitalDocAdviceAuditResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrescriptionAuditMobile">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/PrescriptionAuditMobile" style="document" />
+      <wsdl:input name="PrescriptionAuditMobile">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrescriptionAuditMobileResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncDiagnosisDictData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/SyncDiagnosisDictData" style="document" />
+      <wsdl:input name="SyncDiagnosisDictData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SyncDiagnosisDictDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HisDrugManualByAuditClient">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/HisDrugManualByAuditClient" style="document" />
+      <wsdl:input name="HisDrugManualByAuditClient">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="HisDrugManualByAuditClientResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrescriptionDispensingAudit">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/PrescriptionDispensingAudit" style="document" />
+      <wsdl:input name="PrescriptionDispensingAudit">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrescriptionDispensingAuditResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncPatInfoExt">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/SyncPatInfoExt" style="document" />
+      <wsdl:input name="SyncPatInfoExt">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SyncPatInfoExtResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDocAdviceResultByPatAdvDateNo">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/QueryDocAdviceResultByAdvNo" style="document" />
+      <wsdl:input name="QueryDocAdviceResultByPatAdvDateNo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryDocAdviceResultByPatAdvDateNoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TellSyncDocadviceData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/TellSyncDocadviceData" style="document" />
+      <wsdl:input name="TellSyncDocadviceData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="TellSyncDocadviceDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HospitalDocAdviceChangeStatus">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/HospitalDocAdviceChangeStatus" style="document" />
+      <wsdl:input name="HospitalDocAdviceChangeStatus">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="HospitalDocAdviceChangeStatusResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDocAdvice">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/QueryDocAdvice" style="document" />
+      <wsdl:input name="QueryDocAdvice">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryDocAdviceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SynRpPatInfo">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/SynRpPatInfo" style="document" />
+      <wsdl:input name="SynRpPatInfo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SynRpPatInfoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PresCalHistDrugDdd">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/PresCalHistDrugDdd" style="document" />
+      <wsdl:input name="PresCalHistDrugDdd">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PresCalHistDrugDddResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemindDocAdviceResult">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/RemindDocAdviceResult" style="document" />
+      <wsdl:input name="RemindDocAdviceResult">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RemindDocAdviceResultResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrescriptionAudit">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/PrescriptionAudit" style="document" />
+      <wsdl:input name="PrescriptionAudit">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrescriptionAuditResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TellSyncPacsData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/TellSyncPacsData" style="document" />
+      <wsdl:input name="TellSyncPacsData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="TellSyncPacsDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TellSyncEmrData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/TellSyncEmrData" style="document" />
+      <wsdl:input name="TellSyncEmrData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="TellSyncEmrDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncCmPrescriptionData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/SyncCmPrescriptionData" style="document" />
+      <wsdl:input name="SyncCmPrescriptionData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SyncCmPrescriptionDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CmPrescriptionAudit">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/CmPrescriptionAudit" style="document" />
+      <wsdl:input name="CmPrescriptionAudit">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CmPrescriptionAuditResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDocAdviceResultDetailByAdvNo">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/QueryDocAdviceResultByAdvNo" style="document" />
+      <wsdl:input name="QueryDocAdviceResultDetailByAdvNo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="QueryDocAdviceResultDetailByAdvNoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TellSyncPrescriptionData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/TellSyncPrescriptionData" style="document" />
+      <wsdl:input name="TellSyncPrescriptionData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="TellSyncPrescriptionDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TellCmPrescriptionData">
+      <soap:operation soapAction="http://wsInterface.ws.phhc.com/TellCmPrescriptionData" style="document" />
+      <wsdl:input name="TellCmPrescriptionData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="TellCmPrescriptionDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IPrescriptionAuditToHospitalWSI1_1Service">
+    <wsdl:port name="IPrescriptionAuditToHospitalWSI1_1Port" binding="tns:IPrescriptionAuditToHospitalWSI1_1ServiceSoapBinding">
+      <soap:address location="http://192.168.0.99:8056/phhcwsi/services/medOrdersAudit" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

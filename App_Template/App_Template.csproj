@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A479250A-C473-447F-8A9D-D52B31F4918C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App_Template</RootNamespace>
+    <AssemblyName>App_Template</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DCSoft.Writer, Version=1.2015.9.18, Culture=neutral, PublicKeyToken=2e40e961ea876340, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DCSoft.Writer.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Dos.ORM, Version=1.10.6.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dos.ORM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ChildTemplateTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ChildTemplateTree.Designer.cs">
+      <DependentUpon>ChildTemplateTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ElementDesignControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ElementDesignControl.Designer.cs">
+      <DependentUpon>ElementDesignControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ElementSourceTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ElementSourceTree.Designer.cs">
+      <DependentUpon>ElementSourceTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\TemplateSample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\TemplateSample.Designer.cs">
+      <DependentUpon>TemplateSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\WordLibTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\WordLibTree.Designer.cs">
+      <DependentUpon>WordLibTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSource\FormDataSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSource\FormDataSource.Designer.cs">
+      <DependentUpon>FormDataSource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElementLIB\FormElementLIB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElementLIB\FormElementLIB.Designer.cs">
+      <DependentUpon>FormElementLIB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ElementTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ElementTree.Designer.cs">
+      <DependentUpon>ElementTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Individuation\FormFavorite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Individuation\FormFavorite.Designer.cs">
+      <DependentUpon>FormFavorite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\FormChildTemplateSaveAs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\FormChildTemplateSaveAs.Designer.cs">
+      <DependentUpon>FormChildTemplateSaveAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\FormInsertListFromDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\FormInsertListFromDocument.Designer.cs">
+      <DependentUpon>FormInsertListFromDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\FormInsertComboList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\FormInsertComboList.Designer.cs">
+      <DependentUpon>FormInsertComboList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\FormTemplateSampleSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\FormTemplateSampleSave.Designer.cs">
+      <DependentUpon>FormTemplateSampleSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\FormTemplateSampleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\FormTemplateSampleEdit.Designer.cs">
+      <DependentUpon>FormTemplateSampleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\FormChildTemplateEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\FormChildTemplateEdit.Designer.cs">
+      <DependentUpon>FormChildTemplateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\FormChildTemplateSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\FormChildTemplateSave.Designer.cs">
+      <DependentUpon>FormChildTemplateSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Range\FormAddRange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Range\FormAddRange.Designer.cs">
+      <DependentUpon>FormAddRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Range\FormAddRangeType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Range\FormAddRangeType.Designer.cs">
+      <DependentUpon>FormAddRangeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Range\FormRangeType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Range\FormRangeType.Designer.cs">
+      <DependentUpon>FormRangeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\TemplateDesignControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\TemplateDesignControl.Designer.cs">
+      <DependentUpon>TemplateDesignControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\ChildTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\ChildTemplate.Designer.cs">
+      <DependentUpon>ChildTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\FormWordLIBSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\FormWordLIBSave.Designer.cs">
+      <DependentUpon>FormWordLIBSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\MainTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\MainTemplate.Designer.cs">
+      <DependentUpon>MainTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WordLIB\FormSelectDept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WordLIB\FormSelectDept.Designer.cs">
+      <DependentUpon>FormSelectDept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WordLIB\FormWordLIB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WordLIB\FormWordLIB.Designer.cs">
+      <DependentUpon>FormWordLIB.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Common\ChildTemplateTree.resx">
+      <DependentUpon>ChildTemplateTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ElementDesignControl.resx">
+      <DependentUpon>ElementDesignControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ElementSourceTree.resx">
+      <DependentUpon>ElementSourceTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ElementTree.resx">
+      <DependentUpon>ElementTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\TemplateSample.resx">
+      <DependentUpon>TemplateSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\WordLibTree.resx">
+      <DependentUpon>WordLibTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataSource\FormDataSource.resx">
+      <DependentUpon>FormDataSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElementLIB\FormElementLib.resx">
+      <DependentUpon>FormElementLIB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Individuation\FormFavorite.resx">
+      <DependentUpon>FormFavorite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\FormChildTemplateSaveAs.resx">
+      <DependentUpon>FormChildTemplateSaveAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\FormInsertListFromDocument.resx">
+      <DependentUpon>FormInsertListFromDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\FormInsertComboList.resx">
+      <DependentUpon>FormInsertComboList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\FormTemplateSampleSave.resx">
+      <DependentUpon>FormTemplateSampleSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\FormTemplateSampleEdit.resx">
+      <DependentUpon>FormTemplateSampleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\FormChildTemplateEdit.resx">
+      <DependentUpon>FormChildTemplateEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Range\FormAddRange.resx">
+      <DependentUpon>FormAddRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Range\FormAddRangeType.resx">
+      <DependentUpon>FormAddRangeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Range\FormRangeType.resx">
+      <DependentUpon>FormRangeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\TemplateDesignControl.resx">
+      <DependentUpon>TemplateDesignControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\ChildTemplate.resx">
+      <DependentUpon>ChildTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\FormChildTemplateSave.resx">
+      <DependentUpon>FormChildTemplateSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\FormWordLIBSave.resx">
+      <DependentUpon>FormWordLIBSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\MainTemplate.resx">
+      <DependentUpon>MainTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordLIB\FormSelectDept.resx">
+      <DependentUpon>FormSelectDept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordLIB\FormWordLIB.resx">
+      <DependentUpon>FormWordLIB.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Definition\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\未标题1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\门诊病历页眉页脚.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\门诊病历页眉页脚1.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CIS.ControlLib\CIS.ControlLib.csproj">
+      <Project>{958522ea-20d5-4851-a1cf-571de5901bf5}</Project>
+      <Name>CIS.ControlLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.Core\CIS.Core.csproj">
+      <Project>{e78aeea2-962d-4d27-ad53-be29c3644007}</Project>
+      <Name>CIS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.DAL\CIS.DAL.csproj">
+      <Project>{ce52d0f9-5c5d-400d-a7b5-4b93914d05ea}</Project>
+      <Name>CIS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.DCWriterExtensions\CIS.DCWriter.csproj">
+      <Project>{685046b0-ce5b-4e6d-b29c-7a9a24934742}</Project>
+      <Name>CIS.DCWriter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.Model\CIS.Model.csproj">
+      <Project>{27b3ccfe-b0cb-4512-9bdf-a1e05cc2eef4}</Project>
+      <Name>CIS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.Purview\CIS.Purview.csproj">
+      <Project>{6af12c66-25a4-4024-8e19-c19abef87fdb}</Project>
+      <Name>CIS.Purview</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.Utility\CIS.Utility.csproj">
+      <Project>{679daad6-d534-44d9-9790-e46fac55005a}</Project>
+      <Name>CIS.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

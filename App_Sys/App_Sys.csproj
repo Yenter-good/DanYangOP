@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C59558A-728B-448E-B619-A1EF1752246B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App_Sys</RootNamespace>
+    <AssemblyName>App_Sys</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DCSoft.Writer, Version=1.2015.9.18, Culture=neutral, PublicKeyToken=2e40e961ea876340, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DCSoft.Writer.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DevComponents.DotNetBar.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Dos.ORM, Version=1.10.6.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dos.ORM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ICD\FormICD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ICD\FormICD.Designer.cs">
+      <DependentUpon>FormICD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Knowlage\FormKnowlage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Knowlage\FormKnowlage.Designer.cs">
+      <DependentUpon>FormKnowlage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message\FormProclamation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message\FormProclamation.Designer.cs">
+      <DependentUpon>FormProclamation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message\FormSetProclamation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message\FormSetProclamation.Designer.cs">
+      <DependentUpon>FormSetProclamation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\FormModuleBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\FormModuleBrowser.Designer.cs">
+      <DependentUpon>FormModuleBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FormSystemEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FormSystemEdit.Designer.cs">
+      <DependentUpon>FormSystemEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FormMenuEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FormMenuEdit.Designer.cs">
+      <DependentUpon>FormMenuEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FormMenuManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FormMenuManager.Designer.cs">
+      <DependentUpon>FormMenuManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\FormDLLBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\FormDLLBrowser.Designer.cs">
+      <DependentUpon>FormDLLBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\FormModuleCategoryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\FormModuleCategoryEdit.Designer.cs">
+      <DependentUpon>FormModuleCategoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\FormModuleManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\FormModuleManager.Designer.cs">
+      <DependentUpon>FormModuleManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Role\FormAddAuthority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Role\FormAddAuthority.Designer.cs">
+      <DependentUpon>FormAddAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Role\FormAddRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Role\FormAddRole.Designer.cs">
+      <DependentUpon>FormAddRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Role\FormRoleManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Role\FormRoleManager.Designer.cs">
+      <DependentUpon>FormRoleManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\FormModuleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\FormModuleEdit.Designer.cs">
+      <DependentUpon>FormModuleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Surgery\SurgeryManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Surgery\SurgeryManager.Designer.cs">
+      <DependentUpon>SurgeryManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysDic\FormAddDic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysDic\FormAddDic.Designer.cs">
+      <DependentUpon>FormAddDic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysDic\FormAddDicDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysDic\FormAddDicDetails.Designer.cs">
+      <DependentUpon>FormAddDicDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysDic\FormSetSysDic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysDic\FormSetSysDic.Designer.cs">
+      <DependentUpon>FormSetSysDic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysParameter\FormAddParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysParameter\FormAddParameter.Designer.cs">
+      <DependentUpon>FormAddParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysParameter\FormSetSysParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysParameter\FormSetSysParameter.Designer.cs">
+      <DependentUpon>FormSetSysParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManager\FormAddDept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManager\FormAddDept.Designer.cs">
+      <DependentUpon>FormAddDept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManager\FormAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManager\FormAddUser.Designer.cs">
+      <DependentUpon>FormAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManager\FormAddUserAuthority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManager\FormAddUserAuthority.Designer.cs">
+      <DependentUpon>FormAddUserAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManager\FormAddUserDept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManager\FormAddUserDept.Designer.cs">
+      <DependentUpon>FormAddUserDept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManager\FormAddUserRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManager\FormAddUserRole.Designer.cs">
+      <DependentUpon>FormAddUserRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManager\FormUserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManager\FormUserManager.Designer.cs">
+      <DependentUpon>FormUserManager.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ICD\FormICD.resx">
+      <DependentUpon>FormICD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Knowlage\FormKnowlage.resx">
+      <DependentUpon>FormKnowlage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message\FormProclamation.resx">
+      <DependentUpon>FormProclamation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message\FormSetProclamation.resx">
+      <DependentUpon>FormSetProclamation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\FormModuleBrowser.resx">
+      <DependentUpon>FormModuleBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FormSystemEdit.resx">
+      <DependentUpon>FormSystemEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FormMenuEdit.resx">
+      <DependentUpon>FormMenuEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FormMenuManager.resx">
+      <DependentUpon>FormMenuManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\FormDLLBrowser.resx">
+      <DependentUpon>FormDLLBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\FormModuleCategoryEdit.resx">
+      <DependentUpon>FormModuleCategoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\FormModuleManager.resx">
+      <DependentUpon>FormModuleManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Role\FormAddAuthority.resx">
+      <DependentUpon>FormAddAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Role\FormAddRole.resx">
+      <DependentUpon>FormAddRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Role\FormRoleManager.resx">
+      <DependentUpon>FormRoleManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\FormModuleEdit.resx">
+      <DependentUpon>FormModuleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Surgery\SurgeryManager.resx">
+      <DependentUpon>SurgeryManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysDic\FormAddDic.resx">
+      <DependentUpon>FormAddDic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysDic\FormAddDicDetails.resx">
+      <DependentUpon>FormAddDicDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysDic\FormSetSysDic.resx">
+      <DependentUpon>FormSetSysDic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysParameter\FormAddParameter.resx">
+      <DependentUpon>FormAddParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysParameter\FormSetSysParameter.resx">
+      <DependentUpon>FormSetSysParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManager\FormAddDept.resx">
+      <DependentUpon>FormAddDept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManager\FormAddUser.resx">
+      <DependentUpon>FormAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManager\FormAddUserAuthority.resx">
+      <DependentUpon>FormAddUserAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManager\FormAddUserDept.resx">
+      <DependentUpon>FormAddUserDept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManager\FormAddUserRole.resx">
+      <DependentUpon>FormAddUserRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManager\FormUserManager.resx">
+      <DependentUpon>FormUserManager.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\AlignVerticalLeft2_32x32.png" />
+    <Content Include="Resources\Cards_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CIS.ControlLib\CIS.ControlLib.csproj">
+      <Project>{958522ea-20d5-4851-a1cf-571de5901bf5}</Project>
+      <Name>CIS.ControlLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.Core\CIS.Core.csproj">
+      <Project>{e78aeea2-962d-4d27-ad53-be29c3644007}</Project>
+      <Name>CIS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.DCWriterExtensions\CIS.DCWriter.csproj">
+      <Project>{685046b0-ce5b-4e6d-b29c-7a9a24934742}</Project>
+      <Name>CIS.DCWriter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.Model\CIS.Model.csproj">
+      <Project>{27b3ccfe-b0cb-4512-9bdf-a1e05cc2eef4}</Project>
+      <Name>CIS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.Purview\CIS.Purview.csproj">
+      <Project>{6af12c66-25a4-4024-8e19-c19abef87fdb}</Project>
+      <Name>CIS.Purview</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIS.Utility\CIS.Utility.csproj">
+      <Project>{679daad6-d534-44d9-9790-e46fac55005a}</Project>
+      <Name>CIS.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
