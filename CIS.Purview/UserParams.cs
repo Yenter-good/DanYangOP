@@ -111,6 +111,11 @@ namespace CIS.Purview
         /// 医保事前审查
         /// </summary>
         public bool OP_BeforePrescriptionAudit { get { return GetValue(curUserId, "U021", "医保事前审查", "医保事前审查", "否").AsBoolean(); } }
+
+        /// <summary>
+        /// 云影像平台
+        /// </summary>
+        public bool OP_PACSShare { get { return GetValue(curUserId, "U022", "云影像平台", "云影像平台", "否").AsBoolean(); } }
         /// <summary>
         /// 获取参数值
         /// </summary>

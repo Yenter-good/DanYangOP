@@ -60,8 +60,7 @@
             // 
             // ControlAmpoule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.textBoxX1);
             this.Controls.Add(this.labelX1);
             this.Name = "ControlAmpoule";

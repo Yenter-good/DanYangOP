@@ -177,6 +177,7 @@ namespace CIS
             BuildResult("U019", this.cbxU019.Text, true);
             BuildResult("U020", this.cbxU020.Text, true);
             BuildResult("U021", this.cbxU021.Text, true);
+            BuildResult("U022", this.cbxU022.Text, true);
 
             //DbBatch batch = DBHelper.CIS.BeginBatchConnection();
 

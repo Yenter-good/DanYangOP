@@ -5,14 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace App_OP.Examination.PACSShare.Notice
+namespace App_OP.Examination.PACSShare.Submit
 {
-    class NoticeHelper
+    class SubmitHelper
     {
-        public (string url, string serialNumber) Handler(List<OP_Prescription_Detail> details)
+        public string Handler(string prescriptionNo, List<OP_Prescription_Detail> details)
         {
-            NoticeRequest request = new NoticeRequest()
+            SubmitRequest request = new SubmitRequest()
             {
+                view_record_id = prescriptionNo,
                 app_doc_idcard = SysContext.CurrUser.user.IDCard,
                 app_doc_loginid = SysContext.CurrUser.UserId,
                 app_doc_name = SysContext.CurrUser.UserName,
@@ -31,10 +32,10 @@ namespace App_OP.Examination.PACSShare.Notice
                 source = "丹阳市中医院",
             };
 
-            request.project_list = new List<project>();
+            request.project_list = new List<Notice.project>();
             foreach (var detail in details)
             {
-                request.project_list.Add(new project()
+                request.project_list.Add(new Notice.project()
                 {
                     chk_advice = detail.ItemName,
                     chk_modality = "",
@@ -45,19 +46,11 @@ namespace App_OP.Examination.PACSShare.Notice
                 });
             }
 
-            var response = PACSShareHelper.Post<NoticeResponse>(request, "http://20.30.1.81/openapi/api/v2/mutual/project/notice", "类似检查项目");
-            if (response == null)
-                return (null, null);
+            var response = PACSShareHelper.Post<SubmitResponse>(request, "http://20.30.1.81/openapi/api/v2/mutual/project/callback", "开单回执");
+            if (response.code == "200")
+                return null;
             else
-            {
-                if (response.data.url == null)
-                    return (null, response.data.view_record_id);
-                else
-                {
-                    var url = $"{response.data.url.transport_protocol}://{response.data.url.domain}/{response.data.url.path}";
-                    return (url, response.data.view_record_id);
-                }
-            }
+                return response.message;
         }
     }
 }

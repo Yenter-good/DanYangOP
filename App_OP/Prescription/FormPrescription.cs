@@ -19,6 +19,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App_OP.Prescription
@@ -4217,23 +4218,31 @@ namespace App_OP.Prescription
             if (save.Item1 == null)
                 return;
 
-            var diagnosis = formMain.GEtDiagnosis();
-            var preAudit = new UploadPreAuditHelper();
-            var auditResult = preAudit.Handler(save.Item1, save.Item2, WesternMedicineInfo, Usage, diagnosis, AllInterval);
-            if (auditResult != null)
-            {
-                var sign = new UploadPrescriptionSignHelper();
-                var signResult = sign.Handler(auditResult, save.Item1, save.Item2.Count.ToString());
-                if (signResult.Item1 != null)
-                {
-                    var upload = new UploadPrescriptionHelper();
-                    var uploadResult = upload.Handler(signResult.Item1, signResult.Item2);
-                    if (uploadResult != null)
-                    {
-                        DBHelper.CIS.FromSql($"update op_prescription set PrescriptionCirculation_PrescriptionNo='{uploadResult.hiRxno}' where PrescriptionNo='{save.Item1.PrescriptionNo}'").ExecuteNonQuery();
-                    }
-                }
-            }
+
+            //formMain.AddPrescriptionCirculationTask();
+            //Task.Factory.StartNew(() =>
+            //{
+            //    var diagnosis = formMain.GEtDiagnosis();
+            //    var preAudit = new UploadPreAuditHelper();
+            //    var auditResult = preAudit.Handler(save.Item1, save.Item2, WesternMedicineInfo, Usage, diagnosis, AllInterval);
+            //    if (auditResult != null)
+            //    {
+            //        var sign = new UploadPrescriptionSignHelper();
+            //        var signResult = sign.Handler(auditResult, save.Item1, save.Item2.Count.ToString());
+            //        if (signResult.Item1 != null)
+            //        {
+            //            var upload = new UploadPrescriptionHelper();
+            //            var uploadResult = upload.Handler(signResult.Item1, signResult.Item2);
+            //            if (uploadResult != null)
+            //            {
+            //                DBHelper.CIS.FromSql($"update op_prescription set PrescriptionCirculation_PrescriptionNo='{uploadResult.hiRxno}' where   PrescriptionNo='{save.Item1.PrescriptionNo}'").ExecuteNonQuery();
+            //            }
+            //        }
+            //    }
+            //}).ContinueWith(p =>
+            //{
+            //    formMain.RemovePrescriptionCirculationTask();
+            //}, TaskScheduler.Current);
         }
 
         private void inputHerbalMedicineNum_TextChanged(object sender, EventArgs e)

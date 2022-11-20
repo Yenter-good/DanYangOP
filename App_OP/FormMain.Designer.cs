@@ -50,6 +50,7 @@
             this.btnExistsEmergency = new DevComponents.DotNetBar.ButtonItem();
             this.btnIPRecordView = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.pnlRight = new DevComponents.DotNetBar.ExpandablePanel();
             this.expandablePanel1 = new DevComponents.DotNetBar.ExpandablePanel();
             this.dgvPrescription = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
@@ -61,6 +62,9 @@
             this.召回ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除选中处方ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stripCopyPrescription = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.查看双流转处方信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.查看双流转处方审核结果ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridColumn1 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn16 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
@@ -106,7 +110,7 @@
             this.tabMain = new DevComponents.DotNetBar.SuperTabControl();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.expandableSplitter1 = new DevComponents.DotNetBar.ExpandableSplitter();
-            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.查看双流转取药结果ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.barTop)).BeginInit();
             this.pnlRight.SuspendLayout();
             this.expandablePanel1.SuspendLayout();
@@ -259,6 +263,15 @@
             this.buttonItem1.Text = "麻醉记录调阅";
             this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
             // 
+            // buttonItem2
+            // 
+            this.buttonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways;
+            this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
+            this.buttonItem2.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Far;
+            this.buttonItem2.Name = "buttonItem2";
+            this.buttonItem2.Text = "重症护理记录单";
+            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
+            // 
             // pnlRight
             // 
             this.pnlRight.CanvasColor = System.Drawing.SystemColors.Control;
@@ -377,56 +390,79 @@
             this.toolStripSeparator1,
             this.召回ToolStripMenuItem,
             this.删除选中处方ToolStripMenuItem,
-            this.stripCopyPrescription});
+            this.stripCopyPrescription,
+            this.toolStripSeparator2,
+            this.查看双流转处方信息ToolStripMenuItem,
+            this.查看双流转处方审核结果ToolStripMenuItem,
+            this.查看双流转取药结果ToolStripMenuItem});
             this.contextPrescription.Name = "contextPrescription";
-            this.contextPrescription.Size = new System.Drawing.Size(169, 142);
+            this.contextPrescription.Size = new System.Drawing.Size(209, 236);
             // 
             // 打印选中处方ToolStripMenuItem
             // 
             this.打印选中处方ToolStripMenuItem.Name = "打印选中处方ToolStripMenuItem";
-            this.打印选中处方ToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.打印选中处方ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.打印选中处方ToolStripMenuItem.Text = "直接打印(不预览)";
             this.打印选中处方ToolStripMenuItem.Click += new System.EventHandler(this.打印选中处方ToolStripMenuItem_Click);
             // 
             // 打印膏方ToolStripMenuItem
             // 
             this.打印膏方ToolStripMenuItem.Name = "打印膏方ToolStripMenuItem";
-            this.打印膏方ToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.打印膏方ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.打印膏方ToolStripMenuItem.Text = "打印膏方";
             this.打印膏方ToolStripMenuItem.Click += new System.EventHandler(this.打印膏方ToolStripMenuItem_Click);
             // 
             // 预览选中处方ToolStripMenuItem
             // 
             this.预览选中处方ToolStripMenuItem.Name = "预览选中处方ToolStripMenuItem";
-            this.预览选中处方ToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.预览选中处方ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.预览选中处方ToolStripMenuItem.Text = "预览选中处方";
             this.预览选中处方ToolStripMenuItem.Click += new System.EventHandler(this.预览选中处方ToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(165, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(205, 6);
             // 
             // 召回ToolStripMenuItem
             // 
             this.召回ToolStripMenuItem.Name = "召回ToolStripMenuItem";
-            this.召回ToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.召回ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.召回ToolStripMenuItem.Text = "召回";
             this.召回ToolStripMenuItem.Click += new System.EventHandler(this.召回ToolStripMenuItem_Click);
             // 
             // 删除选中处方ToolStripMenuItem
             // 
             this.删除选中处方ToolStripMenuItem.Name = "删除选中处方ToolStripMenuItem";
-            this.删除选中处方ToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.删除选中处方ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.删除选中处方ToolStripMenuItem.Text = "删除选中处方";
             this.删除选中处方ToolStripMenuItem.Click += new System.EventHandler(this.删除选中处方ToolStripMenuItem_Click);
             // 
             // stripCopyPrescription
             // 
             this.stripCopyPrescription.Name = "stripCopyPrescription";
-            this.stripCopyPrescription.Size = new System.Drawing.Size(168, 22);
+            this.stripCopyPrescription.Size = new System.Drawing.Size(208, 22);
             this.stripCopyPrescription.Text = "复制处方";
             this.stripCopyPrescription.Click += new System.EventHandler(this.stripCopyPrescription_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(205, 6);
+            // 
+            // 查看双流转处方信息ToolStripMenuItem
+            // 
+            this.查看双流转处方信息ToolStripMenuItem.Name = "查看双流转处方信息ToolStripMenuItem";
+            this.查看双流转处方信息ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.查看双流转处方信息ToolStripMenuItem.Text = "查看双流转处方信息";
+            this.查看双流转处方信息ToolStripMenuItem.Click += new System.EventHandler(this.查看双流转处方信息ToolStripMenuItem_Click);
+            // 
+            // 查看双流转处方审核结果ToolStripMenuItem
+            // 
+            this.查看双流转处方审核结果ToolStripMenuItem.Name = "查看双流转处方审核结果ToolStripMenuItem";
+            this.查看双流转处方审核结果ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.查看双流转处方审核结果ToolStripMenuItem.Text = "查看双流转处方审核结果";
+            this.查看双流转处方审核结果ToolStripMenuItem.Click += new System.EventHandler(this.查看双流转处方审核结果ToolStripMenuItem_Click);
             // 
             // gridColumn1
             // 
@@ -999,14 +1035,12 @@
             this.expandableSplitter1.TabIndex = 37;
             this.expandableSplitter1.TabStop = false;
             // 
-            // buttonItem2
+            // 查看双流转取药结果ToolStripMenuItem
             // 
-            this.buttonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways;
-            this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
-            this.buttonItem2.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Far;
-            this.buttonItem2.Name = "buttonItem2";
-            this.buttonItem2.Text = "重症护理记录单";
-            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
+            this.查看双流转取药结果ToolStripMenuItem.Name = "查看双流转取药结果ToolStripMenuItem";
+            this.查看双流转取药结果ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.查看双流转取药结果ToolStripMenuItem.Text = "查看双流转取药结果";
+            this.查看双流转取药结果ToolStripMenuItem.Click += new System.EventHandler(this.查看双流转取药结果ToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -1110,5 +1144,9 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
         private DevComponents.DotNetBar.ButtonItem btnExistsEmergency;
         private DevComponents.DotNetBar.ButtonItem buttonItem2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem 查看双流转处方信息ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 查看双流转处方审核结果ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 查看双流转取药结果ToolStripMenuItem;
     }
 }

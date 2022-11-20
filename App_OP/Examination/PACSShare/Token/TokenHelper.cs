@@ -9,10 +9,10 @@ namespace App_OP.Examination.PACSShare.Token
     {
         public bool Handler()
         {
-            string secret = "";
+            string secret = "ead6213132957a487d6eb6180ebe0cc5";
 
             TokenRequest request = new TokenRequest();
-            request.app_key = "";
+            request.app_key = "1575311312265756673";
             request.timestamp = getTime10().ToString();
             request.app_sign = ((request.app_key + request.timestamp).ToMD5() + secret).ToMD5();
 

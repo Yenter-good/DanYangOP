@@ -8,10 +8,11 @@ namespace App_OP.PrescriptionCirculation
 {
     class Decryption
     {
-        public T GetDecryptionData<T>(string response, string handlerName) where T : class
+        public T GetDecryptionData<T>(string response, string handlerName, bool log) where T : class
         {
             var success = HTTPHelper.HttpPost("http://192.168.1.218:8095/Getsmjm", response, HTTPHelper.ContentType.Json, out var result);
-            LogHelper.Debug($"{handlerName} 获得响应解密报文 " + result);
+            if (log)
+                LogHelper.Debug($"{handlerName} 获得响应解密报文 " + result);
             if (success)
             {
                 var data = SerializeHelper.BeginJsonDeserialize<DecryptionResponse>(result);

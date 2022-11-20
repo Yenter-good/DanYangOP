@@ -9,7 +9,7 @@ namespace App_OP.PrescriptionCirculation
 {
     class Encryption
     {
-        public PrescriptionCirculationRequest GetEncryptionData(object obj, string handlerName)
+        public PrescriptionCirculationRequest GetEncryptionData(object obj, string handlerName, bool log)
         {
             var request = new request()
             {
@@ -17,11 +17,13 @@ namespace App_OP.PrescriptionCirculation
             };
 
             var json = SerializeHelper.BeginJsonSerializable(request);
-            LogHelper.Debug($"{handlerName} 提交待加密报文 " + json);
+            if (log)
+                LogHelper.Debug($"{handlerName} 提交待加密报文 " + json);
             var success = HTTPHelper.HttpPost("http://192.168.1.218:8095/Getsmdy", json, HTTPHelper.ContentType.Json, out var result);
             if (success)
             {
-                LogHelper.Debug($"{handlerName} 获得加密报文 " + result);
+                if (log)
+                    LogHelper.Debug($"{handlerName} 获得加密报文 " + result);
 
                 var response = SerializeHelper.BeginJsonDeserialize<EncryptionResponse>(result);
                 if (response.code != 0)

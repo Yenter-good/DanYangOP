@@ -20,7 +20,7 @@ namespace App_OP
         /// <summary>
         /// 处方打印
         /// </summary>
-        public static void PrescriptionPrint(string PrescriptionNo, string PrescriptionType, string PrescriptionNum, bool IsView = false, bool IsSpecialPrite = false, string OutpatientNo = "")
+        public static void PrescriptionPrint(string PrescriptionNo, string PrescriptionType, string PrescriptionNum, bool IsView = false, bool IsSpecialPrite = false, string OutpatientNo = "", bool selectAll = false)
         {
             //获取路径
             string frxPath = System.IO.Path.Combine(Application.StartupPath, "FRX");
@@ -50,7 +50,7 @@ namespace App_OP
 
 
             string TreatmentNo = OutpatientNo == "" ? SysContext.GetCurrPatient.OutpatientNo : OutpatientNo;
-            DataTable dt = BuildPrescription(PrescriptionNo, TreatmentNo, PrescriptionType, PrescriptionNum);
+            DataTable dt = BuildPrescription(PrescriptionNo, TreatmentNo, PrescriptionType, PrescriptionNum, selectAll);
 
             report.RegisterData(dt, "Table4");
             //report.SetParameterValue("PayWX", GetPayRequest(dt.Rows[0]["Total"].ToString()));
@@ -121,12 +121,16 @@ namespace App_OP
             return QRImage.GetPayImage(result);
         }
 
-        public static DataTable BuildPrescription(string PrescriptionNo, string TreatmentNo, string PrescriptionType, string PrescriptionNum)
+        public static DataTable BuildPrescription(string PrescriptionNo, string TreatmentNo, string PrescriptionType, string PrescriptionNum, bool selectAll = false)
         {
             DataTable dt = new DataTable();
             dt = GetPrintDataTableStru().Clone();
+            List<OP_PatientDiagnosis> diagnosis = new List<OP_PatientDiagnosis>();
 
-            List<OP_PatientDiagnosis> diagnosis = DBHelper.CIS.From<OP_PatientDiagnosis>().Where(p => p.TreatmentNo == TreatmentNo).Select(p => new { p.Name, p.Status }).OrderBy(p => new { p.Type, p.Index }).ToList<OP_PatientDiagnosis>();
+            if (selectAll)
+                diagnosis = DBHelper.CIS.From<OP_PatientDiagnosis>().UnionAll(DBHelper.CIS.From<OP_PatientDiagnosis_History>()).Where(p => p.TreatmentNo == TreatmentNo).Select(p => new { p.Name, p.Status }).OrderBy(p => new { p.Type, p.Index }).ToList<OP_PatientDiagnosis>();
+            else
+                diagnosis = DBHelper.CIS.From<OP_PatientDiagnosis>().Where(p => p.TreatmentNo == TreatmentNo).Select(p => new { p.Name, p.Status }).OrderBy(p => new { p.Type, p.Index }).ToList<OP_PatientDiagnosis>();
 
 
             //List<string> prescriptionNoList = DBHelper.CIS.From<OP_Prescription>().Where(p => p.TreatmentNo == TreatmentNo).OrderBy(p => p.UpdateTime).Select(p => p.PrescriptionNo).ToList<string>();
@@ -138,7 +142,12 @@ namespace App_OP
             string diagnosisString = string.Join(",", diagnosis.Select(p => p.Name).ToArray()); //获得诊断信息
 
             //List<CIS.Model.Prescription> list= DBHelper.CIS.FromSql(string.Format("SELECT A.*,B.NAME AS DIAGNOSISNAME,C.NAME AS DEPTNAME,D.PATIENTNAME,D.SEX,D.AGE,D.PAYTYPE,D.USERNAME AS DOCTORNAME,G.NAME AS PRESCRIPTIONTYPE,D.ConditionSummary,D.Explanation,D.Specimen,D.HerbalMedicineNum,A.TREATMENTNO FROM OP_PRESCRIPTION_DETAIL A LEFT JOIN OP_PATIENTDIAGNOSIS B ON A.TREATMENTNO=B.TREATMENTNO AND B.ISMAIN=1 LEFT JOIN OP_PRESCRIPTION D ON A.PRESCRIPTIONNO=D.PRESCRIPTIONNO LEFT JOIN IVIEW_DEPT C ON D.DEPTCODE=C.CODE LEFT JOIN OP_DIC_PRESCRIPTIONTYPE G ON D.PRESCRIPTIONTYPE=G.CODE WHERE A.PrescriptionNo='{0}' AND A.TreatmentNo='{1}' ORDER BY A.NO", PrescriptionNo, TreatmentNo)).ToList<CIS.Model.Prescription>();
-            List<CIS.Model.Prescription> list = DBHelper.CIS.FromProc("Proc_OP_GetPrintPrescription").AddInParameter("PrescriptionNo", DbType.String, PrescriptionNo).AddInParameter("TreatmentNo", DbType.String, TreatmentNo).ToList<CIS.Model.Prescription>();
+            List<CIS.Model.Prescription> list = new List<CIS.Model.Prescription>();
+            if (selectAll)
+                list = DBHelper.CIS.FromProc("Proc_OP_GetPrintPrescription_All").AddInParameter("PrescriptionNo", DbType.String, PrescriptionNo).AddInParameter("TreatmentNo", DbType.String, TreatmentNo).ToList<CIS.Model.Prescription>();
+            else
+                list = DBHelper.CIS.FromProc("Proc_OP_GetPrintPrescription").AddInParameter("PrescriptionNo", DbType.String, PrescriptionNo).AddInParameter("TreatmentNo", DbType.String, TreatmentNo).ToList<CIS.Model.Prescription>();
+
             list = list.OrderBy(p => p.No).ToList();
             list.ForEach(p => p.DiagnosisName = diagnosisString);
 

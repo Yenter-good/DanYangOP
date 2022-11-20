@@ -5,7 +5,7 @@ using System.Text;
 
 namespace App_OP.Examination.PACSShare.Number
 {
-    class NumberRequest:ViewOtherHos.ViewOtherHosRequest
+    class NumberRequest : ViewOtherHos.ViewOtherHosRequest
     {
         /// <summary>
         /// 门诊/急诊/住院/体检标志 默认传门诊

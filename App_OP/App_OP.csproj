@@ -178,6 +178,9 @@
     <Compile Include="Examination\PACSShare\Number\NumberRequest.cs" />
     <Compile Include="Examination\PACSShare\Number\NumberResponse.cs" />
     <Compile Include="Examination\PACSShare\PACSShareHelper.cs" />
+    <Compile Include="Examination\PACSShare\Submit\SubmitHelper.cs" />
+    <Compile Include="Examination\PACSShare\Submit\SubmitRequest.cs" />
+    <Compile Include="Examination\PACSShare\Submit\SubmitResponse.cs" />
     <Compile Include="Examination\PACSShare\Token\TokenHelper.cs" />
     <Compile Include="Examination\PACSShare\Token\TokenRequest.cs" />
     <Compile Include="Examination\PACSShare\Token\TokenResponse.cs" />
@@ -245,14 +248,38 @@
     <Compile Include="PatientInfo\FormEmergencyList.Designer.cs">
       <DependentUpon>FormEmergencyList.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrescriptionCirculation\AuditResult\AuditResultHelper.cs" />
+    <Compile Include="PrescriptionCirculation\AuditResult\AuditResultRequest.cs" />
+    <Compile Include="PrescriptionCirculation\AuditResult\AuditResultResponse.cs" />
+    <Compile Include="PrescriptionCirculation\AuditResult\FormAuditResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrescriptionCirculation\AuditResult\FormAuditResult.Designer.cs">
+      <DependentUpon>FormAuditResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrescriptionCirculation\Decryption.cs" />
     <Compile Include="PrescriptionCirculation\Encryption.cs" />
+    <Compile Include="PrescriptionCirculation\FormPrescriptionCirculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrescriptionCirculation\FormPrescriptionCirculation.Designer.cs">
+      <DependentUpon>FormPrescriptionCirculation.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrescriptionCirculation\PrescriptionCirculationHandler.cs" />
     <Compile Include="PrescriptionCirculation\PreAudit\UploadPreAuditHelper.cs" />
     <Compile Include="PrescriptionCirculation\PreAudit\UploadPreAuditRequest.cs" />
     <Compile Include="PrescriptionCirculation\PreAudit\UploadPreAuditResponse.cs" />
     <Compile Include="PrescriptionCirculation\PrescriptionCirculationResponse.cs" />
     <Compile Include="PrescriptionCirculation\PrescriptionCirculationRequest.cs" />
+    <Compile Include="PrescriptionCirculation\TakeDrugResult\FormTakeDrugResultPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrescriptionCirculation\TakeDrugResult\FormTakeDrugResultPreview.Designer.cs">
+      <DependentUpon>FormTakeDrugResultPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrescriptionCirculation\TakeDrugResult\TakeDrugResultHelper.cs" />
+    <Compile Include="PrescriptionCirculation\TakeDrugResult\TakeDrugResultRequest.cs" />
+    <Compile Include="PrescriptionCirculation\TakeDrugResult\TakeDrugResultResponse.cs" />
     <Compile Include="PrescriptionCirculation\Undo\FormPrescriptionCirculationUndo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +296,15 @@
     <Compile Include="PrescriptionCirculation\Upload\UploadPrescriptionResponse.cs" />
     <Compile Include="PrescriptionCirculation\Upload\UploadPrescriptionRequest.cs" />
     <Compile Include="PrescriptionCirculation\Upload\UploadPrescriptionHelper.cs" />
+    <Compile Include="PrescriptionCirculation\ViewPrescription\FormPrescriptionCirculationPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrescriptionCirculation\ViewPrescription\FormPrescriptionCirculationPreview.Designer.cs">
+      <DependentUpon>FormPrescriptionCirculationPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrescriptionCirculation\ViewPrescription\ViewPrescriptionRequest.cs" />
+    <Compile Include="PrescriptionCirculation\ViewPrescription\ViewPrescriptionResponse.cs" />
+    <Compile Include="PrescriptionCirculation\ViewPrescription\ViewPrescriptionHelper.cs" />
     <Compile Include="Prescription\BeforePrescriptionAuditRequest.cs" />
     <Compile Include="Prescription\BeforePrescriptionAudit.cs" />
     <Compile Include="Prescription\BeforePrescriptionAuditResponse.cs" />
@@ -635,8 +671,20 @@
     <EmbeddedResource Include="PatientInfo\FormEmergencyList.resx">
       <DependentUpon>FormEmergencyList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrescriptionCirculation\AuditResult\FormAuditResult.resx">
+      <DependentUpon>FormAuditResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrescriptionCirculation\FormPrescriptionCirculation.resx">
+      <DependentUpon>FormPrescriptionCirculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrescriptionCirculation\TakeDrugResult\FormTakeDrugResultPreview.resx">
+      <DependentUpon>FormTakeDrugResultPreview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrescriptionCirculation\Undo\FormPrescriptionCirculationUndo.resx">
       <DependentUpon>FormPrescriptionCirculationUndo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrescriptionCirculation\ViewPrescription\FormPrescriptionCirculationPreview.resx">
+      <DependentUpon>FormPrescriptionCirculationPreview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prescription\ControlAmpoule.resx">
       <DependentUpon>ControlAmpoule.cs</DependentUpon>

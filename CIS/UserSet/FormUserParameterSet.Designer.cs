@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUserParameterSet));
             this.sideNav1 = new DevComponents.DotNetBar.Controls.SideNav();
             this.sideGlobal = new DevComponents.DotNetBar.Controls.SideNavPanel();
+            this.cbxU021 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem36 = new DevComponents.Editors.ComboItem();
+            this.comboItem37 = new DevComponents.Editors.ComboItem();
+            this.labelX20 = new DevComponents.DotNetBar.LabelX();
             this.cbxU020 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem34 = new DevComponents.Editors.ComboItem();
             this.comboItem35 = new DevComponents.Editors.ComboItem();
@@ -125,10 +129,10 @@
             this.sideHospitalized = new DevComponents.DotNetBar.Controls.SideNavItem();
             this.sideSave = new DevComponents.DotNetBar.Controls.SideNavItem();
             this.sideExit = new DevComponents.DotNetBar.Controls.SideNavItem();
-            this.labelX20 = new DevComponents.DotNetBar.LabelX();
-            this.cbxU021 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboItem36 = new DevComponents.Editors.ComboItem();
-            this.comboItem37 = new DevComponents.Editors.ComboItem();
+            this.cbxU022 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem38 = new DevComponents.Editors.ComboItem();
+            this.comboItem39 = new DevComponents.Editors.ComboItem();
+            this.labelX21 = new DevComponents.DotNetBar.LabelX();
             this.sideNav1.SuspendLayout();
             this.sideGlobal.SuspendLayout();
             this.sideNavPanel2.SuspendLayout();
@@ -161,6 +165,8 @@
             // 
             // sideGlobal
             // 
+            this.sideGlobal.Controls.Add(this.cbxU022);
+            this.sideGlobal.Controls.Add(this.labelX21);
             this.sideGlobal.Controls.Add(this.cbxU021);
             this.sideGlobal.Controls.Add(this.labelX20);
             this.sideGlobal.Controls.Add(this.cbxU020);
@@ -180,6 +186,44 @@
             this.sideGlobal.Name = "sideGlobal";
             this.sideGlobal.Size = new System.Drawing.Size(730, 420);
             this.sideGlobal.TabIndex = 2;
+            // 
+            // cbxU021
+            // 
+            this.cbxU021.DisplayMember = "Text";
+            this.cbxU021.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxU021.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxU021.FormattingEnabled = true;
+            this.cbxU021.ItemHeight = 16;
+            this.cbxU021.Items.AddRange(new object[] {
+            this.comboItem36,
+            this.comboItem37});
+            this.cbxU021.Location = new System.Drawing.Point(112, 70);
+            this.cbxU021.Name = "cbxU021";
+            this.cbxU021.Size = new System.Drawing.Size(121, 22);
+            this.cbxU021.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbxU021.TabIndex = 22;
+            // 
+            // comboItem36
+            // 
+            this.comboItem36.Text = "是";
+            // 
+            // comboItem37
+            // 
+            this.comboItem37.Text = "否";
+            // 
+            // labelX20
+            // 
+            this.labelX20.AutoSize = true;
+            this.labelX20.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX20.Location = new System.Drawing.Point(25, 74);
+            this.labelX20.Name = "labelX20";
+            this.labelX20.Size = new System.Drawing.Size(93, 18);
+            this.labelX20.TabIndex = 21;
+            this.labelX20.Text = "医保事前审查：";
             // 
             // cbxU020
             // 
@@ -1066,43 +1110,43 @@
             this.sideExit.Text = "退出";
             this.sideExit.Click += new System.EventHandler(this.sideExit_Click);
             // 
-            // labelX20
+            // cbxU022
             // 
-            this.labelX20.AutoSize = true;
-            this.labelX20.BackColor = System.Drawing.Color.Transparent;
+            this.cbxU022.DisplayMember = "Text";
+            this.cbxU022.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxU022.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxU022.FormattingEnabled = true;
+            this.cbxU022.ItemHeight = 16;
+            this.cbxU022.Items.AddRange(new object[] {
+            this.comboItem38,
+            this.comboItem39});
+            this.cbxU022.Location = new System.Drawing.Point(360, 70);
+            this.cbxU022.Name = "cbxU022";
+            this.cbxU022.Size = new System.Drawing.Size(86, 22);
+            this.cbxU022.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbxU022.TabIndex = 24;
+            // 
+            // comboItem38
+            // 
+            this.comboItem38.Text = "是";
+            // 
+            // comboItem39
+            // 
+            this.comboItem39.Text = "否";
+            // 
+            // labelX21
+            // 
+            this.labelX21.AutoSize = true;
+            this.labelX21.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX20.Location = new System.Drawing.Point(25, 74);
-            this.labelX20.Name = "labelX20";
-            this.labelX20.Size = new System.Drawing.Size(93, 18);
-            this.labelX20.TabIndex = 21;
-            this.labelX20.Text = "医保事前审查：";
-            // 
-            // cbxU021
-            // 
-            this.cbxU021.DisplayMember = "Text";
-            this.cbxU021.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbxU021.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxU021.FormattingEnabled = true;
-            this.cbxU021.ItemHeight = 16;
-            this.cbxU021.Items.AddRange(new object[] {
-            this.comboItem36,
-            this.comboItem37});
-            this.cbxU021.Location = new System.Drawing.Point(112, 70);
-            this.cbxU021.Name = "cbxU021";
-            this.cbxU021.Size = new System.Drawing.Size(121, 22);
-            this.cbxU021.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbxU021.TabIndex = 22;
-            // 
-            // comboItem36
-            // 
-            this.comboItem36.Text = "是";
-            // 
-            // comboItem37
-            // 
-            this.comboItem37.Text = "否";
+            this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX21.Location = new System.Drawing.Point(263, 74);
+            this.labelX21.Name = "labelX21";
+            this.labelX21.Size = new System.Drawing.Size(105, 18);
+            this.labelX21.TabIndex = 23;
+            this.labelX21.Text = "开启云影像平台：";
             // 
             // FormUserParameterSet
             // 
@@ -1237,5 +1281,9 @@
         private DevComponents.Editors.ComboItem comboItem36;
         private DevComponents.Editors.ComboItem comboItem37;
         private DevComponents.DotNetBar.LabelX labelX20;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cbxU022;
+        private DevComponents.Editors.ComboItem comboItem38;
+        private DevComponents.Editors.ComboItem comboItem39;
+        private DevComponents.DotNetBar.LabelX labelX21;
     }
 }

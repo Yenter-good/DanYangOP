@@ -1,6 +1,7 @@
 ﻿using CIS.Utility;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 
@@ -10,12 +11,23 @@ namespace App_OP.Examination.PACSShare
     {
         private static Dictionary<string, string> _tokenHeader;
         private static string _token;
+        private static bool _log;
+
+        public void Init()
+        {
+            var log = ConfigurationManager.AppSettings["pacs_share_log"];
+            if (log == "true")
+                _log = true;
+
+            _log = false;
+        }
 
         public static string Token
         {
             get => _token;
             set
             {
+                _token = value;
                 _tokenHeader = new Dictionary<string, string>();
                 _tokenHeader["X-Token"] = value;
             }
@@ -36,7 +48,8 @@ namespace App_OP.Examination.PACSShare
                 else
                     success = HTTPHelper.HttpPost(url, json, _tokenHeader, HTTPHelper.ContentType.Json, out response);
 
-                LogHelper.Debug($"{handlerName} 响应报文 " + json, "PACSShare");
+                if (_log)
+                    LogHelper.Debug($"{handlerName} 响应报文 " + response, "PACSShare");
 
                 if (success)
                     return SerializeHelper.BeginJsonDeserialize<T>(response);
@@ -45,7 +58,8 @@ namespace App_OP.Examination.PACSShare
             }
             catch (Exception ex)
             {
-                LogHelper.Debug($"{handlerName} 响应报文报错 " + ex.Message, "PACSShare");
+                if (_log)
+                    LogHelper.Debug($"{handlerName} 响应报文报错 " + ex.Message, "PACSShare");
             }
 
             return default;

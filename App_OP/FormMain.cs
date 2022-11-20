@@ -1,7 +1,10 @@
 ﻿using App_OP.Examination;
 using App_OP.PatientInfo;
 using App_OP.Prescription;
+using App_OP.PrescriptionCirculation.AuditResult;
+using App_OP.PrescriptionCirculation.TakeDrugResult;
 using App_OP.PrescriptionCirculation.Undo;
+using App_OP.PrescriptionCirculation.ViewPrescription;
 using App_OP.Record;
 using App_OP.Surgery;
 using CIS.Core;
@@ -45,6 +48,7 @@ namespace App_OP
         List<IView_HIS_ICD> CommonICD = new List<IView_HIS_ICD>();  //常用诊断
         List<OP_Dic_PrescriptionType> prescriptionType = new List<OP_Dic_PrescriptionType>();
         FastReport.EnvironmentSettings environment = new EnvironmentSettings();
+        private int _prescriptionCirculationCount;
 
         private DataTable _emergency;
 
@@ -164,6 +168,8 @@ namespace App_OP
             //var pCode = this.dgvPrescription.PrimaryGrid.Columns["col_Name"];
             //pCode.EditorType = typeof(CIS.ControlLib.Controls.MyComboBox);
             prescriptionType = DBHelper.CIS.From<OP_Dic_PrescriptionType>().ToList();
+
+            PrescriptionCirculation.PrescriptionCirculationHandler.Init();
             //pCode.EditorParams = new object[] { list, "Name", "Code" };
         }
 
@@ -1552,6 +1558,21 @@ namespace App_OP
                 AlertBox.Error("叫号失败,叫号接口调用失败");
             }
         }
+
+        public void AddPrescriptionCirculationTask()
+        {
+            _prescriptionCirculationCount++;
+            this.expandablePanel1.TitleText = "已开处方信息" + $"({_prescriptionCirculationCount}份正在上传)";
+        }
+
+        public void RemovePrescriptionCirculationTask()
+        {
+            _prescriptionCirculationCount--;
+            if (_prescriptionCirculationCount == 0)
+                this.expandablePanel1.TitleText = "已开处方信息";
+            else
+                this.expandablePanel1.TitleText = "已开处方信息" + $"({_prescriptionCirculationCount}份正在上传)";
+        }
         #endregion
 
         private void btnSEMR_Click(object sender, EventArgs e)
@@ -1671,6 +1692,69 @@ namespace App_OP
             }
 
             Process.Start($"http://192.168.0.221/#/print?code=CARE_DOCUMENT&sort=1&wardCode=22001300&timePoint=2022-08-23&idCard={SysContext.GetCurrPatient.IDCard}");
+        }
+
+        private void 查看双流转处方信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var selectedRows = this.dgvPrescription.GetSelectedRows();
+            if (selectedRows.Count == 0)
+                return;
+
+            var selectedRow = selectedRows[0] as GridRow;
+            var prescription = selectedRow.DataItem as OP_Prescription;
+
+            var circulationCode = DBHelper.CIS.From<OP_Prescription>().Where(p => p.PrescriptionNo == prescription.PrescriptionNo).Select(p => p.PrescriptionCirculation_PrescriptionNo).First<string>();
+            prescription.PrescriptionCirculation_PrescriptionNo = circulationCode;
+
+            ViewPrescriptionHelper viewPrescription = new ViewPrescriptionHelper();
+            var data = viewPrescription.Handler(prescription);
+            if (data == null)
+                return;
+            FormPrescriptionCirculationPreview preview = new FormPrescriptionCirculationPreview();
+            preview.Init(data);
+            preview.ShowDialog();
+        }
+
+        private void 查看双流转处方审核结果ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var selectedRows = this.dgvPrescription.GetSelectedRows();
+            if (selectedRows.Count == 0)
+                return;
+
+            var selectedRow = selectedRows[0] as GridRow;
+            var prescription = selectedRow.DataItem as OP_Prescription;
+
+            var circulationCode = DBHelper.CIS.From<OP_Prescription>().Where(p => p.PrescriptionNo == prescription.PrescriptionNo).Select(p => p.PrescriptionCirculation_PrescriptionNo).First<string>();
+            prescription.PrescriptionCirculation_PrescriptionNo = circulationCode;
+
+            AuditResultHelper auditResult = new AuditResultHelper();
+            var data = auditResult.Handler(prescription);
+            if (data == null)
+                return;
+            FormAuditResult preview = new FormAuditResult();
+            preview.Init(data);
+            preview.ShowDialog();
+        }
+
+        private void 查看双流转取药结果ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var selectedRows = this.dgvPrescription.GetSelectedRows();
+            if (selectedRows.Count == 0)
+                return;
+
+            var selectedRow = selectedRows[0] as GridRow;
+            var prescription = selectedRow.DataItem as OP_Prescription;
+
+            var circulationCode = DBHelper.CIS.From<OP_Prescription>().Where(p => p.PrescriptionNo == prescription.PrescriptionNo).Select(p => p.PrescriptionCirculation_PrescriptionNo).First<string>();
+            prescription.PrescriptionCirculation_PrescriptionNo = circulationCode;
+
+            TakeDrugResultHelper takeDrug = new TakeDrugResultHelper();
+            var data = takeDrug.Handler(prescription);
+            if (data == null)
+                return;
+            FormTakeDrugResultPreview preview = new FormTakeDrugResultPreview();
+            preview.Init(data);
+            preview.ShowDialog();
         }
     }
 }

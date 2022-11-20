@@ -170,13 +170,13 @@ namespace App_OP
         private void btnPrescriptionPrite_Click(object sender, EventArgs e)
         {
             if (prescriptionNo == "" || prescriptionType == "") return;
-            Print.PrescriptionPrint(prescriptionNo, prescriptionType, HISInterface_PrescriptionNo, OutpatientNo: TreatmentNo, IsView: true);
+            Print.PrescriptionPrint(prescriptionNo, prescriptionType, HISInterface_PrescriptionNo, OutpatientNo: TreatmentNo, IsView: true, selectAll: true);
         }
 
         private void btnSpecialPrite_Click(object sender, EventArgs e)
         {
             if (prescriptionNo == "" || prescriptionType == "") return;
-            Print.PrescriptionPrint(prescriptionNo, prescriptionType, HISInterface_PrescriptionNo, OutpatientNo: TreatmentNo, IsView: true, IsSpecialPrite: true);
+            Print.PrescriptionPrint(prescriptionNo, prescriptionType, HISInterface_PrescriptionNo, OutpatientNo: TreatmentNo, IsView: true, IsSpecialPrite: true, selectAll: true);
         }
     }
 }

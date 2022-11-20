@@ -10,6 +10,11 @@ using CIS.Core;
 using CIS.Core.EventBroker;
 using CIS.Utility;
 using CIS.Core.Interceptors;
+using App_OP.Examination.PACSShare.Token;
+using App_OP.Examination.PACSShare.Number;
+using App_OP.Examination.PACSShare.Notice;
+using System.Diagnostics;
+using App_OP.Examination.PACSShare.Submit;
 
 namespace App_OP.Examination
 {
@@ -474,10 +479,13 @@ namespace App_OP.Examination
 
             int errorNumber = 0;
             DBHelper.CIS.Delete<OP_Prescription_Detail>(p => p.PrescriptionNo == guid && p.ItemType == "9");
+
+            List<OP_Prescription_Detail> details = new List<OP_Prescription_Detail>();
             //保存申请单明细
             foreach (GridRow row in gridSubList.PrimaryGrid.Rows)
             {
                 OP_Prescription_Detail detail = row.DataItem as OP_Prescription_Detail;
+                details.Add(detail);
                 //if (Additional.Contains(row.Cells["gridSubList_Code"].Value.ToString().Trim()))
                 //{
 
@@ -509,10 +517,50 @@ namespace App_OP.Examination
             //    }
             AlertBox.Info("保存成功");
             formMain.HandleRefreshPatient(new PatientEventArgs() { Mode = PatientEventArgs.UpdateMode.Prescription });
+            string prescriptionNo = currPrescription.PrescriptionNo;
             InitUI();
             DBHelper.CIS.FromSql(string.Format("UPDATE GHBRZL SET CZJC='1' WHERE JZH='{0}'", SysContext.GetCurrPatient.OutpatientNo)).ExecuteNonQuery();
             DBHelper.CIS.FromSql(string.Format("UPDATE GHBRZL SET YSBM=(CASE WHEN YSBM IS NULL OR RTRIM(YSBM)='' THEN '{0}' ELSE YSBM END),YSXM=(CASE WHEN YSXM IS NULL OR RTRIM(YSXM)='' THEN '{1}' ELSE YSXM END) WHERE JZH='{2}'", SysContext.CurrUser.user.Code, SysContext.CurrUser.user.Name, SysContext.GetCurrPatient.OutpatientNo)).ExecuteNonQuery();
             //}
+
+            if (SysContext.CurrUser.Params.OP_PACSShare)
+            {
+                bool hasToken = false;
+                if (details.Any())
+                {
+                    hasToken = new TokenHelper().Handler();
+                    if (hasToken)
+                    {
+                        var number = new NumberHelper().Handler();
+                        var data = new NoticeHelper().Handler(details);
+                        DialogResult dresult = DialogResult.No;
+                        if (number > 0)
+                        {
+                            if (!string.IsNullOrEmpty(data.url))
+                            {
+                                var result = MessageBox.Show("该患者近期有类似检查项目，是否跳转至云影像平台查看", "", MessageBoxButtons.YesNo);
+                                if (result == DialogResult.Yes)
+                                {
+                                    Process.Start(data.url);
+                                }
+                            }
+
+                            dresult = DialogResult.Yes;
+                        }
+                        else
+                            dresult = MessageBox.Show("云影像平台提示该患者近期类似检查项目数量为0，是否提交回执", "", MessageBoxButtons.YesNo);
+
+                        if (dresult == DialogResult.Yes && !string.IsNullOrEmpty(data.serialNumber))
+                        {
+                            var msg = new SubmitHelper().Handler(data.serialNumber, details);
+                            if (!string.IsNullOrEmpty(msg))
+                                MessageBox.Show("提交云影像平台失败：" + msg);
+                            else
+                                AlertBox.Info("云影像平台回执提交成功");
+                        }
+                    }
+                }
+            }
         }
 
         /// <summary>
