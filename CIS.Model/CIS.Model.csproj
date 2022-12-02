@@ -88,6 +88,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Automatic\IView_HIS_Outpatients_All.cs" />
+    <Compile Include="Automatic\IView_PrescriptionCirculation_DrugInfo.cs" />
+    <Compile Include="Automatic\OP_PrescriptionCirculation.cs" />
+    <Compile Include="Automatic\OP_PrescriptionCirculation_Detail.cs" />
     <Compile Include="Automatic\yj_pacs_dr.cs" />
     <Compile Include="Automatic\IView_Dept.cs" />
     <Compile Include="Automatic\IView_HIS_DealWithItem.cs" />

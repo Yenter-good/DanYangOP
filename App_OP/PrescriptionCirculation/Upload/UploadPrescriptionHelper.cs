@@ -1,4 +1,5 @@
 ﻿using App_OP.PrescriptionCirculation.UploadSign;
+using CIS.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,8 @@ namespace App_OP.PrescriptionCirculation.Upload
             request.rxFile = signResponse.rxFile;
             request.signDigest = signResponse.signDigest;
 
-            return _handler.Post<UploadPrescriptionResponse>(request, "http://10.72.3.127:20080/fixmedins/fixmedins/rxFileUpld", "处方上传");
+            var url = SysContext.CurrUser.Params.OP_PrescriptionCirculation_Url;
+            return _handler.Post<UploadPrescriptionResponse>(request, url + "/fixmedins/fixmedins/rxFileUpld", "处方上传");
         }
     }
 }

@@ -45,7 +45,8 @@ namespace App_OP.Examination.PACSShare.Notice
                 });
             }
 
-            var response = PACSShareHelper.Post<NoticeResponse>(request, "http://20.30.1.81/openapi/api/v2/mutual/project/notice", "类似检查项目");
+            var url = SysContext.CurrUser.Params.OP_PACSShare_Url;
+            var response = PACSShareHelper.Post<NoticeResponse>(request, url + "/openapi/api/v2/mutual/project/notice", "类似检查项目");
             if (response == null)
                 return (null, null);
             else
@@ -54,8 +55,8 @@ namespace App_OP.Examination.PACSShare.Notice
                     return (null, response.data.view_record_id);
                 else
                 {
-                    var url = $"{response.data.url.transport_protocol}://{response.data.url.domain}/{response.data.url.path}";
-                    return (url, response.data.view_record_id);
+                    var url1 = $"{response.data.url.transport_protocol}://{response.data.url.domain}/{response.data.url.path}";
+                    return (url1, response.data.view_record_id);
                 }
             }
         }

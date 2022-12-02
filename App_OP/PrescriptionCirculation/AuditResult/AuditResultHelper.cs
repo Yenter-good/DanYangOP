@@ -1,4 +1,5 @@
-﻿using CIS.Model;
+﻿using CIS.Core;
+using CIS.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace App_OP.PrescriptionCirculation.AuditResult
             _handler = new PrescriptionCirculationHandler();
         }
 
-        public AuditResultResponse Handler(OP_Prescription prescription)
+        public AuditResultResponse Handler(OP_PrescriptionCirculation prescription)
         {
             var dt = DBHelper.CIS.FromSql($"select * from vtyb_mz_dj where jzh ='{prescription.TreatmentNo}'").ToDataTable();
             if (dt.Rows.Count == 0)
@@ -24,13 +25,14 @@ namespace App_OP.PrescriptionCirculation.AuditResult
             {
                 certno = prescription.IDCard,
                 fixmedinsCode = "H32118100064",
-                hiRxno = prescription.PrescriptionCirculation_PrescriptionNo,
+                hiRxno = prescription.PrescriptionCirculationNo,
                 mdtrtId = dt.Rows[0]["mdtrt_id"].ToString(),
                 psnCertType = "01",
                 psnName = prescription.PatientName,
             };
 
-            return _handler.Post<AuditResultResponse>(request, "http://10.72.3.127:20080/fixmedins/fixmedins/rxChkInfoQuery", "审核结果查询");
+            var url = SysContext.CurrUser.Params.OP_PrescriptionCirculation_Url;
+            return _handler.Post<AuditResultResponse>(request, url + "/fixmedins/fixmedins/rxChkInfoQuery", "审核结果查询");
         }
     }
 }

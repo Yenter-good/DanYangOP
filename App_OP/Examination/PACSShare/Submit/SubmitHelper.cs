@@ -46,7 +46,8 @@ namespace App_OP.Examination.PACSShare.Submit
                 });
             }
 
-            var response = PACSShareHelper.Post<SubmitResponse>(request, "http://20.30.1.81/openapi/api/v2/mutual/project/callback", "开单回执");
+            var url = SysContext.CurrUser.Params.OP_PACSShare_Url;
+            var response = PACSShareHelper.Post<SubmitResponse>(request, url + "/openapi/api/v2/mutual/project/callback", "开单回执");
             if (response.code == "200")
                 return null;
             else

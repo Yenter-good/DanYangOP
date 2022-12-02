@@ -23,7 +23,7 @@ namespace App_OP.PrescriptionCirculation.PreAudit
             _dept[SysContext.CurrUser.UserId] = SysContext.CurrUser.UserName;
         }
 
-        public UploadPreAuditResponse Handler(OP_Prescription prescription, List<OP_Prescription_Detail> details, List<IView_HIS_DrugInfo> drugs, List<IView_HIS_DrugUsage> usages, List<OP_PatientDiagnosis> diagnosis, List<OP_Dic_Interval> interval)
+        public UploadPreAuditResponse Handler(OP_PrescriptionCirculation prescription, List<OP_PrescriptionCirculation_Detail> details, List<IView_PrescriptionCirculation_DrugInfo> drugs, List<IView_HIS_DrugUsage> usages, List<OP_PatientDiagnosis> diagnosis, List<OP_Dic_Interval> interval)
         {
             UploadPreAuditRequest request = new UploadPreAuditRequest();
 
@@ -33,49 +33,49 @@ namespace App_OP.PrescriptionCirculation.PreAudit
 
             request.insuPlcNo = "321181";
 
-            request.hospRxno = prescription.PrescriptionNo;
+            request.hospRxno = prescription.PrescriptionNo.ToString();
 
-            var prescriptionType = (PrescriptionType)Convert.ToInt32(prescription.PrescriptionType);
-            if (prescriptionType == PrescriptionType.Normal)
-                request.rxTypeCode = "1";
-            else if (prescriptionType == PrescriptionType.JingmaYi)
-                request.rxTypeCode = "7";
-            else if (prescriptionType == PrescriptionType.Herbal)
-                request.rxTypeCode = "2";
+            //var prescriptionType = (PrescriptionType)Convert.ToInt32(prescription.PrescriptionType);
+            //if (prescriptionType == PrescriptionType.Normal)
+            request.rxTypeCode = "1";
+            //else if (prescriptionType == PrescriptionType.JingmaYi)
+            //    request.rxTypeCode = "7";
+            //else if (prescriptionType == PrescriptionType.Herbal)
+            //    request.rxTypeCode = "2";
 
             request.prscTime = prescription.UpdateTime.Value;
             request.valiDays = 3;
             request.rxCotnFlag = "0";
 
-            if (prescriptionType == PrescriptionType.Herbal)
-            {
-                request.rxDrugCnt = prescription.HerbalMedicineNum.Value;
-                request.rxUsedWayCodg = "9";
-                request.rxUsedWayName = prescription.ConditionSummary;
-            }
-            else
-                request.rxDrugCnt = prescription.RecordNumber.Value;
+            //if (prescriptionType == PrescriptionType.Herbal)
+            //{
+            //    request.rxDrugCnt = prescription.HerbalMedicineNum.Value;
+            //    request.rxUsedWayCodg = "9";
+            //    request.rxUsedWayName = prescription.ConditionSummary;
+            //}
+            //else
+            request.rxDrugCnt = prescription.RecordNumber.Value;
 
             request.rxdrugdetail = this.BuildDetails(prescription, details, drugs, usages, interval);
             request.mdtrtinfo = this.BuildTreatment(prescription, diagnosis);
             request.diseinfo = this.BuildDiagnosis(diagnosis);
             request.valiEndTime = prescription.UpdateTime.Value.AddDays(3);
 
-            return _handler.Post<UploadPreAuditResponse>(request, "http://10.72.3.127:20080/fixmedins/fixmedins/uploadChk", "上传预核检");
+            var url = SysContext.CurrUser.Params.OP_PrescriptionCirculation_Url;
+            return _handler.Post<UploadPreAuditResponse>(request, url + "/fixmedins/fixmedins/uploadChk", "上传预核检");
         }
 
-        private List<rxdrugdetail> BuildDetails(OP_Prescription prescription, List<OP_Prescription_Detail> details, List<IView_HIS_DrugInfo> drugs, List<IView_HIS_DrugUsage> usages, List<OP_Dic_Interval> interval)
+        private List<rxdrugdetail> BuildDetails(OP_PrescriptionCirculation prescription, List<OP_PrescriptionCirculation_Detail> details, List<IView_PrescriptionCirculation_DrugInfo> drugs, List<IView_HIS_DrugUsage> usages, List<OP_Dic_Interval> interval)
         {
             List<rxdrugdetail> result = new List<rxdrugdetail>();
-            var totle = details.Sum(p => p.Total);
 
             foreach (var detail in details)
             {
-                var drug = drugs.FirstOrDefault(p => p.DrugID == detail.ItemCode);
+                var drug = drugs.FirstOrDefault(p => p.CityCode == detail.ItemCode);
                 rxdrugdetail model = new rxdrugdetail();
 
                 model.medListCodg = drug?.CityCode;
-                model.fixmedinsHilistId = drug?.DrugID;
+                //model.fixmedinsHilistId = drug?.DrugID;
 
                 var category = drug?.DrugCategory;
                 model.rxItemTypeCode = category == "1" ? "11" : category == "6" ? "13" : "12";
@@ -85,14 +85,12 @@ namespace App_OP.PrescriptionCirculation.PreAudit
                 model.drugDosform = drug.DrugForm;
                 model.drugSpec = drug.Specification;
                 model.prdrName = drug.ProductionSites;
-                model.medcWayCodg = drug.Usage;
-                model.medcWayDscr = usages.FirstOrDefault(p => p.Code == drug.Usage)?.Name;
+                model.medcWayCodg = detail.Usage;
+                model.medcWayDscr = usages.FirstOrDefault(p => p.Code == detail.Usage)?.Name;
                 if (model.medcWayDscr == null)
-                    model.medcWayDscr = drug.Usage;
+                    model.medcWayDscr = detail.Usage;
 
                 model.medcDays = detail.Days.Value;
-                model.drugPric = drug.DrugPrice;
-                model.drugSumamt = totle.Value;
                 model.sinDoscnt = (decimal)detail.Amount.Value;
                 model.sinDosunt = detail.DosageUnit;
                 model.usedFrquCodg = detail.Frequency;
@@ -110,7 +108,7 @@ namespace App_OP.PrescriptionCirculation.PreAudit
             return result;
         }
 
-        private mdtrtinfo BuildTreatment(OP_Prescription prescription, List<OP_PatientDiagnosis> diagnosis)
+        private mdtrtinfo BuildTreatment(OP_PrescriptionCirculation prescription, List<OP_PatientDiagnosis> diagnosis)
         {
             mdtrtinfo result = new mdtrtinfo();
 

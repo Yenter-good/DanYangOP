@@ -88,6 +88,10 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Design, Version=14.1.0.37, Culture=neutral, PublicKeyToken=90f470f34c89ccaf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DevComponents.DotNetBar.Design.dll</HintPath>
+    </Reference>
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\DevComponents.DotNetBar.SuperGrid.dll</HintPath>

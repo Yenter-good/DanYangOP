@@ -116,6 +116,15 @@ namespace CIS.Purview
         /// 云影像平台
         /// </summary>
         public bool OP_PACSShare { get { return GetValue(curUserId, "U022", "云影像平台", "云影像平台", "否").AsBoolean(); } }
+
+        /// <summary>
+        /// 处方双通道地址
+        /// </summary>
+        public string OP_PrescriptionCirculation_Url { get { return GetValue(curUserId, "U998", "处方双通道地址", "处方双通道地址", "http://10.72.3.127:20080").AsString(); } }
+        /// <summary>
+        /// 云影像平台地址
+        /// </summary>
+        public string OP_PACSShare_Url { get { return GetValue(curUserId, "U999", "云影像平台地址", "云影像平台地址", "http://20.30.1.81").AsString(); } }
         /// <summary>
         /// 获取参数值
         /// </summary>

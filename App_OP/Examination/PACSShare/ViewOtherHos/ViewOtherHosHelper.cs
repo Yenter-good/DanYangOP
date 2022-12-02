@@ -28,15 +28,12 @@ namespace App_OP.Examination.PACSShare.ViewOtherHos
                 study_request_time = DateTime.Now
             };
 
-            var response = PACSShareHelper.Post<ViewOtherHosResponse>(request, "http://20.30.1.81/openapi/api/v2/study/create/url", "跨院调阅影像");
+            var url = SysContext.CurrUser.Params.OP_PACSShare_Url;
+            var response = PACSShareHelper.Post<ViewOtherHosResponse>(request, url + "/openapi/api/v2/study/create/url", "跨院调阅影像");
             if (response == null)
                 return null;
             else
-            {
-                var url = $"{response.data.url.transport_protocol}://{response.data.url.domain}/{response.data.url.path}";
-                return url;
-            }
-
+                return $"{response.data.url.transport_protocol}://{response.data.url.domain}/{response.data.url.path}";
         }
     }
 }

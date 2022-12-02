@@ -18,8 +18,8 @@ namespace App_OP.Examination.PACSShare
             var log = ConfigurationManager.AppSettings["pacs_share_log"];
             if (log == "true")
                 _log = true;
-
-            _log = false;
+            else
+                _log = false;
         }
 
         public static string Token

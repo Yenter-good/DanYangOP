@@ -19,7 +19,7 @@ namespace App_OP.PrescriptionCirculation.UploadSign
             _handler = new PrescriptionCirculationHandler();
         }
 
-        public (UploadPrescriptionSignResponse, UploadPrescriptionRequest) Handler(UploadPreAuditResponse preauditInfo, OP_Prescription prescription, string PrescriptionNum)
+        public (UploadPrescriptionSignResponse, UploadPrescriptionRequest) Handler(UploadPreAuditResponse preauditInfo, OP_PrescriptionCirculation prescription, string PrescriptionNum)
         {
             var dt = DBHelper.CIS.FromSql($"select * from vtyb_mz_dj where jzh ='{prescription.TreatmentNo}'").ToDataTable();
             if (dt.Rows.Count == 0)
@@ -45,7 +45,7 @@ namespace App_OP.PrescriptionCirculation.UploadSign
             uploadRequest.pharChkTime = prescription.UpdateTime.Value;
 
             var uploadBase = uploadRequest as UploadPrescriptionBase;
-            var base64 = Print.PrescriptionBase64(prescription.PrescriptionNo, prescription.PrescriptionType, PrescriptionNum);
+            var base64 = Print.PrescriptionBase64(prescription.PrescriptionNo, preauditInfo.rxTraceCode, PrescriptionNum);
 
             UploadPrescriptionSignRequest signRequest = new UploadPrescriptionSignRequest()
             {
@@ -54,7 +54,8 @@ namespace App_OP.PrescriptionCirculation.UploadSign
                 originalRxFile = base64
             };
 
-            var response = _handler.Post<UploadPrescriptionSignResponse>(signRequest, "http://10.72.3.127:20080/fixmedins/fixmedins/rxFixmedinsSign", "上传签名");
+            var url = SysContext.CurrUser.Params.OP_PrescriptionCirculation_Url;
+            var response = _handler.Post<UploadPrescriptionSignResponse>(signRequest, url + "/fixmedins/fixmedins/rxFixmedinsSign", "上传签名");
             if (response != null)
                 return (response, uploadRequest);
             else

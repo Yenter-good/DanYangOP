@@ -29,7 +29,8 @@ namespace App_OP.Examination.PACSShare.Number
                 op_em_hp_ex_mark = "门诊"
             };
 
-            var response = PACSShareHelper.Post<NumberResponse>(request, "http://20.30.1.81/openapi/api/v2/study/shorttime/list/total", "获取项目总数");
+            var url = SysContext.CurrUser.Params.OP_PACSShare_Url;
+            var response = PACSShareHelper.Post<NumberResponse>(request, url + "/openapi/api/v2/study/shorttime/list/total", "获取项目总数");
             if (response == null)
                 return 0;
             else

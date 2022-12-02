@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using App_OP.PrescriptionCirculation.PreAudit;
 using CIS.Core;
+using CIS.Model;
 using CIS.Utility;
 
 namespace App_OP.PrescriptionCirculation
@@ -14,6 +15,9 @@ namespace App_OP.PrescriptionCirculation
         private Encryption _encryption = new Encryption();
         private Decryption _decryption = new Decryption();
 
+        public static event EventHandler<PatientDiagnosisEventArgs> PatientDiagnosis;
+        public static event EventHandler NewPatientHandler;
+
         private static bool _log;
 
         public static void Init()
@@ -21,9 +25,23 @@ namespace App_OP.PrescriptionCirculation
             var log = ConfigurationManager.AppSettings["prescription_circulation_log"];
             if (log == "true")
                 _log = true;
-
-            _log = false;
+            else
+                _log = false;
         }
+
+        public static List<OP_PatientDiagnosis> GetPatientDiagnoses()
+        {
+            var args = new PatientDiagnosisEventArgs();
+            PatientDiagnosis.Invoke(null, args);
+            return args.Diagnosis;
+        }
+
+        public static void NewPatient()
+        {
+            NewPatientHandler?.Invoke(null, EventArgs.Empty);
+        }
+
+        public static List<IView_PrescriptionCirculation_DrugInfo> DrugInfos { get; set; }
 
         public T Post<T>(object request, string url, string handlerName) where T : class
         {
@@ -55,5 +73,10 @@ namespace App_OP.PrescriptionCirculation
                 return null;
             }
         }
+    }
+
+    class PatientDiagnosisEventArgs : EventArgs
+    {
+        public List<OP_PatientDiagnosis> Diagnosis { get; set; }
     }
 }

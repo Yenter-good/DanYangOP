@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CIS.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,8 @@ namespace App_OP.Examination.PACSShare.Token
             request.timestamp = getTime10().ToString();
             request.app_sign = ((request.app_key + request.timestamp).ToMD5() + secret).ToMD5();
 
-            var response = PACSShareHelper.Post<TokenResponse>(request, "http://20.30.1.81/openapi/api/v2/auth/token", "获取Token");
+            var url = SysContext.CurrUser.Params.OP_PACSShare_Url;
+            var response = PACSShareHelper.Post<TokenResponse>(request, url + "/openapi/api/v2/auth/token", "获取Token");
             if (response != null)
             {
                 PACSShareHelper.Token = response.data.token;

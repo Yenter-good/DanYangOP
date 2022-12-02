@@ -15,7 +15,7 @@ namespace App_OP.PrescriptionCirculation.ViewPrescription
         {
             _handler = new PrescriptionCirculationHandler();
         }
-        public ViewPrescriptionResponse Handler(OP_Prescription prescription)
+        public ViewPrescriptionResponse Handler(OP_PrescriptionCirculation prescription)
         {
             var dt = DBHelper.CIS.FromSql($"select * from vtyb_mz_dj where jzh ='{prescription.TreatmentNo}'").ToDataTable();
             if (dt.Rows.Count == 0)
@@ -24,13 +24,14 @@ namespace App_OP.PrescriptionCirculation.ViewPrescription
             {
                 certno = prescription.IDCard,
                 fixmedinsCode = "H32118100064",
-                hiRxno = prescription.PrescriptionCirculation_PrescriptionNo,
+                hiRxno = prescription.PrescriptionCirculationNo,
                 mdtrtId = dt.Rows[0]["mdtrt_id"].ToString(),
                 psnCertType = "01",
                 psnName = prescription.PatientName,
             };
 
-            return _handler.Post<ViewPrescriptionResponse>(request, "http://10.72.3.127:20080/fixmedins/fixmedins/hospRxDetlQuery", "处方信息查询");
+            var url = SysContext.CurrUser.Params.OP_PrescriptionCirculation_Url;
+            return _handler.Post<ViewPrescriptionResponse>(request, url + "/fixmedins/fixmedins/hospRxDetlQuery", "处方信息查询");
         }
     }
 }

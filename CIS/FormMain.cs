@@ -145,7 +145,7 @@ namespace CIS
             this.cbxDept.ValueMember = "Code";
             this.cbxClinic.DisplayMember = "ClinicName";
             this.cbxClinic.ValueMember = "ClinicCode";
-            this.btnUserSet.Text = "当前用户：" + SysContext.CurrUser.user.Name;
+            this.btnUserSet.Text = "当前用户：" + SysContext.CurrUser.user.Name + $"({SysContext.CurrUser.user.HealthCareCode})";
             CreateAppButton(SysContext.CurrUser.appList);
             if (SysContext.CurrUser.appList.Count == 0 || SysContext.CurrUser.menuList.Count == 0 || SysContext.CurrUser.roleList.Count == 0)
             {

@@ -16,10 +16,10 @@ namespace App_OP.PrescriptionCirculation.Undo
             _handler = new PrescriptionCirculationHandler();
         }
 
-        public UndoPrescriptionResponse Handler(OP_Prescription prescription, string reason)
+        public UndoPrescriptionResponse Handler(OP_PrescriptionCirculation prescription, string reason)
         {
             UndoPrescriptionRequest request = new UndoPrescriptionRequest();
-            request.hiRxno = prescription.PrescriptionCirculation_PrescriptionNo;
+            request.hiRxno = prescription.PrescriptionCirculationNo;
             request.fixmedinsCode = "H32118100064";
             request.drCode = SysContext.CurrUser.user.HealthCareCode;
             request.undoDrName = SysContext.CurrUser.UserName;
@@ -28,7 +28,8 @@ namespace App_OP.PrescriptionCirculation.Undo
             request.undoRea = reason;
             request.undoTime = DateTime.Now;
 
-            var response = _handler.Post<UndoPrescriptionResponse>(request, "http://10.72.3.127:20080/fixmedins/fixmedins/rxUndo", "处方撤销");
+            var url = SysContext.CurrUser.Params.OP_PrescriptionCirculation_Url;
+            var response = _handler.Post<UndoPrescriptionResponse>(request, url + "/fixmedins/fixmedins/rxUndo", "处方撤销");
             if (response != null)
                 return response;
             else

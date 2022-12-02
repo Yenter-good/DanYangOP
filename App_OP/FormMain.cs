@@ -1,6 +1,7 @@
 ﻿using App_OP.Examination;
 using App_OP.PatientInfo;
 using App_OP.Prescription;
+using App_OP.PrescriptionCirculation;
 using App_OP.PrescriptionCirculation.AuditResult;
 using App_OP.PrescriptionCirculation.TakeDrugResult;
 using App_OP.PrescriptionCirculation.Undo;
@@ -114,6 +115,13 @@ namespace App_OP
             {
                 this.dgvZD.Height = SysContext.UserPositionSetting.PatientInfoPosition;
             }
+
+            PrescriptionCirculationHandler.PatientDiagnosis += PrescriptionCirculationHandler_PatientDiagnosis;
+        }
+
+        private void PrescriptionCirculationHandler_PatientDiagnosis(object sender, PatientDiagnosisEventArgs e)
+        {
+            e.Diagnosis = this.GEtDiagnosis();
         }
 
         public void ShowTab(string caption, Control formType, string imageName)
@@ -313,6 +321,8 @@ namespace App_OP
                 _emergency = null;
                 this.btnExistsEmergency.Visible = false;
             }
+
+            PrescriptionCirculationHandler.NewPatient();
 
             formPrescription.InitUI(true);
             formLisRequisition.InitUI();
@@ -1076,19 +1086,19 @@ namespace App_OP
                 }
             }
 
-            if (successPrescription.Any(p => !string.IsNullOrWhiteSpace(p.PrescriptionCirculation_PrescriptionNo)))
-            {
-                UndoPrescriptionHelper helper = new UndoPrescriptionHelper();
-                FormPrescriptionCirculationUndo form = new FormPrescriptionCirculationUndo();
-                if (form.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(form.Reason))
-                {
-                    foreach (var prescription in successPrescription)
-                    {
-                        if (!string.IsNullOrWhiteSpace(prescription.PrescriptionCirculation_PrescriptionNo))
-                            helper.Handler(prescription, form.Reason);
-                    }
-                }
-            }
+            //if (successPrescription.Any(p => !string.IsNullOrWhiteSpace(p.PrescriptionCirculation_PrescriptionNo)))
+            //{
+            //    UndoPrescriptionHelper helper = new UndoPrescriptionHelper();
+            //    FormPrescriptionCirculationUndo form = new FormPrescriptionCirculationUndo();
+            //    if (form.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(form.Reason))
+            //    {
+            //        foreach (var prescription in successPrescription)
+            //        {
+            //            if (!string.IsNullOrWhiteSpace(prescription.PrescriptionCirculation_PrescriptionNo))
+            //                helper.Handler(prescription, form.Reason);
+            //        }
+            //    }
+            //}
 
 
             InitPrescription();
@@ -1696,65 +1706,65 @@ namespace App_OP
 
         private void 查看双流转处方信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var selectedRows = this.dgvPrescription.GetSelectedRows();
-            if (selectedRows.Count == 0)
-                return;
+            //var selectedRows = this.dgvPrescription.GetSelectedRows();
+            //if (selectedRows.Count == 0)
+            //    return;
 
-            var selectedRow = selectedRows[0] as GridRow;
-            var prescription = selectedRow.DataItem as OP_Prescription;
+            //var selectedRow = selectedRows[0] as GridRow;
+            //var prescription = selectedRow.DataItem as OP_Prescription;
 
-            var circulationCode = DBHelper.CIS.From<OP_Prescription>().Where(p => p.PrescriptionNo == prescription.PrescriptionNo).Select(p => p.PrescriptionCirculation_PrescriptionNo).First<string>();
-            prescription.PrescriptionCirculation_PrescriptionNo = circulationCode;
+            //var circulationCode = DBHelper.CIS.From<OP_Prescription>().Where(p => p.PrescriptionNo == prescription.PrescriptionNo).Select(p => p.PrescriptionCirculation_PrescriptionNo).First<string>();
+            //prescription.PrescriptionCirculation_PrescriptionNo = circulationCode;
 
-            ViewPrescriptionHelper viewPrescription = new ViewPrescriptionHelper();
-            var data = viewPrescription.Handler(prescription);
-            if (data == null)
-                return;
-            FormPrescriptionCirculationPreview preview = new FormPrescriptionCirculationPreview();
-            preview.Init(data);
-            preview.ShowDialog();
+            //ViewPrescriptionHelper viewPrescription = new ViewPrescriptionHelper();
+            //var data = viewPrescription.Handler(prescription);
+            //if (data == null)
+            //    return;
+            //FormPrescriptionCirculationPreview preview = new FormPrescriptionCirculationPreview();
+            //preview.Init(data);
+            //preview.ShowDialog();
         }
 
         private void 查看双流转处方审核结果ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var selectedRows = this.dgvPrescription.GetSelectedRows();
-            if (selectedRows.Count == 0)
-                return;
+            //var selectedRows = this.dgvPrescription.GetSelectedRows();
+            //if (selectedRows.Count == 0)
+            //    return;
 
-            var selectedRow = selectedRows[0] as GridRow;
-            var prescription = selectedRow.DataItem as OP_Prescription;
+            //var selectedRow = selectedRows[0] as GridRow;
+            //var prescription = selectedRow.DataItem as OP_Prescription;
 
-            var circulationCode = DBHelper.CIS.From<OP_Prescription>().Where(p => p.PrescriptionNo == prescription.PrescriptionNo).Select(p => p.PrescriptionCirculation_PrescriptionNo).First<string>();
-            prescription.PrescriptionCirculation_PrescriptionNo = circulationCode;
+            //var circulationCode = DBHelper.CIS.From<OP_Prescription>().Where(p => p.PrescriptionNo == prescription.PrescriptionNo).Select(p => p.PrescriptionCirculation_PrescriptionNo).First<string>();
+            //prescription.PrescriptionCirculation_PrescriptionNo = circulationCode;
 
-            AuditResultHelper auditResult = new AuditResultHelper();
-            var data = auditResult.Handler(prescription);
-            if (data == null)
-                return;
-            FormAuditResult preview = new FormAuditResult();
-            preview.Init(data);
-            preview.ShowDialog();
+            //AuditResultHelper auditResult = new AuditResultHelper();
+            //var data = auditResult.Handler(prescription);
+            //if (data == null)
+            //    return;
+            //FormAuditResult preview = new FormAuditResult();
+            //preview.Init(data);
+            //preview.ShowDialog();
         }
 
         private void 查看双流转取药结果ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var selectedRows = this.dgvPrescription.GetSelectedRows();
-            if (selectedRows.Count == 0)
-                return;
+            //var selectedRows = this.dgvPrescription.GetSelectedRows();
+            //if (selectedRows.Count == 0)
+            //    return;
 
-            var selectedRow = selectedRows[0] as GridRow;
-            var prescription = selectedRow.DataItem as OP_Prescription;
+            //var selectedRow = selectedRows[0] as GridRow;
+            //var prescription = selectedRow.DataItem as OP_Prescription;
 
-            var circulationCode = DBHelper.CIS.From<OP_Prescription>().Where(p => p.PrescriptionNo == prescription.PrescriptionNo).Select(p => p.PrescriptionCirculation_PrescriptionNo).First<string>();
-            prescription.PrescriptionCirculation_PrescriptionNo = circulationCode;
+            //var circulationCode = DBHelper.CIS.From<OP_Prescription>().Where(p => p.PrescriptionNo == prescription.PrescriptionNo).Select(p => p.PrescriptionCirculation_PrescriptionNo).First<string>();
+            //prescription.PrescriptionCirculation_PrescriptionNo = circulationCode;
 
-            TakeDrugResultHelper takeDrug = new TakeDrugResultHelper();
-            var data = takeDrug.Handler(prescription);
-            if (data == null)
-                return;
-            FormTakeDrugResultPreview preview = new FormTakeDrugResultPreview();
-            preview.Init(data);
-            preview.ShowDialog();
+            //TakeDrugResultHelper takeDrug = new TakeDrugResultHelper();
+            //var data = takeDrug.Handler(prescription);
+            //if (data == null)
+            //    return;
+            //FormTakeDrugResultPreview preview = new FormTakeDrugResultPreview();
+            //preview.Init(data);
+            //preview.ShowDialog();
         }
     }
 }

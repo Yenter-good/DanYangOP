@@ -65,6 +65,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.查看双流转处方信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.查看双流转处方审核结果ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.查看双流转取药结果ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridColumn1 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn16 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
@@ -79,11 +80,6 @@
             this.btnUndoPrescription = new DevComponents.DotNetBar.ButtonItem();
             this.btnDelPrescription = new DevComponents.DotNetBar.ButtonItem();
             this.dgvZDDetail = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiagnosisType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiagnosisSpecialFlag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvChronic = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
             this.gridColumn14 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn11 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
@@ -110,7 +106,12 @@
             this.tabMain = new DevComponents.DotNetBar.SuperTabControl();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.expandableSplitter1 = new DevComponents.DotNetBar.ExpandableSplitter();
-            this.查看双流转取药结果ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMedicareCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiagnosisType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiagnosisSpecialFlag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barTop)).BeginInit();
             this.pnlRight.SuspendLayout();
             this.expandablePanel1.SuspendLayout();
@@ -396,7 +397,7 @@
             this.查看双流转处方审核结果ToolStripMenuItem,
             this.查看双流转取药结果ToolStripMenuItem});
             this.contextPrescription.Name = "contextPrescription";
-            this.contextPrescription.Size = new System.Drawing.Size(209, 236);
+            this.contextPrescription.Size = new System.Drawing.Size(209, 214);
             // 
             // 打印选中处方ToolStripMenuItem
             // 
@@ -463,6 +464,13 @@
             this.查看双流转处方审核结果ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.查看双流转处方审核结果ToolStripMenuItem.Text = "查看双流转处方审核结果";
             this.查看双流转处方审核结果ToolStripMenuItem.Click += new System.EventHandler(this.查看双流转处方审核结果ToolStripMenuItem_Click);
+            // 
+            // 查看双流转取药结果ToolStripMenuItem
+            // 
+            this.查看双流转取药结果ToolStripMenuItem.Name = "查看双流转取药结果ToolStripMenuItem";
+            this.查看双流转取药结果ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.查看双流转取药结果ToolStripMenuItem.Text = "查看双流转取药结果";
+            this.查看双流转取药结果ToolStripMenuItem.Click += new System.EventHandler(this.查看双流转取药结果ToolStripMenuItem_Click);
             // 
             // gridColumn1
             // 
@@ -599,6 +607,7 @@
             this.Column1,
             this.colCode,
             this.colName,
+            this.colMedicareCode,
             this.DiagnosisType,
             this.DiagnosisSpecialFlag});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -611,7 +620,7 @@
             this.dgvZDDetail.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvZDDetail.EnableHeadersVisualStyles = false;
             this.dgvZDDetail.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.dgvZDDetail.Location = new System.Drawing.Point(-104, 108);
+            this.dgvZDDetail.Location = new System.Drawing.Point(-200, 108);
             this.dgvZDDetail.Name = "dgvZDDetail";
             this.dgvZDDetail.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -625,54 +634,13 @@
             this.dgvZDDetail.RowHeadersVisible = false;
             this.dgvZDDetail.RowTemplate.Height = 23;
             this.dgvZDDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvZDDetail.Size = new System.Drawing.Size(377, 230);
+            this.dgvZDDetail.Size = new System.Drawing.Size(473, 230);
             this.dgvZDDetail.TabIndex = 1;
             this.dgvZDDetail.Visible = false;
             this.dgvZDDetail.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvZDDetail_CellFormatting);
             this.dgvZDDetail.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvZDDetail_CellMouseDoubleClick);
             this.dgvZDDetail.VisibleChanged += new System.EventHandler(this.dgvZDDetail_VisibleChanged);
             this.dgvZDDetail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvZDDetail_KeyDown);
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.DataPropertyName = "Type";
-            this.Column1.HeaderText = "类型";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 60;
-            // 
-            // colCode
-            // 
-            this.colCode.DataPropertyName = "Code";
-            this.colCode.HeaderText = "ICD";
-            this.colCode.Name = "colCode";
-            this.colCode.ReadOnly = true;
-            this.colCode.Width = 70;
-            // 
-            // colName
-            // 
-            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colName.DataPropertyName = "Name";
-            this.colName.HeaderText = "诊断名称";
-            this.colName.Name = "colName";
-            this.colName.ReadOnly = true;
-            // 
-            // DiagnosisType
-            // 
-            this.DiagnosisType.DataPropertyName = "Type";
-            this.DiagnosisType.HeaderText = "诊断类型";
-            this.DiagnosisType.Name = "DiagnosisType";
-            this.DiagnosisType.ReadOnly = true;
-            this.DiagnosisType.Visible = false;
-            // 
-            // DiagnosisSpecialFlag
-            // 
-            this.DiagnosisSpecialFlag.DataPropertyName = "SpecialFlag";
-            this.DiagnosisSpecialFlag.HeaderText = "特殊标志 0正常 1慢病 2传染病";
-            this.DiagnosisSpecialFlag.Name = "DiagnosisSpecialFlag";
-            this.DiagnosisSpecialFlag.ReadOnly = true;
-            this.DiagnosisSpecialFlag.Visible = false;
             // 
             // dgvChronic
             // 
@@ -1035,12 +1003,53 @@
             this.expandableSplitter1.TabIndex = 37;
             this.expandableSplitter1.TabStop = false;
             // 
-            // 查看双流转取药结果ToolStripMenuItem
+            // Column1
             // 
-            this.查看双流转取药结果ToolStripMenuItem.Name = "查看双流转取药结果ToolStripMenuItem";
-            this.查看双流转取药结果ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
-            this.查看双流转取药结果ToolStripMenuItem.Text = "查看双流转取药结果";
-            this.查看双流转取药结果ToolStripMenuItem.Click += new System.EventHandler(this.查看双流转取药结果ToolStripMenuItem_Click);
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.DataPropertyName = "Type";
+            this.Column1.HeaderText = "类型";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 60;
+            // 
+            // colCode
+            // 
+            this.colCode.DataPropertyName = "Code";
+            this.colCode.HeaderText = "ICD";
+            this.colCode.Name = "colCode";
+            this.colCode.ReadOnly = true;
+            this.colCode.Width = 70;
+            // 
+            // colName
+            // 
+            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colName.DataPropertyName = "Name";
+            this.colName.HeaderText = "诊断名称";
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
+            // 
+            // colMedicareCode
+            // 
+            this.colMedicareCode.DataPropertyName = "MedicareCode";
+            this.colMedicareCode.HeaderText = "医保编码";
+            this.colMedicareCode.Name = "colMedicareCode";
+            this.colMedicareCode.ReadOnly = true;
+            // 
+            // DiagnosisType
+            // 
+            this.DiagnosisType.DataPropertyName = "Type";
+            this.DiagnosisType.HeaderText = "诊断类型";
+            this.DiagnosisType.Name = "DiagnosisType";
+            this.DiagnosisType.ReadOnly = true;
+            this.DiagnosisType.Visible = false;
+            // 
+            // DiagnosisSpecialFlag
+            // 
+            this.DiagnosisSpecialFlag.DataPropertyName = "SpecialFlag";
+            this.DiagnosisSpecialFlag.HeaderText = "特殊标志 0正常 1慢病 2传染病";
+            this.DiagnosisSpecialFlag.Name = "DiagnosisSpecialFlag";
+            this.DiagnosisSpecialFlag.ReadOnly = true;
+            this.DiagnosisSpecialFlag.Visible = false;
             // 
             // FormMain
             // 
@@ -1134,11 +1143,6 @@
         private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn19;
         private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn20;
         private DevComponents.DotNetBar.ButtonItem btnSEMR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiagnosisType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiagnosisSpecialFlag;
         private System.Windows.Forms.ToolStripMenuItem stripCopyPrescription;
         private DevComponents.DotNetBar.ButtonItem btnIPRecordView;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
@@ -1148,5 +1152,11 @@
         private System.Windows.Forms.ToolStripMenuItem 查看双流转处方信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 查看双流转处方审核结果ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 查看双流转取药结果ToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMedicareCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiagnosisType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiagnosisSpecialFlag;
     }
 }

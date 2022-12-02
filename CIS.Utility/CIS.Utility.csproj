@@ -120,6 +120,7 @@
     <Compile Include="Helpers\FrmExcelImportDialog.Designer.cs">
       <DependentUpon>FrmExcelImportDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\IdHelper.cs" />
     <Compile Include="Helpers\SerializeHelper.cs" />
     <Compile Include="Helpers\KnowlageNodeModel.cs" />
     <Compile Include="Helpers\TreeHelper.cs" />

@@ -67,30 +67,14 @@ namespace App_OP
             //FastReport.Utils.Config.PreviewSettings.Buttons = previewButtons;
         }
 
-        public static string PrescriptionBase64(string PrescriptionNo, string PrescriptionType, string PrescriptionNum)
+        public static string PrescriptionBase64(long PrescriptionNo, string prescriptionCirculationNo, string PrescriptionNum)
         {
             //获取路径
             string frxPath = System.IO.Path.Combine(Application.StartupPath, "FRX");
             FastReport.Report report = new FastReport.Report();
-            if (PrescriptionType == "1" || PrescriptionType == "3" || PrescriptionType == "5" || PrescriptionType == "6" || PrescriptionType == "8")
-                report.Load(frxPath + "\\mzcf.frx");
-            //report.Load(frxPath + "\\mzcf-QR.frx");
-            else if (PrescriptionType == "2")
-                report.Load(frxPath + "\\mzcycf.frx");
-            else if (PrescriptionType == "9")
-                report.Load(frxPath + "\\mzcz.frx");
-            else if (PrescriptionType == "11")
-                report.Load(frxPath + "\\jysq.frx");
-            else if (PrescriptionType == "12")
-                report.Load(frxPath + "\\jcsq.frx");
-            //else if (PrescriptionType == "7")
-            //    report.Load(frxPath + "\\mzjmycf.frx");
-            else if (PrescriptionType == "13")//门诊外购处方
-                report.Load(frxPath + "\\mzwgcf.frx");
-            else if (PrescriptionType == "4" || PrescriptionType == "7")
-                report.Load(frxPath + "\\mzmzcf.frx");
+            report.Load(frxPath + "\\stdlz.frx");
 
-            DataTable dt = BuildPrescription(PrescriptionNo, SysContext.GetCurrPatient.OutpatientNo, PrescriptionType, PrescriptionNum);
+            DataTable dt = BuildPrescriptionCirculation(PrescriptionNo, prescriptionCirculationNo, SysContext.GetCurrPatient.OutpatientNo);
 
             report.RegisterData(dt, "Table4");
 
@@ -102,7 +86,9 @@ namespace App_OP
             using (var stream = new MemoryStream())
             {
                 report.Export(export, stream);
-                return Convert.ToBase64String(stream.ToArray());
+                var buffer = stream.ToArray();
+
+                return Convert.ToBase64String(buffer);
             }
         }
 
@@ -133,15 +119,10 @@ namespace App_OP
                 diagnosis = DBHelper.CIS.From<OP_PatientDiagnosis>().Where(p => p.TreatmentNo == TreatmentNo).Select(p => new { p.Name, p.Status }).OrderBy(p => new { p.Type, p.Index }).ToList<OP_PatientDiagnosis>();
 
 
-            //List<string> prescriptionNoList = DBHelper.CIS.From<OP_Prescription>().Where(p => p.TreatmentNo == TreatmentNo).OrderBy(p => p.UpdateTime).Select(p => p.PrescriptionNo).ToList<string>();
-            List<string> prescriptionNoList = DBHelper.CIS.FromSql(string.Format("SELECT PrescriptionNo FROM OP_Prescription WHERE TreatmentNo='{0}' UNION ALL SELECT PrescriptionNo FROM OP_Prescription_History WHERE TreatmentNo='{0}'", TreatmentNo)).ToList<string>();
-            int index = prescriptionNoList.IndexOf(PrescriptionNo);
-
             diagnosis.ForEach(p => p.Name += p.Status == 2 ? "(待查)" : "");
 
             string diagnosisString = string.Join(",", diagnosis.Select(p => p.Name).ToArray()); //获得诊断信息
 
-            //List<CIS.Model.Prescription> list= DBHelper.CIS.FromSql(string.Format("SELECT A.*,B.NAME AS DIAGNOSISNAME,C.NAME AS DEPTNAME,D.PATIENTNAME,D.SEX,D.AGE,D.PAYTYPE,D.USERNAME AS DOCTORNAME,G.NAME AS PRESCRIPTIONTYPE,D.ConditionSummary,D.Explanation,D.Specimen,D.HerbalMedicineNum,A.TREATMENTNO FROM OP_PRESCRIPTION_DETAIL A LEFT JOIN OP_PATIENTDIAGNOSIS B ON A.TREATMENTNO=B.TREATMENTNO AND B.ISMAIN=1 LEFT JOIN OP_PRESCRIPTION D ON A.PRESCRIPTIONNO=D.PRESCRIPTIONNO LEFT JOIN IVIEW_DEPT C ON D.DEPTCODE=C.CODE LEFT JOIN OP_DIC_PRESCRIPTIONTYPE G ON D.PRESCRIPTIONTYPE=G.CODE WHERE A.PrescriptionNo='{0}' AND A.TreatmentNo='{1}' ORDER BY A.NO", PrescriptionNo, TreatmentNo)).ToList<CIS.Model.Prescription>();
             List<CIS.Model.Prescription> list = new List<CIS.Model.Prescription>();
             if (selectAll)
                 list = DBHelper.CIS.FromProc("Proc_OP_GetPrintPrescription_All").AddInParameter("PrescriptionNo", DbType.String, PrescriptionNo).AddInParameter("TreatmentNo", DbType.String, TreatmentNo).ToList<CIS.Model.Prescription>();
@@ -164,6 +145,25 @@ namespace App_OP
 
 
             return result;
+        }
+
+        public static DataTable BuildPrescriptionCirculation(long prescriptionNo, string prescriptionCirculationNo, string treatmentNo)
+        {
+            DataTable dt = new DataTable();
+            dt = GetPrintDataTableStru().Clone();
+            List<OP_PatientDiagnosis> diagnosis = new List<OP_PatientDiagnosis>();
+
+            diagnosis = DBHelper.CIS.From<OP_PatientDiagnosis>().Where(p => p.TreatmentNo == treatmentNo).Select(p => new { p.Name, p.Status }).OrderBy(p => new { p.Type, p.Index }).ToList<OP_PatientDiagnosis>();
+
+            diagnosis.ForEach(p => p.Name += p.Status == 2 ? "(待查)" : "");
+
+            string diagnosisString = string.Join(",", diagnosis.Select(p => p.Name).ToArray()); //获得诊断信息
+
+            List<CIS.Model.Prescription> list = new List<CIS.Model.Prescription>();
+
+            list = DBHelper.CIS.FromProc("Proc_OP_GetPrintPrescriptionCirculation").AddInParameter("PrescriptionNo", DbType.Int64, prescriptionNo).AddInParameter("TreatmentNo", DbType.String, treatmentNo).ToList<CIS.Model.Prescription>();
+
+            return BuildCirculationWesternMedicine(dt, list, prescriptionNo, prescriptionCirculationNo);
         }
 
         private static DataTable GetPrintDataTableStru()
@@ -199,6 +199,7 @@ namespace App_OP
             dt.Columns.Add("HerbsGroupName"); //膏方名称
             dt.Columns.Add("PatientAddress"); //病人地址
             dt.Columns.Add("DrugPurpose"); //用药目的
+            dt.Columns.Add("PrescriptionCirculationNo"); //医保处方追溯码
             return dt;
         }
 
@@ -233,7 +234,7 @@ namespace App_OP
                 }
                 ItemName = ItemName.TrimEnd((char[])"\r\n".ToCharArray());
                 DataRow row = dt.NewRow();
-                row.ItemArray = new object[] { ItemName, ItemUsage, list[0].TreatmentNo.AsString(""), Total, list[0].DeptName, list[0].DiagnosisName, list[0].PatientName, list[0].Sex, list[0].Age, list[0].DoctorName, list[0].UpdateTime, list[0].PrescriptionType, "1", list[0].PayType, "", "", "", list[0].TreatmentNo, list[0].HerbalMedicineNum, PrescriptionNo, list[0]?.PatientPhone, "", list[0].IDCard, list[0].AgentName, list[0].AgentIDCard, list[0].AgentAge, list[0].AgentSex, "", list[0].PatientAddress, list[0].DrugPurpose };
+                row.ItemArray = new object[] { ItemName, ItemUsage, list[0].TreatmentNo.AsString(""), Total, list[0].DeptName?.Trim(), list[0].DiagnosisName?.Trim(), list[0].PatientName?.Trim(), list[0].Sex?.Trim(), list[0].Age?.Trim(), list[0].DoctorName?.Trim(), list[0].UpdateTime, list[0].PrescriptionType?.Trim(), "1", list[0].PayType?.Trim(), "", "", "", list[0].TreatmentNo?.Trim(), list[0].HerbalMedicineNum?.Trim(), PrescriptionNo, list[0]?.PatientPhone?.Trim(), "", list[0].IDCard?.Trim(), list[0].AgentName?.Trim(), list[0].AgentIDCard?.Trim(), list[0].AgentAge?.Trim(), list[0].AgentSex?.Trim(), "", list[0].PatientAddress?.Trim(), list[0].DrugPurpose?.Trim() };
                 dt.Rows.Add(row);
             }
 
@@ -244,12 +245,60 @@ namespace App_OP
                 string ItemUsage = "   Sig." + " " + item.Amount.AsFloat() + item.DosageUnit + " " + Usage.Where(p => p.Code == item.Usage).First().Name + " " + item.Frequency + (item.SkinTestFlag == "Y" ? "  需皮试" : item.SkinTestFlag == "N" ? "  已皮试" : "") + Environment.NewLine;
                 //string ItemUsage = "   Sig." + " " + item.Amount.AsFloat() + " " + "口服" + " " + item.Frequency;
                 DataRow row = dt.NewRow();
-                row.ItemArray = new object[] { ItemName + ItemUsage, "", list[0].TreatmentNo.AsString(""), Total, list[0].DeptName, list[0].DiagnosisName, list[0].PatientName, list[0].Sex, list[0].Age, list[0].DoctorName, list[0].UpdateTime, list[0].PrescriptionType, "0", list[0].PayType, item.ConditionSummary, "", "", list[0].TreatmentNo, list[0].HerbalMedicineNum, PrescriptionNo, list[0]?.PatientPhone, "", list[0].IDCard, list[0].AgentName, list[0].AgentIDCard, list[0].AgentAge, list[0].AgentSex, "", list[0].PatientAddress, list[0].DrugPurpose };
+                row.ItemArray = new object[] { ItemName + ItemUsage, "", list[0].TreatmentNo.AsString(""), Total, list[0].DeptName?.Trim(), list[0].DiagnosisName?.Trim(), list[0].PatientName?.Trim(), list[0].Sex?.Trim(), list[0].Age?.Trim(), list[0].DoctorName?.Trim(), list[0].UpdateTime, list[0].PrescriptionType?.Trim(), "0", list[0].PayType?.Trim(), item.ConditionSummary?.Trim(), "", "", list[0].TreatmentNo, list[0].HerbalMedicineNum, PrescriptionNo, list[0]?.PatientPhone?.Trim(), "", list[0].IDCard?.Trim(), list[0].AgentName?.Trim(), list[0].AgentIDCard?.Trim(), list[0].AgentAge?.Trim(), list[0].AgentSex?.Trim(), "", list[0].PatientAddress?.Trim(), list[0].DrugPurpose?.Trim() };
                 dt.Rows.Add(row);
             }
 
             return dt;
         }
+
+        /// <summary>
+        /// 组装双流转西药处方
+        /// </summary>
+        /// <param name="dt">DataTable结构体</param>
+        /// <param name="list">数据源</param>
+        /// <returns></returns>
+        private static DataTable BuildCirculationWesternMedicine(DataTable dt, List<CIS.Model.Prescription> list, long prescriptionNo, string prescriptionCirculationNo)
+        {
+            List<CIS.Model.Prescription> listGroup = list.Where(p => p.GroupNo != 0 && p.IsAdditional != 1).ToList();    //找到同组的药品
+            List<int?> listGroupNo = listGroup.Select(p => p.GroupNo).Distinct().ToList();    //找到同组编号
+            List<CIS.Model.Prescription> listNoGroup = list.Where(p => p.GroupNo == 0 && p.IsAdditional != 1).ToList();    //找到没有同组的药品
+            if (listGroupNo == null)
+                listGroupNo = new List<int?>();
+            //生成同组的处方格式
+            foreach (int? item1 in listGroupNo)
+            {
+                List<CIS.Model.Prescription> tmp = listGroup.Where(p => p.GroupNo == item1).ToList();
+                string ItemName = "";
+                string ItemUsage = "";
+                foreach (CIS.Model.Prescription item in tmp)
+                {
+                    ItemName += item.ItemName + " " + item.Specification + " " + " " + item.Number + item.PackingUnit + Environment.NewLine;
+                    string usage = "用法：" + item.Amount.AsFloat() + item.DosageUnit + " " + Usage.Where(p => p.Code == item.Usage).First().Name + " " + item.Frequency + (item.SkinTestFlag == "Y" ? "  需皮试" : item.SkinTestFlag == "N" ? "  已皮试" : "") + Environment.NewLine + Environment.NewLine;
+                    ItemName += usage;
+                    //ItemUsage = Usage.Where(p => p.Code == item.Usage).First().Name + Environment.NewLine + item.Frequency + " " + "×" + " " + item.Days + "天";
+                    //ItemUsage = "口服" + Environment.NewLine + item.Frequency + " " + "×" + " " + item.Days + "天";
+                }
+                ItemName = ItemName.TrimEnd((char[])"\r\n".ToCharArray());
+                DataRow row = dt.NewRow();
+                row.ItemArray = new object[] { ItemName, ItemUsage, list[0].TreatmentNo.AsString(""), "", list[0].DeptName?.Trim(), list[0].DiagnosisName?.Trim(), list[0].PatientName?.Trim(), list[0].Sex?.Trim(), list[0].Age?.Trim(), list[0].DoctorName?.Trim(), list[0].UpdateTime, list[0].PrescriptionType?.Trim(), "1", list[0].PayType?.Trim(), "", "", "", list[0].TreatmentNo?.Trim(), list[0].HerbalMedicineNum?.Trim(), prescriptionNo, list[0]?.PatientPhone?.Trim(), "", list[0].IDCard?.Trim(), list[0].AgentName?.Trim(), list[0].AgentIDCard?.Trim(), list[0].AgentAge?.Trim(), list[0].AgentSex?.Trim(), "", list[0].PatientAddress?.Trim(), list[0].DrugPurpose?.Trim(), prescriptionCirculationNo };
+                dt.Rows.Add(row);
+            }
+
+            //生成非同组的处方格式
+            foreach (CIS.Model.Prescription item in listNoGroup)
+            {
+                string ItemName = item.ItemName + " " + item.Specification + " " + "×" + " " + item.Number + item.PackingUnit + Environment.NewLine;
+                string ItemUsage = "   Sig." + " " + item.Amount.AsFloat() + item.DosageUnit + " " + Usage.Where(p => p.Code == item.Usage).First().Name + " " + item.Frequency + (item.SkinTestFlag == "Y" ? "  需皮试" : item.SkinTestFlag == "N" ? "  已皮试" : "") + Environment.NewLine;
+                //string ItemUsage = "   Sig." + " " + item.Amount.AsFloat() + " " + "口服" + " " + item.Frequency;
+                DataRow row = dt.NewRow();
+                row.ItemArray = new object[] { ItemName + ItemUsage, "", list[0].TreatmentNo.AsString(""), "", list[0].DeptName?.Trim(), list[0].DiagnosisName?.Trim(), list[0].PatientName?.Trim(), list[0].Sex?.Trim(), list[0].Age?.Trim(), list[0].DoctorName?.Trim(), list[0].UpdateTime, list[0].PrescriptionType?.Trim(), "0", list[0].PayType?.Trim(), item.ConditionSummary?.Trim(), "", "", list[0].TreatmentNo, list[0].HerbalMedicineNum, prescriptionNo, list[0]?.PatientPhone?.Trim(), "", list[0].IDCard?.Trim(), list[0].AgentName?.Trim(), list[0].AgentIDCard?.Trim(), list[0].AgentAge?.Trim(), list[0].AgentSex?.Trim(), "", list[0].PatientAddress?.Trim(), list[0].DrugPurpose?.Trim(), prescriptionCirculationNo };
+                dt.Rows.Add(row);
+            }
+
+            return dt;
+        }
+
         /// <summary>
         /// 组装西药处方(老处方格式)
         /// </summary>
