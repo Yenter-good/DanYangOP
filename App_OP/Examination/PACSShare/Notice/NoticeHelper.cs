@@ -48,7 +48,15 @@ namespace App_OP.Examination.PACSShare.Notice
             var url = SysContext.CurrUser.Params.OP_PACSShare_Url;
             var response = PACSShareHelper.Post<NoticeResponse>(request, url + "/openapi/api/v2/mutual/project/notice", "类似检查项目");
             if (response == null)
+            {
+                AlertBox.Error("获取云影像平台类似检查项目失败:服务器错误");
                 return (null, null);
+            }
+            if (response.code != "200")
+            {
+                AlertBox.Error("获取云影像平台类似检查项目失败:" + response.message);
+                return (null, null);
+            }
             else
             {
                 if (response.data.url == null)

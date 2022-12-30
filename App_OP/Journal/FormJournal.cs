@@ -102,27 +102,44 @@ select * from (SELECT name,treatmentno,type,[index] from op_patientdiagnosis uni
                     journal.Name = string.Join(Environment.NewLine, format);
                 }
 
-                this.BeginInvoke((MethodInvoker)delegate
+                try
                 {
-                    if (this.progressBar1.Value + 200 > this.progressBar1.Maximum)
-                        this.progressBar1.Value = this.progressBar1.Maximum;
-                    else
-                        this.progressBar1.Value += 200;
-                });
+                    this.BeginInvoke((MethodInvoker)delegate
+                    {
+                        if (this.progressBar1.Value + 500 > this.progressBar1.Maximum)
+                            this.progressBar1.Value = this.progressBar1.Maximum;
+                        else
+                            this.progressBar1.Value += 500;
+                    });
+                }
+                catch
+                {
+                    return;
+                }
+
 
             }
-            this.BeginInvoke((MethodInvoker)delegate
+            try
             {
-                this.label1.Text = "正在构建界面\r\n请稍后";
-                this.progressBar1.Hide();
-                Application.DoEvents();
-                BindingSource bs = new BindingSource();
-                bs.DataSource = _allJournal;
+                this.BeginInvoke((MethodInvoker)delegate
+                {
+                    if (this.IsDisposed || this.Disposing)
+                        return;
+                    this.label1.Text = "正在构建界面\r\n请稍后";
+                    this.progressBar1.Hide();
+                    Application.DoEvents();
+                    bs = new BindingSource();
+                    bs.DataSource = _allJournal;
 
-                this.dgvJournal.DataSource = bs;
-                Application.DoEvents();
-                this.panel1.Hide();
-            });
+                    this.dgvJournal.DataSource = bs;
+                    Application.DoEvents();
+                    this.panel1.Hide();
+                });
+            }
+            catch
+            {
+                return;
+            }
         }
 
         private void btnExport_Click(object sender, EventArgs e)
@@ -132,7 +149,7 @@ select * from (SELECT name,treatmentno,type,[index] from op_patientdiagnosis uni
         }
 
 
-        class PatientDiagnosis
+        public class PatientDiagnosis
         {
             public string Name { get; set; }
             public string TreatmentNo { get; set; }

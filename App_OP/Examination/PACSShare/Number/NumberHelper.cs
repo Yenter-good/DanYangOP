@@ -8,7 +8,7 @@ namespace App_OP.Examination.PACSShare.Number
 {
     class NumberHelper
     {
-        public int Handler()
+        public int? Handler()
         {
             NumberRequest request = new NumberRequest()
             {
@@ -31,6 +31,11 @@ namespace App_OP.Examination.PACSShare.Number
 
             var url = SysContext.CurrUser.Params.OP_PACSShare_Url;
             var response = PACSShareHelper.Post<NumberResponse>(request, url + "/openapi/api/v2/study/shorttime/list/total", "获取项目总数");
+            if (response.code != "200")
+            {
+                AlertBox.Error("获取云影像平台项目总数失败:" + response.message);
+                return null;
+            }
             if (response == null)
                 return 0;
             else

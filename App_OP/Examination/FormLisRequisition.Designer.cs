@@ -47,6 +47,7 @@
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.btnAdd = new DevComponents.DotNetBar.ButtonItem();
             this.btnKnowlage = new DevComponents.DotNetBar.ButtonItem();
+            this.cbxSpecimen = new DevComponents.DotNetBar.ComboBoxItem();
             this.gridTCSM = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
             this.gridColumn14 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn15 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
@@ -72,7 +73,6 @@
             this.btnDel = new DevComponents.DotNetBar.ButtonItem();
             this.btnSave = new DevComponents.DotNetBar.ButtonItem();
             this.btnClear = new DevComponents.DotNetBar.ButtonItem();
-            this.cbxSpecimen = new DevComponents.DotNetBar.ComboBoxItem();
             this.expandablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.treeGroup)).BeginInit();
             this.pnlList.SuspendLayout();
@@ -190,7 +190,7 @@
             this.gridList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridList.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.gridList.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.gridList.Location = new System.Drawing.Point(2, 83);
+            this.gridList.Location = new System.Drawing.Point(2, 81);
             this.gridList.Name = "gridList";
             // 
             // 
@@ -205,7 +205,7 @@
             this.gridList.PrimaryGrid.RowHeaderIndexOffset = 1;
             this.gridList.PrimaryGrid.SelectionGranularity = DevComponents.DotNetBar.SuperGrid.SelectionGranularity.Row;
             this.gridList.PrimaryGrid.ShowRowGridIndex = true;
-            this.gridList.Size = new System.Drawing.Size(539, 141);
+            this.gridList.Size = new System.Drawing.Size(539, 143);
             this.gridList.TabIndex = 10;
             this.gridList.Text = "superGridControl1";
             this.gridList.RowClick += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowClickEventArgs>(this.gridList_RowClick);
@@ -267,7 +267,7 @@
             this.tbxSearch.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbxSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbxSearch.Font = new System.Drawing.Font("宋体", 12F);
-            this.tbxSearch.Location = new System.Drawing.Point(2, 57);
+            this.tbxSearch.Location = new System.Drawing.Point(2, 55);
             this.tbxSearch.MarkString = null;
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.PreventEnterBeep = true;
@@ -289,7 +289,7 @@
             this.cbxSpecimen});
             this.bar1.Location = new System.Drawing.Point(2, 28);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(539, 29);
+            this.bar1.Size = new System.Drawing.Size(539, 27);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar1.TabIndex = 5;
@@ -311,6 +311,13 @@
             this.btnKnowlage.Name = "btnKnowlage";
             this.btnKnowlage.Text = "知识库";
             this.btnKnowlage.Click += new System.EventHandler(this.btnKnowlage_Click);
+            // 
+            // cbxSpecimen
+            // 
+            this.cbxSpecimen.ComboWidth = 120;
+            this.cbxSpecimen.DropDownHeight = 106;
+            this.cbxSpecimen.ItemHeight = 18;
+            this.cbxSpecimen.Name = "cbxSpecimen";
             // 
             // gridTCSM
             // 
@@ -424,7 +431,7 @@
             this.gridSubList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSubList.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.gridSubList.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.gridSubList.Location = new System.Drawing.Point(2, 55);
+            this.gridSubList.Location = new System.Drawing.Point(2, 52);
             this.gridSubList.Name = "gridSubList";
             // 
             // 
@@ -439,7 +446,7 @@
             this.gridSubList.PrimaryGrid.RowHeaderIndexOffset = 1;
             this.gridSubList.PrimaryGrid.SelectionGranularity = DevComponents.DotNetBar.SuperGrid.SelectionGranularity.Row;
             this.gridSubList.PrimaryGrid.ShowRowGridIndex = true;
-            this.gridSubList.Size = new System.Drawing.Size(296, 349);
+            this.gridSubList.Size = new System.Drawing.Size(296, 352);
             this.gridSubList.TabIndex = 29;
             this.gridSubList.Text = "superGridControl1";
             // 
@@ -570,7 +577,7 @@
             this.btnClear});
             this.bar2.Location = new System.Drawing.Point(2, 28);
             this.bar2.Name = "bar2";
-            this.bar2.Size = new System.Drawing.Size(296, 27);
+            this.bar2.Size = new System.Drawing.Size(296, 24);
             this.bar2.Stretch = true;
             this.bar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar2.TabIndex = 6;
@@ -600,13 +607,6 @@
             this.btnClear.Name = "btnClear";
             this.btnClear.Text = "清空";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // cbxSpecimen
-            // 
-            this.cbxSpecimen.ComboWidth = 120;
-            this.cbxSpecimen.DropDownHeight = 106;
-            this.cbxSpecimen.ItemHeight = 18;
-            this.cbxSpecimen.Name = "cbxSpecimen";
             // 
             // FormLISRequisition
             // 

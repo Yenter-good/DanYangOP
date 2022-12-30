@@ -225,6 +225,12 @@ namespace System
         {
             return string.IsNullOrEmpty(text);
         }
+
+        public static bool IsNotNullOrEmpty(this string text)
+        {
+            return !string.IsNullOrEmpty(text);
+        }
+
         /// <summary>
         ///  指示指定的字符串是 null、空还是仅由空白字符组成。
         /// </summary>

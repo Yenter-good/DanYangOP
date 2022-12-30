@@ -13,7 +13,7 @@ namespace App_OP.Examination.PACSShare
         private static string _token;
         private static bool _log;
 
-        public void Init()
+        public static void Init()
         {
             var log = ConfigurationManager.AppSettings["pacs_share_log"];
             if (log == "true")

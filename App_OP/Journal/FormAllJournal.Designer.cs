@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.btnExport = new DevComponents.DotNetBar.ButtonX();
@@ -38,30 +42,32 @@
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.dgvJournal = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
-            this.gridColumn1 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn4 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn5 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn6 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn7 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn20 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn19 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn14 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn15 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn16 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn8 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn9 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn10 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn12 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn11 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn17 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn18 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn13 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.dgvJournal = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.colTreatmentNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPatientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colJob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFirstOrMany = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBloodPressure = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCardNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiagnosis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIDCard = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colUpdateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDoctorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDeptName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRemark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.EndTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StartTime)).BeginInit();
             this.panelEx1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvJournal)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // saveFileDialog1
@@ -227,7 +233,7 @@
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEx1.Location = new System.Drawing.Point(0, 0);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(880, 95);
+            this.panelEx1.Size = new System.Drawing.Size(1021, 95);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -265,196 +271,258 @@
             // 
             // dgvJournal
             // 
+            this.dgvJournal.AllowUserToAddRows = false;
+            this.dgvJournal.AllowUserToDeleteRows = false;
+            this.dgvJournal.AllowUserToResizeRows = false;
+            this.dgvJournal.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvJournal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvJournal.ColumnHeadersHeight = 28;
+            this.dgvJournal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvJournal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colTreatmentNo,
+            this.colPatientName,
+            this.colSex,
+            this.colAge,
+            this.colJob,
+            this.colFirstOrMany,
+            this.colBloodPressure,
+            this.colDA,
+            this.colPhone,
+            this.colCardNo,
+            this.colDiagnosis,
+            this.colAddress,
+            this.colIDCard,
+            this.colUpdateTime,
+            this.colDoctorName,
+            this.colDeptName,
+            this.colRemark});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvJournal.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvJournal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvJournal.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
-            this.dgvJournal.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.dgvJournal.EnableHeadersVisualStyles = false;
+            this.dgvJournal.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dgvJournal.Location = new System.Drawing.Point(0, 95);
             this.dgvJournal.Name = "dgvJournal";
+            this.dgvJournal.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvJournal.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvJournal.RowHeadersVisible = false;
+            this.dgvJournal.RowTemplate.Height = 23;
+            this.dgvJournal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvJournal.Size = new System.Drawing.Size(1021, 545);
+            this.dgvJournal.TabIndex = 21;
+            this.dgvJournal.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvJournal_CellMouseDoubleClick);
             // 
+            // colTreatmentNo
             // 
+            this.colTreatmentNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colTreatmentNo.DataPropertyName = "OutpatientNo";
+            this.colTreatmentNo.HeaderText = "就诊号";
+            this.colTreatmentNo.Name = "colTreatmentNo";
+            this.colTreatmentNo.ReadOnly = true;
+            this.colTreatmentNo.Width = 74;
             // 
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn1);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn2);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn3);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn4);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn5);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn6);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn7);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn20);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn19);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn14);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn15);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn16);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn8);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn9);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn10);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn12);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn11);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn17);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn18);
-            this.dgvJournal.PrimaryGrid.Columns.Add(this.gridColumn13);
-            this.dgvJournal.PrimaryGrid.ReadOnly = true;
-            this.dgvJournal.PrimaryGrid.SelectionGranularity = DevComponents.DotNetBar.SuperGrid.SelectionGranularity.Row;
-            this.dgvJournal.Size = new System.Drawing.Size(880, 545);
-            this.dgvJournal.TabIndex = 17;
-            this.dgvJournal.Text = "superGridControl1";
-            this.dgvJournal.RowDoubleClick += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDoubleClickEventArgs>(this.dgvJournal_RowDoubleClick);
+            // colPatientName
             // 
-            // gridColumn1
+            this.colPatientName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colPatientName.DataPropertyName = "PatientName";
+            this.colPatientName.HeaderText = "病人姓名";
+            this.colPatientName.Name = "colPatientName";
+            this.colPatientName.ReadOnly = true;
+            this.colPatientName.Width = 88;
             // 
-            this.gridColumn1.Name = "col_ID";
-            this.gridColumn1.ReadOnly = true;
-            this.gridColumn1.Visible = false;
+            // colSex
             // 
-            // gridColumn2
+            this.colSex.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colSex.DataPropertyName = "Sex";
+            this.colSex.HeaderText = "性别";
+            this.colSex.Name = "colSex";
+            this.colSex.ReadOnly = true;
+            this.colSex.Width = 60;
             // 
-            this.gridColumn2.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn2.DataPropertyName = "OutpatientNo";
-            this.gridColumn2.HeaderText = "就诊号";
-            this.gridColumn2.Name = "col_OutpatientNo";
-            this.gridColumn2.ReadOnly = true;
+            // colAge
             // 
-            // gridColumn3
+            this.colAge.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colAge.DataPropertyName = "Age";
+            this.colAge.HeaderText = "年龄";
+            this.colAge.Name = "colAge";
+            this.colAge.ReadOnly = true;
+            this.colAge.Width = 60;
             // 
-            this.gridColumn3.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn3.DataPropertyName = "PatientID";
-            this.gridColumn3.Name = "col_PatientID";
-            this.gridColumn3.ReadOnly = true;
-            this.gridColumn3.Visible = false;
+            // colJob
             // 
-            // gridColumn4
+            this.colJob.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colJob.DataPropertyName = "Job";
+            this.colJob.HeaderText = "职业";
+            this.colJob.Name = "colJob";
+            this.colJob.ReadOnly = true;
+            this.colJob.Width = 60;
             // 
-            this.gridColumn4.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn4.DataPropertyName = "PatientName";
-            this.gridColumn4.HeaderText = "病人姓名";
-            this.gridColumn4.Name = "col_PatientName";
-            this.gridColumn4.ReadOnly = true;
+            // colFirstOrMany
             // 
-            // gridColumn5
+            this.colFirstOrMany.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colFirstOrMany.DataPropertyName = "FirstOrMany";
+            this.colFirstOrMany.HeaderText = "初复诊";
+            this.colFirstOrMany.Name = "colFirstOrMany";
+            this.colFirstOrMany.ReadOnly = true;
+            this.colFirstOrMany.Width = 74;
             // 
-            this.gridColumn5.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn5.DataPropertyName = "Sex";
-            this.gridColumn5.HeaderText = "性别";
-            this.gridColumn5.Name = "col_Sex";
-            this.gridColumn5.ReadOnly = true;
+            // colBloodPressure
             // 
-            // gridColumn6
+            this.colBloodPressure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colBloodPressure.DataPropertyName = "BloodPressure";
+            this.colBloodPressure.HeaderText = "血压";
+            this.colBloodPressure.Name = "colBloodPressure";
+            this.colBloodPressure.ReadOnly = true;
+            this.colBloodPressure.Width = 60;
             // 
-            this.gridColumn6.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn6.DataPropertyName = "Birthday";
-            this.gridColumn6.HeaderText = "出生日期";
-            this.gridColumn6.Name = "col_Birthday";
-            this.gridColumn6.ReadOnly = true;
-            this.gridColumn6.Visible = false;
+            // colDA
             // 
-            // gridColumn7
+            this.colDA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colDA.DataPropertyName = "DA";
+            this.colDA.HeaderText = "发病日期";
+            this.colDA.Name = "colDA";
+            this.colDA.ReadOnly = true;
+            this.colDA.Width = 88;
             // 
-            this.gridColumn7.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn7.DataPropertyName = "Age";
-            this.gridColumn7.HeaderText = "年龄";
-            this.gridColumn7.Name = "col_Age";
-            this.gridColumn7.ReadOnly = true;
+            // colPhone
             // 
-            // gridColumn20
+            this.colPhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colPhone.DataPropertyName = "PhoneNumber";
+            this.colPhone.HeaderText = "电话";
+            this.colPhone.Name = "colPhone";
+            this.colPhone.ReadOnly = true;
+            this.colPhone.Width = 60;
             // 
-            this.gridColumn20.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.AllCells;
-            this.gridColumn20.DataPropertyName = "Job";
-            this.gridColumn20.HeaderText = "职业";
-            this.gridColumn20.Name = "col_Job";
+            // colCardNo
             // 
-            // gridColumn19
+            this.colCardNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colCardNo.DataPropertyName = "CardNo";
+            this.colCardNo.HeaderText = "卡号";
+            this.colCardNo.Name = "colCardNo";
+            this.colCardNo.ReadOnly = true;
+            this.colCardNo.Width = 60;
             // 
-            this.gridColumn19.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.AllCells;
-            this.gridColumn19.DataPropertyName = "FirstOrMany";
-            this.gridColumn19.HeaderText = "初复诊";
-            this.gridColumn19.Name = "col_FirstOrMany";
+            // colDiagnosis
             // 
-            // gridColumn14
+            this.colDiagnosis.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colDiagnosis.DataPropertyName = "Name";
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDiagnosis.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colDiagnosis.HeaderText = "病人诊断";
+            this.colDiagnosis.Name = "colDiagnosis";
+            this.colDiagnosis.ReadOnly = true;
+            this.colDiagnosis.Width = 88;
             // 
-            this.gridColumn14.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn14.DataPropertyName = "BloodPressure";
-            this.gridColumn14.HeaderText = "血压";
-            this.gridColumn14.Name = "col_BloodPressure";
+            // colAddress
             // 
-            // gridColumn15
+            this.colAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colAddress.DataPropertyName = "Address";
+            this.colAddress.HeaderText = "病人地址";
+            this.colAddress.Name = "colAddress";
+            this.colAddress.ReadOnly = true;
+            this.colAddress.Width = 88;
             // 
-            this.gridColumn15.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn15.DataPropertyName = "DA";
-            this.gridColumn15.HeaderText = "发病日期";
-            this.gridColumn15.Name = "col_DA";
+            // colIDCard
             // 
-            // gridColumn16
+            this.colIDCard.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colIDCard.DataPropertyName = "IDCard";
+            this.colIDCard.HeaderText = "身份证号";
+            this.colIDCard.Name = "colIDCard";
+            this.colIDCard.ReadOnly = true;
+            this.colIDCard.Width = 88;
             // 
-            this.gridColumn16.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn16.DataPropertyName = "PhoneNumber";
-            this.gridColumn16.HeaderText = "电话";
-            this.gridColumn16.Name = "col_PhoneNumber";
+            // colUpdateTime
             // 
-            // gridColumn8
+            this.colUpdateTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colUpdateTime.DataPropertyName = "UpdateDate";
+            this.colUpdateTime.HeaderText = "就诊时间";
+            this.colUpdateTime.Name = "colUpdateTime";
+            this.colUpdateTime.ReadOnly = true;
+            this.colUpdateTime.Width = 88;
             // 
-            this.gridColumn8.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn8.DataPropertyName = "CardNo";
-            this.gridColumn8.HeaderText = "一卡通号";
-            this.gridColumn8.Name = "col_CardNo";
-            this.gridColumn8.ReadOnly = true;
+            // colDoctorName
             // 
-            // gridColumn9
+            this.colDoctorName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colDoctorName.DataPropertyName = "DoctorName";
+            this.colDoctorName.HeaderText = "就诊医生";
+            this.colDoctorName.Name = "colDoctorName";
+            this.colDoctorName.ReadOnly = true;
+            this.colDoctorName.Width = 88;
             // 
-            this.gridColumn9.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn9.DataPropertyName = "Name";
-            this.gridColumn9.HeaderText = "病人诊断";
-            this.gridColumn9.Name = "col_PatientDiagnosis";
-            this.gridColumn9.ReadOnly = true;
+            // colDeptName
             // 
-            // gridColumn10
+            this.colDeptName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colDeptName.DataPropertyName = "DeptName";
+            this.colDeptName.HeaderText = "科室名称";
+            this.colDeptName.Name = "colDeptName";
+            this.colDeptName.ReadOnly = true;
+            this.colDeptName.Width = 88;
             // 
-            this.gridColumn10.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn10.DataPropertyName = "Address";
-            this.gridColumn10.HeaderText = "病人地址";
-            this.gridColumn10.Name = "col_PatientAddress";
-            this.gridColumn10.ReadOnly = true;
+            // colRemark
             // 
-            // gridColumn12
+            this.colRemark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colRemark.DataPropertyName = "Remark";
+            this.colRemark.HeaderText = "备注";
+            this.colRemark.Name = "colRemark";
+            this.colRemark.ReadOnly = true;
+            this.colRemark.Width = 60;
             // 
-            this.gridColumn12.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn12.DataPropertyName = "IDCard";
-            this.gridColumn12.HeaderText = "身份证号";
-            this.gridColumn12.Name = "col_PatientIDCard";
+            // panel1
             // 
-            // gridColumn11
+            this.panel1.Controls.Add(this.progressBar1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 95);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1021, 545);
+            this.panel1.TabIndex = 22;
+            this.panel1.Visible = false;
             // 
-            this.gridColumn11.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn11.DataPropertyName = "ProcessTime";
-            this.gridColumn11.HeaderText = "就诊时间";
-            this.gridColumn11.Name = "col_UpdateDate";
-            this.gridColumn11.ReadOnly = true;
+            // progressBar1
             // 
-            // gridColumn17
+            this.progressBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.progressBar1.Location = new System.Drawing.Point(396, 331);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(238, 23);
+            this.progressBar1.TabIndex = 1;
             // 
-            this.gridColumn17.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn17.DataPropertyName = "DoctorName";
-            this.gridColumn17.HeaderText = "医生姓名";
-            this.gridColumn17.Name = "col_DoctorName";
+            // label1
             // 
-            // gridColumn18
-            // 
-            this.gridColumn18.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn18.DataPropertyName = "DeptName";
-            this.gridColumn18.HeaderText = "科室名称";
-            this.gridColumn18.Name = "col_DeptName";
-            // 
-            // gridColumn13
-            // 
-            this.gridColumn13.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.gridColumn13.DataPropertyName = "Remark";
-            this.gridColumn13.HeaderText = "备注";
-            this.gridColumn13.Name = "col_Remark";
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Font = new System.Drawing.Font("宋体", 42F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(68, 201);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(885, 118);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "正在加载\r\n请稍后";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormAllJournal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 640);
+            this.ClientSize = new System.Drawing.Size(1021, 640);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvJournal);
             this.Controls.Add(this.panelEx1);
             this.DoubleBuffered = true;
@@ -465,6 +533,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.StartTime)).EndInit();
             this.panelEx1.ResumeLayout(false);
             this.panelEx1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvJournal)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -481,26 +551,26 @@
         private DevComponents.DotNetBar.PanelEx panelEx1;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx1;
-        private DevComponents.DotNetBar.SuperGrid.SuperGridControl dgvJournal;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn1;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn17;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn2;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn3;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn4;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn5;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn6;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn7;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn19;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn14;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn15;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn16;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn8;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn9;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn10;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn12;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn11;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn18;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn13;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn20;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvJournal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTreatmentNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPatientName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colJob;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFirstOrMany;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBloodPressure;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPhone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCardNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDiagnosis;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIDCard;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colUpdateTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDoctorName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDeptName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRemark;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -92,6 +92,23 @@ namespace App_OP
             }
         }
 
+        public static void PrescriptionPrint(long PrescriptionNo, string prescriptionCirculationNo, string treatmentNo)
+        {
+            //获取路径
+            string frxPath = System.IO.Path.Combine(Application.StartupPath, "FRX");
+            FastReport.Report report = new FastReport.Report();
+            report.Load(frxPath + "\\stdlz.frx");
+
+            DataTable dt = BuildPrescriptionCirculation(PrescriptionNo, prescriptionCirculationNo, treatmentNo);
+
+            report.RegisterData(dt, "Table4");
+
+            environment.ReportSettings.ShowProgress = false;
+            report.PrintSettings.ShowDialog = false;
+            FastReport.Utils.Config.PreviewSettings.Buttons = PreviewButtons.Save | PreviewButtons.Print;
+            report.Show(true);
+        }
+
         private static Bitmap GetPayRequest(string Total, bool isWX = true)
         {
             PayRequest result = new PayRequest();

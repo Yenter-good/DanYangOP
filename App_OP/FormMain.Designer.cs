@@ -80,6 +80,12 @@
             this.btnUndoPrescription = new DevComponents.DotNetBar.ButtonItem();
             this.btnDelPrescription = new DevComponents.DotNetBar.ButtonItem();
             this.dgvZDDetail = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMedicareCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiagnosisType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiagnosisSpecialFlag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvChronic = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
             this.gridColumn14 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn11 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
@@ -106,12 +112,6 @@
             this.tabMain = new DevComponents.DotNetBar.SuperTabControl();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.expandableSplitter1 = new DevComponents.DotNetBar.ExpandableSplitter();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMedicareCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiagnosisType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiagnosisSpecialFlag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barTop)).BeginInit();
             this.pnlRight.SuspendLayout();
             this.expandablePanel1.SuspendLayout();
@@ -642,6 +642,54 @@
             this.dgvZDDetail.VisibleChanged += new System.EventHandler(this.dgvZDDetail_VisibleChanged);
             this.dgvZDDetail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvZDDetail_KeyDown);
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.DataPropertyName = "Type";
+            this.Column1.HeaderText = "类型";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 60;
+            // 
+            // colCode
+            // 
+            this.colCode.DataPropertyName = "Code";
+            this.colCode.HeaderText = "ICD";
+            this.colCode.Name = "colCode";
+            this.colCode.ReadOnly = true;
+            this.colCode.Width = 70;
+            // 
+            // colName
+            // 
+            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colName.DataPropertyName = "Name";
+            this.colName.HeaderText = "诊断名称";
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
+            // 
+            // colMedicareCode
+            // 
+            this.colMedicareCode.DataPropertyName = "MedicareCode";
+            this.colMedicareCode.HeaderText = "医保编码";
+            this.colMedicareCode.Name = "colMedicareCode";
+            this.colMedicareCode.ReadOnly = true;
+            // 
+            // DiagnosisType
+            // 
+            this.DiagnosisType.DataPropertyName = "Type";
+            this.DiagnosisType.HeaderText = "诊断类型";
+            this.DiagnosisType.Name = "DiagnosisType";
+            this.DiagnosisType.ReadOnly = true;
+            this.DiagnosisType.Visible = false;
+            // 
+            // DiagnosisSpecialFlag
+            // 
+            this.DiagnosisSpecialFlag.DataPropertyName = "SpecialFlag";
+            this.DiagnosisSpecialFlag.HeaderText = "特殊标志 0正常 1慢病 2传染病";
+            this.DiagnosisSpecialFlag.Name = "DiagnosisSpecialFlag";
+            this.DiagnosisSpecialFlag.ReadOnly = true;
+            this.DiagnosisSpecialFlag.Visible = false;
+            // 
             // dgvChronic
             // 
             this.dgvChronic.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1002,54 +1050,6 @@
             this.expandableSplitter1.Style = DevComponents.DotNetBar.eSplitterStyle.Office2007;
             this.expandableSplitter1.TabIndex = 37;
             this.expandableSplitter1.TabStop = false;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.DataPropertyName = "Type";
-            this.Column1.HeaderText = "类型";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 60;
-            // 
-            // colCode
-            // 
-            this.colCode.DataPropertyName = "Code";
-            this.colCode.HeaderText = "ICD";
-            this.colCode.Name = "colCode";
-            this.colCode.ReadOnly = true;
-            this.colCode.Width = 70;
-            // 
-            // colName
-            // 
-            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colName.DataPropertyName = "Name";
-            this.colName.HeaderText = "诊断名称";
-            this.colName.Name = "colName";
-            this.colName.ReadOnly = true;
-            // 
-            // colMedicareCode
-            // 
-            this.colMedicareCode.DataPropertyName = "MedicareCode";
-            this.colMedicareCode.HeaderText = "医保编码";
-            this.colMedicareCode.Name = "colMedicareCode";
-            this.colMedicareCode.ReadOnly = true;
-            // 
-            // DiagnosisType
-            // 
-            this.DiagnosisType.DataPropertyName = "Type";
-            this.DiagnosisType.HeaderText = "诊断类型";
-            this.DiagnosisType.Name = "DiagnosisType";
-            this.DiagnosisType.ReadOnly = true;
-            this.DiagnosisType.Visible = false;
-            // 
-            // DiagnosisSpecialFlag
-            // 
-            this.DiagnosisSpecialFlag.DataPropertyName = "SpecialFlag";
-            this.DiagnosisSpecialFlag.HeaderText = "特殊标志 0正常 1慢病 2传染病";
-            this.DiagnosisSpecialFlag.Name = "DiagnosisSpecialFlag";
-            this.DiagnosisSpecialFlag.ReadOnly = true;
-            this.DiagnosisSpecialFlag.Visible = false;
             // 
             // FormMain
             // 

@@ -116,6 +116,30 @@ namespace App_OP.Prescription
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.controlAmpoule1 = new App_OP.Prescription.ControlAmpoule();
             this.dgvWesternMedicineDetail = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.Space = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colYB = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colNH = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colName1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colName11 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colGG1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colSL12 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colGGDW1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colZXKS1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colLSJ1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colYL1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colYLDW1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colYPCD1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.colCityCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.XY_colYF1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colYPID1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colYPXMLX1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colBZS1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colDM = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colYPSX1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colYPHH1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colYBHH1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.XY_colJXMC1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
+            this.IsJY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvWesternMedicine = new CIS.ControlLib.Controls.myDataGridView();
             this.XY_colID = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
             this.XY_colName = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
@@ -376,30 +400,6 @@ namespace App_OP.Prescription
             this.dataGridViewTextBoxExtColumn93 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
             this.dataGridViewTextBoxExtColumn94 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
             this.dataGridViewTextBoxExtColumn95 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.Space = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colYB = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colNH = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colName1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colName11 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colGG1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colSL12 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colGGDW1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colZXKS1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colLSJ1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colYL1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colYLDW1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colYPCD1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.colCityCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.XY_colYF1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colYPID1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colYPXMLX1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colBZS1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colDM = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colYPSX1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colYPHH1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colYBHH1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.XY_colJXMC1 = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
-            this.IsJY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTop.SuspendLayout();
             this.pnlDearWithGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.treeDearWithGroup)).BeginInit();
@@ -502,13 +502,13 @@ namespace App_OP.Prescription
             this.treeDearWithGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeDearWithGroup.DragDropEnabled = false;
             this.treeDearWithGroup.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.treeDearWithGroup.Location = new System.Drawing.Point(1, 79);
+            this.treeDearWithGroup.Location = new System.Drawing.Point(1, 76);
             this.treeDearWithGroup.Margin = new System.Windows.Forms.Padding(3, 3, 3, 11);
             this.treeDearWithGroup.Name = "treeDearWithGroup";
             this.treeDearWithGroup.NodesConnector = this.nodeConnector3;
             this.treeDearWithGroup.NodeStyle = this.elementStyle3;
             this.treeDearWithGroup.PathSeparator = ";";
-            this.treeDearWithGroup.Size = new System.Drawing.Size(668, 148);
+            this.treeDearWithGroup.Size = new System.Drawing.Size(668, 151);
             this.treeDearWithGroup.Styles.Add(this.elementStyle3);
             this.treeDearWithGroup.TabIndex = 9;
             this.treeDearWithGroup.NodeClick += new DevComponents.AdvTree.TreeNodeMouseEventHandler(this.treeDearWithGroup_NodeClick);
@@ -532,7 +532,7 @@ namespace App_OP.Prescription
             this.tbxSearchDearWith.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbxSearchDearWith.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbxSearchDearWith.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbxSearchDearWith.Location = new System.Drawing.Point(1, 56);
+            this.tbxSearchDearWith.Location = new System.Drawing.Point(1, 53);
             this.tbxSearchDearWith.Name = "tbxSearchDearWith";
             this.tbxSearchDearWith.PreventEnterBeep = true;
             this.tbxSearchDearWith.Size = new System.Drawing.Size(668, 23);
@@ -552,7 +552,7 @@ namespace App_OP.Prescription
             this.btnRefreshDiagnose});
             this.bar5.Location = new System.Drawing.Point(1, 29);
             this.bar5.Name = "bar5";
-            this.bar5.Size = new System.Drawing.Size(668, 27);
+            this.bar5.Size = new System.Drawing.Size(668, 24);
             this.bar5.Stretch = true;
             this.bar5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar5.TabIndex = 6;
@@ -685,13 +685,13 @@ namespace App_OP.Prescription
             this.treeHerbsGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeHerbsGroup.DragDropEnabled = false;
             this.treeHerbsGroup.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.treeHerbsGroup.Location = new System.Drawing.Point(1, 79);
+            this.treeHerbsGroup.Location = new System.Drawing.Point(1, 76);
             this.treeHerbsGroup.Margin = new System.Windows.Forms.Padding(3, 3, 3, 11);
             this.treeHerbsGroup.Name = "treeHerbsGroup";
             this.treeHerbsGroup.NodesConnector = this.nodeConnector2;
             this.treeHerbsGroup.NodeStyle = this.elementStyle2;
             this.treeHerbsGroup.PathSeparator = ";";
-            this.treeHerbsGroup.Size = new System.Drawing.Size(351, 148);
+            this.treeHerbsGroup.Size = new System.Drawing.Size(351, 151);
             this.treeHerbsGroup.Styles.Add(this.elementStyle2);
             this.treeHerbsGroup.TabIndex = 9;
             this.treeHerbsGroup.NodeClick += new DevComponents.AdvTree.TreeNodeMouseEventHandler(this.treeHerbsGroup_NodeClick);
@@ -715,7 +715,7 @@ namespace App_OP.Prescription
             this.tbxSearchHerbs.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbxSearchHerbs.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbxSearchHerbs.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbxSearchHerbs.Location = new System.Drawing.Point(1, 56);
+            this.tbxSearchHerbs.Location = new System.Drawing.Point(1, 53);
             this.tbxSearchHerbs.Name = "tbxSearchHerbs";
             this.tbxSearchHerbs.PreventEnterBeep = true;
             this.tbxSearchHerbs.Size = new System.Drawing.Size(351, 23);
@@ -735,7 +735,7 @@ namespace App_OP.Prescription
             this.btnRefreshHM});
             this.bar6.Location = new System.Drawing.Point(1, 29);
             this.bar6.Name = "bar6";
-            this.bar6.Size = new System.Drawing.Size(351, 27);
+            this.bar6.Size = new System.Drawing.Size(351, 24);
             this.bar6.Stretch = true;
             this.bar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar6.TabIndex = 7;
@@ -803,13 +803,13 @@ namespace App_OP.Prescription
             this.treeDrugGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeDrugGroup.DragDropEnabled = false;
             this.treeDrugGroup.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.treeDrugGroup.Location = new System.Drawing.Point(1, 79);
+            this.treeDrugGroup.Location = new System.Drawing.Point(1, 76);
             this.treeDrugGroup.Margin = new System.Windows.Forms.Padding(3, 3, 3, 11);
             this.treeDrugGroup.Name = "treeDrugGroup";
             this.treeDrugGroup.NodesConnector = this.nodeConnector1;
             this.treeDrugGroup.NodeStyle = this.elementStyle1;
             this.treeDrugGroup.PathSeparator = ";";
-            this.treeDrugGroup.Size = new System.Drawing.Size(300, 148);
+            this.treeDrugGroup.Size = new System.Drawing.Size(300, 151);
             this.treeDrugGroup.Styles.Add(this.elementStyle1);
             this.treeDrugGroup.TabIndex = 8;
             this.treeDrugGroup.AfterCheck += new DevComponents.AdvTree.AdvTreeCellEventHandler(this.treeDrugGroup_AfterCheck);
@@ -834,7 +834,7 @@ namespace App_OP.Prescription
             this.tbxSearchDrug.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbxSearchDrug.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbxSearchDrug.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbxSearchDrug.Location = new System.Drawing.Point(1, 56);
+            this.tbxSearchDrug.Location = new System.Drawing.Point(1, 53);
             this.tbxSearchDrug.Name = "tbxSearchDrug";
             this.tbxSearchDrug.PreventEnterBeep = true;
             this.tbxSearchDrug.Size = new System.Drawing.Size(300, 23);
@@ -854,7 +854,7 @@ namespace App_OP.Prescription
             this.btnRefreshWM});
             this.bar4.Location = new System.Drawing.Point(1, 29);
             this.bar4.Name = "bar4";
-            this.bar4.Size = new System.Drawing.Size(300, 27);
+            this.bar4.Size = new System.Drawing.Size(300, 24);
             this.bar4.Stretch = true;
             this.bar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar4.TabIndex = 5;
@@ -1022,6 +1022,289 @@ namespace App_OP.Prescription
             this.dgvWesternMedicineDetail.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvWesternMedicineDetail_CellPainting);
             this.dgvWesternMedicineDetail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvXYDetail_KeyDown);
             // 
+            // Space
+            // 
+            this.Space.HeaderText = "";
+            this.Space.Name = "Space";
+            this.Space.ReadOnly = true;
+            this.Space.Tag1 = null;
+            this.Space.Tag2 = null;
+            this.Space.Tag3 = null;
+            this.Space.Tag4 = null;
+            this.Space.Width = 20;
+            // 
+            // XY_colYB
+            // 
+            this.XY_colYB.DataPropertyName = "City_Medicare";
+            this.XY_colYB.HeaderText = "医保";
+            this.XY_colYB.Name = "XY_colYB";
+            this.XY_colYB.ReadOnly = true;
+            this.XY_colYB.Tag1 = null;
+            this.XY_colYB.Tag2 = null;
+            this.XY_colYB.Tag3 = null;
+            this.XY_colYB.Tag4 = null;
+            this.XY_colYB.Width = 60;
+            // 
+            // XY_colNH
+            // 
+            this.XY_colNH.DataPropertyName = "Village_Medicare";
+            this.XY_colNH.HeaderText = "农合";
+            this.XY_colNH.Name = "XY_colNH";
+            this.XY_colNH.ReadOnly = true;
+            this.XY_colNH.Tag1 = null;
+            this.XY_colNH.Tag2 = null;
+            this.XY_colNH.Tag3 = null;
+            this.XY_colNH.Tag4 = null;
+            this.XY_colNH.Visible = false;
+            this.XY_colNH.Width = 60;
+            // 
+            // XY_colName1
+            // 
+            this.XY_colName1.DataPropertyName = "DrugName";
+            this.XY_colName1.HeaderText = "名称";
+            this.XY_colName1.MinimumWidth = 150;
+            this.XY_colName1.Name = "XY_colName1";
+            this.XY_colName1.ReadOnly = true;
+            this.XY_colName1.Tag1 = null;
+            this.XY_colName1.Tag2 = null;
+            this.XY_colName1.Tag3 = null;
+            this.XY_colName1.Tag4 = null;
+            this.XY_colName1.Visible = false;
+            this.XY_colName1.Width = 300;
+            // 
+            // XY_colName11
+            // 
+            this.XY_colName11.DataPropertyName = "NickName";
+            this.XY_colName11.HeaderText = "名称";
+            this.XY_colName11.MinimumWidth = 150;
+            this.XY_colName11.Name = "XY_colName11";
+            this.XY_colName11.ReadOnly = true;
+            this.XY_colName11.Tag1 = null;
+            this.XY_colName11.Tag2 = null;
+            this.XY_colName11.Tag3 = null;
+            this.XY_colName11.Tag4 = null;
+            this.XY_colName11.Width = 300;
+            // 
+            // XY_colGG1
+            // 
+            this.XY_colGG1.DataPropertyName = "Specification";
+            this.XY_colGG1.HeaderText = "规格";
+            this.XY_colGG1.Name = "XY_colGG1";
+            this.XY_colGG1.ReadOnly = true;
+            this.XY_colGG1.Tag1 = null;
+            this.XY_colGG1.Tag2 = null;
+            this.XY_colGG1.Tag3 = null;
+            this.XY_colGG1.Tag4 = null;
+            this.XY_colGG1.Width = 110;
+            // 
+            // XY_colSL12
+            // 
+            this.XY_colSL12.DataPropertyName = "Reserve";
+            this.XY_colSL12.HeaderText = "库存数量";
+            this.XY_colSL12.Name = "XY_colSL12";
+            this.XY_colSL12.ReadOnly = true;
+            this.XY_colSL12.Tag1 = null;
+            this.XY_colSL12.Tag2 = null;
+            this.XY_colSL12.Tag3 = null;
+            this.XY_colSL12.Tag4 = null;
+            // 
+            // XY_colGGDW1
+            // 
+            this.XY_colGGDW1.DataPropertyName = "PackingUnit";
+            this.XY_colGGDW1.HeaderText = "单位";
+            this.XY_colGGDW1.Name = "XY_colGGDW1";
+            this.XY_colGGDW1.ReadOnly = true;
+            this.XY_colGGDW1.Tag1 = null;
+            this.XY_colGGDW1.Tag2 = null;
+            this.XY_colGGDW1.Tag3 = null;
+            this.XY_colGGDW1.Tag4 = null;
+            this.XY_colGGDW1.Width = 45;
+            // 
+            // XY_colZXKS1
+            // 
+            this.XY_colZXKS1.DataPropertyName = "DrugDept";
+            this.XY_colZXKS1.HeaderText = "执行科室";
+            this.XY_colZXKS1.Name = "XY_colZXKS1";
+            this.XY_colZXKS1.ReadOnly = true;
+            this.XY_colZXKS1.Tag1 = null;
+            this.XY_colZXKS1.Tag2 = null;
+            this.XY_colZXKS1.Tag3 = null;
+            this.XY_colZXKS1.Tag4 = null;
+            this.XY_colZXKS1.Visible = false;
+            // 
+            // XY_colLSJ1
+            // 
+            this.XY_colLSJ1.DataPropertyName = "DrugPrice";
+            this.XY_colLSJ1.HeaderText = "单价";
+            this.XY_colLSJ1.Name = "XY_colLSJ1";
+            this.XY_colLSJ1.ReadOnly = true;
+            this.XY_colLSJ1.Tag1 = null;
+            this.XY_colLSJ1.Tag2 = null;
+            this.XY_colLSJ1.Tag3 = null;
+            this.XY_colLSJ1.Tag4 = null;
+            this.XY_colLSJ1.Width = 70;
+            // 
+            // XY_colYL1
+            // 
+            this.XY_colYL1.DataPropertyName = "MinDose";
+            this.XY_colYL1.HeaderText = "一次用量";
+            this.XY_colYL1.Name = "XY_colYL1";
+            this.XY_colYL1.ReadOnly = true;
+            this.XY_colYL1.Tag1 = null;
+            this.XY_colYL1.Tag2 = null;
+            this.XY_colYL1.Tag3 = null;
+            this.XY_colYL1.Tag4 = null;
+            // 
+            // XY_colYLDW1
+            // 
+            this.XY_colYLDW1.DataPropertyName = "MinDoseUnit";
+            this.XY_colYLDW1.HeaderText = "单位";
+            this.XY_colYLDW1.Name = "XY_colYLDW1";
+            this.XY_colYLDW1.ReadOnly = true;
+            this.XY_colYLDW1.Tag1 = null;
+            this.XY_colYLDW1.Tag2 = null;
+            this.XY_colYLDW1.Tag3 = null;
+            this.XY_colYLDW1.Tag4 = null;
+            this.XY_colYLDW1.Width = 45;
+            // 
+            // XY_colYPCD1
+            // 
+            this.XY_colYPCD1.DataPropertyName = "ProductionSites";
+            this.XY_colYPCD1.HeaderText = "药品产地";
+            this.XY_colYPCD1.Name = "XY_colYPCD1";
+            this.XY_colYPCD1.ReadOnly = true;
+            this.XY_colYPCD1.Tag1 = null;
+            this.XY_colYPCD1.Tag2 = null;
+            this.XY_colYPCD1.Tag3 = null;
+            this.XY_colYPCD1.Tag4 = null;
+            this.XY_colYPCD1.Width = 150;
+            // 
+            // colCityCode
+            // 
+            this.colCityCode.DataPropertyName = "CityCode";
+            this.colCityCode.HeaderText = "国家编码";
+            this.colCityCode.Name = "colCityCode";
+            this.colCityCode.ReadOnly = true;
+            this.colCityCode.Width = 200;
+            // 
+            // XY_colYF1
+            // 
+            this.XY_colYF1.DataPropertyName = "Usage";
+            this.XY_colYF1.HeaderText = "用法";
+            this.XY_colYF1.Name = "XY_colYF1";
+            this.XY_colYF1.ReadOnly = true;
+            this.XY_colYF1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.XY_colYF1.Tag1 = null;
+            this.XY_colYF1.Tag2 = null;
+            this.XY_colYF1.Tag3 = null;
+            this.XY_colYF1.Tag4 = null;
+            this.XY_colYF1.Visible = false;
+            this.XY_colYF1.Width = 120;
+            // 
+            // XY_colYPID1
+            // 
+            this.XY_colYPID1.DataPropertyName = "DrugID";
+            this.XY_colYPID1.HeaderText = "药品ID";
+            this.XY_colYPID1.Name = "XY_colYPID1";
+            this.XY_colYPID1.ReadOnly = true;
+            this.XY_colYPID1.Tag1 = null;
+            this.XY_colYPID1.Tag2 = null;
+            this.XY_colYPID1.Tag3 = null;
+            this.XY_colYPID1.Tag4 = null;
+            this.XY_colYPID1.Visible = false;
+            // 
+            // XY_colYPXMLX1
+            // 
+            this.XY_colYPXMLX1.DataPropertyName = "DrugCategory";
+            this.XY_colYPXMLX1.HeaderText = "药品项目类型";
+            this.XY_colYPXMLX1.Name = "XY_colYPXMLX1";
+            this.XY_colYPXMLX1.ReadOnly = true;
+            this.XY_colYPXMLX1.Tag1 = null;
+            this.XY_colYPXMLX1.Tag2 = null;
+            this.XY_colYPXMLX1.Tag3 = null;
+            this.XY_colYPXMLX1.Tag4 = null;
+            this.XY_colYPXMLX1.Visible = false;
+            // 
+            // XY_colBZS1
+            // 
+            this.XY_colBZS1.DataPropertyName = "PackingNumber";
+            this.XY_colBZS1.HeaderText = "包装数";
+            this.XY_colBZS1.Name = "XY_colBZS1";
+            this.XY_colBZS1.ReadOnly = true;
+            this.XY_colBZS1.Tag1 = null;
+            this.XY_colBZS1.Tag2 = null;
+            this.XY_colBZS1.Tag3 = null;
+            this.XY_colBZS1.Tag4 = null;
+            this.XY_colBZS1.Visible = false;
+            // 
+            // XY_colDM
+            // 
+            this.XY_colDM.DataPropertyName = "DrugFlag";
+            this.XY_colDM.HeaderText = "是否毒麻";
+            this.XY_colDM.Name = "XY_colDM";
+            this.XY_colDM.ReadOnly = true;
+            this.XY_colDM.Tag1 = null;
+            this.XY_colDM.Tag2 = null;
+            this.XY_colDM.Tag3 = null;
+            this.XY_colDM.Tag4 = null;
+            this.XY_colDM.Visible = false;
+            // 
+            // XY_colYPSX1
+            // 
+            this.XY_colYPSX1.DataPropertyName = "DrugProperties";
+            this.XY_colYPSX1.HeaderText = "药品属性";
+            this.XY_colYPSX1.Name = "XY_colYPSX1";
+            this.XY_colYPSX1.ReadOnly = true;
+            this.XY_colYPSX1.Tag1 = null;
+            this.XY_colYPSX1.Tag2 = null;
+            this.XY_colYPSX1.Tag3 = null;
+            this.XY_colYPSX1.Tag4 = null;
+            this.XY_colYPSX1.Visible = false;
+            // 
+            // XY_colYPHH1
+            // 
+            this.XY_colYPHH1.DataPropertyName = "DrugSerial";
+            this.XY_colYPHH1.HeaderText = "药品货号";
+            this.XY_colYPHH1.Name = "XY_colYPHH1";
+            this.XY_colYPHH1.ReadOnly = true;
+            this.XY_colYPHH1.Tag1 = null;
+            this.XY_colYPHH1.Tag2 = null;
+            this.XY_colYPHH1.Tag3 = null;
+            this.XY_colYPHH1.Tag4 = null;
+            this.XY_colYPHH1.Visible = false;
+            // 
+            // XY_colYBHH1
+            // 
+            this.XY_colYBHH1.DataPropertyName = "MedicalInsuranceDrugSerial";
+            this.XY_colYBHH1.HeaderText = "医保货号";
+            this.XY_colYBHH1.Name = "XY_colYBHH1";
+            this.XY_colYBHH1.ReadOnly = true;
+            this.XY_colYBHH1.Tag1 = null;
+            this.XY_colYBHH1.Tag2 = null;
+            this.XY_colYBHH1.Tag3 = null;
+            this.XY_colYBHH1.Tag4 = null;
+            this.XY_colYBHH1.Visible = false;
+            // 
+            // XY_colJXMC1
+            // 
+            this.XY_colJXMC1.DataPropertyName = "DrugForm";
+            this.XY_colJXMC1.HeaderText = "剂型名称";
+            this.XY_colJXMC1.Name = "XY_colJXMC1";
+            this.XY_colJXMC1.ReadOnly = true;
+            this.XY_colJXMC1.Tag1 = null;
+            this.XY_colJXMC1.Tag2 = null;
+            this.XY_colJXMC1.Tag3 = null;
+            this.XY_colJXMC1.Tag4 = null;
+            this.XY_colJXMC1.Visible = false;
+            // 
+            // IsJY
+            // 
+            this.IsJY.DataPropertyName = "IsJY";
+            this.IsJY.HeaderText = "是否基药";
+            this.IsJY.Name = "IsJY";
+            this.IsJY.ReadOnly = true;
+            this.IsJY.Visible = false;
+            // 
             // dgvWesternMedicine
             // 
             this.dgvWesternMedicine.AllowUserToAddRows = false;
@@ -1079,7 +1362,7 @@ namespace App_OP.Prescription
             this.dgvWesternMedicine.EnableHeadersVisualStyles = false;
             this.dgvWesternMedicine.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dgvWesternMedicine.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.dgvWesternMedicine.Location = new System.Drawing.Point(25, 31);
+            this.dgvWesternMedicine.Location = new System.Drawing.Point(25, 29);
             this.dgvWesternMedicine.Name = "dgvWesternMedicine";
             this.dgvWesternMedicine.PaintEnhancedSelection = false;
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1093,7 +1376,7 @@ namespace App_OP.Prescription
             this.dgvWesternMedicine.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvWesternMedicine.RowTemplate.Height = 23;
             this.dgvWesternMedicine.SelectAllSignVisible = false;
-            this.dgvWesternMedicine.Size = new System.Drawing.Size(1305, 372);
+            this.dgvWesternMedicine.Size = new System.Drawing.Size(1305, 374);
             this.dgvWesternMedicine.TabIndex = 1;
             this.dgvWesternMedicine.UseCustomBackgroundColor = true;
             this.dgvWesternMedicine.Text_Changed += new System.EventHandler(this.dgvWesternMedicine_Text_Changed);
@@ -1507,9 +1790,9 @@ namespace App_OP.Prescription
             this.panelEx2.Controls.Add(this.buttonX1);
             this.panelEx2.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelEx2.Location = new System.Drawing.Point(1, 31);
+            this.panelEx2.Location = new System.Drawing.Point(1, 29);
             this.panelEx2.Name = "panelEx2";
-            this.panelEx2.Size = new System.Drawing.Size(24, 372);
+            this.panelEx2.Size = new System.Drawing.Size(24, 374);
             this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx2.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -1525,7 +1808,7 @@ namespace App_OP.Prescription
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Location = new System.Drawing.Point(4, 223);
+            this.buttonX2.Location = new System.Drawing.Point(4, 224);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(15, 19);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1538,7 +1821,7 @@ namespace App_OP.Prescription
             this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(5, 149);
+            this.buttonX1.Location = new System.Drawing.Point(5, 150);
             this.buttonX1.Name = "buttonX1";
             this.buttonX1.Size = new System.Drawing.Size(15, 19);
             this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1570,7 +1853,7 @@ namespace App_OP.Prescription
             this.bar1.Name = "bar1";
             this.bar1.PaddingLeft = 5;
             this.bar1.RoundCorners = false;
-            this.bar1.Size = new System.Drawing.Size(1329, 30);
+            this.bar1.Size = new System.Drawing.Size(1329, 28);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar1.TabIndex = 0;
@@ -2079,7 +2362,7 @@ namespace App_OP.Prescription
             this.dgvHerbalMedicine.EnableHeadersVisualStyles = false;
             this.dgvHerbalMedicine.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dgvHerbalMedicine.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.dgvHerbalMedicine.Location = new System.Drawing.Point(1, 31);
+            this.dgvHerbalMedicine.Location = new System.Drawing.Point(1, 29);
             this.dgvHerbalMedicine.Name = "dgvHerbalMedicine";
             this.dgvHerbalMedicine.PaintEnhancedSelection = false;
             dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -2093,7 +2376,7 @@ namespace App_OP.Prescription
             this.dgvHerbalMedicine.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvHerbalMedicine.RowTemplate.Height = 23;
             this.dgvHerbalMedicine.SelectAllSignVisible = false;
-            this.dgvHerbalMedicine.Size = new System.Drawing.Size(1329, 372);
+            this.dgvHerbalMedicine.Size = new System.Drawing.Size(1329, 374);
             this.dgvHerbalMedicine.TabIndex = 3;
             this.dgvHerbalMedicine.UseCustomBackgroundColor = true;
             this.dgvHerbalMedicine.Text_Changed += new System.EventHandler(this.dgvHerbalMedicine_Text_Changed);
@@ -2370,7 +2653,7 @@ namespace App_OP.Prescription
             this.bar3.Location = new System.Drawing.Point(1, 1);
             this.bar3.Name = "bar3";
             this.bar3.PaddingLeft = 5;
-            this.bar3.Size = new System.Drawing.Size(1329, 30);
+            this.bar3.Size = new System.Drawing.Size(1329, 28);
             this.bar3.Stretch = true;
             this.bar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar3.TabIndex = 1;
@@ -2735,7 +3018,7 @@ namespace App_OP.Prescription
             this.dgvDiagnose.EnableHeadersVisualStyles = false;
             this.dgvDiagnose.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dgvDiagnose.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.dgvDiagnose.Location = new System.Drawing.Point(1, 31);
+            this.dgvDiagnose.Location = new System.Drawing.Point(1, 29);
             this.dgvDiagnose.Name = "dgvDiagnose";
             this.dgvDiagnose.PaintEnhancedSelection = false;
             dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -2749,7 +3032,7 @@ namespace App_OP.Prescription
             this.dgvDiagnose.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvDiagnose.RowTemplate.Height = 23;
             this.dgvDiagnose.SelectAllSignVisible = false;
-            this.dgvDiagnose.Size = new System.Drawing.Size(1329, 372);
+            this.dgvDiagnose.Size = new System.Drawing.Size(1329, 374);
             this.dgvDiagnose.TabIndex = 3;
             this.dgvDiagnose.UseCustomBackgroundColor = true;
             this.dgvDiagnose.Text_Changed += new System.EventHandler(this.dgvDiagnose_Text_Changed);
@@ -2928,7 +3211,7 @@ namespace App_OP.Prescription
             this.bar2.Location = new System.Drawing.Point(1, 1);
             this.bar2.Name = "bar2";
             this.bar2.PaddingLeft = 5;
-            this.bar2.Size = new System.Drawing.Size(1329, 30);
+            this.bar2.Size = new System.Drawing.Size(1329, 28);
             this.bar2.Stretch = true;
             this.bar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar2.TabIndex = 1;
@@ -4282,289 +4565,6 @@ namespace App_OP.Prescription
             this.dataGridViewTextBoxExtColumn95.Tag3 = null;
             this.dataGridViewTextBoxExtColumn95.Tag4 = null;
             this.dataGridViewTextBoxExtColumn95.Visible = false;
-            // 
-            // Space
-            // 
-            this.Space.HeaderText = "";
-            this.Space.Name = "Space";
-            this.Space.ReadOnly = true;
-            this.Space.Tag1 = null;
-            this.Space.Tag2 = null;
-            this.Space.Tag3 = null;
-            this.Space.Tag4 = null;
-            this.Space.Width = 20;
-            // 
-            // XY_colYB
-            // 
-            this.XY_colYB.DataPropertyName = "City_Medicare";
-            this.XY_colYB.HeaderText = "医保";
-            this.XY_colYB.Name = "XY_colYB";
-            this.XY_colYB.ReadOnly = true;
-            this.XY_colYB.Tag1 = null;
-            this.XY_colYB.Tag2 = null;
-            this.XY_colYB.Tag3 = null;
-            this.XY_colYB.Tag4 = null;
-            this.XY_colYB.Width = 60;
-            // 
-            // XY_colNH
-            // 
-            this.XY_colNH.DataPropertyName = "Village_Medicare";
-            this.XY_colNH.HeaderText = "农合";
-            this.XY_colNH.Name = "XY_colNH";
-            this.XY_colNH.ReadOnly = true;
-            this.XY_colNH.Tag1 = null;
-            this.XY_colNH.Tag2 = null;
-            this.XY_colNH.Tag3 = null;
-            this.XY_colNH.Tag4 = null;
-            this.XY_colNH.Visible = false;
-            this.XY_colNH.Width = 60;
-            // 
-            // XY_colName1
-            // 
-            this.XY_colName1.DataPropertyName = "DrugName";
-            this.XY_colName1.HeaderText = "名称";
-            this.XY_colName1.MinimumWidth = 150;
-            this.XY_colName1.Name = "XY_colName1";
-            this.XY_colName1.ReadOnly = true;
-            this.XY_colName1.Tag1 = null;
-            this.XY_colName1.Tag2 = null;
-            this.XY_colName1.Tag3 = null;
-            this.XY_colName1.Tag4 = null;
-            this.XY_colName1.Visible = false;
-            this.XY_colName1.Width = 300;
-            // 
-            // XY_colName11
-            // 
-            this.XY_colName11.DataPropertyName = "NickName";
-            this.XY_colName11.HeaderText = "名称";
-            this.XY_colName11.MinimumWidth = 150;
-            this.XY_colName11.Name = "XY_colName11";
-            this.XY_colName11.ReadOnly = true;
-            this.XY_colName11.Tag1 = null;
-            this.XY_colName11.Tag2 = null;
-            this.XY_colName11.Tag3 = null;
-            this.XY_colName11.Tag4 = null;
-            this.XY_colName11.Width = 300;
-            // 
-            // XY_colGG1
-            // 
-            this.XY_colGG1.DataPropertyName = "Specification";
-            this.XY_colGG1.HeaderText = "规格";
-            this.XY_colGG1.Name = "XY_colGG1";
-            this.XY_colGG1.ReadOnly = true;
-            this.XY_colGG1.Tag1 = null;
-            this.XY_colGG1.Tag2 = null;
-            this.XY_colGG1.Tag3 = null;
-            this.XY_colGG1.Tag4 = null;
-            this.XY_colGG1.Width = 110;
-            // 
-            // XY_colSL12
-            // 
-            this.XY_colSL12.DataPropertyName = "Reserve";
-            this.XY_colSL12.HeaderText = "库存数量";
-            this.XY_colSL12.Name = "XY_colSL12";
-            this.XY_colSL12.ReadOnly = true;
-            this.XY_colSL12.Tag1 = null;
-            this.XY_colSL12.Tag2 = null;
-            this.XY_colSL12.Tag3 = null;
-            this.XY_colSL12.Tag4 = null;
-            // 
-            // XY_colGGDW1
-            // 
-            this.XY_colGGDW1.DataPropertyName = "PackingUnit";
-            this.XY_colGGDW1.HeaderText = "单位";
-            this.XY_colGGDW1.Name = "XY_colGGDW1";
-            this.XY_colGGDW1.ReadOnly = true;
-            this.XY_colGGDW1.Tag1 = null;
-            this.XY_colGGDW1.Tag2 = null;
-            this.XY_colGGDW1.Tag3 = null;
-            this.XY_colGGDW1.Tag4 = null;
-            this.XY_colGGDW1.Width = 45;
-            // 
-            // XY_colZXKS1
-            // 
-            this.XY_colZXKS1.DataPropertyName = "DrugDept";
-            this.XY_colZXKS1.HeaderText = "执行科室";
-            this.XY_colZXKS1.Name = "XY_colZXKS1";
-            this.XY_colZXKS1.ReadOnly = true;
-            this.XY_colZXKS1.Tag1 = null;
-            this.XY_colZXKS1.Tag2 = null;
-            this.XY_colZXKS1.Tag3 = null;
-            this.XY_colZXKS1.Tag4 = null;
-            this.XY_colZXKS1.Visible = false;
-            // 
-            // XY_colLSJ1
-            // 
-            this.XY_colLSJ1.DataPropertyName = "DrugPrice";
-            this.XY_colLSJ1.HeaderText = "单价";
-            this.XY_colLSJ1.Name = "XY_colLSJ1";
-            this.XY_colLSJ1.ReadOnly = true;
-            this.XY_colLSJ1.Tag1 = null;
-            this.XY_colLSJ1.Tag2 = null;
-            this.XY_colLSJ1.Tag3 = null;
-            this.XY_colLSJ1.Tag4 = null;
-            this.XY_colLSJ1.Width = 70;
-            // 
-            // XY_colYL1
-            // 
-            this.XY_colYL1.DataPropertyName = "MinDose";
-            this.XY_colYL1.HeaderText = "一次用量";
-            this.XY_colYL1.Name = "XY_colYL1";
-            this.XY_colYL1.ReadOnly = true;
-            this.XY_colYL1.Tag1 = null;
-            this.XY_colYL1.Tag2 = null;
-            this.XY_colYL1.Tag3 = null;
-            this.XY_colYL1.Tag4 = null;
-            // 
-            // XY_colYLDW1
-            // 
-            this.XY_colYLDW1.DataPropertyName = "MinDoseUnit";
-            this.XY_colYLDW1.HeaderText = "单位";
-            this.XY_colYLDW1.Name = "XY_colYLDW1";
-            this.XY_colYLDW1.ReadOnly = true;
-            this.XY_colYLDW1.Tag1 = null;
-            this.XY_colYLDW1.Tag2 = null;
-            this.XY_colYLDW1.Tag3 = null;
-            this.XY_colYLDW1.Tag4 = null;
-            this.XY_colYLDW1.Width = 45;
-            // 
-            // XY_colYPCD1
-            // 
-            this.XY_colYPCD1.DataPropertyName = "ProductionSites";
-            this.XY_colYPCD1.HeaderText = "药品产地";
-            this.XY_colYPCD1.Name = "XY_colYPCD1";
-            this.XY_colYPCD1.ReadOnly = true;
-            this.XY_colYPCD1.Tag1 = null;
-            this.XY_colYPCD1.Tag2 = null;
-            this.XY_colYPCD1.Tag3 = null;
-            this.XY_colYPCD1.Tag4 = null;
-            this.XY_colYPCD1.Width = 150;
-            // 
-            // colCityCode
-            // 
-            this.colCityCode.DataPropertyName = "CityCode";
-            this.colCityCode.HeaderText = "国家编码";
-            this.colCityCode.Name = "colCityCode";
-            this.colCityCode.ReadOnly = true;
-            this.colCityCode.Width = 200;
-            // 
-            // XY_colYF1
-            // 
-            this.XY_colYF1.DataPropertyName = "Usage";
-            this.XY_colYF1.HeaderText = "用法";
-            this.XY_colYF1.Name = "XY_colYF1";
-            this.XY_colYF1.ReadOnly = true;
-            this.XY_colYF1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.XY_colYF1.Tag1 = null;
-            this.XY_colYF1.Tag2 = null;
-            this.XY_colYF1.Tag3 = null;
-            this.XY_colYF1.Tag4 = null;
-            this.XY_colYF1.Visible = false;
-            this.XY_colYF1.Width = 120;
-            // 
-            // XY_colYPID1
-            // 
-            this.XY_colYPID1.DataPropertyName = "DrugID";
-            this.XY_colYPID1.HeaderText = "药品ID";
-            this.XY_colYPID1.Name = "XY_colYPID1";
-            this.XY_colYPID1.ReadOnly = true;
-            this.XY_colYPID1.Tag1 = null;
-            this.XY_colYPID1.Tag2 = null;
-            this.XY_colYPID1.Tag3 = null;
-            this.XY_colYPID1.Tag4 = null;
-            this.XY_colYPID1.Visible = false;
-            // 
-            // XY_colYPXMLX1
-            // 
-            this.XY_colYPXMLX1.DataPropertyName = "DrugCategory";
-            this.XY_colYPXMLX1.HeaderText = "药品项目类型";
-            this.XY_colYPXMLX1.Name = "XY_colYPXMLX1";
-            this.XY_colYPXMLX1.ReadOnly = true;
-            this.XY_colYPXMLX1.Tag1 = null;
-            this.XY_colYPXMLX1.Tag2 = null;
-            this.XY_colYPXMLX1.Tag3 = null;
-            this.XY_colYPXMLX1.Tag4 = null;
-            this.XY_colYPXMLX1.Visible = false;
-            // 
-            // XY_colBZS1
-            // 
-            this.XY_colBZS1.DataPropertyName = "PackingNumber";
-            this.XY_colBZS1.HeaderText = "包装数";
-            this.XY_colBZS1.Name = "XY_colBZS1";
-            this.XY_colBZS1.ReadOnly = true;
-            this.XY_colBZS1.Tag1 = null;
-            this.XY_colBZS1.Tag2 = null;
-            this.XY_colBZS1.Tag3 = null;
-            this.XY_colBZS1.Tag4 = null;
-            this.XY_colBZS1.Visible = false;
-            // 
-            // XY_colDM
-            // 
-            this.XY_colDM.DataPropertyName = "DrugFlag";
-            this.XY_colDM.HeaderText = "是否毒麻";
-            this.XY_colDM.Name = "XY_colDM";
-            this.XY_colDM.ReadOnly = true;
-            this.XY_colDM.Tag1 = null;
-            this.XY_colDM.Tag2 = null;
-            this.XY_colDM.Tag3 = null;
-            this.XY_colDM.Tag4 = null;
-            this.XY_colDM.Visible = false;
-            // 
-            // XY_colYPSX1
-            // 
-            this.XY_colYPSX1.DataPropertyName = "DrugProperties";
-            this.XY_colYPSX1.HeaderText = "药品属性";
-            this.XY_colYPSX1.Name = "XY_colYPSX1";
-            this.XY_colYPSX1.ReadOnly = true;
-            this.XY_colYPSX1.Tag1 = null;
-            this.XY_colYPSX1.Tag2 = null;
-            this.XY_colYPSX1.Tag3 = null;
-            this.XY_colYPSX1.Tag4 = null;
-            this.XY_colYPSX1.Visible = false;
-            // 
-            // XY_colYPHH1
-            // 
-            this.XY_colYPHH1.DataPropertyName = "DrugSerial";
-            this.XY_colYPHH1.HeaderText = "药品货号";
-            this.XY_colYPHH1.Name = "XY_colYPHH1";
-            this.XY_colYPHH1.ReadOnly = true;
-            this.XY_colYPHH1.Tag1 = null;
-            this.XY_colYPHH1.Tag2 = null;
-            this.XY_colYPHH1.Tag3 = null;
-            this.XY_colYPHH1.Tag4 = null;
-            this.XY_colYPHH1.Visible = false;
-            // 
-            // XY_colYBHH1
-            // 
-            this.XY_colYBHH1.DataPropertyName = "MedicalInsuranceDrugSerial";
-            this.XY_colYBHH1.HeaderText = "医保货号";
-            this.XY_colYBHH1.Name = "XY_colYBHH1";
-            this.XY_colYBHH1.ReadOnly = true;
-            this.XY_colYBHH1.Tag1 = null;
-            this.XY_colYBHH1.Tag2 = null;
-            this.XY_colYBHH1.Tag3 = null;
-            this.XY_colYBHH1.Tag4 = null;
-            this.XY_colYBHH1.Visible = false;
-            // 
-            // XY_colJXMC1
-            // 
-            this.XY_colJXMC1.DataPropertyName = "DrugForm";
-            this.XY_colJXMC1.HeaderText = "剂型名称";
-            this.XY_colJXMC1.Name = "XY_colJXMC1";
-            this.XY_colJXMC1.ReadOnly = true;
-            this.XY_colJXMC1.Tag1 = null;
-            this.XY_colJXMC1.Tag2 = null;
-            this.XY_colJXMC1.Tag3 = null;
-            this.XY_colJXMC1.Tag4 = null;
-            this.XY_colJXMC1.Visible = false;
-            // 
-            // IsJY
-            // 
-            this.IsJY.DataPropertyName = "IsJY";
-            this.IsJY.HeaderText = "是否基药";
-            this.IsJY.Name = "IsJY";
-            this.IsJY.ReadOnly = true;
-            this.IsJY.Visible = false;
             // 
             // FormPrescription
             // 

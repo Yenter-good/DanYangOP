@@ -1,4 +1,5 @@
 ﻿using App_OP.PrescriptionCirculation.AuditResult;
+using App_OP.PrescriptionCirculation.Inventory;
 using App_OP.PrescriptionCirculation.PreAudit;
 using App_OP.PrescriptionCirculation.TakeDrugResult;
 using App_OP.PrescriptionCirculation.Undo;
@@ -426,6 +427,14 @@ namespace App_OP.PrescriptionCirculation
                 deleteDetails = _currentPrescriptionCirculationDetails.Except(insertDetails.Union(updateDetails), new PrescriptionEqu());
             }
 
+            InventoryHelper inventoryHelper = new InventoryHelper();
+            var result = inventoryHelper.Handler(PrescriptionCirculationHandler.DrugInfos, _currentPrescriptionCirculation, insertDetails.Union(updateDetails).ToList());
+            if (!result.pass)
+            {
+                AlertBox.Error("药品库存校验失败:" + result.msg);
+                return;
+            }
+
             using (var tran = DBHelper.CIS.BeginTransaction())
             {
                 try
@@ -678,7 +687,7 @@ namespace App_OP.PrescriptionCirculation
 
             Dictionary<Dos.ORM.Field, object> update = new Dictionary<Dos.ORM.Field, object>();
             update[OP_PrescriptionCirculation._.UploadFlag] = false;
-            update[OP_PrescriptionCirculation._.Status] = 0;
+            update[OP_PrescriptionCirculation._.Status] = 3;
             update[OP_PrescriptionCirculation._.PrescriptionCirculationNo] = null;
             DBHelper.CIS.Update<OP_PrescriptionCirculation>(update, d => d.PrescriptionNo.In(successPrescriptionNo));
             foreach (var prescriptionNo in successPrescriptionNo)
@@ -747,6 +756,16 @@ namespace App_OP.PrescriptionCirculation
             btnXYAdd.Enabled = true;
             btnXYDel.Enabled = true;
             btnXYSave.Enabled = true;
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            var selectRows = this.dgvPrescription.SelectedRows;
+            foreach (DataGridViewRow item in selectRows)
+            {
+                var prescription = item.Tag as OP_PrescriptionCirculation;
+                Print.PrescriptionPrint(prescription.PrescriptionNo, prescription.PrescriptionCirculationNo, prescription.TreatmentNo);
+            }
         }
     }
 

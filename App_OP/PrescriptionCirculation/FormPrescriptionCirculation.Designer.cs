@@ -30,20 +30,20 @@ namespace App_OP.PrescriptionCirculation
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrescriptionCirculation));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvWesternMedicineDetail = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.Space = new App_OP.Prescription.DataGridViewTextBoxExtColumn();
@@ -87,6 +87,7 @@ namespace App_OP.PrescriptionCirculation
             this.btnUndoPrescription = new DevComponents.DotNetBar.ButtonItem();
             this.btnDelPrescription = new DevComponents.DotNetBar.ButtonItem();
             this.btnSend = new DevComponents.DotNetBar.ButtonItem();
+            this.btnPrint = new DevComponents.DotNetBar.ButtonItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWesternMedicineDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWesternMedicine)).BeginInit();
@@ -116,14 +117,14 @@ namespace App_OP.PrescriptionCirculation
             this.dgvWesternMedicineDetail.AllowUserToResizeRows = false;
             this.dgvWesternMedicineDetail.BackgroundColor = System.Drawing.Color.White;
             this.dgvWesternMedicineDetail.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvWesternMedicineDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvWesternMedicineDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvWesternMedicineDetail.ColumnHeadersHeight = 25;
             this.dgvWesternMedicineDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvWesternMedicineDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -131,14 +132,14 @@ namespace App_OP.PrescriptionCirculation
             this.XY_colName1,
             this.XY_colGG1,
             this.XY_colYPCD1});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(216)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvWesternMedicineDetail.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(216)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvWesternMedicineDetail.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvWesternMedicineDetail.EnableHeadersVisualStyles = false;
             this.dgvWesternMedicineDetail.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dgvWesternMedicineDetail.HighlightSelectedColumnHeaders = false;
@@ -146,14 +147,14 @@ namespace App_OP.PrescriptionCirculation
             this.dgvWesternMedicineDetail.Name = "dgvWesternMedicineDetail";
             this.dgvWesternMedicineDetail.PaintEnhancedSelection = false;
             this.dgvWesternMedicineDetail.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvWesternMedicineDetail.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvWesternMedicineDetail.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvWesternMedicineDetail.RowHeadersVisible = false;
             this.dgvWesternMedicineDetail.RowTemplate.Height = 23;
             this.dgvWesternMedicineDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -218,14 +219,14 @@ namespace App_OP.PrescriptionCirculation
             this.dgvWesternMedicine.AllowUserToResizeRows = false;
             this.dgvWesternMedicine.BackgroundColor = System.Drawing.Color.White;
             this.dgvWesternMedicine.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvWesternMedicine.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvWesternMedicine.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvWesternMedicine.ColumnHeadersHeight = 25;
             this.dgvWesternMedicine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvWesternMedicine.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -241,34 +242,34 @@ namespace App_OP.PrescriptionCirculation
             this.XY_colGGDW,
             this.XY_colYPCD,
             this.colWhite});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(216)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvWesternMedicine.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(216)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvWesternMedicine.DefaultCellStyle = dataGridViewCellStyle22;
             this.dgvWesternMedicine.Delay = 100;
             this.dgvWesternMedicine.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvWesternMedicine.EnableHeadersVisualStyles = false;
             this.dgvWesternMedicine.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dgvWesternMedicine.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.dgvWesternMedicine.Location = new System.Drawing.Point(0, 27);
+            this.dgvWesternMedicine.Location = new System.Drawing.Point(0, 24);
             this.dgvWesternMedicine.Name = "dgvWesternMedicine";
             this.dgvWesternMedicine.PaintEnhancedSelection = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvWesternMedicine.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvWesternMedicine.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dgvWesternMedicine.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvWesternMedicine.RowTemplate.Height = 23;
             this.dgvWesternMedicine.SelectAllSignVisible = false;
-            this.dgvWesternMedicine.Size = new System.Drawing.Size(1050, 503);
+            this.dgvWesternMedicine.Size = new System.Drawing.Size(1050, 506);
             this.dgvWesternMedicine.TabIndex = 8;
             this.dgvWesternMedicine.UseCustomBackgroundColor = true;
             this.dgvWesternMedicine.Text_Changed += new System.EventHandler(this.dgvWesternMedicine_Text_Changed);
@@ -302,8 +303,8 @@ namespace App_OP.PrescriptionCirculation
             // XY_colGG
             // 
             this.XY_colGG.DataPropertyName = "Specification";
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(206)))), ((int)(((byte)(219)))));
-            this.XY_colGG.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(206)))), ((int)(((byte)(219)))));
+            this.XY_colGG.DefaultCellStyle = dataGridViewCellStyle18;
             this.XY_colGG.HeaderText = "规格";
             this.XY_colGG.Name = "XY_colGG";
             this.XY_colGG.ReadOnly = true;
@@ -328,8 +329,8 @@ namespace App_OP.PrescriptionCirculation
             // XY_colYLDW
             // 
             this.XY_colYLDW.DataPropertyName = "DosageUnit";
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(206)))), ((int)(((byte)(219)))));
-            this.XY_colYLDW.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(206)))), ((int)(((byte)(219)))));
+            this.XY_colYLDW.DefaultCellStyle = dataGridViewCellStyle19;
             this.XY_colYLDW.HeaderText = "单位";
             this.XY_colYLDW.Name = "XY_colYLDW";
             this.XY_colYLDW.ReadOnly = true;
@@ -400,8 +401,8 @@ namespace App_OP.PrescriptionCirculation
             // XY_colGGDW
             // 
             this.XY_colGGDW.DataPropertyName = "PackingUnit";
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(206)))), ((int)(((byte)(219)))));
-            this.XY_colGGDW.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(206)))), ((int)(((byte)(219)))));
+            this.XY_colGGDW.DefaultCellStyle = dataGridViewCellStyle20;
             this.XY_colGGDW.HeaderText = "单位";
             this.XY_colGGDW.Name = "XY_colGGDW";
             this.XY_colGGDW.ReadOnly = true;
@@ -415,8 +416,8 @@ namespace App_OP.PrescriptionCirculation
             // XY_colYPCD
             // 
             this.XY_colYPCD.DataPropertyName = "ProductionSites";
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(206)))), ((int)(((byte)(219)))));
-            this.XY_colYPCD.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(206)))), ((int)(((byte)(219)))));
+            this.XY_colYPCD.DefaultCellStyle = dataGridViewCellStyle21;
             this.XY_colYPCD.HeaderText = "药品产地";
             this.XY_colYPCD.Name = "XY_colYPCD";
             this.XY_colYPCD.ReadOnly = true;
@@ -450,7 +451,7 @@ namespace App_OP.PrescriptionCirculation
             this.bar1.Name = "bar1";
             this.bar1.PaddingLeft = 5;
             this.bar1.RoundCorners = false;
-            this.bar1.Size = new System.Drawing.Size(1050, 27);
+            this.bar1.Size = new System.Drawing.Size(1050, 24);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar1.TabIndex = 7;
@@ -523,28 +524,28 @@ namespace App_OP.PrescriptionCirculation
             this.dgvPrescription.AllowUserToResizeRows = false;
             this.dgvPrescription.BackgroundColor = System.Drawing.Color.White;
             this.dgvPrescription.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrescription.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrescription.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dgvPrescription.ColumnHeadersHeight = 25;
             this.dgvPrescription.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPrescription.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colPrescriptionId,
             this.colState});
             this.dgvPrescription.ContextMenuStrip = this.contextPrescription;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(216)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPrescription.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(216)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPrescription.DefaultCellStyle = dataGridViewCellStyle25;
             this.dgvPrescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPrescription.EnableHeadersVisualStyles = false;
             this.dgvPrescription.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
@@ -553,14 +554,14 @@ namespace App_OP.PrescriptionCirculation
             this.dgvPrescription.Name = "dgvPrescription";
             this.dgvPrescription.PaintEnhancedSelection = false;
             this.dgvPrescription.ReadOnly = true;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrescription.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrescription.RowHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvPrescription.RowHeadersVisible = false;
             this.dgvPrescription.RowTemplate.Height = 23;
             this.dgvPrescription.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -620,7 +621,7 @@ namespace App_OP.PrescriptionCirculation
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(208, 22);
-            this.toolStripMenuItem1.Text = "重新发送";
+            this.toolStripMenuItem1.Text = "发送";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // toolStripSeparator2
@@ -657,6 +658,7 @@ namespace App_OP.PrescriptionCirculation
             this.bar2.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.bar2.IsMaximized = false;
             this.bar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnPrint,
             this.btnUndoPrescription,
             this.btnDelPrescription,
             this.btnSend});
@@ -691,8 +693,16 @@ namespace App_OP.PrescriptionCirculation
             this.btnSend.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.btnSend.Image = ((System.Drawing.Image)(resources.GetObject("btnSend.Image")));
             this.btnSend.Name = "btnSend";
-            this.btnSend.Text = "重新发送";
+            this.btnSend.Text = "发送";
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Text = "打印";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // FormPrescriptionCirculation
             // 
@@ -763,5 +773,6 @@ namespace App_OP.PrescriptionCirculation
         private System.Windows.Forms.ToolStripMenuItem 查看双流转取药结果ToolStripMenuItem;
         private DevComponents.DotNetBar.ButtonItem btnSend;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private DevComponents.DotNetBar.ButtonItem btnPrint;
     }
 }

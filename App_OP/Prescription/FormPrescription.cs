@@ -4355,29 +4355,64 @@ namespace App_OP.Prescription
                 else if (drugLimit.PrescriptionType == DrugLimitPrescriptionTypeEnum.Chronic && prescriptionType != PrescriptionType.Chronic)
                     return true;
 
-                if (drugLimit.DeptCode != null && drugLimit.DeptCode != "")
+                bool limitResult = false;
+
+                var deptCode = SysContext.RunSysInfo.currDept.Code;
+                var userCode = SysContext.CurrUser.user.Code;
+                var jobTitle = SysContext.CurrUser.user.JobTitle;
+
+                var limitDeptCode = drugLimit.DeptCode ?? "";
+                var limitUserCode = drugLimit.DoctorCode ?? "";
+                var limitTitleName = drugLimit.TitleName ?? "";
+
+                if (limitDeptCode == "" && limitUserCode == "" && limitTitleName == "")
+                    return true;
+
+                string msg = "";
+
+                if (drugLimit.Flag == 0)
                 {
-                    if ((drugLimit.DeptCode.Contains(SysContext.RunSysInfo.currDept.Code) && drugLimit.Flag == 1) || (!drugLimit.DeptCode.Contains(SysContext.RunSysInfo.currDept.Code) && drugLimit.Flag == 0))
+                    if (!string.IsNullOrEmpty(drugLimit.DeptCode) && !limitResult)
                     {
-                        MessageBox.Show(string.Format("药品<{0}>限制当前科室使用", DrugName));
-                        return false;
+                        limitResult |= !limitDeptCode.Contains(deptCode);
+                        msg = limitResult ? "该药品{0}不在当前科室的使用权限内" : "";
+                    }
+                    if (!string.IsNullOrEmpty(drugLimit.DoctorCode) && !limitResult)
+                    {
+                        limitResult |= !limitUserCode.Contains(userCode);
+                        msg = limitResult ? "该药品{0}不在当前医生的使用权限内" : "";
+                    }
+                    if (!string.IsNullOrEmpty(drugLimit.TitleName) && !limitResult)
+                    {
+                        limitResult |= !limitTitleName.Contains(jobTitle);
+                        msg = limitResult ? "该药品{0}不在当前职称的使用权限内" : "";
                     }
                 }
-                if (drugLimit.DoctorCode != null && drugLimit.DoctorCode != "")
+                else
                 {
-                    if ((drugLimit.DoctorCode.Contains(SysContext.CurrUser.user.Code) && drugLimit.Flag == 1) || (!drugLimit.DoctorCode.Contains(SysContext.CurrUser.user.Code) && drugLimit.Flag == 0))
+                    if (!string.IsNullOrEmpty(drugLimit.DeptCode) && !limitResult)
                     {
-                        MessageBox.Show(string.Format("药品<{0}>限制当前医生使用", DrugName));
-                        return false;
+                        limitResult |= limitDeptCode.Contains(deptCode);
+                        msg = limitResult ? "该药品{0}在当前科室禁止使用" : "";
+                    }
+                    if (!string.IsNullOrEmpty(drugLimit.DoctorCode) && !limitResult)
+                    {
+                        limitResult |= limitUserCode.Contains(userCode);
+                        msg = limitResult ? "该药品{0}在当前医生禁止使用" : "";
+                    }
+                    if (!string.IsNullOrEmpty(drugLimit.TitleName) && !limitResult)
+                    {
+                        limitResult |= limitTitleName.Contains(jobTitle);
+                        msg = limitResult ? "该药品{0}在当前职称禁止使用" : "";
                     }
                 }
-                if (drugLimit.TitleName != null && drugLimit.TitleName != "")
+
+
+                if (limitResult)
                 {
-                    if ((drugLimit.TitleName.Contains(SysContext.CurrUser.user.JobTitle) && drugLimit.Flag == 1) || (!drugLimit.TitleName.Contains(SysContext.CurrUser.user.JobTitle) && drugLimit.Flag == 0))
-                    {
-                        MessageBox.Show(string.Format("药品<{0}>限制当前职称使用", DrugName));
-                        return false;
-                    }
+                    msg = string.Format(msg, DrugName);
+                    MessageBox.Show(msg);
+                    return false;
                 }
             }
 
@@ -4423,11 +4458,11 @@ namespace App_OP.Prescription
                     int sum = DBHelper.CIS.FromSql($@"SELECT ISNULL(SUM(NUMBER),0) FROM (
                                                     SELECT SUM(B.NUMBER) AS NUMBER FROM OP_Prescription A
                                                     LEFT JOIN OP_Prescription_Detail B ON A.PrescriptionNo = B.PrescriptionNo AND B.ItemCode = '{DrugID}'
-                                                    WHERE (A.IDCARD = '{idCard}' OR A.CardNo='{cardNo}') AND A.UPDATETIME >= '{time}' AND A.Status = 2
+                                                    WHERE (A.IDCARD = '{idCard}' OR A.CardNo='{cardNo}') AND A.UPDATETIME >= '{time}' AND A.Status < 3
                                                     UNION ALL
                                                     SELECT SUM(B.NUMBER) AS NUMBER FROM OP_Prescription_History A
                                                     LEFT JOIN OP_Prescription_Detail_History B ON A.PrescriptionNo = B.PrescriptionNo AND B.ItemCode = '{DrugID}'
-                                                    WHERE (A.IDCARD = '{idCard}' OR A.CardNo='{cardNo}') AND A.UPDATETIME >= '{time}' AND A.Status = 2) A").ToScalar<int>();
+                                                    WHERE (A.IDCARD = '{idCard}' OR A.CardNo='{cardNo}') AND A.UPDATETIME >= '{time}' AND A.Status < 3) A").ToScalar<int>();
                     if (sum + NowNumber > patientNumber)
                     {
                         MessageBox.Show(string.Format($"药品<{DrugName}>限制病人数量使用,限制数量为：{patientNumber},已经开具数量为：{sum + NowNumber}"));
@@ -4448,12 +4483,12 @@ namespace App_OP.Prescription
                                                       SELECT SUM(B.NUMBER) AS NUMBER
                                                       FROM OP_PRESCRIPTION A
                                                       LEFT JOIN OP_PRESCRIPTION_DETAIL B ON A.PRESCRIPTIONNO = B.PRESCRIPTIONNO
-                                                      WHERE A.USERID = '{userID}' AND B.ITEMCODE = '{DrugID}' AND A.UPDATETIME >= '{time}' AND A.Status = 2
+                                                      WHERE A.USERID = '{userID}' AND B.ITEMCODE = '{DrugID}' AND A.UPDATETIME >= '{time}' AND A.Status < 3
                                                       UNION ALL
                                                       SELECT SUM(B.NUMBER) AS NUMBER
                                                       FROM OP_PRESCRIPTION_HISTORY A
                                                       LEFT JOIN OP_PRESCRIPTION_DETAIL_HISTORY B ON A.PRESCRIPTIONNO = B.PRESCRIPTIONNO
-                                                      WHERE A.USERID = '{userID}' AND B.ITEMCODE = '{DrugID}' AND A.UPDATETIME >= '{time}' AND A.Status = 2) C").ToScalar<int>();
+                                                      WHERE A.USERID = '{userID}' AND B.ITEMCODE = '{DrugID}' AND A.UPDATETIME >= '{time}' AND A.Status < 3) C").ToScalar<int>();
 
                     if (sum + NowNumber > doctorNumber)
                     {

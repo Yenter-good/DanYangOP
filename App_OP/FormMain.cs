@@ -1,4 +1,5 @@
 ﻿using App_OP.Examination;
+using App_OP.Examination.PACSShare;
 using App_OP.PatientInfo;
 using App_OP.Prescription;
 using App_OP.PrescriptionCirculation;
@@ -178,6 +179,7 @@ namespace App_OP
             prescriptionType = DBHelper.CIS.From<OP_Dic_PrescriptionType>().ToList();
 
             PrescriptionCirculation.PrescriptionCirculationHandler.Init();
+            PACSShareHelper.Init();
             //pCode.EditorParams = new object[] { list, "Name", "Code" };
         }
 

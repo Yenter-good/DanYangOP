@@ -532,7 +532,11 @@ namespace App_OP.Examination
                     if (hasToken)
                     {
                         var number = new NumberHelper().Handler();
+                        if (number == null)
+                            return;
                         var data = new NoticeHelper().Handler(details);
+                        if (data.url == null && data.serialNumber == null)
+                            return;
                         DialogResult dresult = DialogResult.No;
                         if (number > 0)
                         {

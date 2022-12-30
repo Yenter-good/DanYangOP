@@ -265,6 +265,15 @@
     <Compile Include="PrescriptionCirculation\FormPrescriptionCirculation.Designer.cs">
       <DependentUpon>FormPrescriptionCirculation.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrescriptionCirculation\FormPrescriptionCirculationStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrescriptionCirculation\FormPrescriptionCirculationStatistic.Designer.cs">
+      <DependentUpon>FormPrescriptionCirculationStatistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrescriptionCirculation\Inventory\InventoryHelper.cs" />
+    <Compile Include="PrescriptionCirculation\Inventory\InventoryRequest.cs" />
+    <Compile Include="PrescriptionCirculation\Inventory\InventoryResponse.cs" />
     <Compile Include="PrescriptionCirculation\PrescriptionCirculationHandler.cs" />
     <Compile Include="PrescriptionCirculation\PreAudit\UploadPreAuditHelper.cs" />
     <Compile Include="PrescriptionCirculation\PreAudit\UploadPreAuditRequest.cs" />
@@ -676,6 +685,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PrescriptionCirculation\FormPrescriptionCirculation.resx">
       <DependentUpon>FormPrescriptionCirculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrescriptionCirculation\FormPrescriptionCirculationStatistic.resx">
+      <DependentUpon>FormPrescriptionCirculationStatistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrescriptionCirculation\TakeDrugResult\FormTakeDrugResultPreview.resx">
       <DependentUpon>FormTakeDrugResultPreview.cs</DependentUpon>
