@@ -37,6 +37,7 @@ namespace App_OP.PrescriptionCirculation.Inventory
             request.prscDrName = SysContext.CurrUser.UserName;
             request.pharCode = SysContext.CurrUser.user.HealthCareCode;
             request.pharName = SysContext.CurrUser.UserName;
+            request.mdtrtareaAdmvs = "321181";
 
             request.drugList = new List<DrugList>();
             foreach (var detail in details)
@@ -55,8 +56,10 @@ namespace App_OP.PrescriptionCirculation.Inventory
             }
 
             var url = SysContext.CurrUser.Params.OP_PrescriptionCirculation_Url;
-            var response = _handler.Post<InventoryResponse>(request, url + "/fixmedins/fixmedins/rxSetlStockQuery", "库存查询");
-            if (response.accept == "1")
+            var response = _handler.Post<InventoryResponse>(request, url + "/pcs-manage/pcs/fixmedins/rxSetlStockQuery", "库存查询");
+            if (response == null)
+                return (false, "");
+            else if (response.accept == "1")
                 return (true, "");
             else if (response.accept == "0")
                 return (false, "部分满足");

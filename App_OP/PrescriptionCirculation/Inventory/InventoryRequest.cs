@@ -78,6 +78,11 @@ namespace App_OP.PrescriptionCirculation.Inventory
         /// </summary>
         public string pharName { get; set; }
 
+        /// <summary>
+        /// 就医地医保区划
+        /// </summary>
+        public string mdtrtareaAdmvs { get; set; }
+
         public List<DrugList> drugList { get; set; }
     }
 
