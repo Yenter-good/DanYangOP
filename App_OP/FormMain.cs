@@ -1,5 +1,6 @@
 ﻿using App_OP.Examination;
 using App_OP.Examination.PACSShare;
+using App_OP.HealthRecords;
 using App_OP.PatientInfo;
 using App_OP.Prescription;
 using App_OP.PrescriptionCirculation;
@@ -53,12 +54,13 @@ namespace App_OP
         private int _prescriptionCirculationCount;
 
         private DataTable _emergency;
+        private HealthRecordsURLHelper _healthRecords;
 
         #region 构建页面
         private void FormMain_Shown(object sender, EventArgs e)
         {
             //aa();
-
+            _healthRecords = new HealthRecordsURLHelper();
 
             if (!SysContext.RunSysInfo.Params.OP_FreeRegistered)
             {
@@ -1767,6 +1769,11 @@ namespace App_OP
             //FormTakeDrugResultPreview preview = new FormTakeDrugResultPreview();
             //preview.Init(data);
             //preview.ShowDialog();
+        }
+
+        private void btnHealthRecords_Click(object sender, EventArgs e)
+        {
+            _healthRecords.Handler();
         }
     }
 }

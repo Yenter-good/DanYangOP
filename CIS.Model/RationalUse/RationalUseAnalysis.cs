@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace CIS.Model.RationalUse
@@ -151,10 +152,11 @@ namespace CIS.Model.RationalUse
 
     public class lis_data
     {
-        public form form { get; set; }
+        [JsonProperty("form")]
+        public form1 form { get; set; }
     }
 
-    public class form
+    public class form1
     {
         /// <summary>
         /// 检验、检查单号

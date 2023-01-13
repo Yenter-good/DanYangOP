@@ -37,6 +37,33 @@ namespace CIS.Utility
             }
         }
 
+        public static T HttpPost<T>(string Url, string postDataStr)
+        {
+            var request = (HttpWebRequest)WebRequest.Create(Url);
+
+            var data = Encoding.UTF8.GetBytes(postDataStr);
+
+            request.Method = "POST";
+            request.Timeout = 2000;
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.ContentLength = data.Length;
+            try
+            {
+                using (var stream = request.GetRequestStream())
+                {
+                    stream.Write(data, 0, data.Length);
+                }
+                var response = (HttpWebResponse)request.GetResponse();
+
+                var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(responseString);
+            }
+            catch (Exception)
+            {
+                return default;
+            }
+        }
+
         public static bool HttpPost(string Url, string postDataStr, ContentType contentType, out string result)
         {
             var request = (HttpWebRequest)WebRequest.Create(Url);

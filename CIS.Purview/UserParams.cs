@@ -125,6 +125,13 @@ namespace CIS.Purview
         /// 云影像平台地址
         /// </summary>
         public string OP_PACSShare_Url { get { return GetValue(curUserId, "U999", "云影像平台地址", "云影像平台地址", "http://20.30.1.81").AsString(); } }
+
+        public string OP_HealthRecords_Url { get { return GetValue("All", "U997", "健康档案地址", "健康档案地址", "http://20.17.10.172:9990").AsString(); } }
+        public string OP_HealthRecords_Encryption_Url { get { return GetValue("All", "U996", "健康档案获取加密偏移地址", "健康档案获取加密偏移地址", "http://20.17.10.172:9990/ehr/getEncryptParam").AsString(); } }
+        public string OP_HealthRecords_Account { get { return GetValue("All", "U995", "健康档案账号", "健康档案账号", "DYSZYY").AsString(); } }
+        public string OP_HealthRecords_Password { get { return GetValue("All", "U994", "健康档案密码", "健康档案密码", "dheueEW#2s!@%").AsString(); } }
+        public string OP_HealthRecords_AESKey { get { return GetValue("All", "U993", "健康档案加密key", "健康档案加密key", "ivGtmsFC5lVdm2Kj").AsString(); } }
+
         /// <summary>
         /// 获取参数值
         /// </summary>

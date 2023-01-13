@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            DevComponents.DotNetBar.SuperGrid.Style.Background background1 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background2 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.barTop = new DevComponents.DotNetBar.Bar();
             this.btnQChange = new DevComponents.DotNetBar.ButtonItem();
@@ -112,6 +112,7 @@
             this.tabMain = new DevComponents.DotNetBar.SuperTabControl();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.expandableSplitter1 = new DevComponents.DotNetBar.ExpandableSplitter();
+            this.btnHealthRecords = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barTop)).BeginInit();
             this.pnlRight.SuspendLayout();
             this.expandablePanel1.SuspendLayout();
@@ -140,6 +141,7 @@
             this.buttonItem4,
             this.btnCallPatient,
             this.btnSEMR,
+            this.btnHealthRecords,
             this.lblName,
             this.lblSex,
             this.lblAge,
@@ -151,7 +153,7 @@
             this.buttonItem2});
             this.barTop.Location = new System.Drawing.Point(1, 1);
             this.barTop.Name = "barTop";
-            this.barTop.Size = new System.Drawing.Size(1610, 41);
+            this.barTop.Size = new System.Drawing.Size(1787, 41);
             this.barTop.Stretch = true;
             this.barTop.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.barTop.TabIndex = 0;
@@ -290,7 +292,7 @@
             this.pnlRight.Expanded = false;
             this.pnlRight.ExpandedBounds = new System.Drawing.Rectangle(1041, 25, 200, 368);
             this.pnlRight.HideControlsWhenCollapsed = true;
-            this.pnlRight.Location = new System.Drawing.Point(1342, 42);
+            this.pnlRight.Location = new System.Drawing.Point(1519, 42);
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Padding = new System.Windows.Forms.Padding(5);
             this.pnlRight.Size = new System.Drawing.Size(269, 663);
@@ -345,9 +347,9 @@
             // dgvPrescription
             // 
             this.dgvPrescription.ContextMenuStrip = this.contextPrescription;
-            background1.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            background1.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.dgvPrescription.DefaultVisualStyles.RowStyles.Selected.RowHeaderStyle.Background = background1;
+            background2.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            background2.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvPrescription.DefaultVisualStyles.RowStyles.Selected.RowHeaderStyle.Background = background2;
             this.dgvPrescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPrescription.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.dgvPrescription.Font = new System.Drawing.Font("宋体", 10.5F);
@@ -593,14 +595,14 @@
             this.dgvZDDetail.AllowUserToDeleteRows = false;
             this.dgvZDDetail.AllowUserToResizeRows = false;
             this.dgvZDDetail.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvZDDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvZDDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvZDDetail.ColumnHeadersHeight = 28;
             this.dgvZDDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvZDDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -610,27 +612,27 @@
             this.colMedicareCode,
             this.DiagnosisType,
             this.DiagnosisSpecialFlag});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvZDDetail.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvZDDetail.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvZDDetail.EnableHeadersVisualStyles = false;
             this.dgvZDDetail.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dgvZDDetail.Location = new System.Drawing.Point(-200, 108);
             this.dgvZDDetail.Name = "dgvZDDetail";
             this.dgvZDDetail.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvZDDetail.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvZDDetail.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvZDDetail.RowHeadersVisible = false;
             this.dgvZDDetail.RowTemplate.Height = 23;
             this.dgvZDDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1004,7 +1006,7 @@
             this.tabMain.ReorderTabsEnabled = true;
             this.tabMain.SelectedTabFont = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.tabMain.SelectedTabIndex = -1;
-            this.tabMain.Size = new System.Drawing.Size(1337, 663);
+            this.tabMain.Size = new System.Drawing.Size(1514, 663);
             this.tabMain.TabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Left;
             this.tabMain.TabFont = new System.Drawing.Font("宋体", 15F);
             this.tabMain.TabHorizontalSpacing = 2;
@@ -1044,18 +1046,24 @@
             this.expandableSplitter1.HotGripDarkColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
             this.expandableSplitter1.HotGripLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
             this.expandableSplitter1.HotGripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.expandableSplitter1.Location = new System.Drawing.Point(1338, 42);
+            this.expandableSplitter1.Location = new System.Drawing.Point(1515, 42);
             this.expandableSplitter1.Name = "expandableSplitter1";
             this.expandableSplitter1.Size = new System.Drawing.Size(4, 663);
             this.expandableSplitter1.Style = DevComponents.DotNetBar.eSplitterStyle.Office2007;
             this.expandableSplitter1.TabIndex = 37;
             this.expandableSplitter1.TabStop = false;
             // 
+            // btnHealthRecords
+            // 
+            this.btnHealthRecords.Name = "btnHealthRecords";
+            this.btnHealthRecords.Text = "健康档案";
+            this.btnHealthRecords.Click += new System.EventHandler(this.btnHealthRecords_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1612, 706);
+            this.ClientSize = new System.Drawing.Size(1789, 706);
             this.Controls.Add(this.tabMain);
             this.Controls.Add(this.expandableSplitter1);
             this.Controls.Add(this.pnlRight);
@@ -1158,5 +1166,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colMedicareCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiagnosisType;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiagnosisSpecialFlag;
+        private DevComponents.DotNetBar.ButtonItem btnHealthRecords;
     }
 }

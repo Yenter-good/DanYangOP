@@ -85,6 +85,9 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="DCSoft.Writer, Version=1.2015.9.18, Culture=neutral, PublicKeyToken=2e40e961ea876340, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\DCSoft.Writer.dll</HintPath>
@@ -187,6 +190,8 @@
     <Compile Include="Examination\PACSShare\ViewOtherHos\ViewOtherHosHelper.cs" />
     <Compile Include="Examination\PACSShare\ViewOtherHos\ViewOtherHosRequest.cs" />
     <Compile Include="Examination\PACSShare\ViewOtherHos\ViewOtherHosResponse.cs" />
+    <Compile Include="HealthRecords\EncryptionResponse.cs" />
+    <Compile Include="HealthRecords\HealthRecords.cs" />
     <Compile Include="Journal\FormDiagnosisJournal.cs">
       <SubType>Form</SubType>
     </Compile>
