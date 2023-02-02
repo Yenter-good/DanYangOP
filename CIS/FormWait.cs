@@ -98,10 +98,26 @@ namespace CIS
             this.labelX1.Text += "正在启动更新程序" + Environment.NewLine;
             try
             {
-                Process proc = Process.Start(System.IO.Directory.GetParent(Application.StartupPath) + @"\客户端.exe", "门诊医生站" + "%" + Process.GetCurrentProcess().ProcessName);
-                while (!proc.HasExited)
+                //Process proc = Process.Start(System.IO.Directory.GetParent(Application.StartupPath) + @"\客户端.exe", "门诊医生站" + "%" + Process.GetCurrentProcess().ProcessName);
+                //while (!proc.HasExited)
+                //{
+                //    Application.DoEvents();
+                //}
+                string path = AppDomain.CurrentDomain.BaseDirectory + "MAutoUpdate.exe";
+                //同时启动自动更新程序
+                if (File.Exists(path))
                 {
-                    Application.DoEvents();
+                    var processName = Process.GetCurrentProcess().ProcessName;
+                    ProcessStartInfo processStartInfo = new ProcessStartInfo()
+                    {
+                        FileName = "MAutoUpdate.exe",
+                        Arguments = $"{processName} 0"
+                    };
+                    Process proc = Process.Start(processStartInfo);
+                    if (proc != null)
+                    {
+                        proc.WaitForExit();
+                    }
                 }
             }
             catch
