@@ -21,6 +21,11 @@ namespace CIS.Core
             OffImeControl = control;
         }
 
+        public virtual void OnClose()
+        {
+
+        }
+
         private void BaseForm_InputLanguageChanged(object sender, InputLanguageChangedEventArgs e)
         {
 

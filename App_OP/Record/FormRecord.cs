@@ -1014,5 +1014,10 @@ namespace App_OP.Record
                 System.Diagnostics.Process.Start("iexplore.exe", Url);
             }
         }
+
+        public override void OnClose()
+        {
+            base.OnClose();
+        }
     }
 }

@@ -522,6 +522,15 @@ namespace CIS
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
+            foreach (SuperTabItem item in this.tabMain.Tabs)
+            {
+                if (item.AttachedControl.Controls.Count == 0)
+                    continue;
+                var control = item.AttachedControl.Controls[0];
+                if (control is BaseForm baseForm)
+                    baseForm.OnClose();
+            }
+
             var dtNow = DBHelper.ServerTime;
             if (!DBHelper.CIS.Exists<OP_Log_InOut>(p => p.UserCode == SysContext.CurrUser.user.Code && p.OperationDate == dtNow.Date && p.OperationType == 1))
             {
