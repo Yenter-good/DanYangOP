@@ -107,6 +107,18 @@ namespace CIS
                 //同时启动自动更新程序
                 if (File.Exists(path))
                 {
+                    var info = FileVersionInfo.GetVersionInfo(path);
+                    if (info.ProductVersion != "2.0.0.0")
+                    {
+                        File.Delete("MAutoUpdate.exe");
+                        File.Delete("Local.xml");
+                        using (var webclient = new WebClient())
+                        {
+                            webclient.DownloadFile("http://192.168.1.235:7788/local.txt", "Local.json");
+                            webclient.DownloadFile("http://192.168.1.235:7788/MAutoUpdate.exe", "MAutoUpdate.exe");
+                        }
+                    }
+
                     var processName = Process.GetCurrentProcess().ProcessName;
                     ProcessStartInfo processStartInfo = new ProcessStartInfo()
                     {

@@ -48,6 +48,7 @@
             this.btnAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.btnEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDel = new System.Windows.Forms.ToolStripMenuItem();
+            this.nodeHospital = new DevComponents.AdvTree.Node();
             this.nodeDept = new DevComponents.AdvTree.Node();
             this.nodeUser = new DevComponents.AdvTree.Node();
             this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
@@ -70,6 +71,8 @@
             this.btnDelItem = new DevComponents.DotNetBar.ButtonItem();
             this.btnUp = new DevComponents.DotNetBar.ButtonItem();
             this.btnDown = new DevComponents.DotNetBar.ButtonItem();
+            this.nodeHerbsHospital = new DevComponents.AdvTree.Node();
+            this.node2 = new DevComponents.AdvTree.Node();
             this.pnlJyList.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
@@ -279,6 +282,7 @@
             this.treeGroup.Location = new System.Drawing.Point(2, 55);
             this.treeGroup.Name = "treeGroup";
             this.treeGroup.Nodes.AddRange(new DevComponents.AdvTree.Node[] {
+            this.nodeHospital,
             this.nodeDept,
             this.nodeUser});
             this.treeGroup.NodesConnector = this.nodeConnector1;
@@ -322,6 +326,14 @@
             this.btnDel.Size = new System.Drawing.Size(124, 22);
             this.btnDel.Text = "删除分类";
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // nodeHospital
+            // 
+            this.nodeHospital.Expanded = true;
+            this.nodeHospital.Image = ((System.Drawing.Image)(resources.GetObject("nodeHospital.Image")));
+            this.nodeHospital.Name = "nodeHospital";
+            this.nodeHospital.TagString = "全院套餐";
+            this.nodeHospital.Text = "全院套餐";
             // 
             // nodeDept
             // 
@@ -553,6 +565,22 @@
             this.btnDown.Text = "下移";
             this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
+            // nodeHerbsHospital
+            // 
+            this.nodeHerbsHospital.Expanded = true;
+            this.nodeHerbsHospital.Image = ((System.Drawing.Image)(resources.GetObject("nodeHerbsHospital.Image")));
+            this.nodeHerbsHospital.Name = "nodeHerbsHospital";
+            this.nodeHerbsHospital.TagString = "全院套餐";
+            this.nodeHerbsHospital.Text = "全院套餐";
+            // 
+            // node2
+            // 
+            this.node2.Expanded = true;
+            this.node2.Image = ((System.Drawing.Image)(resources.GetObject("node2.Image")));
+            this.node2.Name = "node2";
+            this.node2.TagString = "全院套餐";
+            this.node2.Text = "全院套餐";
+            // 
             // FormDearWithGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -620,5 +648,8 @@
         private DevComponents.AdvTree.Node nodeUser;
         private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn4;
         private DevComponents.DotNetBar.ButtonItem btnSave;
+        private DevComponents.AdvTree.Node nodeHospital;
+        private DevComponents.AdvTree.Node nodeHerbsHospital;
+        private DevComponents.AdvTree.Node node2;
     }
 }

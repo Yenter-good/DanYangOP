@@ -32,15 +32,15 @@ namespace App_OP.SysSet.DearWithGroup
         }
         private void InitData()
         {
-            groupList = DBHelper.CIS.From<OP_DearWithGroup>().Where(x => x.Owner == SysContext.RunSysInfo.user.ID || x.Owner == SysContext.RunSysInfo.currDept.Code).OrderBy(p => p.No).ToList();
+            groupList = DBHelper.CIS.From<OP_DearWithGroup>().Where(x => x.Owner == SysContext.RunSysInfo.user.ID || x.Owner == SysContext.RunSysInfo.currDept.Code || x.Owner == "*").OrderBy(p => p.No).ToList();
             itemList = DBHelper.CIS.From<IView_HIS_DealWithItem>().ToList();
             relList = DBHelper.CIS.FromSql("select * from IView_Inside_DealWithItem where GroupID in ( select ID from OP_DearWithGroup where Owner ='" +
-                SysContext.RunSysInfo.currDept.Code + "' or Owner ='" + SysContext.RunSysInfo.user.ID + "') ORDER BY NO").ToList<IView_Inside_DealWithItem>();
+                SysContext.RunSysInfo.currDept.Code + "' or Owner ='" + SysContext.RunSysInfo.user.ID + "' or Owner='*') ORDER BY NO").ToList<IView_Inside_DealWithItem>();
         }
 
         private void RefreshGroup()
         {
-            groupList = DBHelper.CIS.From<OP_DearWithGroup>().Where(x => x.Owner == SysContext.RunSysInfo.user.ID || x.Owner == SysContext.RunSysInfo.currDept.Code).OrderBy(p => p.No).ToList();
+            groupList = DBHelper.CIS.From<OP_DearWithGroup>().Where(x => x.Owner == "*" || x.Owner == SysContext.RunSysInfo.user.ID || x.Owner == SysContext.RunSysInfo.currDept.Code).OrderBy(p => p.No).ToList();
         }
         private void InitUI()
         {
@@ -64,14 +64,12 @@ namespace App_OP.SysSet.DearWithGroup
                 Node node = new Node();
                 node.Text = item.Name;
                 node.Tag = item;
-                if (item.GroupType == 1)
-                {
+                if (item.GroupType == 0)
+                    nodeHospital.Nodes.Add(node);
+                else if (item.GroupType == 1)
                     nodeDept.Nodes.Add(node);
-                }
                 else
-                {
                     nodeUser.Nodes.Add(node);
-                }
 
                 CreateChildNode(node, item.ID);
             }
@@ -108,10 +106,18 @@ namespace App_OP.SysSet.DearWithGroup
                 AlertBox.Error("请选中一个分类");
                 return;
             }
-            else if (node.TagString == "科室套餐" || node.TagString == "个人套餐")
+            else if (node.TagString == "全院套餐" || node.TagString == "科室套餐" || node.TagString == "个人套餐")
             {
+                if (node.TagString == "全院套餐")
+                {
+                    if (!SysContext.CurrUser.roleList.Any(p => p.Code == "admin"))
+                    {
+                        AlertBox.Info("全院套餐只有管理员可以更改");
+                        return;
+                    }
+                }
                 form.parentID = "0";
-                form.type = node.TagString == "科室套餐" ? 1 : 2;
+                form.type = (node.TagString == "全院套餐" ? 0 : node.TagString == "科室套餐" ? 1 : 2);
             }
             else
             {
@@ -144,6 +150,20 @@ namespace App_OP.SysSet.DearWithGroup
                 AlertBox.Error("请选中一个分类");
                 return;
             }
+
+            if (node.Tag == null || node.Tag.GetType() != typeof(OP_DearWithGroup)) return;
+            if (node.Tag is OP_DearWithGroup group)
+            {
+                if (group.GroupType == 0)
+                {
+                    if (!SysContext.CurrUser.roleList.Any(p => p.Code == "admin"))
+                    {
+                        AlertBox.Info("全院套餐只有管理员可以更改");
+                        return;
+                    }
+                }
+            }
+
             FormAddGroup form = new FormAddGroup();
             form.status = "edit";
             OP_DearWithGroup temp = node.Tag as OP_DearWithGroup;
@@ -210,7 +230,16 @@ namespace App_OP.SysSet.DearWithGroup
                 AlertBox.Error("该节点不可删除");
                 return;
             }
+
             OP_DearWithGroup temp = node.Tag as OP_DearWithGroup;
+            if (temp.GroupType == 0)
+            {
+                if (!SysContext.CurrUser.roleList.Any(p => p.Code == "admin"))
+                {
+                    AlertBox.Info("全院套餐只有管理员可以更改");
+                    return;
+                }
+            }
 
             DelNodeHasDetail(node);//删除节点下项目明细
 
@@ -252,7 +281,7 @@ namespace App_OP.SysSet.DearWithGroup
                 return;
             }
             OP_DearWithGroup group = node.Tag as OP_DearWithGroup;
-         
+
             if (group == null)
             {
                 AlertBox.Error("该分类下不允许直接添加明细项目。请新建一个分类！");
@@ -286,7 +315,7 @@ namespace App_OP.SysSet.DearWithGroup
                 item.Number = Convert.ToInt32(tbxNumber.Text);
                 item.No = rowIndex;
                 //item.Price = price;
-                item.Owner = group.GroupType == 1 ? SysContext.RunSysInfo.currDept.Code : SysContext.RunSysInfo.user.ID;
+                item.Owner = group.GroupType == 0 ? "*" : group.GroupType == 1 ? SysContext.RunSysInfo.currDept.Code : SysContext.RunSysInfo.user.ID;
                 int i = DBHelper.CIS.Insert<OP_DearWithGroup_Detail>(item);
                 if (i < 1)
                     errorNumber++;
@@ -340,7 +369,7 @@ namespace App_OP.SysSet.DearWithGroup
                 return;
             OP_DearWithGroup item = node.Tag as OP_DearWithGroup;
             relList = DBHelper.CIS.FromSql("select * from IView_Inside_DealWithItem where GroupID in ( select ID from OP_DearWithGroup where Owner ='" +
-               SysContext.RunSysInfo.currDept.Code + "' or Owner ='" + SysContext.RunSysInfo.user.ID + "')").ToList<IView_Inside_DealWithItem>();
+               SysContext.RunSysInfo.currDept.Code + "' or Owner ='" + SysContext.RunSysInfo.user.ID + "' or Owner='*')").ToList<IView_Inside_DealWithItem>();
             gridSubList.PrimaryGrid.DataSource = relList.Where(x => x.GroupID == item.ID).OrderBy((x => x.No)).ToList();
 
             Application.DoEvents();//处理消息队列 清除界面堵塞

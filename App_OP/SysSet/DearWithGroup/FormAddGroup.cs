@@ -43,6 +43,7 @@ namespace App_OP.SysSet.DearWithGroup
 
         private void SetValue()
         {
+            rdo0.Checked = group.GroupType == 0;
             rdo1.Checked = group.GroupType == 1 || group.GroupType == null;
             rdo2.Checked = group.GroupType == 2;
             tbxName.Text = group.Name;
@@ -52,6 +53,11 @@ namespace App_OP.SysSet.DearWithGroup
         private void GetValue()
         {
             group.Name = tbxName.Text.Trim();
+            if (rdo0.Checked)
+            {
+                group.GroupType = 0;
+                group.Owner = "*";
+            }
             if (rdo1.Checked)
             {
                 group.GroupType = 1;
@@ -61,7 +67,6 @@ namespace App_OP.SysSet.DearWithGroup
             {
                 group.GroupType = 2;
                 group.Owner = SysContext.RunSysInfo.user.ID;
-
             }
             group.No = Convert.ToInt32(tbxNo.Value);
             if (status == "add")
@@ -78,6 +83,7 @@ namespace App_OP.SysSet.DearWithGroup
 
         private bool Validing()
         {
+
             if (string.IsNullOrWhiteSpace(tbxName.Text))
             {
                 tbxName.Focus();
@@ -91,6 +97,7 @@ namespace App_OP.SysSet.DearWithGroup
         {
             if (status == "add")
             {
+                rdo0.Checked = type == 0;
                 rdo1.Checked = type == 1;
                 rdo2.Checked = type == 2;
             }

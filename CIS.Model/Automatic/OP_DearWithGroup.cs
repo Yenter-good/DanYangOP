@@ -19,165 +19,165 @@ namespace CIS.Model
     /// 实体类OP_DearWithGroup 。(属性说明自动提取数据库字段的描述信息)
     /// </summary>
     [Table("OP_DearWithGroup")]
-	[Serializable]
-	public partial class OP_DearWithGroup : Entity 
-	{
-		#region Model
-		private string _ID;
-		private string _ParentID;
-		private string _Name;
-		private int? _No;
-		private int? _GroupType;
-		private string _Owner;
-		/// <summary>
-		/// ID
-		/// </summary>
-		public string ID
-		{
-			get{ return _ID; }
-			set
-			{
-				this.OnPropertyValueChange(_.ID,_ID,value);
-				this._ID=value;
-			}
-		}
-		/// <summary>
-		/// 父节点
-		/// </summary>
-		public string ParentID
-		{
-			get{ return _ParentID; }
-			set
-			{
-				this.OnPropertyValueChange(_.ParentID,_ParentID,value);
-				this._ParentID=value;
-			}
-		}
-		/// <summary>
-		/// 名称
-		/// </summary>
-		public string Name
-		{
-			get{ return _Name; }
-			set
-			{
-				this.OnPropertyValueChange(_.Name,_Name,value);
-				this._Name=value;
-			}
-		}
-		/// <summary>
-		/// 序号
-		/// </summary>
-		public int? No
-		{
-			get{ return _No; }
-			set
-			{
-				this.OnPropertyValueChange(_.No,_No,value);
-				this._No=value;
-			}
-		}
-		/// <summary>
-		/// _1科室 2个人
-		/// </summary>
-		public int? GroupType
-		{
-			get{ return _GroupType; }
-			set
-			{
-				this.OnPropertyValueChange(_.GroupType,_GroupType,value);
-				this._GroupType=value;
-			}
-		}
-		/// <summary>
-		/// 拥有者
-		/// </summary>
-		public string Owner
-		{
-			get{ return _Owner; }
-			set
-			{
-				this.OnPropertyValueChange(_.Owner,_Owner,value);
-				this._Owner=value;
-			}
-		}
-		#endregion
+    [Serializable]
+    public partial class OP_DearWithGroup : Entity
+    {
+        #region Model
+        private string _ID;
+        private string _ParentID;
+        private string _Name;
+        private int? _No;
+        private int? _GroupType;
+        private string _Owner;
+        /// <summary>
+        /// ID
+        /// </summary>
+        public string ID
+        {
+            get { return _ID; }
+            set
+            {
+                this.OnPropertyValueChange(_.ID, _ID, value);
+                this._ID = value;
+            }
+        }
+        /// <summary>
+        /// 父节点
+        /// </summary>
+        public string ParentID
+        {
+            get { return _ParentID; }
+            set
+            {
+                this.OnPropertyValueChange(_.ParentID, _ParentID, value);
+                this._ParentID = value;
+            }
+        }
+        /// <summary>
+        /// 名称
+        /// </summary>
+        public string Name
+        {
+            get { return _Name; }
+            set
+            {
+                this.OnPropertyValueChange(_.Name, _Name, value);
+                this._Name = value;
+            }
+        }
+        /// <summary>
+        /// 序号
+        /// </summary>
+        public int? No
+        {
+            get { return _No; }
+            set
+            {
+                this.OnPropertyValueChange(_.No, _No, value);
+                this._No = value;
+            }
+        }
+        /// <summary>
+        /// 0全院 _1科室 2个人
+        /// </summary>
+        public int? GroupType
+        {
+            get { return _GroupType; }
+            set
+            {
+                this.OnPropertyValueChange(_.GroupType, _GroupType, value);
+                this._GroupType = value;
+            }
+        }
+        /// <summary>
+        /// 拥有者
+        /// </summary>
+        public string Owner
+        {
+            get { return _Owner; }
+            set
+            {
+                this.OnPropertyValueChange(_.Owner, _Owner, value);
+                this._Owner = value;
+            }
+        }
+        #endregion
 
-		#region Method
-		/// <summary>
-		/// 获取实体中的主键列
-		/// </summary>
-		public override Field[] GetPrimaryKeyFields()
-		{
-			return new Field[] {
-				_.ID};
-		}
-		/// <summary>
-		/// 获取列信息
-		/// </summary>
-		public override Field[] GetFields()
-		{
-			return new Field[] {
-				_.ID,
-				_.ParentID,
-				_.Name,
-				_.No,
-				_.GroupType,
-				_.Owner};
-		}
-		/// <summary>
-		/// 获取值信息
-		/// </summary>
-		public override object[] GetValues()
-		{
-			return new object[] {
-				this._ID,
-				this._ParentID,
-				this._Name,
-				this._No,
-				this._GroupType,
-				this._Owner};
-		}
-		#endregion
+        #region Method
+        /// <summary>
+        /// 获取实体中的主键列
+        /// </summary>
+        public override Field[] GetPrimaryKeyFields()
+        {
+            return new Field[] {
+                _.ID};
+        }
+        /// <summary>
+        /// 获取列信息
+        /// </summary>
+        public override Field[] GetFields()
+        {
+            return new Field[] {
+                _.ID,
+                _.ParentID,
+                _.Name,
+                _.No,
+                _.GroupType,
+                _.Owner};
+        }
+        /// <summary>
+        /// 获取值信息
+        /// </summary>
+        public override object[] GetValues()
+        {
+            return new object[] {
+                this._ID,
+                this._ParentID,
+                this._Name,
+                this._No,
+                this._GroupType,
+                this._Owner};
+        }
+        #endregion
 
-		#region _Field
-		/// <summary>
-		/// 字段信息
-		/// </summary>
-		public class _
-		{
-			/// <summary>
-			/// * 
-			/// </summary>
-			public readonly static Field All = new Field("*","OP_DearWithGroup");
-			/// <summary>
-			/// ID
-			/// </summary>
-			public readonly static Field ID = new Field("ID","OP_DearWithGroup","ID");
-			/// <summary>
-			/// 父节点
-			/// </summary>
-			public readonly static Field ParentID = new Field("ParentID","OP_DearWithGroup","父节点");
-			/// <summary>
-			/// 名称
-			/// </summary>
-			public readonly static Field Name = new Field("Name","OP_DearWithGroup","名称");
-			/// <summary>
-			/// 序号
-			/// </summary>
-			public readonly static Field No = new Field("No","OP_DearWithGroup","序号");
-			/// <summary>
-			/// _0科室 1个人
-			/// </summary>
-			public readonly static Field GroupType = new Field("GroupType","OP_DearWithGroup","_0科室 1个人");
-			/// <summary>
-			/// 拥有者
-			/// </summary>
-			public readonly static Field Owner = new Field("Owner","OP_DearWithGroup","拥有者");
-		}
-		#endregion
+        #region _Field
+        /// <summary>
+        /// 字段信息
+        /// </summary>
+        public class _
+        {
+            /// <summary>
+            /// * 
+            /// </summary>
+            public readonly static Field All = new Field("*", "OP_DearWithGroup");
+            /// <summary>
+            /// ID
+            /// </summary>
+            public readonly static Field ID = new Field("ID", "OP_DearWithGroup", "ID");
+            /// <summary>
+            /// 父节点
+            /// </summary>
+            public readonly static Field ParentID = new Field("ParentID", "OP_DearWithGroup", "父节点");
+            /// <summary>
+            /// 名称
+            /// </summary>
+            public readonly static Field Name = new Field("Name", "OP_DearWithGroup", "名称");
+            /// <summary>
+            /// 序号
+            /// </summary>
+            public readonly static Field No = new Field("No", "OP_DearWithGroup", "序号");
+            /// <summary>
+            /// _0科室 1个人
+            /// </summary>
+            public readonly static Field GroupType = new Field("GroupType", "OP_DearWithGroup", "_0科室 1个人");
+            /// <summary>
+            /// 拥有者
+            /// </summary>
+            public readonly static Field Owner = new Field("Owner", "OP_DearWithGroup", "拥有者");
+        }
+        #endregion
 
 
-	}
+    }
 }
 

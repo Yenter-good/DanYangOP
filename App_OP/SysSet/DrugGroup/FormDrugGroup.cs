@@ -54,7 +54,7 @@ namespace App_OP
 
         private void RefreshGroup()
         {
-            groupList = DBHelper.CIS.From<OP_DrugGroup>().Where(x => x.Owner == SysContext.RunSysInfo.user.ID || x.Owner == SysContext.RunSysInfo.currDept.Code).ToList();
+            groupList = DBHelper.CIS.From<OP_DrugGroup>().Where(x => x.Owner == "*" || x.Owner == SysContext.RunSysInfo.user.ID || x.Owner == SysContext.RunSysInfo.currDept.Code).ToList();
         }
 
         private void InitUI()

@@ -330,6 +330,13 @@ namespace App_OP.Prescription
         {
             treeDearWithGroup.Nodes.Clear();
 
+            Node rootHospital = new Node();
+            rootHospital.Text = "全院套餐";
+            rootHospital.Tag = null;
+            rootHospital.Image = global::App_OP.Properties.Resources._152;
+            treeDearWithGroup.Nodes.Add(rootHospital);
+            CreateDearWithGroupNode(rootHospital, "0", list.Where(x => x.GroupType == 0).ToList());
+
             Node rootDept = new Node();
             rootDept.Text = "科室套餐";
             rootDept.Tag = null;

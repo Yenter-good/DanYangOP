@@ -33,12 +33,13 @@
             this.lblName = new DevComponents.DotNetBar.LabelX();
             this.tbxName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
-            this.rdo1 = new System.Windows.Forms.RadioButton();
-            this.rdo2 = new System.Windows.Forms.RadioButton();
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.btnOk = new DevComponents.DotNetBar.ButtonX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.tbxNo = new DevComponents.Editors.IntegerInput();
+            this.rdo2 = new System.Windows.Forms.RadioButton();
+            this.rdo0 = new System.Windows.Forms.RadioButton();
+            this.rdo1 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.tbxNo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             this.tbxName.Location = new System.Drawing.Point(102, 24);
             this.tbxName.Name = "tbxName";
             this.tbxName.PreventEnterBeep = true;
-            this.tbxName.Size = new System.Drawing.Size(208, 21);
+            this.tbxName.Size = new System.Drawing.Size(208, 23);
             this.tbxName.TabIndex = 1;
             this.tbxName.WatermarkText = "请输入分组名称";
             // 
@@ -72,30 +73,6 @@
             // 
             this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Blue;
             this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
-            // 
-            // rdo1
-            // 
-            this.rdo1.AutoSize = true;
-            this.rdo1.Checked = true;
-            this.rdo1.Enabled = false;
-            this.rdo1.Location = new System.Drawing.Point(101, 91);
-            this.rdo1.Name = "rdo1";
-            this.rdo1.Size = new System.Drawing.Size(47, 16);
-            this.rdo1.TabIndex = 2;
-            this.rdo1.TabStop = true;
-            this.rdo1.Text = "科室";
-            this.rdo1.UseVisualStyleBackColor = true;
-            // 
-            // rdo2
-            // 
-            this.rdo2.AutoSize = true;
-            this.rdo2.Enabled = false;
-            this.rdo2.Location = new System.Drawing.Point(176, 91);
-            this.rdo2.Name = "rdo2";
-            this.rdo2.Size = new System.Drawing.Size(47, 16);
-            this.rdo2.TabIndex = 4;
-            this.rdo2.Text = "个人";
-            this.rdo2.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
@@ -147,23 +124,60 @@
             this.tbxNo.Location = new System.Drawing.Point(102, 55);
             this.tbxNo.Name = "tbxNo";
             this.tbxNo.ShowUpDown = true;
-            this.tbxNo.Size = new System.Drawing.Size(80, 21);
+            this.tbxNo.Size = new System.Drawing.Size(80, 23);
             this.tbxNo.TabIndex = 8;
             this.tbxNo.WatermarkText = "请输入序号";
             // 
+            // rdo2
+            // 
+            this.rdo2.AutoSize = true;
+            this.rdo2.Enabled = false;
+            this.rdo2.Location = new System.Drawing.Point(216, 94);
+            this.rdo2.Name = "rdo2";
+            this.rdo2.Size = new System.Drawing.Size(53, 18);
+            this.rdo2.TabIndex = 19;
+            this.rdo2.Text = "个人";
+            this.rdo2.UseVisualStyleBackColor = true;
+            // 
+            // rdo0
+            // 
+            this.rdo0.AutoSize = true;
+            this.rdo0.Enabled = false;
+            this.rdo0.Location = new System.Drawing.Point(102, 94);
+            this.rdo0.Name = "rdo0";
+            this.rdo0.Size = new System.Drawing.Size(53, 18);
+            this.rdo0.TabIndex = 17;
+            this.rdo0.Text = "全院";
+            this.rdo0.UseVisualStyleBackColor = true;
+            // 
+            // rdo1
+            // 
+            this.rdo1.AutoSize = true;
+            this.rdo1.Checked = true;
+            this.rdo1.Enabled = false;
+            this.rdo1.Location = new System.Drawing.Point(161, 94);
+            this.rdo1.Name = "rdo1";
+            this.rdo1.Size = new System.Drawing.Size(53, 18);
+            this.rdo1.TabIndex = 18;
+            this.rdo1.TabStop = true;
+            this.rdo1.Text = "科室";
+            this.rdo1.UseVisualStyleBackColor = true;
+            // 
             // FormAddGroup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 159);
+            this.Controls.Add(this.rdo2);
+            this.Controls.Add(this.rdo0);
+            this.Controls.Add(this.rdo1);
             this.Controls.Add(this.tbxNo);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.rdo2);
-            this.Controls.Add(this.rdo1);
             this.Controls.Add(this.tbxName);
             this.Controls.Add(this.lblName);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddGroup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -180,11 +194,12 @@
         private DevComponents.DotNetBar.LabelX lblName;
         private DevComponents.DotNetBar.Controls.TextBoxX tbxName;
         private DevComponents.DotNetBar.StyleManager styleManager1;
-        private System.Windows.Forms.RadioButton rdo1;
-        private System.Windows.Forms.RadioButton rdo2;
         private DevComponents.DotNetBar.ButtonX btnCancel;
         private DevComponents.DotNetBar.ButtonX btnOk;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.Editors.IntegerInput tbxNo;
+        private System.Windows.Forms.RadioButton rdo2;
+        private System.Windows.Forms.RadioButton rdo0;
+        private System.Windows.Forms.RadioButton rdo1;
     }
 }
