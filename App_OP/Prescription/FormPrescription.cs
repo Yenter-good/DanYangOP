@@ -286,7 +286,7 @@ namespace App_OP.Prescription
             Interval = DBHelper.CIS.From<OP_UserInterval>().Where(p => p.UserID == SysContext.CurrUser.user.Code).OrderBy(p => p.No).ToList();
             if (Interval.Count == 0)
             {
-                Interval = AllInterval.Where(p => p.IsWesternMedicine == 0).OrderBy(p => p.Code).ToList().Select(p => new OP_UserInterval { Code = p.Code, Name = p.Name, No = 0, UserID = SysContext.CurrUser.user.Code }).ToList<OP_UserInterval>();
+                Interval = AllInterval.Where(p => p.IsWesternMedicine == 0).OrderBy(p => p.Code).ToList().Select(p => new OP_UserInterval { Code = p.Code, Name = p.Name, No = 0, UserID = SysContext.CurrUser.user.Code, Count = p.Count }).ToList<OP_UserInterval>();
             }
 
 
