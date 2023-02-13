@@ -179,7 +179,9 @@ namespace CIS
             st.second = (short)dt.Second;
             st.milliseconds = (short)dt.Millisecond;
             SetLocalTime(ref st);
+
         }
+
 
         //创建该用户所拥有的系统模块
         private void CreateAppButton(List<Sys_App> appList)
@@ -580,5 +582,15 @@ namespace CIS
             form.ShowDialog();
         }
         #endregion
+
+        private void tabMain_TabRemoved(object sender, SuperTabStripTabRemovedEventArgs e)
+        {
+            var tab = e.Tab as SuperTabItem;
+            if (tab.AttachedControl.Controls.Count > 0)
+            {
+                if (tab.AttachedControl.Controls[0] is BaseForm baseForm)
+                    baseForm.OnClose();
+            }
+        }
     }
 }

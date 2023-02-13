@@ -140,6 +140,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\HMSocket.dll</HintPath>
     </Reference>
+    <Reference Include="Mandala.EPR.Com.Interfaces">
+      <HintPath>..\packages\Mandala.EPR.Com.Interfaces.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -341,6 +344,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Method\QRImage.cs" />
+    <Compile Include="Record\FormRecordMTL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record\FormRecordMTL.Designer.cs">
+      <DependentUpon>FormRecordMTL.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportEdit\FormDesignReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -711,6 +720,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prescription\FormBeforePrescriptionAudit.resx">
       <DependentUpon>FormBeforePrescriptionAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record\FormRecordMTL.resx">
+      <DependentUpon>FormRecordMTL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportEdit\FormDesignReport.resx">
       <DependentUpon>FormDesignReport.cs</DependentUpon>

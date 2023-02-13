@@ -18,6 +18,8 @@ namespace App_OP
         {
             InitializeComponent();
             formMain = _formMain;
+            if (formMain == null)
+                this.buttonX1.Hide();
         }
 
         public bool search = false;

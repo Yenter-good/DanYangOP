@@ -43,6 +43,7 @@ namespace App_OP
         FormLISRequisition formLisRequisition;//检验申请界面
         FormRISRequisition formPacsRequisition;//检查申请界面
         FormReportManage1 formReportManage;//报卡日志管理界面
+        FormRecordMTL _formRecordMTL;//曼陀罗病历
         //CIS.Core.EventBroker.EventBroker broker = new CIS.Core.EventBroker.EventBroker();
         List<OP_Prescription_Detail> Prescription_Detail = new List<OP_Prescription_Detail>(); //当前病人处方明细列表
         public FormPrescription formPrescription;//处方界面
@@ -74,6 +75,8 @@ namespace App_OP
             formPacsRequisition = new FormRISRequisition(this);
             formPrescription = new FormPrescription(this);
             formReportManage = new FormReportManage1(this);
+            _formRecordMTL = new FormRecordMTL();
+            _formRecordMTL.Init();
             if (SysContext.CurrUser.roleList.Find(p => p.Code == "hs") != null)
             {
                 ShowTab("病历", formRecord, "clipboard");
@@ -83,6 +86,7 @@ namespace App_OP
             else
             {
                 ShowTab("病历", formRecord, "clipboard");
+                ShowTab("结构化\r\n病历", _formRecordMTL, "clipboard");
                 ShowTab("处方", formPrescription, "capsule");
                 ShowTab("检验", formLisRequisition, "blood");
                 ShowTab("检查", formPacsRequisition, "ecg");
@@ -308,6 +312,7 @@ namespace App_OP
 
 
             formPrescription.InitDrugInfo();
+            _formRecordMTL.ChangedPatient();
             LoadPatientInfo();
             InitPrescription();
 
@@ -1775,5 +1780,19 @@ namespace App_OP
         {
             _healthRecords.Handler();
         }
+
+        public override void OnClose()
+        {
+            base.OnClose();
+            foreach (SuperTabItem item in this.tabMain.Tabs)
+            {
+                if (item.AttachedControl.Controls.Count > 0)
+                {
+                    if (item.AttachedControl.Controls[0] is BaseForm baseForm)
+                        baseForm.OnClose();
+                }
+            }
+        }
+
     }
 }

@@ -517,6 +517,7 @@
             this.tabMain.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.tabItemProclamation});
             this.tabMain.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
+            this.tabMain.TabRemoved += new System.EventHandler<DevComponents.DotNetBar.SuperTabStripTabRemovedEventArgs>(this.tabMain_TabRemoved);
             // 
             // superTabControlPanel1
             // 

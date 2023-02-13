@@ -149,6 +149,114 @@
   <data name="btnUserSet.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 39</value>
   </data>
+  <data name="btnDoctorInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAADJ0RVh0VGl0
+        bGUAQ3VzdG9tZXI7RW1wbG95ZWU7UGVyc29uO0NvbnRhY3Q7VXNlcjtDbGllbnR+ETboAAADOUlEQVQ4
+        T3WSZ0zTQRjGD0vFqi2oERUcoQwHooCLKpFS2n+tgkIQEpCgUUEKuAiWQB0oLgyjlSIYSEANASNRVBwQ
+        CeIIYTQEEDA4on5QagQBgxocj3eIWj54yZPLve/7/O69QVJTU//qz5BKpRbrpOt4crmcr5Qp+ZyUs6Qx
+        Houz/BiP+SIkJISZx9WcCHJtzgisqDu2vu2mRoaiKElHRqhHTqzCY2pAQICFuWcMQKlUjrulVQYYMzYN
+        vKs6AlPNSfQ9ykR32QHcTQtFkty5ViVTWZp7xgBoy5YVib7PXxUG445WBaMuGO3ZG1Gn8cb1eAkSfMTg
+        fDm+uWcMQCaT8S9ES4bL4r1h6qrGnSw19OGeOBnoCl3Qgp9xkrnDCoXi/wD5Wjk/M2Tpm9ytXvjW34Fv
+        va341GLAi9LdOMQ5Yaen3Rt2seYe0pXi+FeUzkuUu5zRR3h9/fy6Gt/f1mCwIQPPStQ4zIm/hLnOyKVd
+        8to1YtJ6gCrR4R+gM9mRvYKFQCAQ6SK8HnZfS8ZQsw49lUlo0ofhqMqpkeVYTfP+eaSJqnHfPELaksSk
+        TeNAfnZnkQtqGXtmq5QNi+LKExToKopCZ+F2lMRIEL/abi/NTTjuZ09+1MeQh7FzyAP1bEKMCb9pdLBP
+        wrscMcuzKtahufJoEAxhnsgOXoy8cA9UbLM3GgKnr2QbsDpWX7XDjpDHcZRCA9e2zvK+F21/syHZDa2G
+        QHQW78KTkgTUpkfiSow3bu9fjto9TigPt63W+0/jRkEjP5N3I3Kmtj7FHW+vbsNwUyIGyjeg8eASVEY5
+        40qkGFXxLjAV+2DoVihe5ktRrXZAnv+U09Q7ngHGV2yxNQ3ei8LQ9Y0YvLQKAxdXYqBoBfqLlqG/0AMf
+        C9zRl78EvXlu6C1Yhp4CLxT42/RR72QGsCrdPA1GrQueprngZfoCfDi3GB8MC/H+7HyYdE7oyXJET6YY
+        XYfnoEVjj/uxM2CQC0G9QgbgpfkIfXUK0dkcTlSTw1m35ylFyFWIYFAIkeMnhN5vMrJlk3Bq7cTOtDWC
+        Ou0qwfloNysV9Y4cYeT2RxcTqCZRMbKIynpUNqMzi7G2BVR8QojFLxErpYC5aZnAAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnDoctorInfo.Text" xml:space="preserve">
+    <value>医生信息</value>
+  </data>
+  <data name="btnSetUserParameter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAALaSURBVDhPfZBPTNIBHMWptg56aGvr0L+DknUoW390
+        znkwskNzrTknMaZoLNGYIQVZ0wkT/6DTTJE/SqHhH4RSTE1/EJvCHDVFXYqApltMU/GW5mwrwxfYUJyt
+        w+f0fe/t+x4JwH8pTDnBnKqPWFvUnMQXddjmK2544+2Y8MOB+z5DMNzEUwnu1jDvUvtxBKPMIdcGNPtM
+        wTRmHKtb6orCspGFH8PVWNbHYUl7Go568reAZp8pGEXKkWrPhBFrHxTYnGjG+kcFFj8RMJdcdgc0+0zB
+        JCfeyXK18ba+T3bCO92FDUc3PJY6FKdf0wc0ewxZlAimnHl9rY5BgeJuwiabFjlW9zTnl0fPx9ceETy9
+        AlgbHuAi6zwRnXchdE9ARtyZBDnzhrc2lYJgmmq4kCpLYTAQ6OvrQ4+zDWXmYkQKz6kv8c+G7ATU0K5Y
+        X7CT0FV0D672Qmj4VOieCWEyEmgbrYDFYsHg4CAkVhG0+nY811Ujlh2t2AmQ0cgdc2btnsFMJhNmZ2dh
+        NpvhcrkwMzMDo9EIh8OBiooKzMmTdvv/a7BxkwZ2ux0dHR0QiUSorKzcrmGz2SCQCLD88tZuwMGrknxZ
+        PmdnsIBwZWUFYrEY93V0ZGvpkNVLsbCwAIIgUF5e/td8IE6XmcwfX7esAOI3egiatNBoNL7hDJifn4dK
+        pUJovDLEr5XL5atOpxNKpRIsFguksMQGKpXbt9E77UWpC2DZgHQLkPbuJ4St4xgZGcHAwADkioZNmUy2
+        2t/fj6GhIXA4HJUv4CjJXhr1e6xTCv5bDzKMQEb3FlK1W6CqvVCr1dsB/m/8dfzG5uZmWK1WfwByc3MP
+        kdyS+OXOskegC4eRZQKYBt8H3QCjF3iiJMBmsyHIK0FLSwuqqqr8b9MYDIaXTqe/91cifW7NjiWKkwti
+        qG3dUQ9HQRHafUyBUjiJ+IJxkG++dksfZxbxeDykpaX5PLvDAyD9AcstvDv6FFrnAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnSetUserParameter.Text" xml:space="preserve">
+    <value>用户参数设置</value>
+  </data>
+  <data name="btnSetPwd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAALkSURBVDhPpY9tLBRwHMevF82bpCO1WptGmoexNnlV
+        DEl3DmVY1uUpJtRZjI7jRB6Oi4Y8RmweOpeWcuUMUY0dQs5d0kqHGFPOQ+7O43071l1OL3vx+e/3/e/7
+        /f5/fwKA/+Kfiwjbg8wckv5yLuUA2CQ9MJ2IMqqNYdpunxotcd1Gn17kQVSW+eqjVMUDLyJYrnqIst+v
+        pFgbpOz0qtESxRQ9VKqCbFWIpZpZFCLS3QwR66iPqzZ6izu9arQEy34fmosTMclno7s8CpEOhoh2PoIb
+        540Reoa4VhXnrrPTv4WWKPM3mlPMfMZiVzGmWu9DyL0DyassSCX94ISZLI422F4eqfXFlxfpGHzkAmGh
+        pb9WQT7VolPa+xizffWQD3JU1G3P0n4O+Glm36bb6VgYegn8msL80FMIskkzmvBhSu1e07MRVRzaaaz0
+        lUMhbthG/qEWHWxr/BAlba5+b8T0m3uQi55hY6wTospQxXbY0JWjY0CqCT9GaoN4YhncBA/UJbhv05Lt
+        BKmYiU15J+SjNzHXS8On6mAMlfn97M33PEkwIHP36LpwA43cOjE8KUfNJBAtBsJ7gIzWDkhF8dhUCCD7
+        GgDFBBVLwwxISh1m+nOcT209TrD0qrjk7M1GffcGSoQATaBEWIcSyZznmH5P/xP2h2L8ChbFCRDnuSA6
+        NCxZ/XXCQKLZxiwvDgUVPATygeAmgFnNg6j5tmrtd1BIgrEy4YcF1SYjhRcw2xgLQYz5mqZAyDRXSlvu
+        wje0EmmtMsTkc/CxiQEhPxeTPT6QSaiYG4zDUJEn/EKKMN+Wil66hVJTIKqixffHm64HBWWs2wZ24EnW
+        OWBpDCMPvdHOOIquEjL4mWQ4eZeDFsKQDSRZr6gyqZqCrUNSF66bxEgzOH6JV5ISYoVVQQFWe/LQk+6I
+        mmsmsCNnSU9cbGy5FZl8aJwbrqsOawp24mNHVLACzNZfZ5LX23Kc3vLoVsa7PX8B4Tfl0bczbKqJHAAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnSetPwd.Text" xml:space="preserve">
+    <value>设置密码</value>
+  </data>
+  <data name="btnSwitchingUser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAOCSURBVDhPdZJrTNtVGIffJS4zm7Be1u2LMzqdg7Eu
+        gWLrNjdKSxCJbCDdgIylXCxt2Qr0fvv3XyAMwgqMbc45XYIxWoESLlMwUZMyxWTJjFmj4NRlk2u6SjI0
+        S8yk5OdpXcz84EmevMl5z/t7zkkO2VWiJLZcEfFFW5PVzrCqt/5Tc4TPuV4Vxc9pt6O97Gk0KUVxu0q4
+        w6EWUYL/BHCvS8iSI2BDAoFFLWEBQmo4JHw47E3D551KhDglnIUvoC5bEDcoxJTg3wCrUrjDXSBevVDz
+        DDrKtjOT+E+bUvCkLU+IAZcUn3UexkeeEniLZajKFEAnl1CdQkJkUYvJrBIzkyCeNJ3JfWTaidqszfMn
+        D2zEdyEjZsbdWP62C79OtuB4xibUyERUm72FyFMoIfdrErKpmcn5mOmIDJV7UqDd+8QM7vdjJXIWd8J+
+        TH/qwInd62N62VNUL0slsuUJ2C0EVL+fmQaZ6ZNHpnAzjj2/AUSUPssG55g5MmpB+LIWirRtOSFfAfnf
+        3UdkfXkdmRTrqVq6Lob7H+P3SA/uhnkWZEfFs3TL9bZUNNJ3IvrNhyYMBo6Bb8yMWbv2pHEXsok/LydS
+        vbNCY1wmKXYJcxbDLix95cUPoyZMXioD154x98EXOvx84wquB40IthXgcncV+icN4HqlN/nerFTKP3eb
+        8t6KUsnZG2mnW3wxu7cNTQ4/TBYOrZ08wnMBzD/4Hn3vB+HynYaX7wDvP4P2gB/enqw1yu+eSVH13rlp
+        77iEiYlxxNeAhcUo5heiGAyNodpcA3ubDqNjE0islZUHWFr6DUPD43D6ToLUnRFcn/0LnMuePOD1+aGt
+        roXL7YXby8Pj9TOa4eES1Q+dzohSTTlu/XQbHN8KOtITwZe/rMJqbsC96D24PBwmwlN4s86QDIzFljE7
+        t4Dwta/h8fBwXzyK4mINRkavsqe0gBSeKVyc+gPmUwYsLiyCb25Fnd6IkpJSNLe0wul0wuFwoKGhCRUV
+        lax3ivU0CA6EYGo0g7ZVXUXle3fR6GnHyNAApqdnEA5fQyDQhYMH9iND9gqkueXQlL4BHzMODY8i2D+I
+        7t7zKK84vkYpB+2Nm46GVjdqQiistKDeaITZaoNer0e6PB9bNH0PUw85zPtekv0olyugN9RDW1WDosPF
+        yztf3FXEPhptZmQxZP9DJkPASH9sL8FeItrwN6QHA8BDHAdBAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnSwitchingUser.Text" xml:space="preserve">
+    <value>注销</value>
+  </data>
+  <data name="btnExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHrSURBVDhPlZJNSBtBGIZ77amHCoqsrkZY/ElJ2dig
+        RZsemrjYqBctFYRKbv0JgSBShbZJYzzlsGB6CUECgmhEVFAxWAgE6qkgFgm5FQI9VQ0Ucn66U4eKJIfk
+        uc073zvzzTvfnVo8djrV9wMDp697eg6kVD8eTXObU1PlytUVEV3/LuX6GFXVT4fRKFxewsUFEbv9l2Gz
+        vbI6uidLaiMKArqeK2UyUCxCoQDn53B2Rml9neT0dFkcLstvY93giLrd5Uo2CycnkM9DLgfHx3B0BPv7
+        sLdHKRZjRtNyVd342tqChVQKxAE7O7C9DRsbsLYGq6uQTEIiAabJ77k5ZhSlOthRRQllgsFr8/IyLC1B
+        JAKLi2CZCATA74fJSYr9/Tzr6gpJ6w1P29td4ZGRcmV3F0SQoRD5+XlO43Eqm5sQDoPPBx4PXzTtz8Pe
+        3vvSeoMQ37pc+VI6DSsrfNT1oqX5njc1pdKig60tGBujpOtYF76TtmoMVf18uLBAZGLi/xy4HA7nh8HB
+        HxWR1/Awb1pbv8qt2jyx2bxDLS1+ufyHmFBzfLwsMkp0dmJJd693GkAMVsF6Xravjwfd3UNSboyYYfws
+        zs4i8pFSY4jZ+Wb90KOOjltPrBsrC4fp9WI0N8el1Dgv7fYDp6K8+At6XwWQs2l7AwAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>安全退出</value>
+  </data>
   <data name="btnUserSet.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -319,7 +427,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACs
-        rwAAAk1TRnQBSQFMAgEBiQEAASgBAQEoAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        rwAAAk1TRnQBSQFMAgEBiQEAATABAQEwAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAATABAgIAAQEBAAEIBgABjBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -1146,117 +1254,24 @@
   <data name="&gt;&gt;ribbonControl1.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="btnDoctorInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAADJ0RVh0VGl0
-        bGUAQ3VzdG9tZXI7RW1wbG95ZWU7UGVyc29uO0NvbnRhY3Q7VXNlcjtDbGllbnR+ETboAAADOUlEQVQ4
-        T3WSZ0zTQRjGD0vFqi2oERUcoQwHooCLKpFS2n+tgkIQEpCgUUEKuAiWQB0oLgyjlSIYSEANASNRVBwQ
-        CeIIYTQEEDA4on5QagQBgxocj3eIWj54yZPLve/7/O69QVJTU//qz5BKpRbrpOt4crmcr5Qp+ZyUs6Qx
-        Houz/BiP+SIkJISZx9WcCHJtzgisqDu2vu2mRoaiKElHRqhHTqzCY2pAQICFuWcMQKlUjrulVQYYMzYN
-        vKs6AlPNSfQ9ykR32QHcTQtFkty5ViVTWZp7xgBoy5YVib7PXxUG445WBaMuGO3ZG1Gn8cb1eAkSfMTg
-        fDm+uWcMQCaT8S9ES4bL4r1h6qrGnSw19OGeOBnoCl3Qgp9xkrnDCoXi/wD5Wjk/M2Tpm9ytXvjW34Fv
-        va341GLAi9LdOMQ5Yaen3Rt2seYe0pXi+FeUzkuUu5zRR3h9/fy6Gt/f1mCwIQPPStQ4zIm/hLnOyKVd
-        8to1YtJ6gCrR4R+gM9mRvYKFQCAQ6SK8HnZfS8ZQsw49lUlo0ofhqMqpkeVYTfP+eaSJqnHfPELaksSk
-        TeNAfnZnkQtqGXtmq5QNi+LKExToKopCZ+F2lMRIEL/abi/NTTjuZ09+1MeQh7FzyAP1bEKMCb9pdLBP
-        wrscMcuzKtahufJoEAxhnsgOXoy8cA9UbLM3GgKnr2QbsDpWX7XDjpDHcZRCA9e2zvK+F21/syHZDa2G
-        QHQW78KTkgTUpkfiSow3bu9fjto9TigPt63W+0/jRkEjP5N3I3Kmtj7FHW+vbsNwUyIGyjeg8eASVEY5
-        40qkGFXxLjAV+2DoVihe5ktRrXZAnv+U09Q7ngHGV2yxNQ3ei8LQ9Y0YvLQKAxdXYqBoBfqLlqG/0AMf
-        C9zRl78EvXlu6C1Yhp4CLxT42/RR72QGsCrdPA1GrQueprngZfoCfDi3GB8MC/H+7HyYdE7oyXJET6YY
-        XYfnoEVjj/uxM2CQC0G9QgbgpfkIfXUK0dkcTlSTw1m35ylFyFWIYFAIkeMnhN5vMrJlk3Bq7cTOtDWC
-        Ou0qwfloNysV9Y4cYeT2RxcTqCZRMbKIynpUNqMzi7G2BVR8QojFLxErpYC5aZnAAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnDoctorInfo.Text" xml:space="preserve">
-    <value>医生信息</value>
-  </data>
-  <data name="btnSetUserParameter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAALaSURBVDhPfZBPTNIBHMWptg56aGvr0L+DknUoW390
-        znkwskNzrTknMaZoLNGYIQVZ0wkT/6DTTJE/SqHhH4RSTE1/EJvCHDVFXYqApltMU/GW5mwrwxfYUJyt
-        w+f0fe/t+x4JwH8pTDnBnKqPWFvUnMQXddjmK2544+2Y8MOB+z5DMNzEUwnu1jDvUvtxBKPMIdcGNPtM
-        wTRmHKtb6orCspGFH8PVWNbHYUl7Go568reAZp8pGEXKkWrPhBFrHxTYnGjG+kcFFj8RMJdcdgc0+0zB
-        JCfeyXK18ba+T3bCO92FDUc3PJY6FKdf0wc0ewxZlAimnHl9rY5BgeJuwiabFjlW9zTnl0fPx9ceETy9
-        AlgbHuAi6zwRnXchdE9ARtyZBDnzhrc2lYJgmmq4kCpLYTAQ6OvrQ4+zDWXmYkQKz6kv8c+G7ATU0K5Y
-        X7CT0FV0D672Qmj4VOieCWEyEmgbrYDFYsHg4CAkVhG0+nY811Ujlh2t2AmQ0cgdc2btnsFMJhNmZ2dh
-        NpvhcrkwMzMDo9EIh8OBiooKzMmTdvv/a7BxkwZ2ux0dHR0QiUSorKzcrmGz2SCQCLD88tZuwMGrknxZ
-        PmdnsIBwZWUFYrEY93V0ZGvpkNVLsbCwAIIgUF5e/td8IE6XmcwfX7esAOI3egiatNBoNL7hDJifn4dK
-        pUJovDLEr5XL5atOpxNKpRIsFguksMQGKpXbt9E77UWpC2DZgHQLkPbuJ4St4xgZGcHAwADkioZNmUy2
-        2t/fj6GhIXA4HJUv4CjJXhr1e6xTCv5bDzKMQEb3FlK1W6CqvVCr1dsB/m/8dfzG5uZmWK1WfwByc3MP
-        kdyS+OXOskegC4eRZQKYBt8H3QCjF3iiJMBmsyHIK0FLSwuqqqr8b9MYDIaXTqe/91cifW7NjiWKkwti
-        qG3dUQ9HQRHafUyBUjiJ+IJxkG++dksfZxbxeDykpaX5PLvDAyD9AcstvDv6FFrnAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnSetUserParameter.Text" xml:space="preserve">
-    <value>用户参数设置</value>
-  </data>
-  <data name="btnSetPwd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAALkSURBVDhPpY9tLBRwHMevF82bpCO1WptGmoexNnlV
-        DEl3DmVY1uUpJtRZjI7jRB6Oi4Y8RmweOpeWcuUMUY0dQs5d0kqHGFPOQ+7O43071l1OL3vx+e/3/e/7
-        /f5/fwKA/+Kfiwjbg8wckv5yLuUA2CQ9MJ2IMqqNYdpunxotcd1Gn17kQVSW+eqjVMUDLyJYrnqIst+v
-        pFgbpOz0qtESxRQ9VKqCbFWIpZpZFCLS3QwR66iPqzZ6izu9arQEy34fmosTMclno7s8CpEOhoh2PoIb
-        540Reoa4VhXnrrPTv4WWKPM3mlPMfMZiVzGmWu9DyL0DyassSCX94ISZLI422F4eqfXFlxfpGHzkAmGh
-        pb9WQT7VolPa+xizffWQD3JU1G3P0n4O+Glm36bb6VgYegn8msL80FMIskkzmvBhSu1e07MRVRzaaaz0
-        lUMhbthG/qEWHWxr/BAlba5+b8T0m3uQi55hY6wTospQxXbY0JWjY0CqCT9GaoN4YhncBA/UJbhv05Lt
-        BKmYiU15J+SjNzHXS8On6mAMlfn97M33PEkwIHP36LpwA43cOjE8KUfNJBAtBsJ7gIzWDkhF8dhUCCD7
-        GgDFBBVLwwxISh1m+nOcT209TrD0qrjk7M1GffcGSoQATaBEWIcSyZznmH5P/xP2h2L8ChbFCRDnuSA6
-        NCxZ/XXCQKLZxiwvDgUVPATygeAmgFnNg6j5tmrtd1BIgrEy4YcF1SYjhRcw2xgLQYz5mqZAyDRXSlvu
-        wje0EmmtMsTkc/CxiQEhPxeTPT6QSaiYG4zDUJEn/EKKMN+Wil66hVJTIKqixffHm64HBWWs2wZ24EnW
-        OWBpDCMPvdHOOIquEjL4mWQ4eZeDFsKQDSRZr6gyqZqCrUNSF66bxEgzOH6JV5ISYoVVQQFWe/LQk+6I
-        mmsmsCNnSU9cbGy5FZl8aJwbrqsOawp24mNHVLACzNZfZ5LX23Kc3vLoVsa7PX8B4Tfl0bczbKqJHAAA
-        AABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnSetPwd.Text" xml:space="preserve">
-    <value>设置密码</value>
-  </data>
-  <data name="btnSwitchingUser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAOCSURBVDhPdZJrTNtVGIffJS4zm7Be1u2LMzqdg7Eu
-        gWLrNjdKSxCJbCDdgIylXCxt2Qr0fvv3XyAMwgqMbc45XYIxWoESLlMwUZMyxWTJjFmj4NRlk2u6SjI0
-        S8yk5OdpXcz84EmevMl5z/t7zkkO2VWiJLZcEfFFW5PVzrCqt/5Tc4TPuV4Vxc9pt6O97Gk0KUVxu0q4
-        w6EWUYL/BHCvS8iSI2BDAoFFLWEBQmo4JHw47E3D551KhDglnIUvoC5bEDcoxJTg3wCrUrjDXSBevVDz
-        DDrKtjOT+E+bUvCkLU+IAZcUn3UexkeeEniLZajKFEAnl1CdQkJkUYvJrBIzkyCeNJ3JfWTaidqszfMn
-        D2zEdyEjZsbdWP62C79OtuB4xibUyERUm72FyFMoIfdrErKpmcn5mOmIDJV7UqDd+8QM7vdjJXIWd8J+
-        TH/qwInd62N62VNUL0slsuUJ2C0EVL+fmQaZ6ZNHpnAzjj2/AUSUPssG55g5MmpB+LIWirRtOSFfAfnf
-        3UdkfXkdmRTrqVq6Lob7H+P3SA/uhnkWZEfFs3TL9bZUNNJ3IvrNhyYMBo6Bb8yMWbv2pHEXsok/LydS
-        vbNCY1wmKXYJcxbDLix95cUPoyZMXioD154x98EXOvx84wquB40IthXgcncV+icN4HqlN/nerFTKP3eb
-        8t6KUsnZG2mnW3wxu7cNTQ4/TBYOrZ08wnMBzD/4Hn3vB+HynYaX7wDvP4P2gB/enqw1yu+eSVH13rlp
-        77iEiYlxxNeAhcUo5heiGAyNodpcA3ubDqNjE0islZUHWFr6DUPD43D6ToLUnRFcn/0LnMuePOD1+aGt
-        roXL7YXby8Pj9TOa4eES1Q+dzohSTTlu/XQbHN8KOtITwZe/rMJqbsC96D24PBwmwlN4s86QDIzFljE7
-        t4Dwta/h8fBwXzyK4mINRkavsqe0gBSeKVyc+gPmUwYsLiyCb25Fnd6IkpJSNLe0wul0wuFwoKGhCRUV
-        lax3ivU0CA6EYGo0g7ZVXUXle3fR6GnHyNAApqdnEA5fQyDQhYMH9iND9gqkueXQlL4BHzMODY8i2D+I
-        7t7zKK84vkYpB+2Nm46GVjdqQiistKDeaITZaoNer0e6PB9bNH0PUw85zPtekv0olyugN9RDW1WDosPF
-        yztf3FXEPhptZmQxZP9DJkPASH9sL8FeItrwN6QHA8BDHAdBAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnSwitchingUser.Text" xml:space="preserve">
-    <value>注销</value>
-  </data>
-  <data name="btnExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHrSURBVDhPlZJNSBtBGIZ77amHCoqsrkZY/ElJ2dig
-        RZsemrjYqBctFYRKbv0JgSBShbZJYzzlsGB6CUECgmhEVFAxWAgE6qkgFgm5FQI9VQ0Ucn66U4eKJIfk
-        uc073zvzzTvfnVo8djrV9wMDp697eg6kVD8eTXObU1PlytUVEV3/LuX6GFXVT4fRKFxewsUFEbv9l2Gz
-        vbI6uidLaiMKArqeK2UyUCxCoQDn53B2Rml9neT0dFkcLstvY93giLrd5Uo2CycnkM9DLgfHx3B0BPv7
-        sLdHKRZjRtNyVd342tqChVQKxAE7O7C9DRsbsLYGq6uQTEIiAabJ77k5ZhSlOthRRQllgsFr8/IyLC1B
-        JAKLi2CZCATA74fJSYr9/Tzr6gpJ6w1P29td4ZGRcmV3F0SQoRD5+XlO43Eqm5sQDoPPBx4PXzTtz8Pe
-        3vvSeoMQ37pc+VI6DSsrfNT1oqX5njc1pdKig60tGBujpOtYF76TtmoMVf18uLBAZGLi/xy4HA7nh8HB
-        HxWR1/Awb1pbv8qt2jyx2bxDLS1+ufyHmFBzfLwsMkp0dmJJd693GkAMVsF6Xravjwfd3UNSboyYYfws
-        zs4i8pFSY4jZ+Wb90KOOjltPrBsrC4fp9WI0N8el1Dgv7fYDp6K8+At6XwWQs2l7AwAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
-  <data name="btnExit.Text" xml:space="preserve">
-    <value>安全退出</value>
-  </data>
   <metadata name="styleManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="ebarMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ebarMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 26</value>
+  </data>
+  <data name="ebarMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 595</value>
+  </data>
+  <data name="ebarMain.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ebarMain.Text" xml:space="preserve">
+    <value>explorerBar1</value>
+  </data>
   <data name="&gt;&gt;ebarMain.Name" xml:space="preserve">
     <value>ebarMain</value>
   </data>
@@ -1296,45 +1311,9 @@
   <data name="&gt;&gt;epanlLeft.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="ebarMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="ebarMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26</value>
-  </data>
-  <data name="ebarMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 595</value>
-  </data>
-  <data name="ebarMain.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="ebarMain.Text" xml:space="preserve">
-    <value>explorerBar1</value>
-  </data>
-  <data name="&gt;&gt;ebarMain.Name" xml:space="preserve">
-    <value>ebarMain</value>
-  </data>
-  <data name="&gt;&gt;ebarMain.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ExplorerBar, DevComponents.DotNetBar2, Version=12.8.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
-  </data>
-  <data name="&gt;&gt;ebarMain.Parent" xml:space="preserve">
-    <value>epanlLeft</value>
-  </data>
-  <data name="&gt;&gt;ebarMain.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <metadata name="contextMenu_tabMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>264, 17</value>
   </metadata>
-  <data name="contextMenu_tabMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 48</value>
-  </data>
-  <data name="&gt;&gt;contextMenu_tabMain.Name" xml:space="preserve">
-    <value>contextMenu_tabMain</value>
-  </data>
-  <data name="&gt;&gt;contextMenu_tabMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="closeOthersMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 22</value>
   </data>
@@ -1347,53 +1326,14 @@
   <data name="closeAllTabMenuItem.Text" xml:space="preserve">
     <value>关闭所有页面</value>
   </data>
-  <data name="&gt;&gt;lblUser.Name" xml:space="preserve">
-    <value>lblUser</value>
+  <data name="contextMenu_tabMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 48</value>
   </data>
-  <data name="&gt;&gt;lblUser.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=12.8.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  <data name="&gt;&gt;contextMenu_tabMain.Name" xml:space="preserve">
+    <value>contextMenu_tabMain</value>
   </data>
-  <data name="&gt;&gt;lblUser.Parent" xml:space="preserve">
-    <value>panelEx1</value>
-  </data>
-  <data name="&gt;&gt;lblUser.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblDept.Name" xml:space="preserve">
-    <value>lblDept</value>
-  </data>
-  <data name="&gt;&gt;lblDept.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=12.8.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
-  </data>
-  <data name="&gt;&gt;lblDept.Parent" xml:space="preserve">
-    <value>panelEx1</value>
-  </data>
-  <data name="&gt;&gt;lblDept.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panelEx1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="panelEx1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 720</value>
-  </data>
-  <data name="panelEx1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1370, 36</value>
-  </data>
-  <data name="panelEx1.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;panelEx1.Name" xml:space="preserve">
-    <value>panelEx1</value>
-  </data>
-  <data name="&gt;&gt;panelEx1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.PanelEx, DevComponents.DotNetBar2, Version=12.8.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
-  </data>
-  <data name="&gt;&gt;panelEx1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelEx1.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;contextMenu_tabMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblUser.Location" type="System.Drawing.Point, System.Drawing">
     <value>207, 6</value>
@@ -1442,6 +1382,30 @@
   </data>
   <data name="&gt;&gt;lblDept.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="panelEx1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panelEx1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 720</value>
+  </data>
+  <data name="panelEx1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1370, 36</value>
+  </data>
+  <data name="panelEx1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;panelEx1.Name" xml:space="preserve">
+    <value>panelEx1</value>
+  </data>
+  <data name="&gt;&gt;panelEx1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.PanelEx, DevComponents.DotNetBar2, Version=12.8.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;panelEx1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelEx1.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="superTabControlPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
