@@ -1,4 +1,5 @@
 ﻿using CIS.Model;
+using CIS.Purview.ParameterEntities;
 using System;
 using System.Collections.Concurrent;
 
@@ -118,13 +119,17 @@ namespace CIS.Purview
         public bool OP_PACSShare { get { return GetValue(curUserId, "U022", "云影像平台", "云影像平台", "否").AsBoolean(); } }
 
         /// <summary>
+        /// 处方双通道各个接口后缀
+        /// </summary>
+        public PrescriptionCirculationUriEntity OP_PrescriptionCirculation_Uri { get { return GetJson<PrescriptionCirculationUriEntity>("All", "U992", "处方双通道各个接口后缀", "处方双通道各个接口后缀", new PrescriptionCirculationUriEntity()); } }
+        /// <summary>
         /// 处方双通道地址
         /// </summary>
-        public string OP_PrescriptionCirculation_Url { get { return GetValue(curUserId, "U998", "处方双通道地址", "处方双通道地址", "http://10.72.3.127:20080").AsString(); } }
+        public string OP_PrescriptionCirculation_Url { get { return GetValue("All", "U998", "处方双通道地址", "处方双通道地址", "http://10.72.3.127:20080").AsString(); } }
         /// <summary>
         /// 云影像平台地址
         /// </summary>
-        public string OP_PACSShare_Url { get { return GetValue(curUserId, "U999", "云影像平台地址", "云影像平台地址", "http://20.30.1.81").AsString(); } }
+        public string OP_PACSShare_Url { get { return GetValue("All", "U999", "云影像平台地址", "云影像平台地址", "http://20.30.1.81").AsString(); } }
 
         public string OP_HealthRecords_Url { get { return GetValue("All", "U997", "健康档案地址", "健康档案地址", "http://20.17.10.172:9990").AsString(); } }
         public string OP_HealthRecords_Encryption_Url { get { return GetValue("All", "U996", "健康档案获取加密偏移地址", "健康档案获取加密偏移地址", "http://20.17.10.172:9990/ehr/getEncryptParam").AsString(); } }
@@ -164,6 +169,44 @@ namespace CIS.Purview
             }
         }
 
-
+        /// <summary>
+        /// 获取参数值
+        /// </summary>
+        /// <param name="code">参数编码</param>
+        /// <param name="name">参数名称</param>
+        /// <param name="descrption">描述文本</param>
+        /// <param name="defaultValue">默认值</param>
+        /// <returns></returns>
+        private T GetJson<T>(string userId, string code, string name, string descrption, T defaultValue)
+        {
+            if (userId == null) return default;
+            if (paramValues.ContainsKey(code))
+            {
+                paramValues.TryGetValue(code, out var value);
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(value);
+            }
+            else
+            {
+                string value = "";
+                if (UserParameterDal.Exists(userId, code))
+                {
+                    value = UserParameterDal.Get(userId, code);
+                }
+                else
+                {
+                    value = Newtonsoft.Json.JsonConvert.SerializeObject(defaultValue);
+                    UserParameterDal.Add(userId, code, name, descrption, value);
+                }
+                paramValues.TryAdd(code, value);
+                try
+                {
+                    return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(value);
+                }
+                catch (Exception ex)
+                {
+                    return default;
+                }
+            }
+        }
     }
 }

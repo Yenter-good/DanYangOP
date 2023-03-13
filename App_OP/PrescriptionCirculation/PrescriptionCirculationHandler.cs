@@ -56,7 +56,19 @@ namespace App_OP.PrescriptionCirculation
             if (_log)
                 LogHelper.Debug($"{handlerName} 获得响应加密报文 " + pcResponse);
 
-            var result = SerializeHelper.BeginJsonDeserialize<PrescriptionCirculationResponse>(pcResponse);
+            PrescriptionCirculationResponse result = null;
+            try
+            {
+                result = SerializeHelper.BeginJsonDeserialize<PrescriptionCirculationResponse>(pcResponse);
+                if (result == null)
+                    throw new Exception();
+            }
+            catch
+            {
+                LogHelper.Debug($"{handlerName} 反序列化响应内容出错");
+                AlertBox.Error("双通道上传失败");
+                return null;
+            }
             if (result.code != 0)
             {
                 AlertBox.Error(result.message);
@@ -72,6 +84,7 @@ namespace App_OP.PrescriptionCirculation
                 AlertBox.Error("双通道上传失败");
                 return null;
             }
+
         }
     }
 

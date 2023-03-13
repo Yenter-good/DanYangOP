@@ -81,6 +81,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Dos.ORM.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
@@ -97,6 +100,7 @@
     <Compile Include="Dal\UserDal.cs" />
     <Compile Include="Dal\UserParameterDal.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="ParameterEntities\PrescriptionCirculationUriEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -125,6 +129,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\传染病报卡.xml" />
   </ItemGroup>
   <ItemGroup>

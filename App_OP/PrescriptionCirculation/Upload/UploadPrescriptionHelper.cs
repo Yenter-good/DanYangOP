@@ -22,7 +22,7 @@ namespace App_OP.PrescriptionCirculation.Upload
             request.signDigest = signResponse.signDigest;
 
             var url = SysContext.CurrUser.Params.OP_PrescriptionCirculation_Url;
-            return _handler.Post<UploadPrescriptionResponse>(request, url + "/fixmedins/fixmedins/rxFileUpld", "处方上传");
+            return _handler.Post<UploadPrescriptionResponse>(request, url + SysContext.CurrUser.Params.OP_PrescriptionCirculation_Uri.Upload, "处方上传");
         }
     }
 }

@@ -32,7 +32,7 @@ namespace App_OP.PrescriptionCirculation.AuditResult
             };
 
             var url = SysContext.CurrUser.Params.OP_PrescriptionCirculation_Url;
-            return _handler.Post<AuditResultResponse>(request, url + "/fixmedins/fixmedins/rxChkInfoQuery", "审核结果查询");
+            return _handler.Post<AuditResultResponse>(request, url + SysContext.CurrUser.Params.OP_PrescriptionCirculation_Uri.AuditResult, "审核结果查询");
         }
     }
 }

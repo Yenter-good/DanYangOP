@@ -31,6 +31,7 @@ namespace App_OP.Record
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRecordMTL));
             this.bar1 = new DevComponents.DotNetBar.Bar();
+            this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
@@ -39,8 +40,8 @@ namespace App_OP.Record
             this.btnPacsResult = new DevComponents.DotNetBar.ButtonItem();
             this.biEcgQueryReport = new DevComponents.DotNetBar.ButtonItem();
             this.btnSpecialSymbol = new DevComponents.DotNetBar.ButtonItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.btnHistory = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@ namespace App_OP.Record
             this.buttonItem3,
             this.buttonItem4,
             this.btnPrint,
+            this.btnHistory,
             this.buttonItem2,
             this.btnPacsResult,
             this.biEcgQueryReport,
@@ -69,6 +71,12 @@ namespace App_OP.Record
             this.bar1.TabStop = false;
             this.bar1.Text = "bar1";
             // 
+            // buttonItem5
+            // 
+            this.buttonItem5.Name = "buttonItem5";
+            this.buttonItem5.Text = "开始编辑";
+            this.buttonItem5.Click += new System.EventHandler(this.buttonItem5_Click);
+            // 
             // buttonItem1
             // 
             this.buttonItem1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
@@ -79,12 +87,16 @@ namespace App_OP.Record
             // 
             // buttonItem3
             // 
+            this.buttonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem3.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem3.Image")));
             this.buttonItem3.Name = "buttonItem3";
             this.buttonItem3.Text = "提交病历";
             this.buttonItem3.Click += new System.EventHandler(this.buttonItem3_Click);
             // 
             // buttonItem4
             // 
+            this.buttonItem4.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem4.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem4.Image")));
             this.buttonItem4.Name = "buttonItem4";
             this.buttonItem4.Text = "删除病历";
             this.buttonItem4.Click += new System.EventHandler(this.buttonItem4_Click);
@@ -130,26 +142,28 @@ namespace App_OP.Record
             this.btnSpecialSymbol.Text = "特殊符号";
             this.btnSpecialSymbol.Click += new System.EventHandler(this.btnSpecialSymbol_Click);
             // 
-            // panel1
+            // panelMain
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 30);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1019, 513);
-            this.panel1.TabIndex = 14;
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(0, 30);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1019, 513);
+            this.panelMain.TabIndex = 14;
             // 
-            // buttonItem5
+            // btnHistory
             // 
-            this.buttonItem5.Name = "buttonItem5";
-            this.buttonItem5.Text = "开始编辑";
-            this.buttonItem5.Click += new System.EventHandler(this.buttonItem5_Click);
+            this.btnHistory.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.Image")));
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Text = "数据调阅";
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // FormRecordMTL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1019, 543);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.bar1);
             this.DoubleBuffered = true;
             this.Name = "FormRecordMTL";
@@ -170,7 +184,8 @@ namespace App_OP.Record
         private DevComponents.DotNetBar.ButtonItem btnSpecialSymbol;
         private DevComponents.DotNetBar.ButtonItem buttonItem3;
         private DevComponents.DotNetBar.ButtonItem buttonItem4;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelMain;
         private DevComponents.DotNetBar.ButtonItem buttonItem5;
+        private DevComponents.DotNetBar.ButtonItem btnHistory;
     }
 }

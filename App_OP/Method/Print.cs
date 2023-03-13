@@ -17,6 +17,9 @@ namespace App_OP
         static List<IView_HIS_DrugUsage> Usage = DBHelper.CIS.From<IView_HIS_DrugUsage>().ToList(); //用法字典
         static FastReport.EnvironmentSettings environment = new EnvironmentSettings();
 
+        static string _auditSignImageBase64 = null;
+        static string _doctorSignImageBase64 = null;
+
         /// <summary>
         /// 处方打印
         /// </summary>
@@ -69,6 +72,40 @@ namespace App_OP
 
         public static string PrescriptionBase64(long PrescriptionNo, string prescriptionCirculationNo, string PrescriptionNum)
         {
+            if (_doctorSignImageBase64 == null)
+            {
+                try
+                {
+                    var doctorSignBuffer = DBHelper.CIS.FromSql($"select script from zd_per_image where gh='{SysContext.CurrUser.user.Code}'").First<byte[]>();
+                    if (doctorSignBuffer != null && doctorSignBuffer.Length > 0)
+                        _doctorSignImageBase64 = Convert.ToBase64String(doctorSignBuffer);
+                    else
+                        _doctorSignImageBase64 = "";
+                }
+                catch
+                {
+                    _doctorSignImageBase64 = "";
+                }
+
+            }
+
+            if (_auditSignImageBase64 == null)
+            {
+                try
+                {
+                    //蒋双红
+                    var auditSignBuffer = DBHelper.CIS.FromSql($"select script from zd_per_image where gh='5012'").First<byte[]>();
+                    if (auditSignBuffer != null && auditSignBuffer.Length > 0)
+                        _auditSignImageBase64 = Convert.ToBase64String(auditSignBuffer);
+                    else
+                        _auditSignImageBase64 = "";
+                }
+                catch
+                {
+                    _auditSignImageBase64 = "";
+                }
+
+            }
             //获取路径
             string frxPath = System.IO.Path.Combine(Application.StartupPath, "FRX");
             FastReport.Report report = new FastReport.Report();
@@ -77,6 +114,8 @@ namespace App_OP
             DataTable dt = BuildPrescriptionCirculation(PrescriptionNo, prescriptionCirculationNo, SysContext.GetCurrPatient.OutpatientNo);
 
             report.RegisterData(dt, "Table4");
+            report.SetParameterValue("doctorSign", _doctorSignImageBase64);
+            report.SetParameterValue("auditSign", _auditSignImageBase64);
 
             environment.ReportSettings.ShowProgress = false;
             report.PrintSettings.ShowDialog = false;
@@ -94,6 +133,41 @@ namespace App_OP
 
         public static void PrescriptionPrint(long PrescriptionNo, string prescriptionCirculationNo, string treatmentNo)
         {
+            if (_doctorSignImageBase64 == null)
+            {
+                try
+                {
+                    var doctorSignBuffer = DBHelper.CIS.FromSql($"select script from zd_per_image where gh='{SysContext.CurrUser.user.Code}'").First<byte[]>();
+                    if (doctorSignBuffer != null && doctorSignBuffer.Length > 0)
+                        _doctorSignImageBase64 = Convert.ToBase64String(doctorSignBuffer);
+                    else
+                        _doctorSignImageBase64 = "";
+                }
+                catch
+                {
+                    _doctorSignImageBase64 = "";
+                }
+
+            }
+
+            if (_auditSignImageBase64 == null)
+            {
+                try
+                {
+                    //蒋双红
+                    var auditSignBuffer = DBHelper.CIS.FromSql($"select script from zd_per_image where gh='5012'").First<byte[]>();
+                    if (auditSignBuffer != null && auditSignBuffer.Length > 0)
+                        _auditSignImageBase64 = Convert.ToBase64String(auditSignBuffer);
+                    else
+                        _auditSignImageBase64 = "";
+                }
+                catch
+                {
+                    _auditSignImageBase64 = "";
+                }
+
+            }
+
             //获取路径
             string frxPath = System.IO.Path.Combine(Application.StartupPath, "FRX");
             FastReport.Report report = new FastReport.Report();
@@ -102,6 +176,8 @@ namespace App_OP
             DataTable dt = BuildPrescriptionCirculation(PrescriptionNo, prescriptionCirculationNo, treatmentNo);
 
             report.RegisterData(dt, "Table4");
+            report.SetParameterValue("doctorSign", _doctorSignImageBase64);
+            report.SetParameterValue("auditSign", _auditSignImageBase64);
 
             environment.ReportSettings.ShowProgress = false;
             report.PrintSettings.ShowDialog = false;

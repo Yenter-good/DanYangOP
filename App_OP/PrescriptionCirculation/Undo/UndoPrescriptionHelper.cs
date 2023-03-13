@@ -29,7 +29,7 @@ namespace App_OP.PrescriptionCirculation.Undo
             request.undoTime = DateTime.Now;
 
             var url = SysContext.CurrUser.Params.OP_PrescriptionCirculation_Url;
-            var response = _handler.Post<UndoPrescriptionResponse>(request, url + "/fixmedins/fixmedins/rxUndo", "处方撤销");
+            var response = _handler.Post<UndoPrescriptionResponse>(request, url + SysContext.CurrUser.Params.OP_PrescriptionCirculation_Uri.Undo, "处方撤销");
             if (response != null)
                 return response;
             else

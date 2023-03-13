@@ -62,7 +62,7 @@ namespace App_OP.PrescriptionCirculation.PreAudit
             request.valiEndTime = prescription.UpdateTime.Value.AddDays(3);
 
             var url = SysContext.CurrUser.Params.OP_PrescriptionCirculation_Url;
-            return _handler.Post<UploadPreAuditResponse>(request, url + "/fixmedins/fixmedins/uploadChk", "上传预核检");
+            return _handler.Post<UploadPreAuditResponse>(request, url + SysContext.CurrUser.Params.OP_PrescriptionCirculation_Uri.PreAudit, "上传预核检");
         }
 
         private List<rxdrugdetail> BuildDetails(OP_PrescriptionCirculation prescription, List<OP_PrescriptionCirculation_Detail> details, List<IView_PrescriptionCirculation_DrugInfo> drugs, List<IView_HIS_DrugUsage> usages, List<OP_Dic_Interval> interval)

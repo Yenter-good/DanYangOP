@@ -147,7 +147,7 @@ namespace App_OP.PrescriptionCirculation
 
         private bool ValidationLine(DataGridViewRow row)
         {
-            if (row.Tag == null)
+            if (row == null || row.Tag == null)
                 return true;
 
             var dosage = row.Cells[XY_colYL.Index].Value.AsString("");
@@ -424,7 +424,10 @@ namespace App_OP.PrescriptionCirculation
             {
                 _currentPrescriptionCirculation.RecordNumber = insertDetails.Count + updateDetails.Count;
                 _currentPrescriptionCirculation.UpdateTime = DateTime.Now;
-                deleteDetails = _currentPrescriptionCirculationDetails.Except(insertDetails.Union(updateDetails), new PrescriptionEqu());
+                if (_currentPrescriptionCirculationDetails == null)
+                    deleteDetails = null;
+                else
+                    deleteDetails = _currentPrescriptionCirculationDetails.Except(insertDetails.Union(updateDetails), new PrescriptionEqu());
             }
 
             InventoryHelper inventoryHelper = new InventoryHelper();

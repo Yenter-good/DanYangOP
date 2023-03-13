@@ -61,7 +61,7 @@ namespace App_OP.Record
 
             var control = _controller.GetMainControl();
             control.Dock = DockStyle.Fill;
-            this.panel1.Controls.Add(control);
+            this.panelMain.Controls.Add(control);
         }
 
         public void ChangedPatient()
@@ -139,6 +139,11 @@ namespace App_OP.Record
         private void buttonItem5_Click(object sender, EventArgs e)
         {
             _controller.DoEdit();
+        }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            _controller.DoBrowserData();
         }
     }
 }

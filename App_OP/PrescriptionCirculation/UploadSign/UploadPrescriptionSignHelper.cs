@@ -55,7 +55,7 @@ namespace App_OP.PrescriptionCirculation.UploadSign
             };
 
             var url = SysContext.CurrUser.Params.OP_PrescriptionCirculation_Url;
-            var response = _handler.Post<UploadPrescriptionSignResponse>(signRequest, url + "/fixmedins/fixmedins/rxFixmedinsSign", "上传签名");
+            var response = _handler.Post<UploadPrescriptionSignResponse>(signRequest, url + SysContext.CurrUser.Params.OP_PrescriptionCirculation_Uri.UploadSign, "上传签名");
             if (response != null)
                 return (response, uploadRequest);
             else

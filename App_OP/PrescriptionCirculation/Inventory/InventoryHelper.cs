@@ -56,7 +56,7 @@ namespace App_OP.PrescriptionCirculation.Inventory
             }
 
             var url = SysContext.CurrUser.Params.OP_PrescriptionCirculation_Url;
-            var response = _handler.Post<InventoryResponse>(request, url + "/pcs-manage/pcs/fixmedins/rxSetlStockQuery", "库存查询");
+            var response = _handler.Post<InventoryResponse>(request, url + SysContext.CurrUser.Params.OP_PrescriptionCirculation_Uri.Inventory, "库存查询");
             if (response == null)
                 return (false, "");
             else if (response.accept == "1")

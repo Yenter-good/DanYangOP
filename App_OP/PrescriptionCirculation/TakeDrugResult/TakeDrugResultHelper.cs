@@ -32,7 +32,7 @@ namespace App_OP.PrescriptionCirculation.TakeDrugResult
             };
 
             var url = SysContext.CurrUser.Params.OP_PrescriptionCirculation_Url;
-            return _handler.Post<TakeDrugResultResponse>(request, url + "/fixmedins/fixmedins/rxSetlInfoQuery", "取药查询");
+            return _handler.Post<TakeDrugResultResponse>(request, url + SysContext.CurrUser.Params.OP_PrescriptionCirculation_Uri.TakeDrugResult, "取药查询");
         }
     }
 }
