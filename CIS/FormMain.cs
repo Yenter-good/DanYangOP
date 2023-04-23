@@ -442,6 +442,12 @@ namespace CIS
             for (int i = tabMain.Tabs.Count - 1; i >= 0; i--)
             {
                 SuperTabItem tabitem = tabMain.Tabs[i] as SuperTabItem;
+                //if (tabitem.AttachedControl.Controls.Count > 0)
+                //{
+                //    var control = tabitem.AttachedControl.Controls[0];
+                //    if (control is BaseForm baseForm)
+                //        baseForm.OnClose();
+                //}
                 if (tabitem != null && tabitem.CloseButtonVisible == true)
                 {
                     tabitem.Close();
@@ -459,8 +465,16 @@ namespace CIS
                 for (int i = tabMain.Tabs.Count - 1; i >= 0; i--)
                 {
                     SuperTabItem tabitem = tabMain.Tabs[i] as SuperTabItem;
+
                     if (tabitem != null && tabitem != tabMain.SelectedTab && tabitem.CloseButtonVisible == true)
                     {
+                        //if (tabitem.AttachedControl.Controls.Count > 0)
+                        //{
+                        //    var control = tabitem.AttachedControl.Controls[0];
+                        //    if (control is BaseForm baseForm)
+                        //        baseForm.OnClose();
+                        //}
+
                         tabitem.Close();
                     }
                 }

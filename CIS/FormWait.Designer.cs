@@ -54,9 +54,9 @@
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelX1.ForeColor = System.Drawing.Color.Black;
-            this.labelX1.Location = new System.Drawing.Point(361, 283);
+            this.labelX1.Location = new System.Drawing.Point(361, 270);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(335, 80);
+            this.labelX1.Size = new System.Drawing.Size(335, 109);
             this.labelX1.TabIndex = 10;
             this.labelX1.TextLineAlignment = System.Drawing.StringAlignment.Near;
             this.labelX1.Click += new System.EventHandler(this.labelX1_Click);

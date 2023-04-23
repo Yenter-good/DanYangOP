@@ -153,7 +153,7 @@
             this.buttonItem2});
             this.barTop.Location = new System.Drawing.Point(1, 1);
             this.barTop.Name = "barTop";
-            this.barTop.Size = new System.Drawing.Size(1787, 41);
+            this.barTop.Size = new System.Drawing.Size(1787, 38);
             this.barTop.Stretch = true;
             this.barTop.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.barTop.TabIndex = 0;
@@ -298,10 +298,10 @@
             this.pnlRight.Expanded = false;
             this.pnlRight.ExpandedBounds = new System.Drawing.Rectangle(1041, 25, 200, 368);
             this.pnlRight.HideControlsWhenCollapsed = true;
-            this.pnlRight.Location = new System.Drawing.Point(1519, 42);
+            this.pnlRight.Location = new System.Drawing.Point(1519, 39);
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Padding = new System.Windows.Forms.Padding(5);
-            this.pnlRight.Size = new System.Drawing.Size(269, 663);
+            this.pnlRight.Size = new System.Drawing.Size(269, 666);
             this.pnlRight.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.pnlRight.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.pnlRight.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -330,9 +330,9 @@
             this.expandablePanel1.ExpandButtonVisible = false;
             this.expandablePanel1.HideControlsWhenCollapsed = true;
             this.expandablePanel1.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.expandablePanel1.Location = new System.Drawing.Point(5, 374);
+            this.expandablePanel1.Location = new System.Drawing.Point(5, 370);
             this.expandablePanel1.Name = "expandablePanel1";
-            this.expandablePanel1.Size = new System.Drawing.Size(259, 284);
+            this.expandablePanel1.Size = new System.Drawing.Size(259, 291);
             this.expandablePanel1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expandablePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.expandablePanel1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -360,7 +360,7 @@
             this.dgvPrescription.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.dgvPrescription.Font = new System.Drawing.Font("宋体", 10.5F);
             this.dgvPrescription.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.dgvPrescription.Location = new System.Drawing.Point(0, 53);
+            this.dgvPrescription.Location = new System.Drawing.Point(0, 50);
             this.dgvPrescription.Name = "dgvPrescription";
             // 
             // 
@@ -384,7 +384,7 @@
             this.dgvPrescription.PrimaryGrid.RowHeaderIndexOffset = 1;
             this.dgvPrescription.PrimaryGrid.SelectionGranularity = DevComponents.DotNetBar.SuperGrid.SelectionGranularity.Row;
             this.dgvPrescription.PrimaryGrid.ShowRowGridIndex = true;
-            this.dgvPrescription.Size = new System.Drawing.Size(259, 231);
+            this.dgvPrescription.Size = new System.Drawing.Size(259, 241);
             this.dgvPrescription.TabIndex = 7;
             this.dgvPrescription.Text = "superGridControl1";
             this.dgvPrescription.RowDoubleClick += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDoubleClickEventArgs>(this.dgvPrescription_RowDoubleClick);
@@ -564,7 +564,7 @@
             this.btnDelPrescription});
             this.bar1.Location = new System.Drawing.Point(0, 26);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(259, 27);
+            this.bar1.Size = new System.Drawing.Size(259, 24);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar1.TabIndex = 6;
@@ -600,7 +600,6 @@
             this.dgvZDDetail.AllowUserToAddRows = false;
             this.dgvZDDetail.AllowUserToDeleteRows = false;
             this.dgvZDDetail.AllowUserToResizeRows = false;
-            this.dgvZDDetail.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -704,7 +703,7 @@
             this.dgvChronic.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.dgvChronic.Font = new System.Drawing.Font("宋体", 10.5F);
             this.dgvChronic.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.dgvChronic.Location = new System.Drawing.Point(5, 271);
+            this.dgvChronic.Location = new System.Drawing.Point(5, 267);
             this.dgvChronic.Name = "dgvChronic";
             // 
             // 
@@ -783,7 +782,7 @@
             this.SplitterBottom.HotGripDarkColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
             this.SplitterBottom.HotGripLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
             this.SplitterBottom.HotGripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.SplitterBottom.Location = new System.Drawing.Point(5, 266);
+            this.SplitterBottom.Location = new System.Drawing.Point(5, 262);
             this.SplitterBottom.Name = "SplitterBottom";
             this.SplitterBottom.Size = new System.Drawing.Size(259, 5);
             this.SplitterBottom.Style = DevComponents.DotNetBar.eSplitterStyle.Office2007;
@@ -797,7 +796,7 @@
             this.dgvZD.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.dgvZD.Font = new System.Drawing.Font("宋体", 10.5F);
             this.dgvZD.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.dgvZD.Location = new System.Drawing.Point(5, 110);
+            this.dgvZD.Location = new System.Drawing.Point(5, 106);
             this.dgvZD.MinimumSize = new System.Drawing.Size(0, 150);
             this.dgvZD.Name = "dgvZD";
             this.dgvZD.Padding = new System.Windows.Forms.Padding(3);
@@ -880,7 +879,7 @@
             this.tbxZDFilter.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbxZDFilter.DelayTime = 100;
             this.tbxZDFilter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbxZDFilter.Location = new System.Drawing.Point(5, 87);
+            this.tbxZDFilter.Location = new System.Drawing.Point(5, 83);
             this.tbxZDFilter.MarkString = null;
             this.tbxZDFilter.Name = "tbxZDFilter";
             this.tbxZDFilter.PreventEnterBeep = true;
@@ -907,7 +906,7 @@
             this.barDiagnosisChoose.PaddingLeft = 3;
             this.barDiagnosisChoose.PaddingRight = 3;
             this.barDiagnosisChoose.PaddingTop = 3;
-            this.barDiagnosisChoose.Size = new System.Drawing.Size(259, 56);
+            this.barDiagnosisChoose.Size = new System.Drawing.Size(259, 52);
             this.barDiagnosisChoose.Stretch = true;
             this.barDiagnosisChoose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.barDiagnosisChoose.TabIndex = 30;
@@ -1006,13 +1005,13 @@
             this.tabMain.ControlBox.CloseBox});
             this.tabMain.ControlBox.Visible = false;
             this.tabMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabMain.Location = new System.Drawing.Point(1, 42);
+            this.tabMain.Location = new System.Drawing.Point(1, 39);
             this.tabMain.Name = "tabMain";
             this.tabMain.Padding = new System.Windows.Forms.Padding(5);
             this.tabMain.ReorderTabsEnabled = true;
             this.tabMain.SelectedTabFont = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
             this.tabMain.SelectedTabIndex = -1;
-            this.tabMain.Size = new System.Drawing.Size(1514, 663);
+            this.tabMain.Size = new System.Drawing.Size(1514, 666);
             this.tabMain.TabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Left;
             this.tabMain.TabFont = new System.Drawing.Font("宋体", 15F);
             this.tabMain.TabHorizontalSpacing = 2;
@@ -1052,9 +1051,9 @@
             this.expandableSplitter1.HotGripDarkColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
             this.expandableSplitter1.HotGripLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
             this.expandableSplitter1.HotGripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.expandableSplitter1.Location = new System.Drawing.Point(1515, 42);
+            this.expandableSplitter1.Location = new System.Drawing.Point(1515, 39);
             this.expandableSplitter1.Name = "expandableSplitter1";
-            this.expandableSplitter1.Size = new System.Drawing.Size(4, 663);
+            this.expandableSplitter1.Size = new System.Drawing.Size(4, 666);
             this.expandableSplitter1.Style = DevComponents.DotNetBar.eSplitterStyle.Office2007;
             this.expandableSplitter1.TabIndex = 37;
             this.expandableSplitter1.TabStop = false;

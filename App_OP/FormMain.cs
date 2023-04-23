@@ -86,7 +86,14 @@ namespace App_OP
             else
             {
                 ShowTab("病历", formRecord, "clipboard");
-                ShowTab("结构化\r\n病历", _formRecordMTL, "clipboard");
+                try
+                {
+                    ShowTab("结构化\r\n病历", _formRecordMTL, "clipboard");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
                 ShowTab("处方", formPrescription, "capsule");
                 ShowTab("检验", formLisRequisition, "blood");
                 ShowTab("检查", formPacsRequisition, "ecg");

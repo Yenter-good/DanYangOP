@@ -132,8 +132,9 @@ namespace App_OP.Record
 
         public override void OnClose()
         {
+            //MessageBox.Show("调用了曼陀罗关闭方法");
+            //_controller.IsOnClosing();
             base.OnClose();
-            _controller.IsOnClosing();
         }
 
         private void buttonItem5_Click(object sender, EventArgs e)

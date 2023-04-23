@@ -36,6 +36,7 @@ using System.IO;
 using System.Management;
 using System.Net;
 using System.Net.Sockets;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CIS
@@ -70,18 +71,24 @@ namespace CIS
                 string oldPath = Application.StartupPath + @"\妇幼专科电子病历\mandalat_log";
                 Directory.Delete(oldPath, true);
             }
-            UpdateSystem();
-            SetInfo();
-            if (SwitchReadyQueueManagementSystem == "true")
-                InitQueueManagementSystem();
-            if (SwitchReadyModule == "true")
-                ReadyModule();
-            else
+
+            var action = new Action(UpdateSystem);
+            action.BeginInvoke(Callback, null);
+        }
+
+
+        private void Callback(IAsyncResult asyncResult)
+        {
+            this.BeginInvoke((MethodInvoker)delegate
             {
-                this.Close();
-            }
-
-
+                SetInfo();
+                if (SwitchReadyQueueManagementSystem == "true")
+                    InitQueueManagementSystem();
+                if (SwitchReadyModule == "true")
+                    ReadyModule();
+                else
+                    this.Close();
+            });
         }
 
         private void InitQueueManagementSystem()
@@ -98,11 +105,6 @@ namespace CIS
             this.labelX1.Text += "正在启动更新程序" + Environment.NewLine;
             try
             {
-                //Process proc = Process.Start(System.IO.Directory.GetParent(Application.StartupPath) + @"\客户端.exe", "门诊医生站" + "%" + Process.GetCurrentProcess().ProcessName);
-                //while (!proc.HasExited)
-                //{
-                //    Application.DoEvents();
-                //}
                 string path = AppDomain.CurrentDomain.BaseDirectory + "MAutoUpdate.exe";
                 //同时启动自动更新程序
                 if (File.Exists(path))
@@ -126,6 +128,18 @@ namespace CIS
                         Arguments = $"{processName} 0"
                     };
                     Process proc = Process.Start(processStartInfo);
+                    if (proc != null)
+                    {
+                        proc.WaitForExit();
+                    }
+                }
+
+                this.labelX1.Text += "正在启动曼陀罗更新程序" + Environment.NewLine;
+
+                path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Mandala", "Mandala.AutoUpdate.exe");
+                if (File.Exists(path))
+                {
+                    Process proc = Process.Start(path);
                     if (proc != null)
                     {
                         proc.WaitForExit();
